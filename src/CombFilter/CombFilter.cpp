@@ -77,8 +77,8 @@ Error_t CCombFilter::destroy (CCombFilter*& pCCombFilter)
 
 Error_t CCombFilter::init (CombFilterType_t eFilterType, float fMaxDelayLengthInS, float fSampleRateInHz, int iNumChannels)
 {
-    m_filterType = eFilterType;
-    m_fSampleRate = fSampleRateInHz;
+//    m_filterType = eFilterType;
+//    m_fSampleRate = fSampleRateInHz;
     return Error_t::kNoError;
 }
 
