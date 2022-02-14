@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
     // parse command line arguments
     if (argc < 2)
     {
-        cout << "Missing audio input path!";
+        cout << "Missing audio input paths!";
         return -1;
     }
     else
