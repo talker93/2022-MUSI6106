@@ -1,12 +1,14 @@
 
 #include <iostream>
 #include <ctime>
+#include <vector>
 
 #include "MUSI6106Config.h"
 
 #include "AudioFileIf.h"
 #include "CombFilterIf.h"
 
+using namespace std;
 using std::cout;
 using std::endl;
 
@@ -99,16 +101,74 @@ int main(int argc, char* argv[])
         phAudioFile->readData(ppfAudioData, iNumFrames);
 
         cout << "\r" << "reading and writing";
+        
+        // FIR/IIR CombFilter
+        float weight = 0.5;
+        string filter_type = "FIR";
 
-        // write
+        vector<float>output1;
+        vector<float>output2;
+
+        vector<float>delayLine;
+        for(int i=0; i<10; i++)
+        {
+            delayLine.push_back(0);
+        }
+        
+        for(int n = 0; n < iNumFrames; n++)
+        {
+            output1.push_back(ppfAudioData[0][n] + weight * delayLine[delayLine.size()-1]);
+            delayLine.pop_back();
+            if (filter_type == "FIR")
+            {
+                delayLine.push_back(ppfAudioData[0][n]);
+            } else if (filter_type == "IIR")
+            {
+                delayLine.push_back(output1[n]);
+            }
+            rotate(delayLine.begin(), delayLine.begin()+(delayLine.size()-1),delayLine.end());
+        }
+        
+        for(int n = 0; n < iNumFrames; n++)
+        {
+            output2.push_back(ppfAudioData[1][n] + weight * delayLine[delayLine.size()-1]);
+            delayLine.pop_back();
+            if (filter_type == "FIR")
+            {
+                delayLine.push_back(ppfAudioData[1][n]);
+            } else if (filter_type == "IIR")
+            {
+                delayLine.push_back(output2[n]);
+            }
+            rotate(delayLine.begin(), delayLine.begin()+(delayLine.size()-1),delayLine.end());
+        }
+        
         for (int i = 0; i < iNumFrames; i++)
         {
             for (int c = 0; c < stFileSpec.iNumChannels; c++)
             {
-                hOutputFile << ppfAudioData[c][i] << "\t";
+                if (c == 0)
+                {
+                    hOutputFile << output1[i] << "\t";
+                } else if (c == 1)
+                {
+                    hOutputFile << output2[i] << "\t";
+                }
             }
             hOutputFile << endl;
         }
+        
+        
+
+        // write
+//        for (int i = 0; i < iNumFrames; i++)
+//        {
+//            for (int c = 0; c < stFileSpec.iNumChannels; c++)
+//            {
+//                hOutputFile << ppfAudioData[c][i] << "\t";
+//            }
+//            hOutputFile << endl;
+//        }
     }
 
     cout << "\nreading/writing done in: \t" << (clock() - time) * 1.F / CLOCKS_PER_SEC << " seconds." << endl;
@@ -122,6 +182,7 @@ int main(int argc, char* argv[])
         delete[] ppfAudioData[i];
     delete[] ppfAudioData;
     ppfAudioData = 0;
+    
 
     // all done
     return 0;
