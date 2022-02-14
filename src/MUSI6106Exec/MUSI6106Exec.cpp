@@ -6,7 +6,7 @@
 #include "MUSI6106Config.h"
 
 #include "AudioFileIf.h"
-#include "CombFilterIf.h"
+#include "CombFilter.h"
 
 using namespace std;
 using std::cout;
@@ -27,8 +27,10 @@ int main(int argc, char* argv[])
     clock_t time = 0;
 
     float **ppfAudioData = 0;
+    float **ppfFilterData = 0;
 
     CAudioFileIf *phAudioFile = 0;
+    CCombFilter *phFilterFile = 0;
     std::fstream hOutputFile;
     CAudioFileIf::FileSpec_t stFileSpec;
 
@@ -58,6 +60,11 @@ int main(int argc, char* argv[])
         return -1;
     }
     phAudioFile->getFileSpec(stFileSpec);
+    
+    CCombFilter::create(phFilterFile);
+    phFilterFile->init(CCombFilter::kCombFIR, 1, stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
+    phFilterFile->setParam(CCombFilter::kParamGain, 1);
+    phFilterFile->setParam(CCombFilter::kParamDelay, 20);
 
     //////////////////////////////////////////////////////////////////////////////
     // open the output text file
@@ -72,8 +79,12 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory
     ppfAudioData = new float*[stFileSpec.iNumChannels];
+    ppfFilterData = new float*[stFileSpec.iNumChannels];
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
+    {
         ppfAudioData[i] = new float[kBlockSize];
+        ppfFilterData[i] = new float[kBlockSize];
+    }
 
     if (ppfAudioData == 0)
     {
@@ -99,6 +110,7 @@ int main(int argc, char* argv[])
 
         // read data (iNumOfFrames might be updated!)
         phAudioFile->readData(ppfAudioData, iNumFrames);
+        phFilterFile->process(ppfAudioData, ppfFilterData, stFileSpec.iNumChannels);
 
         cout << "\r" << "reading and writing";
         
@@ -143,32 +155,32 @@ int main(int argc, char* argv[])
             rotate(delayLine.begin(), delayLine.begin()+(delayLine.size()-1),delayLine.end());
         }
         
-        for (int i = 0; i < iNumFrames; i++)
-        {
-            for (int c = 0; c < stFileSpec.iNumChannels; c++)
-            {
-                if (c == 0)
-                {
-                    hOutputFile << output1[i] << "\t";
-                } else if (c == 1)
-                {
-                    hOutputFile << output2[i] << "\t";
-                }
-            }
-            hOutputFile << endl;
-        }
-        
-        
-
-        // write
 //        for (int i = 0; i < iNumFrames; i++)
 //        {
 //            for (int c = 0; c < stFileSpec.iNumChannels; c++)
 //            {
-//                hOutputFile << ppfAudioData[c][i] << "\t";
+//                if (c == 0)
+//                {
+//                    hOutputFile << output1[i] << "\t";
+//                } else if (c == 1)
+//                {
+//                    hOutputFile << output2[i] << "\t";
+//                }
 //            }
 //            hOutputFile << endl;
 //        }
+        
+        
+
+        // write
+        for (int i = 0; i < iNumFrames; i++)
+        {
+            for (int c = 0; c < stFileSpec.iNumChannels; c++)
+            {
+                hOutputFile << ppfFilterData[c][i] << "\t";
+            }
+            hOutputFile << endl;
+        }
     }
 
     cout << "\nreading/writing done in: \t" << (clock() - time) * 1.F / CLOCKS_PER_SEC << " seconds." << endl;
@@ -176,12 +188,18 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // clean-up (close files and free memory)
     CAudioFileIf::destroy(phAudioFile);
+    CCombFilter::destroy(phFilterFile);
     hOutputFile.close();
 
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
+    {
         delete[] ppfAudioData[i];
+        delete[] ppfFilterData[i];
+    }
     delete[] ppfAudioData;
+    delete[] ppfFilterData;
     ppfAudioData = 0;
+    ppfFilterData = 0;
     
 
     // all done

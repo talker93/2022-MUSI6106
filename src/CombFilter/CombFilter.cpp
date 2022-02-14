@@ -4,6 +4,7 @@
 //
 //  Created by 江山 on 2/13/22.
 //
+#include "MUSI6106Config.h"
 
 #include <cassert>
 #include <iostream>
@@ -19,38 +20,92 @@
 //#include "sndlib.h"
 //#endif //WITH_SNDLIB
 
-using namespace std;
+static const char*  kCMyProjectBuildDate = __DATE__;
 
-Error_t CCombFilter::process( float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)
+
+CCombFilter::CCombFilter () :
+    m_bIsInitialized(false),
+    m_pCCombFilter(0),
+    m_fSampleRate(0)
 {
-    float weight = 0.5;
-    
-    vector<float>input;
-    for(int i=0; i<100; i++) {
-        input.push_back(0);
-    }
-    input[0] = 1;
+    // this should never hurt
+    this->reset ();
+}
 
-    vector<float>output;
 
-    vector<float>delayLine;
-    for(int i=0; i<10; i++) {
-        delayLine.push_back(0);
-//        cout << delayLine[i] << ",";
+CCombFilter::~CCombFilter ()
+{
+    this->reset ();
+}
+
+const int  CCombFilter::getVersion (const Version_t eVersionIdx)
+{
+    int iVersion = 0;
+
+    switch (eVersionIdx)
+    {
+    case kMajor:
+        iVersion    = MUSI6106_VERSION_MAJOR;
+        break;
+    case kMinor:
+        iVersion    = MUSI6106_VERSION_MINOR;
+        break;
+    case kPatch:
+        iVersion    = MUSI6106_VERSION_PATCH;
+        break;
+    case kNumVersionInts:
+        iVersion    = -1;
+        break;
     }
 
-    for(int n = 0; n < input.size(); n++) {
-        output.push_back(input[n] + weight * delayLine[delayLine.size()-1]);
-        delayLine.pop_back();
-        delayLine.push_back(input[n]);
-        rotate(delayLine.begin(), delayLine.begin()+(delayLine.size()-1),delayLine.end());
-//        for(int i=0; i<10; i++) {
-//            cout << delayLine[i] << ",";
-//        }
-        cout << output[n] << "," << n << endl;
-    }
-    
-    
-    
+    return iVersion;
+}
+const char*  CCombFilter::getBuildDate ()
+{
+    return kCMyProjectBuildDate;
+}
+
+Error_t CCombFilter::create (CCombFilter*& pCCombFilter)
+{
     return Error_t::kNoError;
+}
+
+Error_t CCombFilter::destroy (CCombFilter*& pCCombFilter)
+{
+    return Error_t::kNoError;
+}
+
+Error_t CCombFilter::init (CombFilterType_t eFilterType, float fMaxDelayLengthInS, float fSampleRateInHz, int iNumChannels)
+{
+    m_filterType = eFilterType;
+    m_fSampleRate = fSampleRateInHz;
+    return Error_t::kNoError;
+}
+
+Error_t CCombFilter::reset ()
+{
+    return Error_t::kNoError;
+}
+
+Error_t CCombFilter::process (float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)
+{
+    return Error_t::kNoError;
+}
+
+Error_t CCombFilter::setParam (FilterParam_t eParam, float fParamValue)
+{
+    if (eParam == 'kParamGain')
+    {
+        m_gain = fParamValue;
+    }
+    else if (eParam == 'kParamDelay')
+    {
+        m_delay = fParamValue;
+    }
+    return Error_t::kNoError;
+}
+
+float CCombFilter::getParam (FilterParam_t eParam) const
+{
+    return 0;
 }
