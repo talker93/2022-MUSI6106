@@ -33,21 +33,47 @@ int main(int argc, char* argv[])
     CCombFilter *phFilterFile = 0;
     std::fstream hOutputFile;
     CAudioFileIf::FileSpec_t stFileSpec;
+    
+    std::string sFilterType;
+    float fGain = 0;
+    float fDelay = 0;
 
     showClInfo();
 
     //////////////////////////////////////////////////////////////////////////////
     // parse command line arguments
-    if (argc < 2)
+    // input example: [exe path type gain delay]
+    if (argc < 5)
     {
-        cout << "Missing audio input paths!";
+        cout << "Missing audio input path, type, gain, delay" << endl;
+        cout << "Input Example: [Exe Path Type Gain Delay]" << endl;
+        cout << "Type Example: FIR or IIR" << endl;
         return -1;
     }
-    else
+    else if (argc == 5)
     {
         sInputFilePath = argv[1];
         sOutputFilePath = sInputFilePath + ".txt";
+        sFilterType = argv[2];
+        fGain = stof(argv[3]);
+        fDelay = stof(argv[4]);
+        cout << "Your Input: " << endl;
+        cout << "Input Path: " << sInputFilePath << endl;
+        cout << "Filter Type: " << sFilterType << endl;
+        cout << "Gain: " << fGain << endl;
+        cout << "Delay: " << fDelay << endl;
     }
+    // for test
+//    sInputFilePath = "01_Rock1-90-C#_comp_mic.wav";
+//    sOutputFilePath = sInputFilePath + ".txt";
+//    sFilterType = "IIR";
+//    fGain = stof("0.5");
+//    fDelay = stof("1");
+//    cout << "Your Input: " << endl;
+//    cout << "Input Path: " << sInputFilePath << endl;
+//    cout << "Filter Type: " << sFilterType << endl;
+//    cout << "Gain: " << fGain << endl;
+//    cout << "Delay: " << fDelay << endl;
 
     //////////////////////////////////////////////////////////////////////////////
     // open the input wave file
@@ -62,9 +88,9 @@ int main(int argc, char* argv[])
     phAudioFile->getFileSpec(stFileSpec);
     
     CCombFilter::create(phFilterFile);
-    phFilterFile->init(CCombFilter::kCombFIR, 1, stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
-    phFilterFile->setParam(CCombFilter::kParamGain, 1);
-    phFilterFile->setParam(CCombFilter::kParamDelay, 20);
+    phFilterFile->init(CCombFilter::kCombFIR, fDelay, stFileSpec.fSampleRateInHz, stFileSpec.iNumChannels);
+    phFilterFile->setParam(CCombFilter::kParamGain, fGain);
+    phFilterFile->setParam(CCombFilter::kParamDelay, fDelay);
 
     //////////////////////////////////////////////////////////////////////////////
     // open the output text file
@@ -115,11 +141,7 @@ int main(int argc, char* argv[])
         cout << "\r" << "reading and writing";
         
         // FIR/IIR CombFilter
-        float weight = 0.5;
-        string filter_type = "FIR";
-
-        vector<float>output1;
-        vector<float>output2;
+        vector< vector<float> > output;
 
         vector<float>delayLine;
         for(int i=0; i<10; i++)
@@ -127,57 +149,44 @@ int main(int argc, char* argv[])
             delayLine.push_back(0);
         }
         
-        for(int n = 0; n < iNumFrames; n++)
+        for(int c = 0; c < stFileSpec.iNumChannels; c++)
         {
-            output1.push_back(ppfAudioData[0][n] + weight * delayLine[delayLine.size()-1]);
-            delayLine.pop_back();
-            if (filter_type == "FIR")
+            output.push_back(vector<float>());
+            for(int n = 0; n < iNumFrames; n++)
             {
-                delayLine.push_back(ppfAudioData[0][n]);
-            } else if (filter_type == "IIR")
-            {
-                delayLine.push_back(output1[n]);
+                output[c].push_back(ppfAudioData[c][n] + fGain * delayLine[delayLine.size()-1]);
+                delayLine.pop_back();
+                if (sFilterType == "FIR")
+                {
+                    delayLine.push_back(ppfAudioData[c][n]);
+                } else if (sFilterType == "IIR")
+                {
+                    delayLine.push_back(output[c][n]);
+                }
+                rotate(delayLine.begin(), delayLine.begin()+(delayLine.size()-1),delayLine.end());
             }
-            rotate(delayLine.begin(), delayLine.begin()+(delayLine.size()-1),delayLine.end());
-        }
-        
-        for(int n = 0; n < iNumFrames; n++)
-        {
-            output2.push_back(ppfAudioData[1][n] + weight * delayLine[delayLine.size()-1]);
-            delayLine.pop_back();
-            if (filter_type == "FIR")
+            delayLine.clear();
+            for(int i=0; i<10; i++)
             {
-                delayLine.push_back(ppfAudioData[1][n]);
-            } else if (filter_type == "IIR")
-            {
-                delayLine.push_back(output2[n]);
+                delayLine.push_back(0);
             }
-            rotate(delayLine.begin(), delayLine.begin()+(delayLine.size()-1),delayLine.end());
         }
-        
+
         for (int i = 0; i < iNumFrames; i++)
         {
             for (int c = 0; c < stFileSpec.iNumChannels; c++)
             {
-                if (c == 0)
-                {
-                    hOutputFile << output1[i] << "\t";
-                } else if (c == 1)
-                {
-                    hOutputFile << output2[i] << "\t";
-                }
+                hOutputFile << output[c][i] << "\t";
             }
             hOutputFile << endl;
         }
         
-        
-
-        // write
+        // write raw audio data
 //        for (int i = 0; i < iNumFrames; i++)
 //        {
 //            for (int c = 0; c < stFileSpec.iNumChannels; c++)
 //            {
-//                hOutputFile << ppfFilterData[c][i] << "\t";
+//                hOutputFile << ppfAudioData[c][i] << "\t";
 //            }
 //            hOutputFile << endl;
 //        }
