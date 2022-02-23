@@ -105,9 +105,14 @@ private:
     CCombFilterBase *m_pCCombFilter;    //!< handle of the comb filter
 
     float           m_fSampleRate;      //!< audio sample rate in Hz
+    float           m_fMaxDelayInS;
+    float           m_fMaxDelayInSamples;
+    int             m_iNumChannels;
+    float           m_fGain;
+    float           m_fDelay;
+    CombFilterType_t m_eFilterType;
 };
 
 #endif // #if !defined(__CombFilterIf_hdr__)
-
 
 

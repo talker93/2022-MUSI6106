@@ -1,111 +1,74 @@
-//
-//  CombFilter.cpp
-//  AudioFileIO
-//
-//  Created by 江山 on 2/13/22.
-//
-#include "MUSI6106Config.h"
-
-#include <cassert>
-#include <iostream>
-#include <string.h>
-#include <vector>
-#include <fstream>
-
 #include "Util.h"
+#include "CombFilterIf.h"
 #include "CombFilter.h"
-#include "ErrorDef.h"
 
-//#ifdef WITH_SNDLIB
-//#include "sndlib.h"
-//#endif //WITH_SNDLIB
-
-static const char*  kCMyProjectBuildDate = __DATE__;
-
-
-CCombFilter::CCombFilter () :
-    m_bIsInitialized(false),
-    m_pCCombFilter(0),
-    m_fSampleRate(0)
-{
-    // this should never hurt
-    this->reset ();
+CCombFilterBase::CCombFilterBase() {
+    m_fGain = 0;
+    m_iDelay = 0;
+    m_iMaxDelayInSamples = 0;
+    m_iNumChannels = 0;
+    m_ppRingBuffer = 0;
 }
 
-
-CCombFilter::~CCombFilter ()
-{
-    this->reset ();
-}
-
-const int  CCombFilter::getVersion (const Version_t eVersionIdx)
-{
-    int iVersion = 0;
-
-    switch (eVersionIdx)
-    {
-    case kMajor:
-        iVersion    = MUSI6106_VERSION_MAJOR;
-        break;
-    case kMinor:
-        iVersion    = MUSI6106_VERSION_MINOR;
-        break;
-    case kPatch:
-        iVersion    = MUSI6106_VERSION_PATCH;
-        break;
-    case kNumVersionInts:
-        iVersion    = -1;
-        break;
+CCombFilterBase::CCombFilterBase(float fMaxDelayInSamples, int iNumChannels) {
+    m_ppRingBuffer = new CRingBuffer<float>*[iNumChannels];
+    for(int i=0; i<iNumChannels; i++) {
+        m_ppRingBuffer[i] = new CRingBuffer<float>(fMaxDelayInSamples);
     }
-
-    return iVersion;
-}
-const char*  CCombFilter::getBuildDate ()
-{
-    return kCMyProjectBuildDate;
+    m_iMaxDelayInSamples = static_cast<int>(fMaxDelayInSamples);
+    m_iNumChannels = iNumChannels;
+    m_fGain = 1;
+    m_iDelay = 1;
 }
 
-Error_t CCombFilter::create (CCombFilter*& pCCombFilter)
-{
-    return Error_t::kNoError;
+CCombFilterBase::~CCombFilterBase() {
+    
 }
 
-Error_t CCombFilter::destroy (CCombFilter*& pCCombFilter)
-{
-    return Error_t::kNoError;
-}
-
-Error_t CCombFilter::init (CombFilterType_t eFilterType, float fMaxDelayLengthInS, float fSampleRateInHz, int iNumChannels)
-{
-//    m_filterType = eFilterType;
-//    m_fSampleRate = fSampleRateInHz;
-    return Error_t::kNoError;
-}
-
-Error_t CCombFilter::reset ()
-{
-    return Error_t::kNoError;
-}
-
-Error_t CCombFilter::process (float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)
-{
-    return Error_t::kNoError;
-}
-
-Error_t CCombFilter::setParam (FilterParam_t eParam, float fParamValue)
-{
-    if (eParam == 'kParamGain')
-    {
-        m_gain = fParamValue;
-    }
-    else if (eParam == 'kParamDelay')
-    {
-        m_delay = fParamValue;
+Error_t CCombFilterBase::setParam(CCombFilterIf::FilterParam_t eParam, float fParamValue, float fSampleRate) {
+    if(eParam == CCombFilterIf::kParamGain) {
+        m_fGain = fParamValue;
+    } else {
+        m_iDelay = static_cast<int>(fParamValue * fSampleRate);
     }
     return Error_t::kNoError;
 }
 
-float CCombFilter::getParam (FilterParam_t eParam) const
-{
-    return 0;
+float CCombFilterBase::getParam(CCombFilterIf::FilterParam_t eParam) const {
+    if(eParam == CCombFilterIf::kParamGain) {
+        return m_fGain;
+    } else {
+        return m_iDelay;
+    }
 }
+
+
+// get values from parent class
+CCombFilterFIR::CCombFilterFIR(float fMaxDelayInSamples, int iNumChannels) : CCombFilterBase(fMaxDelayInSamples, iNumChannels) {}
+
+CCombFilterIIR::CCombFilterIIR(float fMaxDelayInSamples, int iNumChannels) : CCombFilterBase(fMaxDelayInSamples, iNumChannels) {}
+
+CCombFilterFIR::~CCombFilterFIR() {}
+CCombFilterIIR::~CCombFilterIIR() {}
+
+Error_t CCombFilterFIR::process(float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames) {
+    for(int i=0; i<m_iNumChannels; i++) {
+        m_ppRingBuffer[i]->setWriteIdx(m_iDelay);
+        for(int j=0; j<iNumberOfFrames; j++) {
+            ppfOutputBuffer[i][j] = ppfInputBuffer[i][j] + m_fGain * (m_ppRingBuffer[i]->getPostInc());
+            m_ppRingBuffer[i]->putPostInc(ppfInputBuffer[i][j]);
+        }
+    }
+}
+
+Error_t CCombFilterIIR::process(float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames) {
+    for(int i=0; i<m_iNumChannels; i++) {
+        m_ppRingBuffer[i]->setWriteIdx(m_iDelay);
+        for(int j=0; j<iNumberOfFrames; j++) {
+            ppfOutputBuffer[i][j] = ppfInputBuffer[i][j] + m_fGain * (m_ppRingBuffer[i]->getPostInc());
+            m_ppRingBuffer[i]->putPostInc(ppfOutputBuffer[i][j]);
+        }
+    }
+}
+
+
