@@ -1,21 +1,48 @@
 #include "MUSI6106Config.h"
 
 #ifdef WITH_TESTS
+#include <cassert>
+#include <cstdio>
+#include <algorithm>
+
+#include "UnitTest++.h"
+
+#include "Synthesis.h"
 #include "Vector.h"
+#include "ErrorDef.h"
+
 #include "Vibrato.h"
 
-#include "gtest/gtest.h"
-
-
-namespace vibrato_test {
-    void CHECK_ARRAY_CLOSE(float* buffer1, float* buffer2, int iLength, float fTolerance)
+SUITE(Vibrato)
+{
+    struct VibratoData
     {
-        for (int i = 0; i < iLength; i++)
+        VibratoData()
         {
-            EXPECT_NEAR(buffer1[i], buffer2[i], fTolerance);
+            // setup
+            // e.g., allocate a vibrato object and test signal (newly created for each test case)
         }
+
+        ~VibratoData()
+        {
+            // teardown
+            // e.g., deallocate the vibrato object and test signal
+        }
+
+        // e.g., a reusable process() function
+
+        // e.g., a member vibrato object to be reused in each test
+    };
+
+    TEST(MyTestWithNoFixture)
+    {
+        // e.g., allocate & deallocate local data for testing
     }
 
+    TEST_FIXTURE(VibratoData, MyTestWithFixture)
+    {
+        // e.g., you can use the "VibratoData" contents
+    }
 }
 
 #endif //WITH_TESTS
