@@ -265,6 +265,14 @@ SUITE(RingBuffer)
             delete pRingBuffer;
         }
         
+        void fillBuffer(iBufferLengthInSamples)
+        {
+            for (int i = 1; i < iBufferLengthInSamples + 1; i++)
+            {
+                pRingBuffer -> putPostInc(i, 1);
+            }
+        }
+        
         CRingBuffer<float>* pRingBuffer;
         int iBufferLength;
     }
@@ -272,14 +280,29 @@ SUITE(RingBuffer)
     // Test put/get and initial read/write from initialized buffer
     TEST_FIXTURE(RingBufferData, InitBuffer)
     {
-        EXPECT_EQ(pRingBuffer->get(), 1, 1e-3F);
-        CHECK(pRingBuffer->getReadIdx() == 0);
-        CHECK(pRingBuffer->getWriteIdx() == 0)
+        EXPECT_EQ(pRingBuffer -> get(), 1, 1e-3F);
+        CHECK(pRingBuffer -> getReadIdx() == 0);
+        CHECK(pRingBuffer -> getWriteIdx() == 0)
     }
     
-    TEST_FIXTURE(RingBufferData, interp)
+    TEST_FIXTURE(RingBufferData, Interp)
     {
-        EXPECT_EQ(pRingBuffer->get(1.5), 2.5, 1e-3F);
+        EXPECT_EQ(pRingBuffer -> get(1.5), 2.5, 1e-3F);
+    }
+    
+    TEST_FIXTURE(RingBufferData, GetWrapAround)
+    {
+        for (int i = 1; i < iBufferLengthInSamples + 1; i++)
+        {
+            EXPECT_EQ(pRingBuffer -> getPostInc(), i);
+        }
+        CHECK(pRingBuffer -> getReadIdx() == 0);
+    }
+    
+    TEST_FIXTURE(RingBufferData, NumValues)
+    {
+        EXPECT_EQ(pRingBuffer -> getNumValuesInBuffer(), iBufferLengthInSamples);
+        EXPECT_EQ(pRingBuffer -> reset(), 0);
     }
     
     
