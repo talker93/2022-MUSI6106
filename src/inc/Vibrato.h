@@ -1,3 +1,7 @@
+/**
+ *  CVibrato Class Header File
+ */
+
 #if !defined(__Vibrato_hdr__)
 #define __Vibrato_hdr__
 
@@ -9,90 +13,97 @@ template <class T>
 class CRingBuffer;
 
 /*
- * brief explanation about your class-interface design
+ * Design choices for Vibrato class interface:
+ We implemented an interface similar to the comb filter class with a standard interface for users or developers to interact with. Trying to be consistent with other code in this repository, we used static methods for creating and destroying instances of the class and kept the constructors and destructors in the protected section of the class. The init() function is the place to basically allocate memory, set parameter ranges and the parameters themselves initially since some of the ranges depend on the parameters. A standard reset() function deletes all data and sets values to 0. We have the usual setParam and getParam functions to set and acccess values within the parameter ranges. The setParam function accordingly calls some functions in the LFO class as well to ensure that any parameter changes here don't break the code or make it not work in the right way. The final process() function just pulls values from the LFO buffer and performs simple operations to get the final result and store it in an output buffer. The parameter ranges values and function are not kept public so that they cannot be tampered with and can only be set on initialization. The core variables for the class are kept private.
  */
 
 class CVibrato
 {
 public:
-
-    CVibrato ();
-    virtual ~CVibrato ();
-    
-    Error_t resetInstance ();
-    
-    /*! list of parameters for the Vibrato */
+    /**
+     *  Parameters for CVibrato Class
+     */
     enum VibratoParam_t
     {
-        kParamWidth,                     //!< Width = amplitude for oscillation
+        kParamWidth,
         kParamModFreq,
+        kParamDelay,
+        kSampleRate,
         
         kNumVibratoParams
     };
-    
-    /*! creates a new comb filter instance
-     \param pCCombFilterIf pointer to the new class
-     \return Error_t
+    /**
+     * Static Function allow to Access class function without
+     * creates a new CVibrato Instance
      */
     static Error_t create (CVibrato*& pCVibrato);
-    
-    /*! destroys a comb filter instance
-     \param pCCombFilterIf pointer to the class to be destroyed
-     \return Error_t
+    /**
+     * Destroy the CVibrato Instance
+     * Memory Clean
      */
     static Error_t destroy (CVibrato*& pCVibrato);
-    
-    /*! initializes a comb filter instance
-     \param eFilterType FIR or IIR
-     \param fMaxDelayLengthInS maximum allowed delay in seconds
-     \param fSampleRateInHz sample rate in Hz
-     \param iNumChannels number of audio channels
-     \return Error_t
+    /**
+     *   CVibrato Class Prameter Initialization
+     *   param fSampleRateInHz: Sample Rate in Hz
+     *   param fModFrequencyInHz: Modulation Frequency in Hz
+     *   param fWidthInHz: Basic Delay in sec
+     *   param iNumChannels: Number of Channels
      */
-    Error_t init (float fMaxWidthInS, float fSampleRateInHz, int iNumChannels, float fModFreq, float fModWidth);
-    
-    /*! resets the internal variables (requires new call of init)
-     \return Error_t
+    Error_t init (float fSampleRateInHz, float fModFrequencyInHz, float fWidthInHz, int iNumChannels);
+    /**
+     *   Reset CVibrato Prameters
      */
-    Error_t reset ();
-    
-    /*! sets a comb filter parameter
-     \param eParam what parameter (see ::FilterParam_t)
-     \param fParamValue value of the parameter
-     \return Error_t
+    Error_t reset();
+    /**
+     *  Parameter Setup for CVibrato Class
+     *  param eParam: parameter to set
+     *  param fParamValue: value to set to
      */
-    Error_t setParam (VibratoParam_t eParam, float fParamValue);
-    
-    /*! return the value of the specified parameter
-     \param eParam
-     \return float
+    Error_t setParam(VibratoParam_t eParam, float fParamValue);
+    /**
+     *  Return Parameter Values
+     *  param eParam: paramter to get
      */
-    float   getParam (VibratoParam_t eParam) const;
-    
-    /*! processes one block of audio
-     \param ppfInputBuffer input buffer [numChannels][iNumberOfFrames]
-     \param ppfOutputBuffer output buffer [numChannels][iNumberOfFrames]
-     \param iNumberOfFrames buffer length (per channel)
-     \return Error_t
+    float getParam(VibratoParam_t eParam) const;
+    /**
+     *  Apply Vibrato on One Block of Given Inputs
+     *   param ppfInputBuffer: Input Buffer [iNumberOfChannels] * [iNumberOfFrames]
+     *   param ppfOutputBuffer: Output Buffer [iNumberOfChannels] * [iNumberOfFrames]
+     *   param iNumberOfFrames: Number of frames
      */
-    Error_t process (float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames);
+    Error_t process(float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames);
     
+protected:
+    /**
+     *   CVibrato Constructor
+     */
+    CVibrato();
+    /**
+     *   CVibrato Destructor
+     */
+    ~CVibrato();
 
+    float   m_aafParamRange[kNumVibratoParams][2];
     
 private:
-    CRingBuffer<float>  **m_ppCRingBuffer;
-    CLfo                *m_pCLfo;
     
-    float               m_afParam[CVibrato::kNumVibratoParams];
+    bool m_bIsInitialized;
     
-    int                 m_iNumChannels;
+    bool isParamInRange(VibratoParam_t eParam, float fParamValue);
+    /**
+     *  LFO and Ringbuffer
+     */
+    CLfo *m_pCLfo;
+    CRingBuffer<float> **m_ppCRingBuffer;
+    /**
+     *  CVibrato Class Parameters
+     */
+    float m_fSampleRateInSamples;
+    float m_fModFreqInSamples;
+    float m_fWidthInSamples;
+    float m_fDelayInSamples;
     
-    float               m_fMaxWidthInS;
-    
-    bool                m_bIsInitialized;   //!< internal bool to check whether the init function has been called
-    
-    float               m_fSampleRateInHz;      //!< audio sample rate in Hz
-
+    int   m_iNumChannels;
 };
 
 #endif // #if !defined(__Vibrato_hdr__)
