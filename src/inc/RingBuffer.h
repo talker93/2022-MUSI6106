@@ -7,13 +7,13 @@
 
 /*! \brief implement a circular buffer of type T
 */
-template <class T> 
+template <class T>
 class CRingBuffer
 {
 public:
     explicit CRingBuffer (int iBufferLengthInSamples) :
         m_iBuffLength(iBufferLengthInSamples),
-        m_iReadIdx(0),                          
+        m_iReadIdx(0),
         m_iWriteIdx(0),
         m_ptBuff(0)
     {
@@ -108,7 +108,7 @@ public:
         else
         {
             
-            // compute fraction for linear interpolation 
+            // compute fraction for linear interpolation
             int     iOffset = static_cast<int>(std::floor(fOffset));
             float   fFrac   = fOffset - iOffset;
             int     iRead   = m_iReadIdx + iOffset;
@@ -207,7 +207,7 @@ private:
         while ((iIdx + iOffset) < 0)
         {
             // avoid negative buffer indices
-            iOffset += m_iBuffLength;   
+            iOffset += m_iBuffLength;
         }
         iIdx    = (iIdx + iOffset) % m_iBuffLength;
     };

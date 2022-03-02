@@ -11,57 +11,74 @@
 class CLfo
 {
 public:
-    CLfo(float fModFreq, float fSampleRateinHz) :
-    m_fModFreq(fModFreq),
-    m_fFixedSampleRateInHz(fSampleRateinHz),
-    m_fCurPos(0)
+    CLfo(float fModFreqInSamples, float fSampleRate):
+    m_pCRingBuffer(0),
+    m_fModFreqInSamples(fModFreqInSamples),
+    m_fSampleRateInHz(fSampleRate),
+    m_fReadIdx(0)
     {
-        m_iFixedBufferLength = m_fFixedSampleRateInHz/m_fFixedModFreq;
-        m_fIncrement = m_iFixedBufferLength/(fSampleRateinHz/fModFreq);
-        float pfOutBuf[m_iFixedBufferLength];
-        
-        CSynthesis::generateSine (pfOutBuf, m_fModFreq, m_fSampleFreqInHz, m_iFixedBufferLength);
-        for (int i=0; i<m_iFixedBufferLength; i++){
-            m_pCRingBuffer->putPostInc(pfOutBuf[i]);
-        }
+        if (m_fModFreqInSamples == 0)
+            m_iBufferLength = 1;
+        else
+            m_iBufferLength = 1 / m_fModFreqInSamples;
+        m_pCRingBuffer = new CRingBuffer<float>(m_iBufferLength);
     }
     
-    ~CLfo(){
+    ~CLfo()
+    {
         delete m_pCRingBuffer;
+        m_pCRingBuffer = 0;
     }
     
-    Error_t reset(){
-        m_fCurPos = 0;
+    // set parameters
+    Error_t setParam(float fParamValue)
+    {
+        m_fModFreqInSamples = fParamValue;
+        if (m_fModFreqInSamples == 0)
+            m_iBufferLength = 1;
+        else
+            m_iBufferLength = 1 / m_fModFreqInSamples;
+        
+        delete m_pCRingBuffer;
+        m_pCRingBuffer = new CRingBuffer<float>(m_iBufferLength);
+        this->process();
+        
         return Error_t::kNoError;
     }
     
-    Error_t setLfoRate(float fLfoRate){
-        m_fModFreq = fLfoRate;
-        m_fIncrement = m_iFixedBufferLength / (m_fSampleFreqInHz/m_fModFreq);
-        return Error_t::kNoError;
+    //return current values
+    float returnLfoVal()
+    {
+        float fLfoVal = m_pCRingBuffer->get(m_fReadIdx);
+        
+        m_fReadIdx = m_fReadIdx + m_fModFreqInSamples * m_iBufferLength;
+        
+        if (m_fReadIdx >= m_iBufferLength)
+            m_fReadIdx -= m_iBufferLength;
+        
+        return fLfoVal;
+        
     }
     
-    float getLfoValue(){
-        float result = m_pCRingBuffer->get(m_fCurPos);
-        m_fCurPos += m_fIncrement;
-        if(m_fCurPos>=m_iFixedBufferLength){
-            m_fCurPos = m_fCurPos - m_iFixedBufferLength;
-        }
-        return result;
+    //LFO waveform generation
+    void process()
+    {
+        float *pfWaveformBuffer = new float [m_iBufferLength];
+        
+        CSynthesis::generateSine(pfWaveformBuffer, m_fModFreqInSamples * m_fSampleRateInHz, m_fSampleRateInHz, m_iBufferLength);
+        
+        m_pCRingBuffer-> putPostInc(pfWaveformBuffer, m_iBufferLength);
+        
+        delete [] pfWaveformBuffer;
     }
     
-
 private:
-    float               m_fModFreq;
-    float               m_fWidth;
-    CRingBuffer<float>  *m_pCRingBuffer;
-    const float         m_fFixedModFreq = 10;
-    const float         m_fFixedSampleRateInHz = 44100;
-    int                 m_iFixedBufferLength;
-    float               m_fSampleFreqInHz;
-    float               m_fIncrement;
-    float               m_fCurPos;
     
+    int                             m_iBufferLength;
+    CRingBuffer<float>              *m_pCRingBuffer;
+    float                           m_fModFreqInSamples;
+    float                           m_fSampleRateInHz;
+    float                           m_fReadIdx;
 };
 
 #endif // __Lfo_hdr__
