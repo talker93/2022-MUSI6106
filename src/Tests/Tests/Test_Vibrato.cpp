@@ -28,8 +28,7 @@ SUITE(Vibrato)
 {
     struct VibratoData
     {
-        VibratoData()
-        {
+        VibratoData():
             // setup
             // e.g., allocate a vibrato object and test signal (newly created for each test case)
             
@@ -69,9 +68,9 @@ SUITE(Vibrato)
 
                     CSynthesis::generateSine(ppfAudioData[i], fTestSigFreq, iSampleRate, iBlockSize);
                 
-            }
+                }
             
-        }
+            }
 
         ~VibratoData()
         {
@@ -133,7 +132,7 @@ SUITE(Vibrato)
         int                 iBlockSize;
         float               fModFreq;
         float               fModWidth;
-            
+
     };
 
     TEST(MyTestWithNoFixture)
@@ -237,7 +236,53 @@ SUITE(Vibrato)
         }
     }
         
+    // write additional test cases
     TEST_FIXTURE(VibratoData, )
-}
+};
+    
+    
+SUITE(RingBuffer)
+{
+    struct RingBufferData
+    {
+        RingBufferData():
+            pRingBuffer(0),
+            iBufferLengthInSamples(10)
+
+        {
+            pRingBuffer = CRingBuffer<float>(iBufferLengthInSamples);
+            
+            // init ring buffer with values 1-10
+            for (int i = 1; i < iBufferLengthInSamples + 1; i++)
+            {
+                pRingBuffer -> putPostInc(i, 1);
+            }
+        }
+        
+        ~RingBufferData()
+        {
+            pRingBuffer -> reset();
+            delete pRingBuffer;
+        }
+        
+        CRingBuffer<float>* pRingBuffer;
+        int iBufferLength;
+    }
+    
+    // Test put/get and initial read/write from initialized buffer
+    TEST_FIXTURE(RingBufferData, InitBuffer)
+    {
+        EXPECT_EQ(pRingBuffer->get(), 1, 1e-3F);
+        CHECK(pRingBuffer->getReadIdx() == 0);
+        CHECK(pRingBuffer->getWriteIdx() == 0)
+    }
+    
+    TEST_FIXTURE(RingBufferData, interp)
+    {
+        EXPECT_EQ(pRingBuffer->get(1.5), 2.5, 1e-3F);
+    }
+    
+    
+};
 
 #endif //WITH_TESTS
