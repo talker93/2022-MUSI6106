@@ -112,19 +112,22 @@ TEST_F(CTestVibrato, ModAmpZero)
 {
     // e.g., you can use the "VibratoData" contents
     pVibrato -> reset();
-    
+
     fMaxWidthSecs = 0.1;
     fModWidth = 0;
-    
+
     pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
-    
+
     testProcess(ppfOutputData, iBlockSize);
-    
-    int iDelayInSamples = (int)(ceil(fModWidth * fSampleRate));
-    
+
+    int iDelayInSamples = (int)(2 + (fMaxWidthSecs * 2 * fSampleRate));
+
     for (int i = 0; i < iNumChannels; i++)
     {
-        CHECK_ARRAY_CLOSE(ppfAudioData[i], ppfOutputData[i], iBlockSize, 1e-3F);
+        for (int j = iDelayInSamples; j < iBlockSize; j++)
+        {
+            EXPECT_NEAR(ppfAudioData[i][j - iDelayInSamples], ppfOutputData[i][j], 1e-3F);
+        }
     }
 }
 
@@ -135,21 +138,28 @@ TEST_F(CTestVibrato, DCEqual)
     {
         CSynthesis::generateDc(ppfAudioData[i], iBlockSize);
     }
-    
+
     pVibrato -> reset();
-    
+
     fMaxWidthSecs = 0.1;
     fModWidth = 0.05;
-    
+
     pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
-    
+
     testProcess(ppfOutputData, iBlockSize);
-    
+
+    int iDelayInSamples = (int)(2 + (fMaxWidthSecs * 2 * fSampleRate));
+
     for (int i = 0; i < iNumChannels; i++)
     {
-        CHECK_ARRAY_CLOSE(ppfAudioData[i], ppfOutputData[i], iBlockSize, 1e-3F);
+        for (int j = iDelayInSamples; j < iBlockSize; j++)
+        {
+            EXPECT_NEAR(ppfAudioData[i][j - iDelayInSamples], ppfOutputData[i][j], 1e-3F);
+        }
     }
 }
+
+
 
 // Varying input block size.
 TEST_F(CTestVibrato, VaryBlockSize)
@@ -177,6 +187,7 @@ TEST_F(CTestVibrato, VaryBlockSize)
     delete[] ppfOutBlock;
 }
 
+// Zero input signal.
 TEST_F(CTestVibrato, ZeroInput)
 {
     for (int i = 0; i < iNumChannels; i++)
