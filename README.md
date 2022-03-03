@@ -12,7 +12,7 @@
 
 ![alt text](https://github.com/talker93/2022-MUSI6106/blob/as2_vibrato/matlab/vibrato.jpg?raw=true)
 
-## Matlab - C++ Comparison Results
+## Matlab - C++ Comparison Results 2
 + Modulation Frequency: 10
 + Delay: 0.001s
 + SampleRate: 44100
