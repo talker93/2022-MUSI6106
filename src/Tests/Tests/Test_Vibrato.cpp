@@ -199,74 +199,70 @@ TEST_F(CTestVibrato, ZeroInput)
     }
 }
 
+class CTestRingBuffer : public testing::Test
+{
+public:
+    CRingBuffer<float>* pRingBuffer = 0;
+    int iBufferLengthInSamples = 10;
+    
+    void SetUp() override
+    {
+        pRingBuffer = new CRingBuffer<float>(iBufferLengthInSamples);
+
+        // init ring buffer with values 1-10
+        for (int i = 1; i < iBufferLengthInSamples + 1; i++)
+        {
+            pRingBuffer -> putPostInc(i);
+        }
+    }
+    
+    virtual void TearDown() override
+    {
+        pRingBuffer -> reset();
+        delete pRingBuffer;
+    }
+    
+    void fillBuffer(int iBufferLengthInSamples)
+    {
+        for (int i = 1; i < iBufferLengthInSamples + 1; i++)
+        {
+            pRingBuffer -> putPostInc(i);
+        }
+    }
+};
+
+// Test put/get and initial read/write from initialized buffer
+TEST_F(CTestRingBuffer, InitBuffer)
+{
+    EXPECT_EQ(pRingBuffer -> get(), 1);
+    EXPECT_EQ(pRingBuffer -> getReadIdx(), 0);
+    EXPECT_EQ(pRingBuffer -> getWriteIdx(), 0);
 }
-    
-    
-//SUITE(RingBuffer)
-//{
-//    struct RingBufferData
-//    {
-//        RingBufferData():
-//            pRingBuffer(0),
-//            iBufferLengthInSamples(10)
-//
-//        {
-//            pRingBuffer = CRingBuffer<float>(iBufferLengthInSamples);
-//
-//            // init ring buffer with values 1-10
-//            for (int i = 1; i < iBufferLengthInSamples + 1; i++)
-//            {
-//                pRingBuffer -> putPostInc(i, 1);
-//            }
-//        }
-//
-//        ~RingBufferData()
-//        {
-//            pRingBuffer -> reset();
-//            delete pRingBuffer;
-//        }
-//
-//        void fillBuffer(iBufferLengthInSamples)
-//        {
-//            for (int i = 1; i < iBufferLengthInSamples + 1; i++)
-//            {
-//                pRingBuffer -> putPostInc(i, 1);
-//            }
-//        }
-//
-//        CRingBuffer<float>* pRingBuffer;
-//        int iBufferLength;
-//    }
-//
-//    // Test put/get and initial read/write from initialized buffer
-//    TEST_FIXTURE(RingBufferData, InitBuffer)
-//    {
-//        EXPECT_EQ(pRingBuffer -> get(), 1, 1e-3F);
-//        CHECK(pRingBuffer -> getReadIdx() == 0);
-//        CHECK(pRingBuffer -> getWriteIdx() == 0)
-//    }
-//
-//    TEST_FIXTURE(RingBufferData, Interp)
-//    {
-//        EXPECT_EQ(pRingBuffer -> get(1.5), 2.5, 1e-3F);
-//    }
-//
-//    TEST_FIXTURE(RingBufferData, GetWrapAround)
-//    {
-//        for (int i = 1; i < iBufferLengthInSamples + 1; i++)
-//        {
-//            EXPECT_EQ(pRingBuffer -> getPostInc(), i);
-//        }
-//        CHECK(pRingBuffer -> getReadIdx() == 0);
-//    }
-//
-//    TEST_FIXTURE(RingBufferData, NumValues)
-//    {
-//        EXPECT_EQ(pRingBuffer -> getNumValuesInBuffer(), iBufferLengthInSamples);
-//        EXPECT_EQ(pRingBuffer -> reset(), 0);
-//    }
-//
-//
-//};
+
+// Test interpolation
+TEST_F(CTestRingBuffer, Interp)
+{
+    EXPECT_EQ(pRingBuffer -> get(1.5), 2.5);
+}
+
+// Test getPostInc and readIdx wrap around
+TEST_F(CTestRingBuffer, GetWrapAround)
+{
+    for (int i = 1; i < iBufferLengthInSamples + 1; i++)
+    {
+        EXPECT_EQ(pRingBuffer -> getPostInc(), i);
+    }
+    EXPECT_EQ(pRingBuffer -> getReadIdx(), 0);
+}
+
+// Test get number of values in ring buffer
+TEST_F(CTestRingBuffer, NumValues)
+{
+    EXPECT_EQ(pRingBuffer -> getNumValuesInBuffer(), iBufferLengthInSamples);
+    pRingBuffer -> reset();
+    EXPECT_EQ(pRingBuffer -> getNumValuesInBuffer(), 0);
+}
+
+}
 
 #endif //WITH_TESTS
