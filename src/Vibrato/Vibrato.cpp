@@ -178,6 +178,8 @@ float CVibrato::getParam(VibratoParam_t eParam) const
             return m_fDelayInSamples / m_fSampleRateInSamples;
         case kSampleRate:
             return m_fSampleRateInSamples;
+        case kNumVibratoParams:
+            return kNumVibratoParams;
     }
 }
 /**
