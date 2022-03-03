@@ -1,5 +1,32 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+#include "MUSI6106Config.h"
+
+#include <gtest/gtest.h>
+
+std::string cTestDataDir;
+
+GTEST_API_ int main(int argc, char** argv) {
+    printf("Running main() from %s\n", __FILE__);
+    testing::InitGoogleTest(&argc, argv);
+ 
+    // quick hack for FILE IO test
+    if (argc > 1)
+        cTestDataDir.assign(argv[1]);
+    else
+    {
+        cTestDataDir.assign(CMAKE_SOURCE_DIR);
+        cTestDataDir.append("/src/Tests/TestData/");
+    }
+
+    return RUN_ALL_TESTS();
+}
+
+
+
+
+
+#ifdef UNITTESTPLUSPLUS
 #include <UnitTest++.h>
 #include "TestReporterStdout.h"
 
@@ -13,7 +40,7 @@
 
 #if (!defined(NDEBUG) && defined (GTCMT_WIN32))
     // include exception header
-    #if defined(WITH_FLOATEXCEPTIONS) 
+    #if defined(WITH_FLOATEXCEPTIONS)
         #include <float.h>
     #endif // #ifndef WITHOUT_EXCEPTIONS
 
@@ -87,3 +114,4 @@ int main(int argc, char* argv[])
     }
 }
 
+#endif // UNITTESTPLUSPLUS
