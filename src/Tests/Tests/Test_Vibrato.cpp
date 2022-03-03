@@ -113,7 +113,6 @@ TEST_F(CTestVibrato, ModAmpZero)
     // e.g., you can use the "VibratoData" contents
     pVibrato -> reset();
 
-    fMaxWidthSecs = 0.1;
     fModWidth = 0;
 
     pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
@@ -141,7 +140,6 @@ TEST_F(CTestVibrato, DCEqual)
 
     pVibrato -> reset();
 
-    fMaxWidthSecs = 0.1;
     fModWidth = 0.05;
 
     pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
@@ -197,7 +195,6 @@ TEST_F(CTestVibrato, ZeroInput)
     
     pVibrato -> reset();
     
-    fMaxWidthSecs = 0.1;
     fModWidth = 0.05;
     
     pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
@@ -208,6 +205,25 @@ TEST_F(CTestVibrato, ZeroInput)
     {
         CHECK_ARRAY_CLOSE(ppfAudioData[i], ppfOutputData[i], iBlockSize, 1e-3F);
     }
+}
+
+// Zero input signal.
+TEST_F(CTestVibrato, InvalidInputs)
+{
+    
+    pVibrato -> reset();
+    
+    // negative inputs
+    fModWidth = -0.05;
+    fModFreq = -10;
+    
+    EXPECT_EQ(pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels), Error_t::kFunctionInvalidArgsError);
+    
+    // mod width larger than max width
+    fModWidth = 1;
+    fModFreq = 10;
+
+    EXPECT_EQ(pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels), Error_t::kFunctionInvalidArgsError);
 }
 
 class CTestRingBuffer : public testing::Test
