@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: Content Moved</title>
+<title>MUSI6106: MUSI6106</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,15 +40,51 @@ $(function() {
 <div id="main-nav"></div>
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">Content Moved </div></div>
+  <div class="headertitle"><div class="title">MUSI6106 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__github_workspace_3rdparty_googletest_googlemock_docs_README"></a> We are working on updates to the GoogleTest documentation, which has moved to the top-level <a href="../../docs">docs</a> directory. </p>
+<div class="textblock"><p ><a class="anchor" id="md__github_workspace_README"></a> <img src="https://img.shields.io/github/languages/top/alexanderlerch/2022-MUSI6106" alt="GitHub top language" class="inline"/> <img src="https://img.shields.io/github/issues-raw/alexanderlerch/2022-MUSI6106" alt="GitHub issues" class="inline"/> <img src="https://img.shields.io/github/last-commit/alexanderlerch/2022-MUSI6106" alt="GitHub last commit" class="inline"/> <a href="https://github.com/alexanderlerch/2022-MUSI6106/actions/workflows/cmake.yml"><img src="https://github.com/alexanderlerch/2022-MUSI6106/actions/workflows/cmake.yml/badge.svg" alt="Tests" style="pointer-events: none;" class="inline"/></a> <img src="https://img.shields.io/github/license/alexanderlerch/2022-MUSI6106" alt="GitHub" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+MUSI6106 2022: Audio Software Engineering</h1>
+<p >Template project for assignments and exercises for the class MUSI6106</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Project Structure</h2>
+<div class="fragment"><div class="line">|_ 3rdparty: (3rd party dependencies)</div>
+<div class="line">  |_ Fft: simple Fft library</div>
+<div class="line">  |_ sndlib: sndfile library (3rdparty with ugly code and lots of warnings)</div>
+<div class="line">  |_ googletest: googletest framework</div>
+<div class="line">|_ cmake.modules: (cmake scripts)</div>
+<div class="line">|_ inc: global headers</div>
+<div class="line">|_ src: source code</div>
+<div class="line">  |_ AudioFileIO: library wrapping sndfile (3rdparty)</div>
+<div class="line">  |_ CombFilter: combfilter library (assignment 1)</div>
+<div class="line">  |_ inc: internal headers</div>
+<div class="line">  |_ MUSI6106Exec: code for executable binary</div>
+<div class="line">  |_ Tests: all code related to tests</div>
+<div class="line">    |_ TestData: data for specific tests possibly requiring data</div>
+<div class="line">    |_ TestExec: test executable</div>
+<div class="line">    |_ Tests: individual test implementations (one file per target)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+Creating the Project Files with CMake</h2>
+<p >The project files are generated through <a href="https://www.cmake.org">CMake</a>. Using the latest CMake GUI,</p><ul>
+<li>point the source code directory to the top-level project directly, then</li>
+<li>set the build directory to some directory you like (suggestion: sourcedir/bld),</li>
+<li>hit 'Configure' button until nothing is red, then</li>
+<li>'Generate' the project and open it with your IDE. In case there are any problems, try clearing the cache first.</li>
+</ul>
+<p >On the command line, try from the sourcedir</p>
+<div class="fragment"><div class="line">cmake -B ./bld/ -DCMAKE_BUILD_TYPE=DEBUG</div>
+<div class="line">cmake --build ./bld/ --config Debug</div>
+</div><!-- fragment --><p> Enable <code>WITH_TESTS</code> to build with GTest support and <code>WITH_DOXYGENTARGET</code> to add a target for creating a doxygen documentation for your project.</p>
+<p >If new files are added, clear the cache and rerun configuration and generation.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Documentation</h2>
+<p >The automatically generated doxygen documentation can be found at <a href="https://alexanderlerch.github.io/2022-MUSI6106">https://alexanderlerch.github.io/2022-MUSI6106</a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:11 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Fri Mar 4 2022 19:52:40 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

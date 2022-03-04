@@ -1,10 +1,6 @@
-<map id="_sndlib.h" name="_sndlib.h">
-<area shape="rect" id="node1" title=" " alt="" coords="245,5,319,32"/>
-<area shape="rect" id="node2" href="$a00086.html" title=" " alt="" coords="5,80,100,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="159,229,245,256"/>
-<area shape="rect" id="node4" title=" " alt="" coords="385,155,445,181"/>
-<area shape="rect" id="node5" href="$a00077.html" title=" " alt="" coords="285,80,351,107"/>
-<area shape="rect" id="node7" href="$a00071.html" title=" " alt="" coords="176,155,228,181"/>
-<area shape="rect" id="node8" href="$a00083.html" title=" " alt="" coords="470,155,521,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="304,155,361,181"/>
+<map id="CCombFilterFir" name="CCombFilterFir">
+<area shape="rect" id="node1" title="FIR comb filter implementation." alt="" coords="13,1013,148,1120"/>
+<area shape="rect" id="node2" href="$a00097.html" title="base class for the comb filter (FIR &amp; IIR)" alt="" coords="5,755,156,964"/>
+<area shape="rect" id="node3" href="$a00117.html" title=" " alt="" coords="12,380,149,692"/>
+<area shape="rect" id="node4" href="$a00117.html" title="implement a circular buffer of type T" alt="" coords="20,5,141,317"/>
 </map>

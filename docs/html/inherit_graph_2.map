@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$a00336.html" title="base class for the comb filter (FIR &amp; IIR)" alt="" coords="5,31,129,57"/>
-<area shape="rect" id="node2" href="$a00340.html" title="FIR comb filter implementation." alt="" coords="177,5,287,32"/>
-<area shape="rect" id="node3" href="$a00344.html" title="IIR comb filter implementation." alt="" coords="179,56,285,83"/>
+<area shape="rect" id="node1" href="$a00097.html" title="base class for the comb filter (FIR &amp; IIR)" alt="" coords="5,31,129,57"/>
+<area shape="rect" id="node2" href="$a00101.html" title="FIR comb filter implementation." alt="" coords="177,5,287,32"/>
+<area shape="rect" id="node3" href="$a00105.html" title="IIR comb filter implementation." alt="" coords="179,56,285,83"/>
 </map>
