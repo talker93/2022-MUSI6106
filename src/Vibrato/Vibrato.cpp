@@ -47,8 +47,8 @@ Error_t CVibrato::init(float fDelayInS, float fSampleRateInHz, float fModWidthIn
     
     if (fDelayInS <= 0 ||
         fSampleRateInHz <= 0 ||
-        fModWidthInS <= 0 ||
-        fModFreqInHz <= 0 ||
+        fModWidthInS <= 0 || fModWidthInS > fDelayInS ||
+        fModFreqInHz <= 0 || fModFreqInHz > fSampleRateInHz ||
         iNumChannels <=0) {
         return Error_t::kFunctionInvalidArgsError;
     }
