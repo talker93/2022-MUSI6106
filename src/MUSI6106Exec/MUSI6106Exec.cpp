@@ -40,12 +40,6 @@ int main(int argc, char* argv[])
     // parse command line arguments
     // arguments should be in this sequence: (input_file_path output_file_path sample_rate mod_frequency mod_delay mod_width)
     
-    sInPath = argv[1];
-    fSampleRate = atof(argv[2]);
-    fModFreq = atof(argv[3]);
-    fDelay = atof(argv[4]);
-    fWidth = atof(argv[5]);
-    
     if(argc < 6) {
         cout << "missing some arguments" << endl;
     }
@@ -81,11 +75,11 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // init the vibrato
     CVibrato::create(pVibrato);
-    pVibrato->init(fSampleRate, fModFreq, fDelay, sFileSpec.iNumChannels);
-    
+    pVibrato->init(fDelay, sFileSpec.fSampleRateInHz, fWidth, fModFreq, sFileSpec.iNumChannels);
+
     // Set parameters of vibrato
-    pVibrato->setParam(CVibrato::kParamWidth, fWidth);
-    pVibrato->setParam(CVibrato::kParamModFreq, fModFreq);
+//    pVibrato->setParam(CVibrato::kParamWidth, fWidth);
+//    pVibrato->setParam(CVibrato::kParamModFreq, fModFreq);
     
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory

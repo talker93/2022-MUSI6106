@@ -39,12 +39,13 @@ public:
     int                 iBlockSize = 1024;
     float               fModFreq = 10;
     float               fModWidth = 0.05;
+    float               fDelay = 0.05;
     
     void SetUp() override
     {
         CVibrato::create(pVibrato);
 
-        pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
+        pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
         
         ppfAudioData  = new float*[iNumChannels];
         ppfOutputData = new float*[iNumChannels];
@@ -115,7 +116,7 @@ TEST_F(CTestVibrato, ModAmpZero)
 
     fModWidth = 0;
 
-    pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
 
     testProcess(ppfOutputData, iBlockSize);
 
@@ -142,7 +143,7 @@ TEST_F(CTestVibrato, DCEqual)
 
     fModWidth = 0.05;
 
-    pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
 
     testProcess(ppfOutputData, iBlockSize);
 
@@ -171,7 +172,7 @@ TEST_F(CTestVibrato, VaryBlockSize)
     
     pVibrato -> reset();
     
-    pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
     
     testProcess(ppfOutputData, iBlockSize);
     testProcess(ppfOutBlock, 459);
@@ -197,7 +198,7 @@ TEST_F(CTestVibrato, ZeroInput)
     
     fModWidth = 0.05;
     
-    pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels);
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
     
     testProcess(ppfOutputData, iBlockSize);
     
@@ -217,13 +218,13 @@ TEST_F(CTestVibrato, InvalidInputs)
     fModWidth = -0.05;
     fModFreq = -10;
     
-    EXPECT_EQ(pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels), Error_t::kFunctionInvalidArgsError);
+    EXPECT_EQ(pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels), Error_t::kFunctionInvalidArgsError);
     
     // mod width larger than max width
     fModWidth = 1;
     fModFreq = 10;
 
-    EXPECT_EQ(pVibrato -> CVibrato::init(fSampleRate, fModFreq, fModWidth, iNumChannels), Error_t::kFunctionInvalidArgsError);
+    EXPECT_EQ(pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels), Error_t::kFunctionInvalidArgsError);
 }
 
 class CTestRingBuffer : public testing::Test

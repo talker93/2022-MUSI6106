@@ -55,7 +55,7 @@ public:
     {
         float fLfo = m_pCRingBuffer->get(m_fRead);
         
-        m_fRead = m_fRead + m_fModFreq * m_iBufferLength;
+        m_fRead = m_fRead + 1;
         
         if (m_fRead >= m_iBufferLength) {
             m_fRead -= m_iBufferLength;
