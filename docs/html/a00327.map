@@ -1,0 +1,5 @@
+<map id="CAudioFileIf" name="CAudioFileIf">
+<area shape="rect" id="node1" title="open, read, and write audio files" alt="" coords="67,5,249,655"/>
+<area shape="rect" id="node2" href="$a00320.html" title="open, read, and write raw audio files in 16 bit integer little endian format." alt="" coords="5,703,143,1015"/>
+<area shape="rect" id="node3" href="$a00324.html" title="open, read, and write audio files with sndlib (CMake option WITH_SNDLIB has to be ON)" alt="" coords="167,703,319,1015"/>
+</map>
