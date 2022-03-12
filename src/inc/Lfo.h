@@ -1,88 +1,91 @@
 #if !defined(__Lfo_hdr__)
 #define __Lfo_hdr__
 
-#define _USE_MATH_DEFINES
 #include <math.h>
-
 #include "ErrorDef.h"
 #include "Synthesis.h"
 #include "RingBuffer.h"
 
-class CLfo
-{
+#include <iostream>
+using namespace::std;
+
+
+class CLfo {
 public:
-    CLfo(float fModFreq, float fSampleRate)
-    {
-        m_pCRingBuffer = 0;
-        m_fRead = 0;
-        m_fModFreq = fModFreq;
-        m_fSampleRate = fSampleRate;
-        if (m_fModFreq == 0) {
-            m_iBufferLength = 1;
-        } else {
-            m_iBufferLength = static_cast<int>(1 / m_fModFreq);
+    static Error_t create (CLfo*& pCLfo) {
+        pCLfo = new CLfo();
+        if (!pCLfo) {
+            return Error_t::kUnknownError;
         }
-        m_pCRingBuffer = new CRingBuffer<float>(m_iBufferLength);
-    }
-    
-    ~CLfo()
-    {
-        delete m_pCRingBuffer;
-        m_pCRingBuffer = 0;
-    }
-    
-    Error_t setParam(float fParamValue)
-    {
-        m_fModFreq = fParamValue;
-        float *pSine = new float [m_iBufferLength];
-        
-        if (m_fModFreq == 0) {
-            m_iBufferLength = 1;
-        }
-        else {
-            m_iBufferLength = static_cast<int>(1 / m_fModFreq);
-        }
-        
-        CSynthesis::generateSine(pSine, m_fModFreq * m_fSampleRate, m_fSampleRate, m_iBufferLength);
-        m_pCRingBuffer-> putPostInc(pSine, m_iBufferLength);
-        delete [] pSine;
-        
         return Error_t::kNoError;
     }
     
-    //return current values
-    float returnLfoVal()
-    {
-        float fLfo = m_pCRingBuffer->get(m_fRead);
-        
-        m_fRead = m_fRead + 1;
-        
-        if (m_fRead >= m_iBufferLength) {
-            m_fRead -= m_iBufferLength;
+    static Error_t destroy (CLfo*& pCLfo) {
+        if (!pCLfo) {
+            return Error_t::kUnknownError;
         }
-        
-        return fLfo;
-        
+        pCLfo -> reset();
+        delete pCLfo;
+        pCLfo = 0;
+        return Error_t::kNoError;
     }
     
-    void process()
-    {
-        float *pSine = new float [m_iBufferLength];
-        
-        CSynthesis::generateSine(pSine, m_fModFreq * m_fSampleRate, m_fSampleRate, m_iBufferLength);
-        
-        m_pCRingBuffer-> putPostInc(pSine, m_iBufferLength);
-        
-        delete [] pSine;
+    Error_t init (float fModFreqRatio, float fSampleRate) {
+        this -> reset();
+        if (fModFreqRatio <= 0 || fSampleRate <= 0) {
+            return Error_t::kFunctionInvalidArgsError;
+        }
+        m_bIsInitialized = true;
+        m_fModFreqRatio = fModFreqRatio;
+        m_fSampleRate = fSampleRate;
+        m_iWaveLength = static_cast<int>(1/fModFreqRatio);
+        m_pSine = new float [m_iWaveLength];
+        m_pRingBuffer = new CRingBuffer<float>(m_iWaveLength);
+        return Error_t::kNoError;
+    }
+    
+    Error_t reset () {
+        if (m_bIsInitialized == true) {
+            delete m_pRingBuffer;
+            m_pRingBuffer = 0;
+            delete [] m_pSine;
+            m_pSine = 0;
+        }
+        m_fSampleRate = 0;
+        m_fModFreqRatio = 0;
+        m_bIsInitialized = false;
+        return Error_t::kNoError;
+    }
+    
+    Error_t generate () {
+        CSynthesis::generateSine(m_pSine, m_fModFreqRatio * m_fSampleRate, m_fSampleRate, m_iWaveLength);
+        m_pRingBuffer -> putPostInc(m_pSine, m_iWaveLength);
+    }
+    
+    float getValue () {
+        return m_pRingBuffer -> getPostInc();
+    }
+    
+    CLfo () {
+        m_bIsInitialized = false;
+        m_pRingBuffer = 0;
+        m_pSine = 0;
+        m_fSampleRate = 0;
+        m_fModFreqRatio = 0;
+        this -> reset ();
+    }
+    
+    virtual ~CLfo () {
+        this -> reset();
     }
     
 private:
-    
-    int                             m_iBufferLength;
-    float                           m_fSampleRate;
-    float                           m_fRead;
-    float                           m_fModFreq;
-    CRingBuffer<float>              *m_pCRingBuffer;
+    CRingBuffer<float>  *m_pRingBuffer;
+    float               *m_pSine;
+    bool                m_bIsInitialized;
+    float               m_fSampleRate;
+    float               m_fModFreqRatio;
+    int                 m_iWaveLength;
 };
 
 #endif // __Lfo_hdr__

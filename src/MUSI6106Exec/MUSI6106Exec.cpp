@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
     CAudioFileIf    *phOutputFile = 0;
     CAudioFileIf::FileSpec_t sFileSpec;
     CVibrato        *pVibrato = 0;
+    // this one equals to: CVibrato *pVibrato; pVibrato = 0;
     clock_t         time = 0;
     static const int kBlockSize = 1024;
     long long iNumFrames = kBlockSize;
@@ -38,10 +39,12 @@ int main(int argc, char* argv[])
     
     //////////////////////////////////////////////////////////////////////////////
     // parse command line arguments
-    // arguments should be in this sequence: (input_file_path output_file_path sample_rate mod_frequency mod_delay mod_width)
+    // arguments should be in this sequence: (input_file_path sample_rate mod_frequency mod_delay mod_width)
     
     if(argc < 6) {
         cout << "missing some arguments" << endl;
+        cout << "Usage: <input_path> <sample_rate> <mod_frequency> <delay> <mod_width>" << endl;
+        cout << "Example: ./sweep.wav 48000 1000 0.001 0.001" << endl;
     }
     else {
         sInPath = argv[1];
@@ -75,11 +78,16 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // init the vibrato
     CVibrato::create(pVibrato);
-    pVibrato->init(fDelay, sFileSpec.fSampleRateInHz, fWidth, fModFreq, sFileSpec.iNumChannels);
+    pVibrato->init(fDelay, fSampleRate, fWidth, fModFreq, sFileSpec.iNumChannels);
 
-    // Set parameters of vibrato
-//    pVibrato->setParam(CVibrato::kParamWidth, fWidth);
-//    pVibrato->setParam(CVibrato::kParamModFreq, fModFreq);
+    // Set parameters of vibrato, try it if you want
+//    pVibrato->setParam(CVibrato::kParamModFreq, 10);
+    
+    // get parameter values
+    cout << "basic delay: " << pVibrato->getParam(CVibrato::kParamDelay) << endl;
+    cout << "mod freq: " << pVibrato->getParam(CVibrato::kParamModFreq) << endl;
+    cout << "mod width: " << pVibrato->getParam(CVibrato::kParamModWidth) << endl;
+    cout << "sample rate: " << pVibrato->getParam(CVibrato::kParamSampleRate) << endl;
     
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory

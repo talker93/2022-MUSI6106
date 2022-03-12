@@ -10,6 +10,15 @@
 
 class CVibrato {
 public:
+    /*! version number*/
+    enum Version_t {
+        kMajor,             //!< major version number
+        kMinor,             //!< minor version number
+        kPatch,             //!< patch version number
+        
+        kNumVersionInts
+    };
+    
     /*!list of parameters for vibrato*/
     enum VibratoParam_t {
         kParamModFreq,          //!< ModFrequency
@@ -19,6 +28,17 @@ public:
         
         kNumFilterParams
     };
+    
+    /*! returns the current project version
+     \param eVersionIdx specifies what version to return (kMajor, kMinor, ...)
+     \return const int
+     */
+    static const int getVersion (const Version_t eVersionIdx);
+    
+    /*! returns the date of the build
+     \return const char*
+     */
+    static const char* getBuildDate ();
     
     /*！open a new instance for vibrato
     \param pCVibrato
@@ -51,7 +71,15 @@ public:
      \param eParam
      \return Error_t
      */
-    Error_t setParam (VibratoParam_t eParam) const;
+    Error_t setParam (VibratoParam_t eParam, float fParamValue);
+    
+    /*! processes one block of audio
+     \param ppfInputBuffer input buffer [numChannels][iNumberOfFrames]
+     \param ppfOutputBuffer output buffer [numChannels][iNumberOfFrames]
+     \param iNumberOfFrames buffer length (per channel)
+     \return Error_t
+     */
+    float getParam(VibratoParam_t eParam) const;
     
     /*! process one block of audio
      \param ppfInputBuffer input buffer [numChannels][iNumberOfFrames]
