@@ -55,3 +55,6 @@ bld
 /2022-MUSI6106-cppcheck-build-dir
 /src/*.bak
 /build/inc
+
+# Media
+*.wav
