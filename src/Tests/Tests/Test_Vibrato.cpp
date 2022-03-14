@@ -163,6 +163,8 @@ TEST_F(CTestVibrato, DCEqual)
 // Varying input block size.
 TEST_F(CTestVibrato, VaryBlockSize)
 {
+    int testBlockSize = 459;
+    
     float** ppfOutBlock  = new float*[iNumChannels];
     
     for (int i = 0; i < iNumChannels; i++)
@@ -175,15 +177,81 @@ TEST_F(CTestVibrato, VaryBlockSize)
     pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
     
     testProcess(ppfOutputData, iBlockSize);
-    testProcess(ppfOutBlock, 459);
+    
+    pVibrato -> reset();
+
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
+    testProcess(ppfOutBlock, testBlockSize);
     
     for (int i = 0; i < iNumChannels; i++)
     {
-        CHECK_ARRAY_CLOSE(ppfOutBlock[i], ppfOutputData[i], iBlockSize, 1e-3F);
+        CHECK_ARRAY_CLOSE(ppfOutBlock[i], ppfOutputData[i], testBlockSize, 1e-3F);
         delete[] ppfOutBlock[i];
     }
-    
     delete[] ppfOutBlock;
+    
+    // Second block size
+    
+    testBlockSize = 277;
+    
+    ppfOutBlock  = new float*[iNumChannels];
+
+    for (int i = 0; i < iNumChannels; i++)
+    {
+        ppfOutBlock[i] = new float[iBlockSize];
+    }
+
+    pVibrato -> reset();
+
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
+
+    testProcess(ppfOutputData, iBlockSize);
+
+    pVibrato -> reset();
+
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
+    
+    testProcess(ppfOutBlock, testBlockSize);
+
+    for (int i = 0; i < iNumChannels; i++)
+    {
+        CHECK_ARRAY_CLOSE(ppfOutBlock[i], ppfOutputData[i], testBlockSize, 1e-3F);
+        delete[] ppfOutBlock[i];
+    }
+
+    delete[] ppfOutBlock;
+    
+    // Third block size
+    
+    testBlockSize = 883;
+    
+    ppfOutBlock  = new float*[iNumChannels];
+
+    for (int i = 0; i < iNumChannels; i++)
+    {
+        ppfOutBlock[i] = new float[iBlockSize];
+    }
+
+    pVibrato -> reset();
+
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
+
+    testProcess(ppfOutputData, iBlockSize);
+
+    pVibrato -> reset();
+
+    pVibrato -> CVibrato::init(fDelay, fSampleRate, fModWidth, fModFreq, iNumChannels);
+    
+    testProcess(ppfOutBlock, testBlockSize);
+
+    for (int i = 0; i < iNumChannels; i++)
+    {
+        CHECK_ARRAY_CLOSE(ppfOutBlock[i], ppfOutputData[i], testBlockSize, 1e-3F);
+        delete[] ppfOutBlock[i];
+    }
+
+    delete[] ppfOutBlock;
+    
 }
 
 // Zero input signal.
@@ -286,7 +354,8 @@ TEST_F(CTestRingBuffer, GetWrapAround)
 // Test get number of values in ring buffer
 TEST_F(CTestRingBuffer, NumValues)
 {
-    EXPECT_EQ(pRingBuffer -> getNumValuesInBuffer(), iBufferLengthInSamples);
+    pRingBuffer -> getPostInc();
+    EXPECT_EQ(pRingBuffer -> getNumValuesInBuffer(), iBufferLengthInSamples-1);
     pRingBuffer -> reset();
     EXPECT_EQ(pRingBuffer -> getNumValuesInBuffer(), 0);
 }
