@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: gtest-typed-test_test.h Source File</title>
+<title>MUSI6106: sample1.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,15 +40,15 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_f12498a9b3b01f7557dfe344f3ca0a3a.html">googletest</a></li><li class="navelem"><a class="el" href="dir_b0bc461411f317819f83da89819c0369.html">googletest</a></li><li class="navelem"><a class="el" href="dir_0b2fbaaab97f92f4905b3fa17a0b09ea.html">test</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_f12498a9b3b01f7557dfe344f3ca0a3a.html">googletest</a></li><li class="navelem"><a class="el" href="dir_b0bc461411f317819f83da89819c0369.html">googletest</a></li><li class="navelem"><a class="el" href="dir_c22799770fa9b75926bb02c09cbfb424.html">samples</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">gtest-typed-test_test.h</div></div>
+  <div class="headertitle"><div class="title">sample1.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00242.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2008 Google Inc.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// All Rights Reserved.</span></div>
+<a href="a00242.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2005, Google Inc.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modification, are permitted provided that the following conditions are</span></div>
@@ -76,48 +76,24 @@ $(function() {
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef GOOGLETEST_TEST_GTEST_TYPED_TEST_TEST_H_</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define GOOGLETEST_TEST_GTEST_TYPED_TEST_TEST_H_</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="a00248.html">gtest/gtest.h</a>&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// A sample program demonstrating using Google C++ testing framework.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifndef GOOGLETEST_SAMPLES_SAMPLE1_H_</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define GOOGLETEST_SAMPLES_SAMPLE1_H_</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">using</span> <a class="code hl_class" href="a00800.html">testing::Test</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// For testing that the same type-parameterized test case can be</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// instantiated in different translation units linked together.</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// ContainerTest will be instantiated in both gtest-typed-test_test.cc</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// and gtest-typed-test2_test.cc.</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a01320.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="a01320.html">ContainerTest</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00800.html">Test</a> {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="a00242.html#aa8a11e8e3b38b32458ba20dd42300eea">   46</a></span><a class="code hl_function" href="a00242.html#aa8a11e8e3b38b32458ba20dd42300eea">TYPED_TEST_SUITE_P</a>(<a class="code hl_class" href="a01320.html">ContainerTest</a>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00242.html#a4ee3f2daf2d553976058f93b9a609ff9">   48</a></span><a class="code hl_function" href="a00242.html#a4ee3f2daf2d553976058f93b9a609ff9">TYPED_TEST_P</a>(<a class="code hl_class" href="a01320.html">ContainerTest</a>, CanBeDefaultConstructed) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  TypeParam container;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00242.html#a9857524d887d69af0daadb9284b9949c">   52</a></span><a class="code hl_function" href="a00242.html#a4ee3f2daf2d553976058f93b9a609ff9">TYPED_TEST_P</a>(<a class="code hl_class" href="a01320.html">ContainerTest</a>, InitialSizeIsZero) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  TypeParam container;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_define" href="a00248.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(0U, container.size());</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="a00242.html#a7658a5e3a8a0f27dd9591a95f2d22bc1">   57</a></span><a class="code hl_function" href="a00242.html#a7658a5e3a8a0f27dd9591a95f2d22bc1">REGISTER_TYPED_TEST_SUITE_P</a>(<a class="code hl_class" href="a01320.html">ContainerTest</a>,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                            CanBeDefaultConstructed, InitialSizeIsZero);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif  </span><span class="comment">// GOOGLETEST_TEST_GTEST_TYPED_TEST_TEST_H_</span></div>
-<div class="ttc" id="aa00242_html_a4ee3f2daf2d553976058f93b9a609ff9"><div class="ttname"><a href="a00242.html#a4ee3f2daf2d553976058f93b9a609ff9">TYPED_TEST_P</a></div><div class="ttdeci">TYPED_TEST_P(ContainerTest, CanBeDefaultConstructed)</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00048">gtest-typed-test_test.h:48</a></div></div>
-<div class="ttc" id="aa00242_html_a7658a5e3a8a0f27dd9591a95f2d22bc1"><div class="ttname"><a href="a00242.html#a7658a5e3a8a0f27dd9591a95f2d22bc1">REGISTER_TYPED_TEST_SUITE_P</a></div><div class="ttdeci">REGISTER_TYPED_TEST_SUITE_P(ContainerTest, CanBeDefaultConstructed, InitialSizeIsZero)</div></div>
-<div class="ttc" id="aa00242_html_aa8a11e8e3b38b32458ba20dd42300eea"><div class="ttname"><a href="a00242.html#aa8a11e8e3b38b32458ba20dd42300eea">TYPED_TEST_SUITE_P</a></div><div class="ttdeci">TYPED_TEST_SUITE_P(ContainerTest)</div></div>
-<div class="ttc" id="aa00248_html"><div class="ttname"><a href="a00248.html">gtest.h</a></div></div>
-<div class="ttc" id="aa00248_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="a00248.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l02050">gtest.h:2050</a></div></div>
-<div class="ttc" id="aa00800_html"><div class="ttname"><a href="a00800.html">testing::Test</a></div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00417">gtest.h:417</a></div></div>
-<div class="ttc" id="aa01320_html"><div class="ttname"><a href="a01320.html">ContainerTest</a></div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00043">gtest-typed-test_test.h:43</a></div></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// Returns n! (the factorial of n).  For negative n, n! is defined to be 1.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00242.html#a0e7da4d7a69c5b5afb707807aa177017">   36</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="a00242.html#a0e7da4d7a69c5b5afb707807aa177017">Factorial</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// Returns true if and only if n is a prime number.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00242.html#a7093217f5edc11fe277d03bd064e5f11">   39</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="a00242.html#a7093217f5edc11fe277d03bd064e5f11">IsPrime</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif  </span><span class="comment">// GOOGLETEST_SAMPLES_SAMPLE1_H_</span></div>
+<div class="ttc" id="aa00242_html_a0e7da4d7a69c5b5afb707807aa177017"><div class="ttname"><a href="a00242.html#a0e7da4d7a69c5b5afb707807aa177017">Factorial</a></div><div class="ttdeci">int Factorial(int n)</div></div>
+<div class="ttc" id="aa00242_html_a7093217f5edc11fe277d03bd064e5f11"><div class="ttname"><a href="a00242.html#a7093217f5edc11fe277d03bd064e5f11">IsPrime</a></div><div class="ttdeci">bool IsPrime(int n)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:08 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:28 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

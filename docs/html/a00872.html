@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::ScopedTrace Class Reference</title>
+<title>MUSI6106: testing::internal::EqHelper Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,55 +40,203 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00872.html">ScopedTrace</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a00872.html">EqHelper</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a00869.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::ScopedTrace Class Reference</div></div>
+  <div class="headertitle"><div class="title">testing::internal::EqHelper Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00248_source.html">gtest.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00260_source.html">gtest.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::ScopedTrace:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::EqHelper:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00870.png" border="0" usemap="#atesting_1_1ScopedTrace_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1ScopedTrace_coll__map" id="atesting_1_1ScopedTrace_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,197,171"/>
+<div class="center"><img src="a00870.png" border="0" usemap="#atesting_1_1internal_1_1EqHelper_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1EqHelper_coll__map" id="atesting_1_1internal_1_1EqHelper_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,120,127"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a2da90b95d682d518cca472934d53c59c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2da90b95d682d518cca472934d53c59c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00872.html#a2da90b95d682d518cca472934d53c59c">ScopedTrace</a> (const char *file, int line, const T &amp;message)</td></tr>
-<tr class="separator:a2da90b95d682d518cca472934d53c59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accd2a06cc941ffd7d6fe109adfdb4f19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00872.html#accd2a06cc941ffd7d6fe109adfdb4f19">ScopedTrace</a> (const char *file, int line, const char *message)</td></tr>
-<tr class="separator:accd2a06cc941ffd7d6fe109adfdb4f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f453a2aade0db6955a111a7cb329615"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00872.html#a1f453a2aade0db6955a111a7cb329615">ScopedTrace</a> (const char *file, int line, const std::string &amp;message)</td></tr>
-<tr class="separator:a1f453a2aade0db6955a111a7cb329615"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8320ec2679f205cf2c14f508ba35b4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00872.html#aa8320ec2679f205cf2c14f508ba35b4d">~ScopedTrace</a> ()</td></tr>
-<tr class="separator:aa8320ec2679f205cf2c14f508ba35b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a905304c342012d6ae1493a1ad3b62255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00872.html#a905304c342012d6ae1493a1ad3b62255">PushTrace</a> (const char *file, int line, std::string message)</td></tr>
-<tr class="separator:a905304c342012d6ae1493a1ad3b62255"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed447fe36b38f99ace904ed52c206eb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00872.html#aed447fe36b38f99ace904ed52c206eb0">GTEST_DISALLOW_COPY_AND_ASSIGN_</a> (<a class="el" href="a00872.html">ScopedTrace</a>)</td></tr>
-<tr class="separator:aed447fe36b38f99ace904ed52c206eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aa5ee2dafddce2496d73ba13fd34bb981"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename std::enable_if&lt;!std::is_integral&lt; T1 &gt;::value||!std::is_pointer&lt; T2 &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
+<tr class="memitem:aa5ee2dafddce2496d73ba13fd34bb981"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="a00816.html">AssertionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00872.html#aa5ee2dafddce2496d73ba13fd34bb981">Compare</a> (const char *lhs_expression, const char *rhs_expression, const T1 &amp;lhs, const T2 &amp;rhs)</td></tr>
+<tr class="separator:aa5ee2dafddce2496d73ba13fd34bb981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e402f6e00be1486d0f102e9f1bc931"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00816.html">AssertionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00872.html#af7e402f6e00be1486d0f102e9f1bc931">Compare</a> (const char *lhs_expression, const char *rhs_expression, <a class="el" href="a00322.html#a401a4a0aa297cd335eea7f641e6c931c">BiggestInt</a> lhs, <a class="el" href="a00322.html#a401a4a0aa297cd335eea7f641e6c931c">BiggestInt</a> rhs)</td></tr>
+<tr class="separator:af7e402f6e00be1486d0f102e9f1bc931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5cac2c28545dfa0688849e205f54bec"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af5cac2c28545dfa0688849e205f54bec"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="a00816.html">AssertionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00872.html#af5cac2c28545dfa0688849e205f54bec">Compare</a> (const char *lhs_expression, const char *rhs_expression, std::nullptr_t, T *rhs)</td></tr>
+<tr class="separator:af5cac2c28545dfa0688849e205f54bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00248_source.html#l02238">2238</a> of file <a class="el" href="a00248_source.html">gtest.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2da90b95d682d518cca472934d53c59c" name="a2da90b95d682d518cca472934d53c59c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2da90b95d682d518cca472934d53c59c">&#9670;&nbsp;</a></span>ScopedTrace() <span class="overload">[1/3]</span></h2>
+<p class="definition">Definition at line <a class="el" href="a00260_source.html#l01559">1559</a> of file <a class="el" href="a00260_source.html">gtest.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af7e402f6e00be1486d0f102e9f1bc931" name="af7e402f6e00be1486d0f102e9f1bc931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e402f6e00be1486d0f102e9f1bc931">&#9670;&nbsp;</a></span>Compare() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00816.html">AssertionResult</a> testing::internal::EqHelper::Compare </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>lhs_expression</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>rhs_expression</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00322.html#a401a4a0aa297cd335eea7f641e6c931c">BiggestInt</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00322.html#a401a4a0aa297cd335eea7f641e6c931c">BiggestInt</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00260_source.html#l01580">1580</a> of file <a class="el" href="a00260_source.html">gtest.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1583</span>                                                 {</div>
+<div class="line"><span class="lineno"> 1584</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a00322.html#a4638c74d9b32e971f9b321af6fafc2f1">CmpHelperEQ</a>(lhs_expression, rhs_expression, lhs, rhs);</div>
+<div class="line"><span class="lineno"> 1585</span>  }</div>
+<div class="ttc" id="aa00322_html_a4638c74d9b32e971f9b321af6fafc2f1"><div class="ttname"><a href="a00322.html#a4638c74d9b32e971f9b321af6fafc2f1">testing::internal::CmpHelperEQ</a></div><div class="ttdeci">AssertionResult CmpHelperEQ(const char *lhs_expression, const char *rhs_expression, const T1 &amp;lhs, const T2 &amp;rhs)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l01548">gtest.h:1548</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00260_source.html#l01548">testing::internal::CmpHelperEQ()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00872_af7e402f6e00be1486d0f102e9f1bc931_cgraph.png" border="0" usemap="#aa00872_af7e402f6e00be1486d0f102e9f1bc931_cgraph" alt=""/></div>
+<map name="aa00872_af7e402f6e00be1486d0f102e9f1bc931_cgraph" id="aa00872_af7e402f6e00be1486d0f102e9f1bc931_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,139,69"/>
+<area shape="rect" href="a00322.html#a4638c74d9b32e971f9b321af6fafc2f1" title=" " alt="" coords="187,27,301,69"/>
+<area shape="rect" href="a00321.html#a74a3d26c1286bd4d7c189c5dff2483ab" title=" " alt="" coords="349,5,523,32"/>
+<area shape="rect" href="a00322.html#a1def8ec9393360a1b34a20528703e7f7" title=" " alt="" coords="364,57,508,98"/>
+<area shape="rect" href="a00322.html#ac61e2ba2cbf259fd6ee5ffd4e49c9445" title=" " alt="" coords="609,21,723,62"/>
+<area shape="rect" href="a00322.html#a91ab078f10adc669f09b7f604975c518" title=" " alt="" coords="571,85,761,141"/>
+<area shape="rect" href="a00752.html#a2aeb688fc55b57abd3021d82eccad896" title=" " alt="" coords="809,85,960,141"/>
+<area shape="rect" href="a00321.html#aa5717bb1144edd1d262d310ba70c82ed" title=" " alt="" coords="1008,100,1151,127"/>
+<area shape="rect" href="a00776.html#a042249cdb42fdb77588c9ad54ea7ed54" title=" " alt="" coords="1199,85,1347,141"/>
+<area shape="rect" href="a00322.html#a30708fa2bacf11895b03bdb21eb72309" title=" " alt="" coords="1395,93,1509,134"/>
+<area shape="rect" href="a00760.html#aecec021e1abbaa260b701e24e3fe33eb" title=" " alt="" coords="1557,93,1705,134"/>
+<area shape="rect" href="a00322.html#adb3c27150dbe661db0e0c4be27533460" title=" " alt="" coords="1753,93,1868,134"/>
+<area shape="rect" href="a00322.html#a5e9f744566e02ba3f811cd51d3b8c4fb" title=" " alt="" coords="1916,93,2040,134"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa5ee2dafddce2496d73ba13fd34bb981" name="aa5ee2dafddce2496d73ba13fd34bb981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ee2dafddce2496d73ba13fd34bb981">&#9670;&nbsp;</a></span>Compare() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 , typename std::enable_if&lt;!std::is_integral&lt; T1 &gt;::value||!std::is_pointer&lt; T2 &gt;::value &gt;::type *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00816.html">AssertionResult</a> testing::internal::EqHelper::Compare </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>lhs_expression</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>rhs_expression</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T1 &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T2 &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00260_source.html#l01568">1568</a> of file <a class="el" href="a00260_source.html">gtest.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1570</span>                                                {</div>
+<div class="line"><span class="lineno"> 1571</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a00322.html#a4638c74d9b32e971f9b321af6fafc2f1">CmpHelperEQ</a>(lhs_expression, rhs_expression, lhs, rhs);</div>
+<div class="line"><span class="lineno"> 1572</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00260_source.html#l01548">testing::internal::CmpHelperEQ()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00872_aa5ee2dafddce2496d73ba13fd34bb981_cgraph.png" border="0" usemap="#aa00872_aa5ee2dafddce2496d73ba13fd34bb981_cgraph" alt=""/></div>
+<map name="aa00872_aa5ee2dafddce2496d73ba13fd34bb981_cgraph" id="aa00872_aa5ee2dafddce2496d73ba13fd34bb981_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,139,69"/>
+<area shape="rect" href="a00322.html#a4638c74d9b32e971f9b321af6fafc2f1" title=" " alt="" coords="187,27,301,69"/>
+<area shape="rect" href="a00321.html#a74a3d26c1286bd4d7c189c5dff2483ab" title=" " alt="" coords="349,5,523,32"/>
+<area shape="rect" href="a00322.html#a1def8ec9393360a1b34a20528703e7f7" title=" " alt="" coords="364,57,508,98"/>
+<area shape="rect" href="a00322.html#ac61e2ba2cbf259fd6ee5ffd4e49c9445" title=" " alt="" coords="609,21,723,62"/>
+<area shape="rect" href="a00322.html#a91ab078f10adc669f09b7f604975c518" title=" " alt="" coords="571,85,761,141"/>
+<area shape="rect" href="a00752.html#a2aeb688fc55b57abd3021d82eccad896" title=" " alt="" coords="809,85,960,141"/>
+<area shape="rect" href="a00321.html#aa5717bb1144edd1d262d310ba70c82ed" title=" " alt="" coords="1008,100,1151,127"/>
+<area shape="rect" href="a00776.html#a042249cdb42fdb77588c9ad54ea7ed54" title=" " alt="" coords="1199,85,1347,141"/>
+<area shape="rect" href="a00322.html#a30708fa2bacf11895b03bdb21eb72309" title=" " alt="" coords="1395,93,1509,134"/>
+<area shape="rect" href="a00760.html#aecec021e1abbaa260b701e24e3fe33eb" title=" " alt="" coords="1557,93,1705,134"/>
+<area shape="rect" href="a00322.html#adb3c27150dbe661db0e0c4be27533460" title=" " alt="" coords="1753,93,1868,134"/>
+<area shape="rect" href="a00322.html#a5e9f744566e02ba3f811cd51d3b8c4fb" title=" " alt="" coords="1916,93,2040,134"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5cac2c28545dfa0688849e205f54bec" name="af5cac2c28545dfa0688849e205f54bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5cac2c28545dfa0688849e205f54bec">&#9670;&nbsp;</a></span>Compare() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -99,22 +247,28 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">testing::ScopedTrace::ScopedTrace </td>
+          <td class="memname">static <a class="el" href="a00816.html">AssertionResult</a> testing::internal::EqHelper::Compare </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
+          <td class="paramname"><em>lhs_expression</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>rhs_expression</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
+          <td class="paramtype">std::nullptr_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -124,206 +278,51 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00248_source.html#l02246">2246</a> of file <a class="el" href="a00248_source.html">gtest.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2246</span>                                                            {</div>
-<div class="line"><span class="lineno"> 2247</span>    <a class="code hl_function" href="a00872.html#a905304c342012d6ae1493a1ad3b62255">PushTrace</a>(file, line, (Message() &lt;&lt; message).GetString());</div>
-<div class="line"><span class="lineno"> 2248</span>  }</div>
-<div class="ttc" id="aa00872_html_a905304c342012d6ae1493a1ad3b62255"><div class="ttname"><a href="a00872.html#a905304c342012d6ae1493a1ad3b62255">testing::ScopedTrace::PushTrace</a></div><div class="ttdeci">void PushTrace(const char *file, int line, std::string message)</div></div>
+<p class="definition">Definition at line <a class="el" href="a00260_source.html#l01588">1588</a> of file <a class="el" href="a00260_source.html">gtest.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1591</span>                              {</div>
+<div class="line"><span class="lineno"> 1592</span>    <span class="comment">// We already know that &#39;lhs&#39; is a null pointer.</span></div>
+<div class="line"><span class="lineno"> 1593</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a00322.html#a4638c74d9b32e971f9b321af6fafc2f1">CmpHelperEQ</a>(lhs_expression, rhs_expression, <span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno"> 1594</span>                       rhs);</div>
+<div class="line"><span class="lineno"> 1595</span>  }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00260_source.html#l01548">testing::internal::CmpHelperEQ()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00872_af5cac2c28545dfa0688849e205f54bec_cgraph.png" border="0" usemap="#aa00872_af5cac2c28545dfa0688849e205f54bec_cgraph" alt=""/></div>
+<map name="aa00872_af5cac2c28545dfa0688849e205f54bec_cgraph" id="aa00872_af5cac2c28545dfa0688849e205f54bec_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,139,69"/>
+<area shape="rect" href="a00322.html#a4638c74d9b32e971f9b321af6fafc2f1" title=" " alt="" coords="187,27,301,69"/>
+<area shape="rect" href="a00321.html#a74a3d26c1286bd4d7c189c5dff2483ab" title=" " alt="" coords="349,5,523,32"/>
+<area shape="rect" href="a00322.html#a1def8ec9393360a1b34a20528703e7f7" title=" " alt="" coords="364,57,508,98"/>
+<area shape="rect" href="a00322.html#ac61e2ba2cbf259fd6ee5ffd4e49c9445" title=" " alt="" coords="609,21,723,62"/>
+<area shape="rect" href="a00322.html#a91ab078f10adc669f09b7f604975c518" title=" " alt="" coords="571,85,761,141"/>
+<area shape="rect" href="a00752.html#a2aeb688fc55b57abd3021d82eccad896" title=" " alt="" coords="809,85,960,141"/>
+<area shape="rect" href="a00321.html#aa5717bb1144edd1d262d310ba70c82ed" title=" " alt="" coords="1008,100,1151,127"/>
+<area shape="rect" href="a00776.html#a042249cdb42fdb77588c9ad54ea7ed54" title=" " alt="" coords="1199,85,1347,141"/>
+<area shape="rect" href="a00322.html#a30708fa2bacf11895b03bdb21eb72309" title=" " alt="" coords="1395,93,1509,134"/>
+<area shape="rect" href="a00760.html#aecec021e1abbaa260b701e24e3fe33eb" title=" " alt="" coords="1557,93,1705,134"/>
+<area shape="rect" href="a00322.html#adb3c27150dbe661db0e0c4be27533460" title=" " alt="" coords="1753,93,1868,134"/>
+<area shape="rect" href="a00322.html#a5e9f744566e02ba3f811cd51d3b8c4fb" title=" " alt="" coords="1916,93,2040,134"/>
+</map>
 </div>
-<a id="accd2a06cc941ffd7d6fe109adfdb4f19" name="accd2a06cc941ffd7d6fe109adfdb4f19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accd2a06cc941ffd7d6fe109adfdb4f19">&#9670;&nbsp;</a></span>ScopedTrace() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">testing::ScopedTrace::ScopedTrace </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00248_source.html#l02251">2251</a> of file <a class="el" href="a00248_source.html">gtest.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2251</span>                                                               {</div>
-<div class="line"><span class="lineno"> 2252</span>    <a class="code hl_function" href="a00872.html#a905304c342012d6ae1493a1ad3b62255">PushTrace</a>(file, line, message ? message : <span class="stringliteral">&quot;(null)&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2253</span>  }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a1f453a2aade0db6955a111a7cb329615" name="a1f453a2aade0db6955a111a7cb329615"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f453a2aade0db6955a111a7cb329615">&#9670;&nbsp;</a></span>ScopedTrace() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">testing::ScopedTrace::ScopedTrace </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00248_source.html#l02255">2255</a> of file <a class="el" href="a00248_source.html">gtest.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2255</span>                                                                    {</div>
-<div class="line"><span class="lineno"> 2256</span>    <a class="code hl_function" href="a00872.html#a905304c342012d6ae1493a1ad3b62255">PushTrace</a>(file, line, message);</div>
-<div class="line"><span class="lineno"> 2257</span>  }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aa8320ec2679f205cf2c14f508ba35b4d" name="aa8320ec2679f205cf2c14f508ba35b4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8320ec2679f205cf2c14f508ba35b4d">&#9670;&nbsp;</a></span>~ScopedTrace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">testing::ScopedTrace::~ScopedTrace </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aed447fe36b38f99ace904ed52c206eb0" name="aed447fe36b38f99ace904ed52c206eb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed447fe36b38f99ace904ed52c206eb0">&#9670;&nbsp;</a></span>GTEST_DISALLOW_COPY_AND_ASSIGN_()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">testing::ScopedTrace::GTEST_DISALLOW_COPY_AND_ASSIGN_ </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00872.html">ScopedTrace</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a905304c342012d6ae1493a1ad3b62255" name="a905304c342012d6ae1493a1ad3b62255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a905304c342012d6ae1493a1ad3b62255">&#9670;&nbsp;</a></span>PushTrace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void testing::ScopedTrace::PushTrace </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00248_source.html">gtest.h</a></li>
+<li><a class="el" href="a00260_source.html">gtest.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

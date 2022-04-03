@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: CONTRIBUTING.md File Reference</title>
+<title>MUSI6106: gmock-internal-utils.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,15 +38,311 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_f12498a9b3b01f7557dfe344f3ca0a3a.html">googletest</a></li><li class="navelem"><a class="el" href="dir_76b6a47ab5cf193a370abf4fcae112aa.html">googlemock</a></li><li class="navelem"><a class="el" href="dir_f04fd9da824c7d16e8b42029801bc028.html">include</a></li><li class="navelem"><a class="el" href="dir_4da6f07d2602a6ec326bf87ca5fb812b.html">gmock</a></li><li class="navelem"><a class="el" href="dir_e3667313c9fc2fdba5631e4635e508b8.html">internal</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">CONTRIBUTING.md File Reference</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">gmock-internal-utils.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00209_source.html">gmock/internal/gmock-port.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00260_source.html">gtest/gtest.h</a>&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for gmock-internal-utils.h:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00216.png" border="0" usemap="#agmock-internal-utils_8h" alt=""/></div>
+<map name="agmock-internal-utils_8h" id="agmock-internal-utils_8h">
+<area shape="rect" title=" " alt="" coords="371,5,517,32"/>
+<area shape="rect" title=" " alt="" coords="26,833,86,859"/>
+<area shape="rect" title=" " alt="" coords="532,475,601,502"/>
+<area shape="rect" title=" " alt="" coords="709,833,763,859"/>
+<area shape="rect" title=" " alt="" coords="2484,833,2567,859"/>
+<area shape="rect" title=" " alt="" coords="2728,833,2787,859"/>
+<area shape="rect" href="a00209.html" title=" " alt="" coords="281,647,431,688"/>
+<area shape="rect" href="a00260.html" title=" " alt="" coords="1502,80,1597,107"/>
+<area shape="rect" title=" " alt="" coords="322,743,390,770"/>
+<area shape="rect" title=" " alt="" coords="454,833,517,859"/>
+<area shape="rect" title=" " alt="" coords="1928,833,1989,859"/>
+<area shape="rect" title=" " alt="" coords="291,833,363,859"/>
+<area shape="rect" href="a00293.html" title=" " alt="" coords="1308,736,1439,777"/>
+<area shape="rect" href="a01781.html" title=" " alt="" coords="144,736,299,777"/>
+<area shape="rect" title=" " alt="" coords="2045,833,2107,859"/>
+<area shape="rect" title=" " alt="" coords="1458,833,1526,859"/>
+<area shape="rect" title=" " alt="" coords="2159,833,2223,859"/>
+<area shape="rect" title=" " alt="" coords="1551,833,1609,859"/>
+<area shape="rect" title=" " alt="" coords="2281,833,2335,859"/>
+<area shape="rect" title=" " alt="" coords="1633,833,1689,859"/>
+<area shape="rect" title=" " alt="" coords="609,833,677,859"/>
+<area shape="rect" title=" " alt="" coords="788,833,839,859"/>
+<area shape="rect" title=" " alt="" coords="1714,833,1801,859"/>
+<area shape="rect" title=" " alt="" coords="1825,833,1903,859"/>
+<area shape="rect" href="a01790.html" title=" " alt="" coords="863,825,1007,867"/>
+<area shape="rect" href="a00278.html" title=" " alt="" coords="1031,825,1161,867"/>
+<area shape="rect" title=" " alt="" coords="1185,833,1252,859"/>
+<area shape="rect" title=" " alt="" coords="1277,833,1347,859"/>
+<area shape="rect" title=" " alt="" coords="1371,833,1434,859"/>
+<area shape="rect" title=" " alt="" coords="2755,155,2821,181"/>
+<area shape="rect" href="a00284.html" title=" " alt="" coords="1687,468,1817,509"/>
+<area shape="rect" href="a00263.html" title=" " alt="" coords="1133,565,1283,591"/>
+<area shape="rect" href="a00299.html" title=" " alt="" coords="1704,647,1835,688"/>
+<area shape="rect" href="a00257.html" title=" " alt="" coords="482,155,638,181"/>
+<area shape="rect" href="a00305.html" title=" " alt="" coords="749,319,901,345"/>
+<area shape="rect" href="a00296.html" title=" " alt="" coords="916,393,1057,420"/>
+<area shape="rect" href="a00272.html" title=" " alt="" coords="1132,393,1292,420"/>
+<area shape="rect" href="a00311.html" title=" " alt="" coords="1587,155,1714,181"/>
+<area shape="rect" href="a00308.html" title=" " alt="" coords="2065,393,2212,420"/>
+<area shape="rect" href="a00275.html" title=" " alt="" coords="1316,393,1471,420"/>
+<area shape="rect" href="a00269.html" title=" " alt="" coords="1789,155,1947,181"/>
+<area shape="rect" title=" " alt="" coords="1935,565,1991,591"/>
+<area shape="rect" title=" " alt="" coords="2015,565,2081,591"/>
+<area shape="rect" title=" " alt="" coords="2106,565,2153,591"/>
+<area shape="rect" title=" " alt="" coords="1615,565,1655,591"/>
+<area shape="rect" href="a00287.html" title=" " alt="" coords="1679,557,1809,599"/>
+<area shape="rect" href="a00302.html" title=" " alt="" coords="1308,557,1439,599"/>
+<area shape="rect" title=" " alt="" coords="1132,654,1201,681"/>
+<area shape="rect" href="a00290.html" title=" " alt="" coords="490,229,630,271"/>
+<area shape="rect" title=" " alt="" coords="828,393,889,420"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00217.png" border="0" usemap="#agmock-internal-utils_8hdep" alt=""/></div>
+<map name="agmock-internal-utils_8hdep" id="agmock-internal-utils_8hdep">
+<area shape="rect" title=" " alt="" coords="226,5,372,32"/>
+<area shape="rect" href="a00218.html" title=" " alt="" coords="144,80,262,107"/>
+<area shape="rect" href="a00188.html" title=" " alt="" coords="312,304,382,331"/>
+<area shape="rect" href="a00203.html" title=" " alt="" coords="336,155,488,181"/>
+<area shape="rect" href="a00200.html" title=" " alt="" coords="263,229,431,256"/>
+<area shape="rect" href="a00194.html" title=" " alt="" coords="473,80,602,107"/>
+<area shape="rect" href="a00221.html" title=" " alt="" coords="37,229,188,256"/>
+<area shape="rect" href="a00185.html" title=" " alt="" coords="284,379,410,405"/>
+<area shape="rect" href="a00197.html" title=" " alt="" coords="456,229,588,256"/>
+<area shape="rect" href="a00191.html" title=" " alt="" coords="512,155,675,181"/>
+</map>
+</div>
+</div>
+<p><a href="a00215_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00644.html">testing::internal::KindOf&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00648.html">testing::internal::FailureReporterInterface</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00652.html">testing::internal::WithoutMatchers</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html">testing::internal::StlContainerView&lt; RawContainer &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html">testing::internal::StlContainerView&lt; Element[N]&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00664.html">testing::internal::StlContainerView&lt; ::std::tuple&lt; ElementPointer, Size &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00668.html">testing::internal::RemoveConstFromKey&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html">testing::internal::RemoveConstFromKey&lt; std::pair&lt; const K, V &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00680.html">testing::internal::Function&lt; R(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a00321"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html">testing</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00322"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html">testing::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a7d8a1871d7a30543a4e1882a8b2bbcd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a7d8a1871d7a30543a4e1882a8b2bbcd8">GMOCK_DECLARE_KIND_</a>(type,  kind)&#160;&#160;&#160;  template &lt;&gt; struct KindOf&lt;type&gt; { enum { value = kind }; }</td></tr>
+<tr class="separator:a7d8a1871d7a30543a4e1882a8b2bbcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b01bdd08b78e927270885ca880ead4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a72b01bdd08b78e927270885ca880ead4">GMOCK_KIND_OF_</a>(type)</td></tr>
+<tr class="separator:a72b01bdd08b78e927270885ca880ead4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac66e9687984566b86192b20eb1eabfda"><td class="memTemplParams" colspan="2">template&lt;TypeKind kFromKind, typename From , TypeKind kToKind, typename To &gt; </td></tr>
+<tr class="memitem:ac66e9687984566b86192b20eb1eabfda"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#ac66e9687984566b86192b20eb1eabfda">testing::internal::LosslessArithmeticConvertibleImpl</a> = std::integral_constant&lt; <a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>,(kFromKind==kBool) ? <a class="el" href="a00083.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7">true</a> :(kFromKind !=kToKind) ? <a class="el" href="a00083.html#a65e9886d74aaee76545e83dd09011727">false</a> :(kFromKind==kInteger &amp;&amp;(((sizeof(From)&lt; sizeof(To)) &amp;&amp;!(std::is_signed&lt; From &gt;::value &amp;&amp;!std::is_signed&lt; To &gt;::value))||((sizeof(From)==sizeof(To)) &amp;&amp;(std::is_signed&lt; From &gt;::value==std::is_signed&lt; To &gt;::value)))) ? <a class="el" href="a00083.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7">true</a> :(kFromKind==kFloatingPoint &amp;&amp;(sizeof(From)&lt;=sizeof(To))) ? <a class="el" href="a00083.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7">true</a> :<a class="el" href="a00083.html#a65e9886d74aaee76545e83dd09011727">false</a> &gt;</td></tr>
+<tr class="separator:ac66e9687984566b86192b20eb1eabfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1492f6584dbc5074fe93eec2e99704"><td class="memTemplParams" colspan="2">template&lt;typename From , typename To &gt; </td></tr>
+<tr class="memitem:aaf1492f6584dbc5074fe93eec2e99704"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#aaf1492f6584dbc5074fe93eec2e99704">testing::internal::LosslessArithmeticConvertible</a> = LosslessArithmeticConvertibleImpl&lt; <a class="el" href="a00215.html#a72b01bdd08b78e927270885ca880ead4">GMOCK_KIND_OF_</a>(From), From, <a class="el" href="a00215.html#a72b01bdd08b78e927270885ca880ead4">GMOCK_KIND_OF_</a>(To), To &gt;</td></tr>
+<tr class="separator:aaf1492f6584dbc5074fe93eec2e99704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aa8747bda20137c9aa7f846dee830e686"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#aa8747bda20137c9aa7f846dee830e686">testing::internal::TypeKind</a> { <a class="el" href="a00322.html#aa8747bda20137c9aa7f846dee830e686a3af2191917fb1796599139b3615302fe">testing::internal::kBool</a>
+, <a class="el" href="a00322.html#aa8747bda20137c9aa7f846dee830e686a8a52f0fd73e05da35c45d80653633cab">testing::internal::kInteger</a>
+, <a class="el" href="a00322.html#aa8747bda20137c9aa7f846dee830e686acdce59b8c136926ace18aa9c2995878d">testing::internal::kFloatingPoint</a>
+, <a class="el" href="a00322.html#aa8747bda20137c9aa7f846dee830e686ad47f29150ab7a9ec8ce2491f44537347">testing::internal::kOther</a>
+ }</td></tr>
+<tr class="separator:aa8747bda20137c9aa7f846dee830e686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203d1a8a2147a53d12bbdae40d443914"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a203d1a8a2147a53d12bbdae40d443914">testing::internal::LogSeverity</a> { <a class="el" href="a00322.html#a203d1a8a2147a53d12bbdae40d443914a396aacfaee2849eaab7c1de9773d624d">testing::internal::kInfo</a> = 0
+, <a class="el" href="a00322.html#a203d1a8a2147a53d12bbdae40d443914a5beeeab1b0a3caabd0afb43356c1a271">testing::internal::kWarning</a> = 1
+ }</td></tr>
+<tr class="separator:a203d1a8a2147a53d12bbdae40d443914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac75a9353286d1b50c872ea2b195f3b4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ac75a9353286d1b50c872ea2b195f3b4a">testing::internal::JoinAsKeyValueTuple</a> (const std::vector&lt; const char * &gt; &amp;names, const Strings &amp;values)</td></tr>
+<tr class="separator:ac75a9353286d1b50c872ea2b195f3b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b375abcf3081393e6c420194a541b29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a0b375abcf3081393e6c420194a541b29">testing::internal::ConvertIdentifierNameToWords</a> (const char *id_name)</td></tr>
+<tr class="separator:a0b375abcf3081393e6c420194a541b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e7c706ea3ebdffa1429cf3677062bd"><td class="memTemplParams" colspan="2">template&lt;typename Pointer &gt; </td></tr>
+<tr class="memitem:ad5e7c706ea3ebdffa1429cf3677062bd"><td class="memTemplItemLeft" align="right" valign="top">const Pointer::element_type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#ad5e7c706ea3ebdffa1429cf3677062bd">testing::internal::GetRawPointer</a> (const Pointer &amp;p)</td></tr>
+<tr class="separator:ad5e7c706ea3ebdffa1429cf3677062bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd3870510b38df6dff33f67b6ee0ced"><td class="memTemplParams" colspan="2">template&lt;typename Element &gt; </td></tr>
+<tr class="memitem:afdd3870510b38df6dff33f67b6ee0ced"><td class="memTemplItemLeft" align="right" valign="top">const Element *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#afdd3870510b38df6dff33f67b6ee0ced">testing::internal::GetRawPointer</a> (const std::reference_wrapper&lt; Element &gt; &amp;r)</td></tr>
+<tr class="separator:afdd3870510b38df6dff33f67b6ee0ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f6499f55e30ff23f9ed914fb8ad597"><td class="memTemplParams" colspan="2">template&lt;typename Element &gt; </td></tr>
+<tr class="memitem:ae9f6499f55e30ff23f9ed914fb8ad597"><td class="memTemplItemLeft" align="right" valign="top">Element *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#ae9f6499f55e30ff23f9ed914fb8ad597">testing::internal::GetRawPointer</a> (Element *p)</td></tr>
+<tr class="separator:ae9f6499f55e30ff23f9ed914fb8ad597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f5584732e44a368e7acf295b639319"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a20f5584732e44a368e7acf295b639319">testing::internal::GMOCK_DECLARE_KIND_</a> (<a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>, kBool)</td></tr>
+<tr class="separator:a20f5584732e44a368e7acf295b639319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f3722ca21d8b14f86e5c949e843508"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ac8f3722ca21d8b14f86e5c949e843508">testing::internal::GMOCK_DECLARE_KIND_</a> (char, kInteger)</td></tr>
+<tr class="separator:ac8f3722ca21d8b14f86e5c949e843508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b8e77d245fd0838ab22e439e92e9af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ae5b8e77d245fd0838ab22e439e92e9af">testing::internal::GMOCK_DECLARE_KIND_</a> (signed char, kInteger)</td></tr>
+<tr class="separator:ae5b8e77d245fd0838ab22e439e92e9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13e89be2f0f22b1da9e22cd53bce5ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ab13e89be2f0f22b1da9e22cd53bce5ce">testing::internal::GMOCK_DECLARE_KIND_</a> (unsigned char, kInteger)</td></tr>
+<tr class="separator:ab13e89be2f0f22b1da9e22cd53bce5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af191a2be9cff1d5900426ef5aa59851e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#af191a2be9cff1d5900426ef5aa59851e">testing::internal::GMOCK_DECLARE_KIND_</a> (short, kInteger)</td></tr>
+<tr class="separator:af191a2be9cff1d5900426ef5aa59851e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6138ee5ce9f509d39e874e4eedb89ae1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a6138ee5ce9f509d39e874e4eedb89ae1">testing::internal::GMOCK_DECLARE_KIND_</a> (unsigned short, kInteger)</td></tr>
+<tr class="separator:a6138ee5ce9f509d39e874e4eedb89ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fb8e3bb6f1fec656ed8bdab0048f9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a59fb8e3bb6f1fec656ed8bdab0048f9f">testing::internal::GMOCK_DECLARE_KIND_</a> (int, kInteger)</td></tr>
+<tr class="separator:a59fb8e3bb6f1fec656ed8bdab0048f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdce95ddf8b975d2a17e76a4c5a6c37f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#abdce95ddf8b975d2a17e76a4c5a6c37f">testing::internal::GMOCK_DECLARE_KIND_</a> (unsigned int, kInteger)</td></tr>
+<tr class="separator:abdce95ddf8b975d2a17e76a4c5a6c37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40597f856b3d94dc82e9fbbf9b027819"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a40597f856b3d94dc82e9fbbf9b027819">testing::internal::GMOCK_DECLARE_KIND_</a> (long, kInteger)</td></tr>
+<tr class="separator:a40597f856b3d94dc82e9fbbf9b027819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8224329431c90b3d943cc43ac92e6e42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a8224329431c90b3d943cc43ac92e6e42">testing::internal::GMOCK_DECLARE_KIND_</a> (unsigned long, kInteger)</td></tr>
+<tr class="separator:a8224329431c90b3d943cc43ac92e6e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7d45c2ecfaa024f658b3657eb8cf69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a6f7d45c2ecfaa024f658b3657eb8cf69">testing::internal::GMOCK_DECLARE_KIND_</a> (long long, kInteger)</td></tr>
+<tr class="separator:a6f7d45c2ecfaa024f658b3657eb8cf69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf250c65b8eeda029c911bbfe8e1ff77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#adf250c65b8eeda029c911bbfe8e1ff77">testing::internal::GMOCK_DECLARE_KIND_</a> (unsigned long long, kInteger)</td></tr>
+<tr class="separator:adf250c65b8eeda029c911bbfe8e1ff77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ebf1b53b79ac38fbd18ccf4d63ceca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ad4ebf1b53b79ac38fbd18ccf4d63ceca">testing::internal::GMOCK_DECLARE_KIND_</a> (float, kFloatingPoint)</td></tr>
+<tr class="separator:ad4ebf1b53b79ac38fbd18ccf4d63ceca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45748f4c08b868cb4939081769cdc7b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a45748f4c08b868cb4939081769cdc7b1">testing::internal::GMOCK_DECLARE_KIND_</a> (double, kFloatingPoint)</td></tr>
+<tr class="separator:a45748f4c08b868cb4939081769cdc7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46fdd94d8aea0da729b554de443315f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#af46fdd94d8aea0da729b554de443315f">testing::internal::GMOCK_DECLARE_KIND_</a> (long double, kFloatingPoint)</td></tr>
+<tr class="separator:af46fdd94d8aea0da729b554de443315f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a00bf550dcc6b1de870d24c624869c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> FailureReporterInterface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a93a00bf550dcc6b1de870d24c624869c">testing::internal::GetFailureReporter</a> ()</td></tr>
+<tr class="separator:a93a00bf550dcc6b1de870d24c624869c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46ca46a5898b2ac75184c62e0355621"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#aa46ca46a5898b2ac75184c62e0355621">testing::internal::Assert</a> (<a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> condition, const char *file, int line, const std::string &amp;msg)</td></tr>
+<tr class="separator:aa46ca46a5898b2ac75184c62e0355621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e71d198ce26b51f84a0b024dc3e054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a23e71d198ce26b51f84a0b024dc3e054">testing::internal::Assert</a> (<a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> condition, const char *file, int line)</td></tr>
+<tr class="separator:a23e71d198ce26b51f84a0b024dc3e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad93379317e10862a77b9fb90aa96e083"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ad93379317e10862a77b9fb90aa96e083">testing::internal::Expect</a> (<a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> condition, const char *file, int line, const std::string &amp;msg)</td></tr>
+<tr class="separator:ad93379317e10862a77b9fb90aa96e083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfe8a755bd02aa5ea162764b61a9d97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a0dfe8a755bd02aa5ea162764b61a9d97">testing::internal::Expect</a> (<a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> condition, const char *file, int line)</td></tr>
+<tr class="separator:a0dfe8a755bd02aa5ea162764b61a9d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ffdba5ee36743e88d8f89b79e566ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> <a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a69ffdba5ee36743e88d8f89b79e566ff">testing::internal::LogIsVisible</a> (LogSeverity severity)</td></tr>
+<tr class="separator:a69ffdba5ee36743e88d8f89b79e566ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a57ce0412334a3f487bbaa8321febbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a8a57ce0412334a3f487bbaa8321febbe">testing::internal::Log</a> (LogSeverity severity, const std::string &amp;message, int stack_frames_to_skip)</td></tr>
+<tr class="separator:a8a57ce0412334a3f487bbaa8321febbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e02ea077a717f95a10a03c10272f1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> WithoutMatchers&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ad4e02ea077a717f95a10a03c10272f1c">testing::internal::GetWithoutMatchers</a> ()</td></tr>
+<tr class="separator:ad4e02ea077a717f95a10a03c10272f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3316c24e8a79f5def3e85d763ae50854"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3316c24e8a79f5def3e85d763ae50854"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#a3316c24e8a79f5def3e85d763ae50854">testing::internal::Invalid</a> ()</td></tr>
+<tr class="separator:a3316c24e8a79f5def3e85d763ae50854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67e1e9d28122eedffbb7b6636824f2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#aa67e1e9d28122eedffbb7b6636824f2d">testing::internal::IllegalDoDefault</a> (const char *file, int line)</td></tr>
+<tr class="separator:aa67e1e9d28122eedffbb7b6636824f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3a67138bf4d8de81606b37127509df"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Tuple , size_t... Idx&gt; </td></tr>
+<tr class="memitem:a6d3a67138bf4d8de81606b37127509df"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#a6d3a67138bf4d8de81606b37127509df">testing::internal::ApplyImpl</a> (F &amp;&amp;f, Tuple &amp;&amp;args, IndexSequence&lt; Idx... &gt;) -&gt; decltype(std::forward&lt; F &gt;(f)(std::get&lt; Idx &gt;(std::forward&lt; Tuple &gt;(args))...))</td></tr>
+<tr class="separator:a6d3a67138bf4d8de81606b37127509df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aeac7ea6170d7347ff9212026e115e8"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Tuple &gt; </td></tr>
+<tr class="memitem:a4aeac7ea6170d7347ff9212026e115e8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#a4aeac7ea6170d7347ff9212026e115e8">testing::internal::Apply</a> (F &amp;&amp;f, Tuple &amp;&amp;args) -&gt; decltype(ApplyImpl(std::forward&lt; F &gt;(f), std::forward&lt; Tuple &gt;(args), MakeIndexSequence&lt; std::tuple_size&lt; typename std::remove_reference&lt; Tuple &gt;::type &gt;::value &gt;()))</td></tr>
+<tr class="separator:a4aeac7ea6170d7347ff9212026e115e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebfee596839f25b8aec40192af1dcdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a7ebfee596839f25b8aec40192af1dcdc">testing::internal::Base64Unescape</a> (const std::string &amp;encoded, std::string *decoded)</td></tr>
+<tr class="separator:a7ebfee596839f25b8aec40192af1dcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a96274a788ffc75a6dffdfa8aa1f34fb9"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a96274a788ffc75a6dffdfa8aa1f34fb9">testing::internal::kInfoVerbosity</a> [] = &quot;info&quot;</td></tr>
+<tr class="separator:a96274a788ffc75a6dffdfa8aa1f34fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9386ccda6b6deac2f7b84784d3088c0"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ad9386ccda6b6deac2f7b84784d3088c0">testing::internal::kWarningVerbosity</a> [] = &quot;warning&quot;</td></tr>
+<tr class="separator:ad9386ccda6b6deac2f7b84784d3088c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d730761274e7b80dd66e5014171fcb5"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a3d730761274e7b80dd66e5014171fcb5">testing::internal::kErrorVerbosity</a> [] = &quot;error&quot;</td></tr>
+<tr class="separator:a3d730761274e7b80dd66e5014171fcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7d8a1871d7a30543a4e1882a8b2bbcd8" name="a7d8a1871d7a30543a4e1882a8b2bbcd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d8a1871d7a30543a4e1882a8b2bbcd8">&#9670;&nbsp;</a></span>GMOCK_DECLARE_KIND_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_DECLARE_KIND_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">kind&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  template &lt;&gt; struct KindOf&lt;type&gt; { enum { value = kind }; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00119">119</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
+
+</div>
+</div>
+<a id="a72b01bdd08b78e927270885ca880ead4" name="a72b01bdd08b78e927270885ca880ead4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b01bdd08b78e927270885ca880ead4">&#9670;&nbsp;</a></span>GMOCK_KIND_OF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_KIND_OF_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">static_cast&lt;</span> ::<a class="code hl_enumeration" href="a00322.html#aa8747bda20137c9aa7f846dee830e686">testing::internal::TypeKind</a><span class="keyword">&gt;</span>( \</div>
+<div class="line">      <a class="code hl_struct" href="a00644.html">::testing::internal::KindOf&lt;type&gt;::value</a>)</div>
+<div class="ttc" id="aa00322_html_aa8747bda20137c9aa7f846dee830e686"><div class="ttname"><a href="a00322.html#aa8747bda20137c9aa7f846dee830e686">testing::internal::TypeKind</a></div><div class="ttdeci">TypeKind</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00109">gmock-internal-utils.h:109</a></div></div>
+<div class="ttc" id="aa00644_html"><div class="ttname"><a href="a00644.html">testing::internal::KindOf</a></div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00114">gmock-internal-utils.h:114</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00149">149</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:08 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

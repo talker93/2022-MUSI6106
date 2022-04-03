@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::RE Class Reference</title>
+<title>MUSI6106: testing::internal::ValueArray&lt; Ts &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,414 +40,144 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a01156.html">RE</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a01156.html">ValueArray</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="a01153.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::RE Class Reference</div></div>
+  <div class="headertitle"><div class="title">testing::internal::ValueArray&lt; Ts &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00281_source.html">gtest-port.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00281_source.html">gtest-param-util.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::RE:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::ValueArray&lt; Ts &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01154.png" border="0" usemap="#atesting_1_1internal_1_1RE_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1RE_coll__map" id="atesting_1_1internal_1_1RE_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,137,259"/>
+<div class="center"><img src="a01154.png" border="0" usemap="#atesting_1_1internal_1_1ValueArray_3_01Ts_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1ValueArray_3_01Ts_01_4_coll__map" id="atesting_1_1internal_1_1ValueArray_3_01Ts_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="16,713,195,849"/>
+<area shape="rect" href="a01048.html" title=" " alt="" coords="44,544,167,651"/>
+<area shape="rect" href="a01060.html" title=" " alt="" coords="5,204,195,325"/>
+<area shape="rect" href="a01048.html" title=" " alt="" coords="121,375,236,481"/>
+<area shape="rect" href="a01060.html" title=" " alt="" coords="17,5,183,112"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab215dbc2565fce641e1746ca43e9d68a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#ab215dbc2565fce641e1746ca43e9d68a">RE</a> (const <a class="el" href="a01156.html">RE</a> &amp;other)</td></tr>
-<tr class="separator:ab215dbc2565fce641e1746ca43e9d68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8840bd639642f3d4769a94a68ce463c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a8840bd639642f3d4769a94a68ce463c2">RE</a> (const ::std::string &amp;regex)</td></tr>
-<tr class="separator:a8840bd639642f3d4769a94a68ce463c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a908ea936a5b7a14479a1b292a7189ca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a908ea936a5b7a14479a1b292a7189ca6">RE</a> (const char *regex)</td></tr>
-<tr class="separator:a908ea936a5b7a14479a1b292a7189ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3ad18e6c0b433f3d85ed23eda8119f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#af3ad18e6c0b433f3d85ed23eda8119f3">~RE</a> ()</td></tr>
-<tr class="separator:af3ad18e6c0b433f3d85ed23eda8119f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a755aa35fb49255d8d17bd5451cdedc5e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a755aa35fb49255d8d17bd5451cdedc5e">pattern</a> () const</td></tr>
-<tr class="separator:a755aa35fb49255d8d17bd5451cdedc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa79a950758d0f1d62f7762d1e9cefe86"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#aa79a950758d0f1d62f7762d1e9cefe86">FullMatch</a> (const ::std::string &amp;str, const <a class="el" href="a01156.html">RE</a> &amp;re)</td></tr>
-<tr class="separator:aa79a950758d0f1d62f7762d1e9cefe86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e81f9a87211bdca645e025f8f0236c8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a1e81f9a87211bdca645e025f8f0236c8">PartialMatch</a> (const ::std::string &amp;str, const <a class="el" href="a01156.html">RE</a> &amp;re)</td></tr>
-<tr class="separator:a1e81f9a87211bdca645e025f8f0236c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b13ec1f6ccd6c32f7efa01e21588f0b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a2b13ec1f6ccd6c32f7efa01e21588f0b">FullMatch</a> (const char *str, const <a class="el" href="a01156.html">RE</a> &amp;re)</td></tr>
-<tr class="separator:a2b13ec1f6ccd6c32f7efa01e21588f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97495dd4c2bb9589522823f060c8e8ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a97495dd4c2bb9589522823f060c8e8ba">PartialMatch</a> (const char *str, const <a class="el" href="a01156.html">RE</a> &amp;re)</td></tr>
-<tr class="separator:a97495dd4c2bb9589522823f060c8e8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7cd6a969a7e95152eac1787c42c9ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#acd7cd6a969a7e95152eac1787c42c9ed">ValueArray</a> (Ts... v)</td></tr>
+<tr class="separator:acd7cd6a969a7e95152eac1787c42c9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019560f10debdce5f47bb18c0e5261b5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a019560f10debdce5f47bb18c0e5261b5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01156.html#a019560f10debdce5f47bb18c0e5261b5">operator ParamGenerator&lt; T &gt;</a> () const</td></tr>
+<tr class="separator:a019560f10debdce5f47bb18c0e5261b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a4c3a519ce849abc57d6d5fffbf1e04dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a4c3a519ce849abc57d6d5fffbf1e04dc">Init</a> (const char *regex)</td></tr>
-<tr class="separator:a4c3a519ce849abc57d6d5fffbf1e04dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23efae4c59674a213cff33fa5d93262"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t... I&gt; </td></tr>
+<tr class="memitem:ab23efae4c59674a213cff33fa5d93262"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01156.html#ab23efae4c59674a213cff33fa5d93262">MakeVector</a> (<a class="el" href="a01004.html">IndexSequence</a>&lt; I... &gt;) const</td></tr>
+<tr class="separator:ab23efae4c59674a213cff33fa5d93262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a44ab32241fab42db5b6f7482776658ec"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a44ab32241fab42db5b6f7482776658ec">pattern_</a></td></tr>
-<tr class="separator:a44ab32241fab42db5b6f7482776658ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9062fefab96529ff785f50097416d64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#af9062fefab96529ff785f50097416d64">is_valid_</a></td></tr>
-<tr class="separator:af9062fefab96529ff785f50097416d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1627cf3c6e38a83518e7aefd659b938b"><td class="memItemLeft" align="right" valign="top">regex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a1627cf3c6e38a83518e7aefd659b938b">full_regex_</a></td></tr>
-<tr class="separator:a1627cf3c6e38a83518e7aefd659b938b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b3e42916c61db479ae90c7a96c22a58"><td class="memItemLeft" align="right" valign="top">regex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a1b3e42916c61db479ae90c7a96c22a58">partial_regex_</a></td></tr>
-<tr class="separator:a1b3e42916c61db479ae90c7a96c22a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13322bd870795fdd18dde7f95c4cedb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01048.html">FlatTuple</a>&lt; Ts... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01156.html#a13322bd870795fdd18dde7f95c4cedb0">v_</a></td></tr>
+<tr class="separator:a13322bd870795fdd18dde7f95c4cedb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00903">903</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename... Ts&gt;<br />
+class testing::internal::ValueArray&lt; Ts &gt;</div>
+<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00790">790</a> of file <a class="el" href="a00281_source.html">gtest-param-util.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab215dbc2565fce641e1746ca43e9d68a" name="ab215dbc2565fce641e1746ca43e9d68a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab215dbc2565fce641e1746ca43e9d68a">&#9670;&nbsp;</a></span>RE() <span class="overload">[1/3]</span></h2>
+<a id="acd7cd6a969a7e95152eac1787c42c9ed" name="acd7cd6a969a7e95152eac1787c42c9ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7cd6a969a7e95152eac1787c42c9ed">&#9670;&nbsp;</a></span>ValueArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">testing::internal::RE::RE </td>
+          <td class="memname"><a class="el" href="a01156.html">testing::internal::ValueArray</a>&lt; Ts &gt;::ValueArray </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a01156.html">RE</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramtype">Ts...&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00907">907</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  907</span>{ <a class="code hl_function" href="a01156.html#a4c3a519ce849abc57d6d5fffbf1e04dc">Init</a>(other.pattern()); }</div>
-<div class="ttc" id="aa01156_html_a4c3a519ce849abc57d6d5fffbf1e04dc"><div class="ttname"><a href="a01156.html#a4c3a519ce849abc57d6d5fffbf1e04dc">testing::internal::RE::Init</a></div><div class="ttdeci">void Init(const char *regex)</div></div>
+<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00792">792</a> of file <a class="el" href="a00281_source.html">gtest-param-util.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  792</span>: <a class="code hl_variable" href="a01156.html#a13322bd870795fdd18dde7f95c4cedb0">v_</a>(FlatTupleConstructTag{}, std::move(v)...) {}</div>
+<div class="ttc" id="aa01156_html_a13322bd870795fdd18dde7f95c4cedb0"><div class="ttname"><a href="a01156.html#a13322bd870795fdd18dde7f95c4cedb0">testing::internal::ValueArray::v_</a></div><div class="ttdeci">FlatTuple&lt; Ts... &gt; v_</div><div class="ttdef"><b>Definition:</b> <a href="a00281_source.html#l00805">gtest-param-util.h:805</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00281_source.html#l00916">pattern()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01156_ab215dbc2565fce641e1746ca43e9d68a_cgraph.png" border="0" usemap="#aa01156_ab215dbc2565fce641e1746ca43e9d68a_cgraph" alt=""/></div>
-<map name="aa01156_ab215dbc2565fce641e1746ca43e9d68a_cgraph" id="aa01156_ab215dbc2565fce641e1746ca43e9d68a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,120,47"/>
-<area shape="rect" href="a01156.html#a755aa35fb49255d8d17bd5451cdedc5e" title=" " alt="" coords="168,5,283,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8840bd639642f3d4769a94a68ce463c2" name="a8840bd639642f3d4769a94a68ce463c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8840bd639642f3d4769a94a68ce463c2">&#9670;&nbsp;</a></span>RE() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">testing::internal::RE::RE </td>
-          <td>(</td>
-          <td class="paramtype">const ::std::string &amp;&#160;</td>
-          <td class="paramname"><em>regex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00910">910</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  910</span>{ <a class="code hl_function" href="a01156.html#a4c3a519ce849abc57d6d5fffbf1e04dc">Init</a>(regex.c_str()); }  <span class="comment">// NOLINT</span></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a908ea936a5b7a14479a1b292a7189ca6" name="a908ea936a5b7a14479a1b292a7189ca6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a908ea936a5b7a14479a1b292a7189ca6">&#9670;&nbsp;</a></span>RE() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">testing::internal::RE::RE </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>regex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00912">912</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  912</span>{ <a class="code hl_function" href="a01156.html#a4c3a519ce849abc57d6d5fffbf1e04dc">Init</a>(regex); }  <span class="comment">// NOLINT</span></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="af3ad18e6c0b433f3d85ed23eda8119f3" name="af3ad18e6c0b433f3d85ed23eda8119f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3ad18e6c0b433f3d85ed23eda8119f3">&#9670;&nbsp;</a></span>~RE()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">testing::internal::RE::~RE </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa79a950758d0f1d62f7762d1e9cefe86" name="aa79a950758d0f1d62f7762d1e9cefe86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa79a950758d0f1d62f7762d1e9cefe86">&#9670;&nbsp;</a></span>FullMatch() <span class="overload">[1/2]</span></h2>
+<a id="ab23efae4c59674a213cff33fa5d93262" name="ab23efae4c59674a213cff33fa5d93262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23efae4c59674a213cff33fa5d93262">&#9670;&nbsp;</a></span>MakeVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<div class="memtemplate">
+template&lt;typename T , size_t... I&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> testing::internal::RE::FullMatch </td>
+          <td class="memname">std::vector&lt; T &gt; <a class="el" href="a01156.html">testing::internal::ValueArray</a>&lt; Ts &gt;::MakeVector </td>
           <td>(</td>
-          <td class="paramtype">const ::std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a01156.html">RE</a> &amp;&#160;</td>
-          <td class="paramname"><em>re</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="a01004.html">IndexSequence</a>&lt; I... &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00922">922</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  922</span>                                                            {</div>
-<div class="line"><span class="lineno">  923</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a01156.html#aa79a950758d0f1d62f7762d1e9cefe86">FullMatch</a>(str.c_str(), re);</div>
-<div class="line"><span class="lineno">  924</span>  }</div>
-<div class="ttc" id="aa01156_html_aa79a950758d0f1d62f7762d1e9cefe86"><div class="ttname"><a href="a01156.html#aa79a950758d0f1d62f7762d1e9cefe86">testing::internal::RE::FullMatch</a></div><div class="ttdeci">static bool FullMatch(const ::std::string &amp;str, const RE &amp;re)</div><div class="ttdef"><b>Definition:</b> <a href="a00281_source.html#l00922">gtest-port.h:922</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00801">801</a> of file <a class="el" href="a00281_source.html">gtest-param-util.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  801</span>                                                     {</div>
+<div class="line"><span class="lineno">  802</span>    <span class="keywordflow">return</span> std::vector&lt;T&gt;{<span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(<a class="code hl_variable" href="a01156.html#a13322bd870795fdd18dde7f95c4cedb0">v_</a>.template Get&lt;I&gt;())...};</div>
+<div class="line"><span class="lineno">  803</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00293_source.html#l00055">GTEST_DISABLE_MSC_WARNINGS_PUSH_()</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01156_aa79a950758d0f1d62f7762d1e9cefe86_icgraph.png" border="0" usemap="#aa01156_aa79a950758d0f1d62f7762d1e9cefe86_icgraph" alt=""/></div>
-<map name="aa01156_aa79a950758d0f1d62f7762d1e9cefe86_icgraph" id="aa01156_aa79a950758d0f1d62f7762d1e9cefe86_icgraph">
-<area shape="rect" title=" " alt="" coords="297,5,412,47"/>
-<area shape="rect" href="a00293.html#ae9b7a8d33bcb4bbad774b324eeeb23d6" title=" " alt="" coords="5,5,249,47"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="a00281_source.html#l00805">testing::internal::ValueArray&lt; Ts &gt;::v_</a>.</p>
 
 </div>
 </div>
-<a id="a2b13ec1f6ccd6c32f7efa01e21588f0b" name="a2b13ec1f6ccd6c32f7efa01e21588f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b13ec1f6ccd6c32f7efa01e21588f0b">&#9670;&nbsp;</a></span>FullMatch() <span class="overload">[2/2]</span></h2>
+<a id="a019560f10debdce5f47bb18c0e5261b5" name="a019560f10debdce5f47bb18c0e5261b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a019560f10debdce5f47bb18c0e5261b5">&#9670;&nbsp;</a></span>operator ParamGenerator&lt; T &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> testing::internal::RE::FullMatch </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a01156.html">RE</a> &amp;&#160;</td>
-          <td class="paramname"><em>re</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4c3a519ce849abc57d6d5fffbf1e04dc" name="a4c3a519ce849abc57d6d5fffbf1e04dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c3a519ce849abc57d6d5fffbf1e04dc">&#9670;&nbsp;</a></span>Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void testing::internal::RE::Init </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>regex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1e81f9a87211bdca645e025f8f0236c8" name="a1e81f9a87211bdca645e025f8f0236c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e81f9a87211bdca645e025f8f0236c8">&#9670;&nbsp;</a></span>PartialMatch() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> testing::internal::RE::PartialMatch </td>
-          <td>(</td>
-          <td class="paramtype">const ::std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a01156.html">RE</a> &amp;&#160;</td>
-          <td class="paramname"><em>re</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00925">925</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  925</span>                                                               {</div>
-<div class="line"><span class="lineno">  926</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a01156.html#a1e81f9a87211bdca645e025f8f0236c8">PartialMatch</a>(str.c_str(), re);</div>
-<div class="line"><span class="lineno">  927</span>  }</div>
-<div class="ttc" id="aa01156_html_a1e81f9a87211bdca645e025f8f0236c8"><div class="ttname"><a href="a01156.html#a1e81f9a87211bdca645e025f8f0236c8">testing::internal::RE::PartialMatch</a></div><div class="ttdeci">static bool PartialMatch(const ::std::string &amp;str, const RE &amp;re)</div><div class="ttdef"><b>Definition:</b> <a href="a00281_source.html#l00925">gtest-port.h:925</a></div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00293_source.html#l00055">GTEST_DISABLE_MSC_WARNINGS_PUSH_()</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01156_a1e81f9a87211bdca645e025f8f0236c8_icgraph.png" border="0" usemap="#aa01156_a1e81f9a87211bdca645e025f8f0236c8_icgraph" alt=""/></div>
-<map name="aa01156_a1e81f9a87211bdca645e025f8f0236c8_icgraph" id="aa01156_a1e81f9a87211bdca645e025f8f0236c8_icgraph">
-<area shape="rect" title=" " alt="" coords="297,5,416,47"/>
-<area shape="rect" href="a00293.html#ae9b7a8d33bcb4bbad774b324eeeb23d6" title=" " alt="" coords="5,5,249,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a97495dd4c2bb9589522823f060c8e8ba" name="a97495dd4c2bb9589522823f060c8e8ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97495dd4c2bb9589522823f060c8e8ba">&#9670;&nbsp;</a></span>PartialMatch() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> testing::internal::RE::PartialMatch </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a01156.html">RE</a> &amp;&#160;</td>
-          <td class="paramname"><em>re</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a755aa35fb49255d8d17bd5451cdedc5e" name="a755aa35fb49255d8d17bd5451cdedc5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a755aa35fb49255d8d17bd5451cdedc5e">&#9670;&nbsp;</a></span>pattern()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char * testing::internal::RE::pattern </td>
+          <td class="memname"><a class="el" href="a01156.html">testing::internal::ValueArray</a>&lt; Ts &gt;::operator <a class="el" href="a01084.html">ParamGenerator</a>&lt; T &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -460,37 +190,42 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00916">916</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  916</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="a01156.html#a44ab32241fab42db5b6f7482776658ec">pattern_</a>; }</div>
-<div class="ttc" id="aa01156_html_a44ab32241fab42db5b6f7482776658ec"><div class="ttname"><a href="a01156.html#a44ab32241fab42db5b6f7482776658ec">testing::internal::RE::pattern_</a></div><div class="ttdeci">const char * pattern_</div><div class="ttdef"><b>Definition:</b> <a href="a00281_source.html#l00934">gtest-port.h:934</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00795">795</a> of file <a class="el" href="a00281_source.html">gtest-param-util.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  795</span>                                     {  <span class="comment">// NOLINT</span></div>
+<div class="line"><span class="lineno">  796</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a00321.html#a350c2610dbc5a30904732c3675c7fdce">ValuesIn</a>(MakeVector&lt;T&gt;(<a class="code hl_typedef" href="a00322.html#ac4603a2df7edcb3e2302ac9e2aa0c11d">MakeIndexSequence</a>&lt;<span class="keyword">sizeof</span>...(Ts)&gt;()));</div>
+<div class="line"><span class="lineno">  797</span>  }</div>
+<div class="ttc" id="aa00321_html_a350c2610dbc5a30904732c3675c7fdce"><div class="ttname"><a href="a00321.html#a350c2610dbc5a30904732c3675c7fdce">testing::ValuesIn</a></div><div class="ttdeci">internal::ParamGenerator&lt; typename std::iterator_traits&lt; ForwardIterator &gt;::value_type &gt; ValuesIn(ForwardIterator begin, ForwardIterator end)</div><div class="ttdef"><b>Definition:</b> <a href="a00272_source.html#l00292">gtest-param-test.h:292</a></div></div>
+<div class="ttc" id="aa00322_html_ac4603a2df7edcb3e2302ac9e2aa0c11d"><div class="ttname"><a href="a00322.html#ac4603a2df7edcb3e2302ac9e2aa0c11d">testing::internal::MakeIndexSequence</a></div><div class="ttdeci">typename MakeIndexSequenceImpl&lt; N &gt;::type MakeIndexSequence</div><div class="ttdef"><b>Definition:</b> <a href="a00284_source.html#l01183">gtest-internal.h:1183</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00281_source.html#l00907">RE()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="a00272_source.html#l00292">testing::ValuesIn()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01156_a755aa35fb49255d8d17bd5451cdedc5e_icgraph.png" border="0" usemap="#aa01156_a755aa35fb49255d8d17bd5451cdedc5e_icgraph" alt=""/></div>
-<map name="aa01156_a755aa35fb49255d8d17bd5451cdedc5e_icgraph" id="aa01156_a755aa35fb49255d8d17bd5451cdedc5e_icgraph">
-<area shape="rect" title=" " alt="" coords="168,5,283,47"/>
-<area shape="rect" href="a01156.html#ab215dbc2565fce641e1746ca43e9d68a" title=" " alt="" coords="5,5,120,47"/>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a01156_a019560f10debdce5f47bb18c0e5261b5_cgraph.png" border="0" usemap="#aa01156_a019560f10debdce5f47bb18c0e5261b5_cgraph" alt=""/></div>
+<map name="aa01156_a019560f10debdce5f47bb18c0e5261b5_cgraph" id="aa01156_a019560f10debdce5f47bb18c0e5261b5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,156,61"/>
+<area shape="rect" href="a00321.html#a350c2610dbc5a30904732c3675c7fdce" title=" " alt="" coords="204,20,323,47"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1627cf3c6e38a83518e7aefd659b938b" name="a1627cf3c6e38a83518e7aefd659b938b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1627cf3c6e38a83518e7aefd659b938b">&#9670;&nbsp;</a></span>full_regex_</h2>
+<a id="a13322bd870795fdd18dde7f95c4cedb0" name="a13322bd870795fdd18dde7f95c4cedb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13322bd870795fdd18dde7f95c4cedb0">&#9670;&nbsp;</a></span>v_</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">regex_t testing::internal::RE::full_regex_</td>
+          <td class="memname"><a class="el" href="a01048.html">FlatTuple</a>&lt;Ts...&gt; <a class="el" href="a01156.html">testing::internal::ValueArray</a>&lt; Ts &gt;::v_</td>
         </tr>
       </table>
   </td>
@@ -500,89 +235,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00939">939</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00805">805</a> of file <a class="el" href="a00281_source.html">gtest-param-util.h</a>.</p>
 
-</div>
-</div>
-<a id="af9062fefab96529ff785f50097416d64" name="af9062fefab96529ff785f50097416d64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9062fefab96529ff785f50097416d64">&#9670;&nbsp;</a></span>is_valid_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> testing::internal::RE::is_valid_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00935">935</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-
-</div>
-</div>
-<a id="a1b3e42916c61db479ae90c7a96c22a58" name="a1b3e42916c61db479ae90c7a96c22a58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b3e42916c61db479ae90c7a96c22a58">&#9670;&nbsp;</a></span>partial_regex_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">regex_t testing::internal::RE::partial_regex_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00940">940</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
-
-</div>
-</div>
-<a id="a44ab32241fab42db5b6f7482776658ec" name="a44ab32241fab42db5b6f7482776658ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ab32241fab42db5b6f7482776658ec">&#9670;&nbsp;</a></span>pattern_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* testing::internal::RE::pattern_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00281_source.html#l00934">934</a> of file <a class="el" href="a00281_source.html">gtest-port.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00281_source.html#l00801">testing::internal::ValueArray&lt; Ts &gt;::MakeVector()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00281_source.html">gtest-port.h</a></li>
+<li><a class="el" href="a00281_source.html">gtest-param-util.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

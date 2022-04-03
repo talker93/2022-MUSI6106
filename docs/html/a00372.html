@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: CVectorFloat Class Reference</title>
+<title>MUSI6106: CRingBuffer&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -41,581 +41,551 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="a00369.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">CVectorFloat Class Reference</div></div>
+  <div class="headertitle"><div class="title">CRingBuffer&lt; T &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>class with static functions for buffer operations with type float  
+<p>implement a circular buffer of type T  
  <a href="a00372.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00053_source.html">Vector.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00047_source.html">RingBuffer.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for CVectorFloat:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for CRingBuffer&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00370.png" border="0" usemap="#aCVectorFloat_coll__map" alt="Collaboration graph"/></div>
-<map name="aCVectorFloat_coll__map" id="aCVectorFloat_coll__map">
-<area shape="rect" title="class with static functions for buffer operations with type float" alt="" coords="5,5,167,229"/>
+<div class="center"><img src="a00371.png" border="0" usemap="#aCRingBuffer_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aCRingBuffer_3_01T_01_4_inherit__map" id="aCRingBuffer_3_01T_01_4_inherit__map">
+<area shape="rect" title="implement a circular buffer of type T" alt="" coords="13,5,135,317"/>
+<area shape="rect" href="a00372.html" title=" " alt="" coords="5,380,143,692"/>
 </map>
 </div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1d4dfb2b0462cadd25aae6fcd4cc978e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a1d4dfb2b0462cadd25aae6fcd4cc978e">setZero</a> (float *pfSrcDest, long long int iLength)</td></tr>
-<tr class="separator:a1d4dfb2b0462cadd25aae6fcd4cc978e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d436efcd4230e2c7573bf66a1c06fdf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a7d436efcd4230e2c7573bf66a1c06fdf">setZeroBelowThresh</a> (float *pfSrcDest, long long int iLength, float fThresh)</td></tr>
-<tr class="separator:a7d436efcd4230e2c7573bf66a1c06fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bf711bf2ed2dc87efeafe12db55570e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a0bf711bf2ed2dc87efeafe12db55570e">copy</a> (float *pfDest, const float *pfSource, long long int iLength)</td></tr>
-<tr class="separator:a0bf711bf2ed2dc87efeafe12db55570e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4939c8901691ccaacf558dee2a2e3ea4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a4939c8901691ccaacf558dee2a2e3ea4">flip_I</a> (float *pfSrcDest, long long int iLength)</td></tr>
-<tr class="separator:a4939c8901691ccaacf558dee2a2e3ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61715dbd068db45281c419aa004b309"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#aa61715dbd068db45281c419aa004b309">moveInMem</a> (float *pfSrcDest, int iDestIdx, int iSrcIdx, long long int iLength)</td></tr>
-<tr class="separator:aa61715dbd068db45281c419aa004b309"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35da686af8fe05cbd3681dc8ee9ea093"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a35da686af8fe05cbd3681dc8ee9ea093">setValue</a> (float *pfDest, float fValue, long long int iLength)</td></tr>
-<tr class="separator:a35da686af8fe05cbd3681dc8ee9ea093"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc9a413a88b0c7143252dac95050af33"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#afc9a413a88b0c7143252dac95050af33">mulC_I</a> (float *pfSrcDest, float fScale, long long int iLength)</td></tr>
-<tr class="separator:afc9a413a88b0c7143252dac95050af33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b380667a11bdeea9255e5370bd5a78"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a46b380667a11bdeea9255e5370bd5a78">mul_I</a> (float *pfSrcDest, const float *pfSrc, long long int iLength)</td></tr>
-<tr class="separator:a46b380667a11bdeea9255e5370bd5a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab572a4fece01255657935ed18afdeadd"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#ab572a4fece01255657935ed18afdeadd">mulScalar</a> (const float *pfSrc1, const float *pfSrc2, long long int iLength)</td></tr>
-<tr class="separator:ab572a4fece01255657935ed18afdeadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fc0e817ee7393981e7bc5368c24bd8b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a9fc0e817ee7393981e7bc5368c24bd8b">div_I</a> (float *pfSrcDest, const float *pfSrc, long long int iLength)</td></tr>
-<tr class="separator:a9fc0e817ee7393981e7bc5368c24bd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8abbcfd075eabceada2f024773f11166"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a8abbcfd075eabceada2f024773f11166">add_I</a> (float *pfSrcDest, const float *pfSrc, long long int iLength)</td></tr>
-<tr class="separator:a8abbcfd075eabceada2f024773f11166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdb1aec0f9f05d402b3804d5c2e29a6a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#abdb1aec0f9f05d402b3804d5c2e29a6a">addC_I</a> (float *pfSrcDest, float fScale, long long int iLength)</td></tr>
-<tr class="separator:abdb1aec0f9f05d402b3804d5c2e29a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb3a5019161f218ad15e52d103a653f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#acb3a5019161f218ad15e52d103a653f3">sub_I</a> (float *pfSrcDest, const float *pfSrc, long long int iLength)</td></tr>
-<tr class="separator:acb3a5019161f218ad15e52d103a653f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7972e4c31df79a32bbc5396e07d2ca9e"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a7972e4c31df79a32bbc5396e07d2ca9e">getSum</a> (const float *pfSrc, long long int iLength, <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> bAbs=<a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
-<tr class="separator:a7972e4c31df79a32bbc5396e07d2ca9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a538360782e08af350628af239a87ed74"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a538360782e08af350628af239a87ed74">isEqual</a> (const float *pfSrc1, const float *pfSrc2, long long int iLength)</td></tr>
-<tr class="separator:a538360782e08af350628af239a87ed74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ebcfe60eb5cda1ab45ae8157be0e64e"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a0ebcfe60eb5cda1ab45ae8157be0e64e">getMean</a> (const float *pfSrc, long long int iLength)</td></tr>
-<tr class="separator:a0ebcfe60eb5cda1ab45ae8157be0e64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb8403fcec4943418492c547a7c59153"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#acb8403fcec4943418492c547a7c59153">getStd</a> (const float *pfSrc, long long int iLength, float fMean=std::numeric_limits&lt; float &gt;::max())</td></tr>
-<tr class="separator:acb8403fcec4943418492c547a7c59153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ebae2ebfad47fcf1b11f432153c1fc8"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a8ebae2ebfad47fcf1b11f432153c1fc8">getRms</a> (const float *pfSrc, long long int iLength)</td></tr>
-<tr class="separator:a8ebae2ebfad47fcf1b11f432153c1fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8279b309edcfcac51d94b1e8f206a330"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a8279b309edcfcac51d94b1e8f206a330">getMax</a> (const float *pfSrc, long long int iLength, <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> bAbs=<a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
-<tr class="separator:a8279b309edcfcac51d94b1e8f206a330"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c336e4bb302b1140096f2f1f1aa2ad3"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a5c336e4bb302b1140096f2f1f1aa2ad3">getMin</a> (const float *pfSrc, long long int iLength, <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> bAbs=<a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
-<tr class="separator:a5c336e4bb302b1140096f2f1f1aa2ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66a451d1a0992e33a73c01b09566eea0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a66a451d1a0992e33a73c01b09566eea0">findMax</a> (const float *pfSrc, float &amp;fMax, long long &amp;iMax, long long int iLength, <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> bAbs=<a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
-<tr class="separator:a66a451d1a0992e33a73c01b09566eea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0908e3346b074958aeb2be9b466ec998"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a0908e3346b074958aeb2be9b466ec998">findMin</a> (const float *pfSrc, float &amp;fMin, long long &amp;iMin, long long int iLength, <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> bAbs=<a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
-<tr class="separator:a0908e3346b074958aeb2be9b466ec998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >class with static functions for buffer operations with type float </p>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00105">105</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8abbcfd075eabceada2f024773f11166" name="a8abbcfd075eabceada2f024773f11166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8abbcfd075eabceada2f024773f11166">&#9670;&nbsp;</a></span>add_I()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CVectorFloat::add_I </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >element-wise vector addition </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>one input and output buffer </td></tr>
-    <tr><td class="paramname">pfSrc</td><td>second input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of element to be added </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00253">253</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>    {</div>
-<div class="line"><span class="lineno">  255</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  256</span>        assert (pfSrcDest);</div>
-<div class="line"><span class="lineno">  257</span>        assert (pfSrc);</div>
-<div class="line"><span class="lineno">  258</span> </div>
-<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  260</span>            pfSrcDest[i] += pfSrc[i];</div>
-<div class="line"><span class="lineno">  261</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00002_source.html#l00020">main()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for CRingBuffer&lt; T &gt;:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a8abbcfd075eabceada2f024773f11166_icgraph.png" border="0" usemap="#aa00372_a8abbcfd075eabceada2f024773f11166_icgraph" alt=""/></div>
-<map name="aa00372_a8abbcfd075eabceada2f024773f11166_icgraph" id="aa00372_a8abbcfd075eabceada2f024773f11166_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,240,32"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<div class="center"><img src="a00370.png" border="0" usemap="#aCRingBuffer_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aCRingBuffer_3_01T_01_4_coll__map" id="aCRingBuffer_3_01T_01_4_coll__map">
+<area shape="rect" title="implement a circular buffer of type T" alt="" coords="5,5,127,317"/>
 </map>
 </div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a0e007e130e9190892274dde988e40a59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a0e007e130e9190892274dde988e40a59">CRingBuffer</a> (int iBufferLengthInSamples)</td></tr>
+<tr class="separator:a0e007e130e9190892274dde988e40a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c8bb4689fcef14d595e897ea72cba9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a97c8bb4689fcef14d595e897ea72cba9">~CRingBuffer</a> ()</td></tr>
+<tr class="separator:a97c8bb4689fcef14d595e897ea72cba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd848181a662312600bc590b9040d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a2bd848181a662312600bc590b9040d2a">putPostInc</a> (T tNewValue)</td></tr>
+<tr class="separator:a2bd848181a662312600bc590b9040d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21568ce259aa8e97ea3f3d7aec4828b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a21568ce259aa8e97ea3f3d7aec4828b7">putPostInc</a> (const T *ptNewBuff, int iLength)</td></tr>
+<tr class="separator:a21568ce259aa8e97ea3f3d7aec4828b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702eb6314380082795f735df74a816c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a702eb6314380082795f735df74a816c9">put</a> (T tNewValue)</td></tr>
+<tr class="separator:a702eb6314380082795f735df74a816c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f6463cfcafd855157d33d253011dc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a15f6463cfcafd855157d33d253011dc7">put</a> (const T *ptNewBuff, int iLength)</td></tr>
+<tr class="separator:a15f6463cfcafd855157d33d253011dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f25eadaafa6a2e7bfe2f9ef6af1104b"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">getPostInc</a> ()</td></tr>
+<tr class="separator:a0f25eadaafa6a2e7bfe2f9ef6af1104b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb86fd660cbaadd93a9d89dc529d5b76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#aeb86fd660cbaadd93a9d89dc529d5b76">getPostInc</a> (T *ptBuff, int iLength)</td></tr>
+<tr class="separator:aeb86fd660cbaadd93a9d89dc529d5b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d9877584d712c17811a9833835605e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a23d9877584d712c17811a9833835605e">get</a> (float fOffset=0) const</td></tr>
+<tr class="separator:a23d9877584d712c17811a9833835605e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047d589f30b02374de2aabdbc6892912"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a047d589f30b02374de2aabdbc6892912">get</a> (T *ptBuff, int iLength) const</td></tr>
+<tr class="separator:a047d589f30b02374de2aabdbc6892912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716fb4acc03355a73cc7d96f3ceb2995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a716fb4acc03355a73cc7d96f3ceb2995">reset</a> ()</td></tr>
+<tr class="separator:a716fb4acc03355a73cc7d96f3ceb2995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8173fd5abe5c4ff4e78ffad4b14ea88b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a8173fd5abe5c4ff4e78ffad4b14ea88b">getWriteIdx</a> () const</td></tr>
+<tr class="separator:a8173fd5abe5c4ff4e78ffad4b14ea88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408e0ec5855fca27bd2dc5862fa913ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab">setWriteIdx</a> (int iNewWriteIdx)</td></tr>
+<tr class="separator:a408e0ec5855fca27bd2dc5862fa913ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18fac37cac4e8bde0419fe04845ac9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#ab18fac37cac4e8bde0419fe04845ac9d">getReadIdx</a> () const</td></tr>
+<tr class="separator:ab18fac37cac4e8bde0419fe04845ac9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af265a6322c4b1584c880def00d31e663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#af265a6322c4b1584c880def00d31e663">setReadIdx</a> (int iNewReadIdx)</td></tr>
+<tr class="separator:af265a6322c4b1584c880def00d31e663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04a6cb30d486a6ddd5f7929db1eef9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#aa04a6cb30d486a6ddd5f7929db1eef9d">getNumValuesInBuffer</a> () const</td></tr>
+<tr class="separator:aa04a6cb30d486a6ddd5f7929db1eef9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec2bd62a49e5078d3ca0a03fa123c9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a0ec2bd62a49e5078d3ca0a03fa123c9e">getLength</a> () const</td></tr>
+<tr class="separator:a0ec2bd62a49e5078d3ca0a03fa123c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a16631e41f7e79a0da11a5246dfcade5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a16631e41f7e79a0da11a5246dfcade5c">CRingBuffer</a> ()</td></tr>
+<tr class="separator:a16631e41f7e79a0da11a5246dfcade5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add36d66b9e45b08cb8bb11b1fbc83e1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#add36d66b9e45b08cb8bb11b1fbc83e1b">CRingBuffer</a> (const <a class="el" href="a00372.html">CRingBuffer</a> &amp;that)</td></tr>
+<tr class="separator:add36d66b9e45b08cb8bb11b1fbc83e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67eddecd2a880c52c80093774bc37c24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a> (int &amp;iIdx, int iOffset=1)</td></tr>
+<tr class="separator:a67eddecd2a880c52c80093774bc37c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a3f35b48aa5632a863a85d09de775fb0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a> = 0</td></tr>
+<tr class="memdesc:a3f35b48aa5632a863a85d09de775fb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">length of the internal buffer  <a href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">More...</a><br /></td></tr>
+<tr class="separator:a3f35b48aa5632a863a85d09de775fb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17237cdeda2b10e77e1815def129debd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a> = 0</td></tr>
+<tr class="memdesc:a17237cdeda2b10e77e1815def129debd"><td class="mdescLeft">&#160;</td><td class="mdescRight">current read index  <a href="a00372.html#a17237cdeda2b10e77e1815def129debd">More...</a><br /></td></tr>
+<tr class="separator:a17237cdeda2b10e77e1815def129debd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bfd60fbefec3403b6a2a420b8695a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a> = 0</td></tr>
+<tr class="memdesc:ad2bfd60fbefec3403b6a2a420b8695a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">current write index  <a href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">More...</a><br /></td></tr>
+<tr class="separator:ad2bfd60fbefec3403b6a2a420b8695a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c82ffd2218093776e8952e15309c51e"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a> = 0</td></tr>
+<tr class="memdesc:a6c82ffd2218093776e8952e15309c51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">data buffer  <a href="a00372.html#a6c82ffd2218093776e8952e15309c51e">More...</a><br /></td></tr>
+<tr class="separator:a6c82ffd2218093776e8952e15309c51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class CRingBuffer&lt; T &gt;</div><p >implement a circular buffer of type T </p>
 
-</div>
-</div>
-<a id="abdb1aec0f9f05d402b3804d5c2e29a6a" name="abdb1aec0f9f05d402b3804d5c2e29a6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdb1aec0f9f05d402b3804d5c2e29a6a">&#9670;&nbsp;</a></span>addC_I()</h2>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00012">12</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0e007e130e9190892274dde988e40a59" name="a0e007e130e9190892274dde988e40a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e007e130e9190892274dde988e40a59">&#9670;&nbsp;</a></span>CRingBuffer() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::addC_I </td>
+          <td class="memname"><a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;<a class="el" href="a00372.html">::CRingBuffer</a> </td>
           <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iBufferLengthInSamples</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fScale</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >adds a buffer to a scalar </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>buffer to be added </td></tr>
-    <tr><td class="paramname">fScale</td><td>scalar </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of element to be added </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00269">269</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>    {</div>
-<div class="line"><span class="lineno">  271</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  272</span>        assert (pfSrcDest);</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  275</span>            pfSrcDest[i] += fScale;</div>
-<div class="line"><span class="lineno">  276</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00015">15</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                     :</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>(iBufferLengthInSamples),</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>(0),</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>(0),</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>(0)</div>
+<div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        assert(iBufferLengthInSamples &gt; 0);</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a> = <span class="keyword">new</span> T[<a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>];</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_function" href="a00372.html#a716fb4acc03355a73cc7d96f3ceb2995">reset</a>();</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+<div class="ttc" id="aa00372_html_a17237cdeda2b10e77e1815def129debd"><div class="ttname"><a href="a00372.html#a17237cdeda2b10e77e1815def129debd">CRingBuffer::m_iReadIdx</a></div><div class="ttdeci">int m_iReadIdx</div><div class="ttdoc">current read index</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00217">RingBuffer.h:217</a></div></div>
+<div class="ttc" id="aa00372_html_a3f35b48aa5632a863a85d09de775fb0b"><div class="ttname"><a href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">CRingBuffer::m_iBuffLength</a></div><div class="ttdeci">int m_iBuffLength</div><div class="ttdoc">length of the internal buffer</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00216">RingBuffer.h:216</a></div></div>
+<div class="ttc" id="aa00372_html_a6c82ffd2218093776e8952e15309c51e"><div class="ttname"><a href="a00372.html#a6c82ffd2218093776e8952e15309c51e">CRingBuffer::m_ptBuff</a></div><div class="ttdeci">T * m_ptBuff</div><div class="ttdoc">data buffer</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00220">RingBuffer.h:220</a></div></div>
+<div class="ttc" id="aa00372_html_a716fb4acc03355a73cc7d96f3ceb2995"><div class="ttname"><a href="a00372.html#a716fb4acc03355a73cc7d96f3ceb2995">CRingBuffer::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00146">RingBuffer.h:146</a></div></div>
+<div class="ttc" id="aa00372_html_ad2bfd60fbefec3403b6a2a420b8695a5"><div class="ttname"><a href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">CRingBuffer::m_iWriteIdx</a></div><div class="ttdeci">int m_iWriteIdx</div><div class="ttdoc">current write index</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00218">RingBuffer.h:218</a></div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a0bf711bf2ed2dc87efeafe12db55570e" name="a0bf711bf2ed2dc87efeafe12db55570e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bf711bf2ed2dc87efeafe12db55570e">&#9670;&nbsp;</a></span>copy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CVectorFloat::copy </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSource</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >copies buffer of type float </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfDest</td><td>pointer to destination memory </td></tr>
-    <tr><td class="paramname">pfSource</td><td>pointer to source memory </td></tr>
-    <tr><td class="paramname">iLength</td><td>length of buffer </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00136">136</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>    {</div>
-<div class="line"><span class="lineno">  138</span>        <a class="code hl_function" href="a00368.html#aba214ad13bd31ee50af099bcf3aeaa66">CVector::copy</a>(pfDest, pfSource, iLength);</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="ttc" id="aa00368_html_aba214ad13bd31ee50af099bcf3aeaa66"><div class="ttname"><a href="a00368.html#aba214ad13bd31ee50af099bcf3aeaa66">CVector::copy</a></div><div class="ttdeci">static void copy(T *pDest, const T *pSource, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00051">Vector.h:51</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00051">CVector::copy()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="a00023_source.html#l00111">CFft::doFft()</a>, <a class="el" href="a00023_source.html#l00135">CFft::doInvFft()</a>, <a class="el" href="a00023_source.html#l00099">CFft::getWindow()</a>, <a class="el" href="a00023_source.html#l00217">CFft::mergeRealImag()</a>, <a class="el" href="a00023_source.html#l00087">CFft::overrideWindow()</a>, and <a class="el" href="a00023_source.html#l00198">CFft::splitRealImag()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>, and <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a0bf711bf2ed2dc87efeafe12db55570e_cgraph.png" border="0" usemap="#aa00372_a0bf711bf2ed2dc87efeafe12db55570e_cgraph" alt=""/></div>
-<map name="aa00372_a0bf711bf2ed2dc87efeafe12db55570e_cgraph" id="aa00372_a0bf711bf2ed2dc87efeafe12db55570e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
-<area shape="rect" href="a00368.html#aba214ad13bd31ee50af099bcf3aeaa66" title=" " alt="" coords="184,5,287,32"/>
+<div class="center"><img src="a00372_a0e007e130e9190892274dde988e40a59_cgraph.png" border="0" usemap="#aa00372_a0e007e130e9190892274dde988e40a59_cgraph" alt=""/></div>
+<map name="aa00372_a0e007e130e9190892274dde988e40a59_cgraph" id="aa00372_a0e007e130e9190892274dde988e40a59_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" href="a00372.html#a716fb4acc03355a73cc7d96f3ceb2995" title=" " alt="" coords="220,5,347,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a97c8bb4689fcef14d595e897ea72cba9" name="a97c8bb4689fcef14d595e897ea72cba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c8bb4689fcef14d595e897ea72cba9">&#9670;&nbsp;</a></span>~CRingBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::~<a class="el" href="a00372.html">CRingBuffer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00027">27</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">delete</span>[] <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>;</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a> = 0;</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+
+</div>
+</div>
+<a id="a16631e41f7e79a0da11a5246dfcade5c" name="a16631e41f7e79a0da11a5246dfcade5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16631e41f7e79a0da11a5246dfcade5c">&#9670;&nbsp;</a></span>CRingBuffer() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;<a class="el" href="a00372.html">::CRingBuffer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add36d66b9e45b08cb8bb11b1fbc83e1b" name="add36d66b9e45b08cb8bb11b1fbc83e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add36d66b9e45b08cb8bb11b1fbc83e1b">&#9670;&nbsp;</a></span>CRingBuffer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;<a class="el" href="a00372.html">::CRingBuffer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a23d9877584d712c17811a9833835605e" name="a23d9877584d712c17811a9833835605e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d9877584d712c17811a9833835605e">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fOffset</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return the value at the current read index </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fOffset</td><td>read at offset from read index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float the value from the read index </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00105">105</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (fOffset == 0)</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>];</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>            <span class="comment">// compute fraction for linear interpolation </span></div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordtype">int</span>     iOffset = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::floor(fOffset));</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordtype">float</span>   fFrac = fOffset - iOffset;</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordtype">int</span>     iRead = <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a> + iOffset;</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">while</span> (iRead &gt; <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a> - 1)</div>
+<div class="line"><span class="lineno">  117</span>                iRead -= <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">while</span> (iRead &lt; 0)</div>
+<div class="line"><span class="lineno">  119</span>                iRead += <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">return</span> (1 - fFrac) * <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[iRead] +</div>
+<div class="line"><span class="lineno">  122</span>                fFrac * <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[(iRead + 1) % <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>];</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00044_source.html#l00064">CLfo::getNext()</a>, <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, and <a class="el" href="a00026_source.html#l00178">CVibrato::process()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a0bf711bf2ed2dc87efeafe12db55570e_icgraph.png" border="0" usemap="#aa00372_a0bf711bf2ed2dc87efeafe12db55570e_icgraph" alt=""/></div>
-<map name="aa00372_a0bf711bf2ed2dc87efeafe12db55570e_icgraph" id="aa00372_a0bf711bf2ed2dc87efeafe12db55570e_icgraph">
-<area shape="rect" title=" " alt="" coords="297,132,428,159"/>
-<area shape="rect" href="a00352.html#a3f8575f19e7cbc3749ffb99fcb78e6e4" title=" " alt="" coords="135,5,218,32"/>
-<area shape="rect" href="a00352.html#a9d36e0324247b1a56f209c0079d898e4" title=" " alt="" coords="126,56,227,83"/>
-<area shape="rect" href="a00352.html#a71a16138f6d7e92548302f692ef92b9d" title=" " alt="" coords="118,107,235,133"/>
-<area shape="rect" href="a00352.html#afae6f37b9bd00eaf068b9edd0fd0273d" title=" " alt="" coords="105,157,249,184"/>
-<area shape="rect" href="a00352.html#aa613a3fa5e2e0ce0889021fdaaed8a0e" title=" " alt="" coords="104,208,249,235"/>
-<area shape="rect" href="a00352.html#a8aca99dbeeab366e72833fa09c134d9a" title=" " alt="" coords="111,259,243,285"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<div class="center"><img src="a00372_a23d9877584d712c17811a9833835605e_icgraph.png" border="0" usemap="#aa00372_a23d9877584d712c17811a9833835605e_icgraph" alt=""/></div>
+<map name="aa00372_a23d9877584d712c17811a9833835605e_icgraph" id="aa00372_a23d9877584d712c17811a9833835605e_icgraph">
+<area shape="rect" title=" " alt="" coords="521,56,636,83"/>
+<area shape="rect" href="a00368.html#a9e71576cbcfc7af6667778053335efaf" title=" " alt="" coords="343,5,444,32"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="123,56,247,83"/>
+<area shape="rect" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b" title=" " alt="" coords="313,107,473,133"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="104,107,265,133"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="106,157,263,184"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a9fc0e817ee7393981e7bc5368c24bd8b" name="a9fc0e817ee7393981e7bc5368c24bd8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fc0e817ee7393981e7bc5368c24bd8b">&#9670;&nbsp;</a></span>div_I()</h2>
+<a id="a047d589f30b02374de2aabdbc6892912" name="a047d589f30b02374de2aabdbc6892912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047d589f30b02374de2aabdbc6892912">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::div_I </td>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::get </td>
           <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ptBuff</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>iLength</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >element-wise vector division </p><dl class="params"><dt>Parameters</dt><dd>
+<p >return the values starting at the current read index </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>one input and output buffer </td></tr>
-    <tr><td class="paramname">pfSrc</td><td>second input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of element to be divided </td></tr>
+    <tr><td class="paramname">ptBuff</td><td>to where the values will be written </td></tr>
+    <tr><td class="paramname">iLength</td><td>number of values </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00234">234</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>    {</div>
-<div class="line"><span class="lineno">  236</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  237</span>        assert (pfSrcDest);</div>
-<div class="line"><span class="lineno">  238</span>        assert (pfSrc);</div>
-<div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  241</span>        {</div>
-<div class="line"><span class="lineno">  242</span>            assert(pfSrc[i] != 0);</div>
-<div class="line"><span class="lineno">  243</span>            pfSrcDest[i] /= pfSrc[i];</div>
-<div class="line"><span class="lineno">  244</span>        }</div>
-<div class="line"><span class="lineno">  245</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00131">131</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        assert(iLength &lt;= m_iBuffLength &amp;&amp; iLength &gt;= 0);</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>        <span class="comment">// copy two parts: to the end of buffer and after wrap around</span></div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">int</span> iNumValues2End = std::min(iLength, <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a> - <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>);</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>        std::memcpy (ptBuff, &amp;<a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>], <span class="keyword">sizeof</span>(T)*iNumValues2End);</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> ((iLength - iNumValues2End)&gt;0)</div>
+<div class="line"><span class="lineno">  140</span>            std::memcpy (&amp;ptBuff[iNumValues2End], <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>, <span class="keyword">sizeof</span>(T)*(iLength - iNumValues2End));</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+
 </div>
 </div>
-<a id="a66a451d1a0992e33a73c01b09566eea0" name="a66a451d1a0992e33a73c01b09566eea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66a451d1a0992e33a73c01b09566eea0">&#9670;&nbsp;</a></span>findMax()</h2>
+<a id="a0ec2bd62a49e5078d3ca0a03fa123c9e" name="a0ec2bd62a49e5078d3ca0a03fa123c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec2bd62a49e5078d3ca0a03fa123c9e">&#9670;&nbsp;</a></span>getLength()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::findMax </td>
+          <td class="memname">int <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::getLength </td>
           <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float &amp;&#160;</td>
-          <td class="paramname"><em>fMax</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long &amp;&#160;</td>
-          <td class="paramname"><em>iMax</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
-          <td class="paramname"><em>bAbs</em> = <code><a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >finds the maximum (absolute) value in the buffer </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>input buffer </td></tr>
-    <tr><td class="paramname">fMax</td><td>resulting output value </td></tr>
-    <tr><td class="paramname">iMax</td><td>index of the resulting output value </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements in buffer </td></tr>
-    <tr><td class="paramname">bAbs</td><td>bool to specify whether we search absolute values </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<p >returns the length of the internal buffer </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00449">449</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  450</span>    {</div>
-<div class="line"><span class="lineno">  451</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  452</span>        assert (pfSrc);</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>        fMax    = -std::numeric_limits&lt;float&gt;::max();</div>
-<div class="line"><span class="lineno">  455</span>        iMax    = -1;</div>
-<div class="line"><span class="lineno">  456</span> </div>
-<div class="line"><span class="lineno">  457</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  458</span>        {</div>
-<div class="line"><span class="lineno">  459</span>            <span class="keywordtype">float</span> fCurr   = (bAbs)? std::abs(pfSrc[i]) : pfSrc[i];</div>
-<div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>            <span class="keywordflow">if</span> (fCurr &gt; fMax)</div>
-<div class="line"><span class="lineno">  462</span>            {</div>
-<div class="line"><span class="lineno">  463</span>                fMax = fCurr;</div>
-<div class="line"><span class="lineno">  464</span>                iMax = i;</div>
-<div class="line"><span class="lineno">  465</span>            }</div>
-<div class="line"><span class="lineno">  466</span>        }</div>
-<div class="line"><span class="lineno">  467</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00198">198</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>    {</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
+<div class="line"><span class="lineno">  201</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00053_source.html#l00415">getMax()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>.</p>
+
+</div>
+</div>
+<a id="aa04a6cb30d486a6ddd5f7929db1eef9d" name="aa04a6cb30d486a6ddd5f7929db1eef9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04a6cb30d486a6ddd5f7929db1eef9d">&#9670;&nbsp;</a></span>getNumValuesInBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::getNumValuesInBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >returns the number of values currently buffered (note: 0 could also mean the buffer is full!) </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00190">190</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>    {</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> (<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a> - <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a> + <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>) % <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
+
+</div>
+</div>
+<a id="a0f25eadaafa6a2e7bfe2f9ef6af1104b" name="a0f25eadaafa6a2e7bfe2f9ef6af1104b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f25eadaafa6a2e7bfe2f9ef6af1104b">&#9670;&nbsp;</a></span>getPostInc() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::getPostInc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return the value at the current read index and increment the read pointer </p><dl class="section return"><dt>Returns</dt><dd>float the value from the read index </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00083">83</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        T tValue = <a class="code hl_function" href="a00372.html#a23d9877584d712c17811a9833835605e">get</a>();</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>);</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> tValue;</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="ttc" id="aa00372_html_a23d9877584d712c17811a9833835605e"><div class="ttname"><a href="a00372.html#a23d9877584d712c17811a9833835605e">CRingBuffer::get</a></div><div class="ttdeci">T get(float fOffset=0) const</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00105">RingBuffer.h:105</a></div></div>
+<div class="ttc" id="aa00372_html_a67eddecd2a880c52c80093774bc37c24"><div class="ttname"><a href="a00372.html#a67eddecd2a880c52c80093774bc37c24">CRingBuffer::incIdx</a></div><div class="ttdeci">void incIdx(int &amp;iIdx, int iOffset=1)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00206">RingBuffer.h:206</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00178">CVibrato::process()</a>, <a class="el" href="a00032_source.html#l00110">CCombFilterFir::process()</a>, and <a class="el" href="a00032_source.html#l00131">CCombFilterIir::process()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a66a451d1a0992e33a73c01b09566eea0_icgraph.png" border="0" usemap="#aa00372_a66a451d1a0992e33a73c01b09566eea0_icgraph" alt=""/></div>
-<map name="aa00372_a66a451d1a0992e33a73c01b09566eea0_icgraph" id="aa00372_a66a451d1a0992e33a73c01b09566eea0_icgraph">
-<area shape="rect" title=" " alt="" coords="200,5,348,32"/>
-<area shape="rect" href="a00372.html#a8279b309edcfcac51d94b1e8f206a330" title=" " alt="" coords="5,5,152,32"/>
+<div class="center"><img src="a00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_cgraph.png" border="0" usemap="#aa00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_cgraph" alt=""/></div>
+<map name="aa00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_cgraph" id="aa00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" href="a00372.html#a23d9877584d712c17811a9833835605e" title=" " alt="" coords="221,5,336,32"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="213,56,344,83"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a0908e3346b074958aeb2be9b466ec998" name="a0908e3346b074958aeb2be9b466ec998"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0908e3346b074958aeb2be9b466ec998">&#9670;&nbsp;</a></span>findMin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CVectorFloat::findMin </td>
-          <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float &amp;&#160;</td>
-          <td class="paramname"><em>fMin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long &amp;&#160;</td>
-          <td class="paramname"><em>iMin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
-          <td class="paramname"><em>bAbs</em> = <code><a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >finds the minimum (absolute) value in the buffer </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>input buffer </td></tr>
-    <tr><td class="paramname">fMin</td><td>resulting output value </td></tr>
-    <tr><td class="paramname">iMin</td><td>index of the resulting output value </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements in buffer </td></tr>
-    <tr><td class="paramname">bAbs</td><td>bool to specify whether we search absolute values </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00477">477</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  478</span>    {</div>
-<div class="line"><span class="lineno">  479</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  480</span>        assert (pfSrc);</div>
-<div class="line"><span class="lineno">  481</span> </div>
-<div class="line"><span class="lineno">  482</span>        fMin    = std::numeric_limits&lt;float&gt;::max();</div>
-<div class="line"><span class="lineno">  483</span>        iMin    = -1;</div>
-<div class="line"><span class="lineno">  484</span> </div>
-<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  486</span>        {</div>
-<div class="line"><span class="lineno">  487</span>            <span class="keywordtype">float</span> fCurr   = (bAbs)? std::abs(pfSrc[i]) : pfSrc[i];</div>
-<div class="line"><span class="lineno">  488</span> </div>
-<div class="line"><span class="lineno">  489</span>            <span class="keywordflow">if</span> (fCurr &lt; fMin)</div>
-<div class="line"><span class="lineno">  490</span>            {</div>
-<div class="line"><span class="lineno">  491</span>                fMin    = fCurr;</div>
-<div class="line"><span class="lineno">  492</span>                iMin    = i;</div>
-<div class="line"><span class="lineno">  493</span>            }</div>
-<div class="line"><span class="lineno">  494</span>        }</div>
-<div class="line"><span class="lineno">  495</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00053_source.html#l00431">getMin()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a0908e3346b074958aeb2be9b466ec998_icgraph.png" border="0" usemap="#aa00372_a0908e3346b074958aeb2be9b466ec998_icgraph" alt=""/></div>
-<map name="aa00372_a0908e3346b074958aeb2be9b466ec998_icgraph" id="aa00372_a0908e3346b074958aeb2be9b466ec998_icgraph">
-<area shape="rect" title=" " alt="" coords="196,5,341,32"/>
-<area shape="rect" href="a00372.html#a5c336e4bb302b1140096f2f1f1aa2ad3" title=" " alt="" coords="5,5,148,32"/>
+<div class="center"><img src="a00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_icgraph.png" border="0" usemap="#aa00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_icgraph" alt=""/></div>
+<map name="aa00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_icgraph" id="aa00372_a0f25eadaafa6a2e7bfe2f9ef6af1104b_icgraph">
+<area shape="rect" title=" " alt="" coords="313,56,473,83"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="123,5,247,32"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="104,56,265,83"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="106,107,263,133"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4939c8901691ccaacf558dee2a2e3ea4" name="a4939c8901691ccaacf558dee2a2e3ea4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4939c8901691ccaacf558dee2a2e3ea4">&#9670;&nbsp;</a></span>flip_I()</h2>
+<a id="aeb86fd660cbaadd93a9d89dc529d5b76" name="aeb86fd660cbaadd93a9d89dc529d5b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb86fd660cbaadd93a9d89dc529d5b76">&#9670;&nbsp;</a></span>getPostInc() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::flip_I </td>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::getPostInc </td>
           <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ptBuff</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long long int&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>iLength</em>&#160;</td>
         </tr>
         <tr>
@@ -626,66 +596,133 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >reverses buffer (last to first element) </p><dl class="params"><dt>Parameters</dt><dd>
+<p >return the values starting at the current read index and increment the read pointer </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>pointer to memory to be flipped </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements </td></tr>
+    <tr><td class="paramname">ptBuff</td><td>pointer to where the values will be written </td></tr>
+    <tr><td class="paramname">iLength</td><td>number of values </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00146">146</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_function" href="a00368.html#a8b3f33c828c43b8d7b01db9ff0b24d66">CVector::flip_I</a>(pfSrcDest, iLength);</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-<div class="ttc" id="aa00368_html_a8b3f33c828c43b8d7b01db9ff0b24d66"><div class="ttname"><a href="a00368.html#a8b3f33c828c43b8d7b01db9ff0b24d66">CVector::flip_I</a></div><div class="ttdeci">static void flip_I(T *pfSrcDest, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00068">Vector.h:68</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00095">95</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_function" href="a00372.html#a23d9877584d712c17811a9833835605e">get</a>(ptBuff, iLength);</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>, iLength);</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00068">CVector::flip_I()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a4939c8901691ccaacf558dee2a2e3ea4_cgraph.png" border="0" usemap="#aa00372_a4939c8901691ccaacf558dee2a2e3ea4_cgraph" alt=""/></div>
-<map name="aa00372_a4939c8901691ccaacf558dee2a2e3ea4_cgraph" id="aa00372_a4939c8901691ccaacf558dee2a2e3ea4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
-<area shape="rect" href="a00368.html#a8b3f33c828c43b8d7b01db9ff0b24d66" title=" " alt="" coords="184,5,287,32"/>
+<div class="center"><img src="a00372_aeb86fd660cbaadd93a9d89dc529d5b76_cgraph.png" border="0" usemap="#aa00372_aeb86fd660cbaadd93a9d89dc529d5b76_cgraph" alt=""/></div>
+<map name="aa00372_aeb86fd660cbaadd93a9d89dc529d5b76_cgraph" id="aa00372_aeb86fd660cbaadd93a9d89dc529d5b76_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" href="a00372.html#a23d9877584d712c17811a9833835605e" title=" " alt="" coords="221,5,336,32"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="213,56,344,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a8279b309edcfcac51d94b1e8f206a330" name="a8279b309edcfcac51d94b1e8f206a330"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8279b309edcfcac51d94b1e8f206a330">&#9670;&nbsp;</a></span>getMax()</h2>
+<a id="ab18fac37cac4e8bde0419fe04845ac9d" name="ab18fac37cac4e8bde0419fe04845ac9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18fac37cac4e8bde0419fe04845ac9d">&#9670;&nbsp;</a></span>getReadIdx()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float CVectorFloat::getMax </td>
+          <td class="memname">int <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::getReadIdx </td>
           <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return the current index for reading/get </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00173">173</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>    {</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>;</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
+
+</div>
+</div>
+<a id="a8173fd5abe5c4ff4e78ffad4b14ea88b" name="a8173fd5abe5c4ff4e78ffad4b14ea88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8173fd5abe5c4ff4e78ffad4b14ea88b">&#9670;&nbsp;</a></span>getWriteIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::getWriteIdx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return the current index for writing/put </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00156">156</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>    {</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>;</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
+
+</div>
+</div>
+<a id="a67eddecd2a880c52c80093774bc37c24" name="a67eddecd2a880c52c80093774bc37c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67eddecd2a880c52c80093774bc37c24">&#9670;&nbsp;</a></span>incIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::incIdx </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>iIdx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
-          <td class="paramname"><em>bAbs</em> = <code><a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a></code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iOffset</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -695,65 +732,70 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >finds the maximum (absolute) value in the buffer </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements in buffer </td></tr>
-    <tr><td class="paramname">bAbs</td><td>bool to specify whether we search absolute values </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00415">415</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  416</span>    {</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordtype">float</span> fMax;</div>
-<div class="line"><span class="lineno">  418</span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> iMax;</div>
-<div class="line"><span class="lineno">  419</span> </div>
-<div class="line"><span class="lineno">  420</span>        <a class="code hl_function" href="a00372.html#a66a451d1a0992e33a73c01b09566eea0">findMax</a>(pfSrc, fMax, iMax, iLength, bAbs);</div>
-<div class="line"><span class="lineno">  421</span> </div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">return</span> fMax;</div>
-<div class="line"><span class="lineno">  423</span>    }</div>
-<div class="ttc" id="aa00372_html_a66a451d1a0992e33a73c01b09566eea0"><div class="ttname"><a href="a00372.html#a66a451d1a0992e33a73c01b09566eea0">CVectorFloat::findMax</a></div><div class="ttdeci">static void findMax(const float *pfSrc, float &amp;fMax, long long &amp;iMax, long long int iLength, bool bAbs=false)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00449">Vector.h:449</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00206">206</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  207</span>    {</div>
+<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">while</span> ((iIdx + iOffset) &lt; 0)</div>
+<div class="line"><span class="lineno">  209</span>        {</div>
+<div class="line"><span class="lineno">  210</span>            <span class="comment">// avoid negative buffer indices</span></div>
+<div class="line"><span class="lineno">  211</span>            iOffset += <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span>        iIdx = (iIdx + iOffset) % <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
+<div class="line"><span class="lineno">  214</span>    };</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00449">findMax()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>, <a class="el" href="a00047_source.html#l00182">CRingBuffer&lt; T &gt;::setReadIdx()</a>, and <a class="el" href="a00047_source.html#l00165">CRingBuffer&lt; T &gt;::setWriteIdx()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a8279b309edcfcac51d94b1e8f206a330_cgraph.png" border="0" usemap="#aa00372_a8279b309edcfcac51d94b1e8f206a330_cgraph" alt=""/></div>
-<map name="aa00372_a8279b309edcfcac51d94b1e8f206a330_cgraph" id="aa00372_a8279b309edcfcac51d94b1e8f206a330_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" href="a00372.html#a66a451d1a0992e33a73c01b09566eea0" title=" " alt="" coords="200,5,348,32"/>
+<div class="center"><img src="a00372_a67eddecd2a880c52c80093774bc37c24_icgraph.png" border="0" usemap="#aa00372_a67eddecd2a880c52c80093774bc37c24_icgraph" alt=""/></div>
+<map name="aa00372_a67eddecd2a880c52c80093774bc37c24_icgraph" id="aa00372_a67eddecd2a880c52c80093774bc37c24_icgraph">
+<area shape="rect" title=" " alt="" coords="685,132,816,159"/>
+<area shape="rect" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b" title=" " alt="" coords="476,56,636,83"/>
+<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="476,107,636,133"/>
+<area shape="rect" href="a00372.html#af265a6322c4b1584c880def00d31e663" title=" " alt="" coords="475,208,637,235"/>
+<area shape="rect" href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab" title=" " alt="" coords="475,157,637,184"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="260,5,384,32"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="241,56,403,83"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="243,107,401,133"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,208,113,235"/>
+<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="229,157,415,184"/>
+<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,157,169,184"/>
+<area shape="rect" href="a00392.html#a58bfe8eb41a59d022121423d2874298a" title=" " alt="" coords="275,208,369,235"/>
+<area shape="rect" href="a00348.html#ad7c00802caed87adaf0294810e0a2733" title=" " alt="" coords="217,259,427,285"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a0ebcfe60eb5cda1ab45ae8157be0e64e" name="a0ebcfe60eb5cda1ab45ae8157be0e64e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ebcfe60eb5cda1ab45ae8157be0e64e">&#9670;&nbsp;</a></span>getMean()</h2>
+<a id="a15f6463cfcafd855157d33d253011dc7" name="a15f6463cfcafd855157d33d253011dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f6463cfcafd855157d33d253011dc7">&#9670;&nbsp;</a></span>put() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float CVectorFloat::getMean </td>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::put </td>
           <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>ptNewBuff</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long long int&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>iLength</em>&#160;</td>
         </tr>
         <tr>
@@ -764,88 +806,121 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >extracts the mean value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >add new values of type T to write index </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements in buffer </td></tr>
+    <tr><td class="paramname">ptNewBuff</td><td>new values </td></tr>
+    <tr><td class="paramname">iLength</td><td>number of values </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00339">339</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  340</span>    {</div>
-<div class="line"><span class="lineno">  341</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  342</span> </div>
-<div class="line"><span class="lineno">  343</span>        <span class="keywordtype">float</span> fMean = <a class="code hl_function" href="a00372.html#a7972e4c31df79a32bbc5396e07d2ca9e">getSum</a>(pfSrc, iLength);</div>
-<div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">if</span> (iLength &gt; 0)</div>
-<div class="line"><span class="lineno">  346</span>        {</div>
-<div class="line"><span class="lineno">  347</span>            fMean  /= iLength;</div>
-<div class="line"><span class="lineno">  348</span>        }</div>
-<div class="line"><span class="lineno">  349</span> </div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">return</span> fMean;</div>
-<div class="line"><span class="lineno">  351</span>    }</div>
-<div class="ttc" id="aa00372_html_a7972e4c31df79a32bbc5396e07d2ca9e"><div class="ttname"><a href="a00372.html#a7972e4c31df79a32bbc5396e07d2ca9e">CVectorFloat::getSum</a></div><div class="ttdeci">static float getSum(const float *pfSrc, long long int iLength, bool bAbs=false)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00300">Vector.h:300</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00068">68</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        assert(iLength &lt;= m_iBuffLength &amp;&amp; iLength &gt;= 0);</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        <span class="comment">// copy two parts: to the end of buffer and after wrap around</span></div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> iNumValues2End = std::min(iLength, <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a> - <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>);</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        std::memcpy (&amp;<a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>], ptNewBuff, <span class="keyword">sizeof</span>(T)*iNumValues2End);</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> ((iLength - iNumValues2End) &gt; 0)</div>
+<div class="line"><span class="lineno">   77</span>            std::memcpy (<a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>, &amp;ptNewBuff[iNumValues2End], <span class="keyword">sizeof</span>(T)*(iLength - iNumValues2End));</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00300">getSum()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="a00053_source.html#l00359">getStd()</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_cgraph.png" border="0" usemap="#aa00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_cgraph" alt=""/></div>
-<map name="aa00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_cgraph" id="aa00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,160,32"/>
-<area shape="rect" href="a00372.html#a7972e4c31df79a32bbc5396e07d2ca9e" title=" " alt="" coords="208,5,357,32"/>
-</map>
-</div>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_icgraph.png" border="0" usemap="#aa00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_icgraph" alt=""/></div>
-<map name="aa00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_icgraph" id="aa00372_a0ebcfe60eb5cda1ab45ae8157be0e64e_icgraph">
-<area shape="rect" title=" " alt="" coords="196,5,351,32"/>
-<area shape="rect" href="a00372.html#acb8403fcec4943418492c547a7c59153" title=" " alt="" coords="5,5,148,32"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
 
 </div>
 </div>
-<a id="a5c336e4bb302b1140096f2f1f1aa2ad3" name="a5c336e4bb302b1140096f2f1f1aa2ad3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c336e4bb302b1140096f2f1f1aa2ad3">&#9670;&nbsp;</a></span>getMin()</h2>
+<a id="a702eb6314380082795f735df74a816c9" name="a702eb6314380082795f735df74a816c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a702eb6314380082795f735df74a816c9">&#9670;&nbsp;</a></span>put() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float CVectorFloat::getMin </td>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::put </td>
           <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>tNewValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >add a new value of type T to write index </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tNewValue</td><td>the new value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00058">58</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>] = tNewValue;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00044_source.html#l00074">CLfo::computeWaveTable()</a>, and <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00372_a702eb6314380082795f735df74a816c9_icgraph.png" border="0" usemap="#aa00372_a702eb6314380082795f735df74a816c9_icgraph" alt=""/></div>
+<map name="aa00372_a702eb6314380082795f735df74a816c9_icgraph" id="aa00372_a702eb6314380082795f735df74a816c9_icgraph">
+<area shape="rect" title=" " alt="" coords="671,81,785,108"/>
+<area shape="rect" href="a00368.html#a5a7d25e5bee8e5e6648f4bbe9317367e" title=" " alt="" coords="452,31,623,57"/>
+<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="457,107,617,133"/>
+<area shape="rect" href="a00368.html#a33d44ada59f89aed15f510d7c5fe019a" title=" " alt="" coords="250,5,371,32"/>
+<area shape="rect" href="a00368.html#a12fc205ad6f6daeb3abd78e108cd6790" title=" " alt="" coords="45,5,129,32"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="249,56,373,83"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="230,107,391,133"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="232,157,389,184"/>
+<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,208,404,235"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,56,113,83"/>
+<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,208,169,235"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21568ce259aa8e97ea3f3d7aec4828b7" name="a21568ce259aa8e97ea3f3d7aec4828b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21568ce259aa8e97ea3f3d7aec4828b7">&#9670;&nbsp;</a></span>putPostInc() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::putPostInc </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>ptNewBuff</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
-          <td class="paramname"><em>bAbs</em> = <code><a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a></code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iLength</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -855,910 +930,417 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >finds the minimum (absolute) value in the buffer </p><dl class="params"><dt>Parameters</dt><dd>
+<p >add new values of type T to write index and increment write index </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements in buffer </td></tr>
-    <tr><td class="paramname">bAbs</td><td>bool to specify whether we search absolute values </td></tr>
+    <tr><td class="paramname">ptNewBuff</td><td>new values </td></tr>
+    <tr><td class="paramname">iLength</td><td>number of values </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00431">431</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  432</span>    {</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordtype">float</span> fMin;</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> iMin;</div>
-<div class="line"><span class="lineno">  435</span> </div>
-<div class="line"><span class="lineno">  436</span>        <a class="code hl_function" href="a00372.html#a0908e3346b074958aeb2be9b466ec998">findMin</a>(pfSrc, fMin, iMin, iLength, bAbs);</div>
-<div class="line"><span class="lineno">  437</span> </div>
-<div class="line"><span class="lineno">  438</span>        <span class="keywordflow">return</span> fMin;</div>
-<div class="line"><span class="lineno">  439</span>    }</div>
-<div class="ttc" id="aa00372_html_a0908e3346b074958aeb2be9b466ec998"><div class="ttname"><a href="a00372.html#a0908e3346b074958aeb2be9b466ec998">CVectorFloat::findMin</a></div><div class="ttdeci">static void findMin(const float *pfSrc, float &amp;fMin, long long &amp;iMin, long long int iLength, bool bAbs=false)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00477">Vector.h:477</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00048">48</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="a00372.html#a702eb6314380082795f735df74a816c9">put</a>(ptNewBuff, iLength);</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>, iLength);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aa00372_html_a702eb6314380082795f735df74a816c9"><div class="ttname"><a href="a00372.html#a702eb6314380082795f735df74a816c9">CRingBuffer::put</a></div><div class="ttdeci">void put(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00058">RingBuffer.h:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00477">findMin()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00372_a21568ce259aa8e97ea3f3d7aec4828b7_cgraph.png" border="0" usemap="#aa00372_a21568ce259aa8e97ea3f3d7aec4828b7_cgraph" alt=""/></div>
+<map name="aa00372_a21568ce259aa8e97ea3f3d7aec4828b7_cgraph" id="aa00372_a21568ce259aa8e97ea3f3d7aec4828b7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="213,5,344,32"/>
+<area shape="rect" href="a00372.html#a702eb6314380082795f735df74a816c9" title=" " alt="" coords="221,56,336,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2bd848181a662312600bc590b9040d2a" name="a2bd848181a662312600bc590b9040d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd848181a662312600bc590b9040d2a">&#9670;&nbsp;</a></span>putPostInc() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::putPostInc </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>tNewValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >add a new value of type T to write index and increment write index </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tNewValue</td><td>the new value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00037">37</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="a00372.html#a702eb6314380082795f735df74a816c9">put</a>(tNewValue);</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>);</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00178">CVibrato::process()</a>, <a class="el" href="a00032_source.html#l00110">CCombFilterFir::process()</a>, <a class="el" href="a00032_source.html#l00131">CCombFilterIir::process()</a>, and <a class="el" href="a00032_source.html#l00059">CCombFilterBase::setParam()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a5c336e4bb302b1140096f2f1f1aa2ad3_cgraph.png" border="0" usemap="#aa00372_a5c336e4bb302b1140096f2f1f1aa2ad3_cgraph" alt=""/></div>
-<map name="aa00372_a5c336e4bb302b1140096f2f1f1aa2ad3_cgraph" id="aa00372_a5c336e4bb302b1140096f2f1f1aa2ad3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" href="a00372.html#a0908e3346b074958aeb2be9b466ec998" title=" " alt="" coords="196,5,341,32"/>
+<div class="center"><img src="a00372_a2bd848181a662312600bc590b9040d2a_cgraph.png" border="0" usemap="#aa00372_a2bd848181a662312600bc590b9040d2a_cgraph" alt=""/></div>
+<map name="aa00372_a2bd848181a662312600bc590b9040d2a_cgraph" id="aa00372_a2bd848181a662312600bc590b9040d2a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="213,5,344,32"/>
+<area shape="rect" href="a00372.html#a702eb6314380082795f735df74a816c9" title=" " alt="" coords="221,56,336,83"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a8ebae2ebfad47fcf1b11f432153c1fc8" name="a8ebae2ebfad47fcf1b11f432153c1fc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ebae2ebfad47fcf1b11f432153c1fc8">&#9670;&nbsp;</a></span>getRms()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float CVectorFloat::getRms </td>
-          <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >extracts the root mean square from a buffer </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements in buffer </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00389">389</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  390</span>    {</div>
-<div class="line"><span class="lineno">  391</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  392</span> </div>
-<div class="line"><span class="lineno">  393</span>        <span class="keywordtype">float</span> fRms = 0;</div>
-<div class="line"><span class="lineno">  394</span> </div>
-<div class="line"><span class="lineno">  395</span> </div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i=0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  397</span>        {</div>
-<div class="line"><span class="lineno">  398</span>            fRms   += pfSrc[i] * pfSrc[i];</div>
-<div class="line"><span class="lineno">  399</span>        }</div>
-<div class="line"><span class="lineno">  400</span> </div>
-<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">if</span> (iLength &gt; 0)</div>
-<div class="line"><span class="lineno">  402</span>        {</div>
-<div class="line"><span class="lineno">  403</span>            fRms   /= iLength;</div>
-<div class="line"><span class="lineno">  404</span>        }</div>
-<div class="line"><span class="lineno">  405</span> </div>
-<div class="line"><span class="lineno">  406</span>        <span class="keywordflow">return</span> std::sqrt(fRms);</div>
-<div class="line"><span class="lineno">  407</span>    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="acb8403fcec4943418492c547a7c59153" name="acb8403fcec4943418492c547a7c59153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb8403fcec4943418492c547a7c59153">&#9670;&nbsp;</a></span>getStd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float CVectorFloat::getStd </td>
-          <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fMean</em> = <code>std::numeric_limits&lt;float&gt;::max()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >extracts the standard deviation (biased) from a buffer </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements in buffer </td></tr>
-    <tr><td class="paramname">fMean</td><td>mean value if it has already been computed, otherwise it will be extracted in function </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00359">359</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  360</span>    {</div>
-<div class="line"><span class="lineno">  361</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  362</span> </div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordtype">float</span>  fStd = 0;</div>
-<div class="line"><span class="lineno">  364</span> </div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (fMean == std::numeric_limits&lt;float&gt;::max())</div>
-<div class="line"><span class="lineno">  366</span>        {</div>
-<div class="line"><span class="lineno">  367</span>            fMean   = <a class="code hl_function" href="a00372.html#a0ebcfe60eb5cda1ab45ae8157be0e64e">getMean</a>(pfSrc, iLength);</div>
-<div class="line"><span class="lineno">  368</span>        }</div>
-<div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i=0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  371</span>        {</div>
-<div class="line"><span class="lineno">  372</span>            fStd   += (pfSrc[i] - fMean) * (pfSrc[i] - fMean);</div>
-<div class="line"><span class="lineno">  373</span>        }</div>
-<div class="line"><span class="lineno">  374</span> </div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">if</span> (iLength &gt; 1)</div>
-<div class="line"><span class="lineno">  376</span>        {</div>
-<div class="line"><span class="lineno">  377</span>            <span class="comment">//dStd   /= (iLength - 1);</span></div>
-<div class="line"><span class="lineno">  378</span>            fStd   /= iLength;</div>
-<div class="line"><span class="lineno">  379</span>        }</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">return</span> std::sqrt(fStd);</div>
-<div class="line"><span class="lineno">  382</span>    }</div>
-<div class="ttc" id="aa00372_html_a0ebcfe60eb5cda1ab45ae8157be0e64e"><div class="ttname"><a href="a00372.html#a0ebcfe60eb5cda1ab45ae8157be0e64e">CVectorFloat::getMean</a></div><div class="ttdeci">static float getMean(const float *pfSrc, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00339">Vector.h:339</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00339">getMean()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_acb8403fcec4943418492c547a7c59153_cgraph.png" border="0" usemap="#aa00372_acb8403fcec4943418492c547a7c59153_cgraph" alt=""/></div>
-<map name="aa00372_acb8403fcec4943418492c547a7c59153_cgraph" id="aa00372_acb8403fcec4943418492c547a7c59153_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" href="a00372.html#a0ebcfe60eb5cda1ab45ae8157be0e64e" title=" " alt="" coords="196,5,351,32"/>
-<area shape="rect" href="a00372.html#a7972e4c31df79a32bbc5396e07d2ca9e" title=" " alt="" coords="399,5,548,32"/>
+<div class="center"><img src="a00372_a2bd848181a662312600bc590b9040d2a_icgraph.png" border="0" usemap="#aa00372_a2bd848181a662312600bc590b9040d2a_icgraph" alt=""/></div>
+<map name="aa00372_a2bd848181a662312600bc590b9040d2a_icgraph" id="aa00372_a2bd848181a662312600bc590b9040d2a_icgraph">
+<area shape="rect" title=" " alt="" coords="452,81,612,108"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="249,5,373,32"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="230,56,391,83"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="232,107,389,133"/>
+<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,157,404,184"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,5,113,32"/>
+<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,157,169,184"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a7972e4c31df79a32bbc5396e07d2ca9e" name="a7972e4c31df79a32bbc5396e07d2ca9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7972e4c31df79a32bbc5396e07d2ca9e">&#9670;&nbsp;</a></span>getSum()</h2>
+<a id="a716fb4acc03355a73cc7d96f3ceb2995" name="a716fb4acc03355a73cc7d96f3ceb2995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716fb4acc03355a73cc7d96f3ceb2995">&#9670;&nbsp;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float CVectorFloat::getSum </td>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::reset </td>
           <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
-          <td class="paramname"><em>bAbs</em> = <code><a class="el" href="a00071.html#a65e9886d74aaee76545e83dd09011727">false</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >computes the sum of a vector </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrc</td><td>vector </td></tr>
-    <tr><td class="paramname">iLength</td><td>length of vector </td></tr>
-    <tr><td class="paramname">bAbs</td><td>specifies whether it is the sum of absolute values or not </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<p >set buffer content and indices to 0 </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00300">300</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  301</span>    {</div>
-<div class="line"><span class="lineno">  302</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  303</span>        assert (pfSrc);</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordtype">float</span> fResult = 0;</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (bAbs)</div>
-<div class="line"><span class="lineno">  307</span>        {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  309</span>                fResult += std::abs(pfSrc[i]);</div>
-<div class="line"><span class="lineno">  310</span>        }</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  312</span>        {</div>
-<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  314</span>                fResult += pfSrc[i];</div>
-<div class="line"><span class="lineno">  315</span>        }</div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">return</span> fResult;</div>
-<div class="line"><span class="lineno">  317</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00146">146</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        std::memset (<a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>, 0, <span class="keyword">sizeof</span>(T)*<a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>);</div>
+<div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>  = 0;</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a> = 0;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00053_source.html#l00339">getMean()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, and <a class="el" href="a00032_source.html#l00048">CCombFilterBase::resetInstance()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a7972e4c31df79a32bbc5396e07d2ca9e_icgraph.png" border="0" usemap="#aa00372_a7972e4c31df79a32bbc5396e07d2ca9e_icgraph" alt=""/></div>
-<map name="aa00372_a7972e4c31df79a32bbc5396e07d2ca9e_icgraph" id="aa00372_a7972e4c31df79a32bbc5396e07d2ca9e_icgraph">
-<area shape="rect" title=" " alt="" coords="399,5,548,32"/>
-<area shape="rect" href="a00372.html#a0ebcfe60eb5cda1ab45ae8157be0e64e" title=" " alt="" coords="196,5,351,32"/>
-<area shape="rect" href="a00372.html#acb8403fcec4943418492c547a7c59153" title=" " alt="" coords="5,5,148,32"/>
+<div class="center"><img src="a00372_a716fb4acc03355a73cc7d96f3ceb2995_icgraph.png" border="0" usemap="#aa00372_a716fb4acc03355a73cc7d96f3ceb2995_icgraph" alt=""/></div>
+<map name="aa00372_a716fb4acc03355a73cc7d96f3ceb2995_icgraph" id="aa00372_a716fb4acc03355a73cc7d96f3ceb2995_icgraph">
+<area shape="rect" title=" " alt="" coords="263,31,389,57"/>
+<area shape="rect" href="a00372.html#a0e007e130e9190892274dde988e40a59" title=" " alt="" coords="27,5,193,32"/>
+<area shape="rect" href="a00348.html#ad7c00802caed87adaf0294810e0a2733" title=" " alt="" coords="5,56,215,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a538360782e08af350628af239a87ed74" name="a538360782e08af350628af239a87ed74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a538360782e08af350628af239a87ed74">&#9670;&nbsp;</a></span>isEqual()</h2>
+<a id="af265a6322c4b1584c880def00d31e663" name="af265a6322c4b1584c880def00d31e663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af265a6322c4b1584c880def00d31e663">&#9670;&nbsp;</a></span>setReadIdx()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> CVectorFloat::isEqual </td>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::setReadIdx </td>
           <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iNewReadIdx</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >checks to buffer for equality (no floating point tolerance) </p><dl class="params"><dt>Parameters</dt><dd>
+<p >move the read index to a new position </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pfSrc1</td><td>buffer 1 </td></tr>
-    <tr><td class="paramname">pfSrc2</td><td>buffer 2 </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of dimensions </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00325">325</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  326</span>    {</div>
-<div class="line"><span class="lineno">  327</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  328</span>        assert (pfSrc1);</div>
-<div class="line"><span class="lineno">  329</span>        assert (pfSrc2);</div>
-<div class="line"><span class="lineno">  330</span> </div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">return</span> (memcmp (pfSrc1, pfSrc2, iLength * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>)) == 0);</div>
-<div class="line"><span class="lineno">  332</span>    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aa61715dbd068db45281c419aa004b309" name="aa61715dbd068db45281c419aa004b309"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa61715dbd068db45281c419aa004b309">&#9670;&nbsp;</a></span>moveInMem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CVectorFloat::moveInMem </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iDestIdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iSrcIdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >moves a subset of the current buffer </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>source and destination </td></tr>
-    <tr><td class="paramname">iDestIdx</td><td>destination index </td></tr>
-    <tr><td class="paramname">iSrcIdx</td><td>source index </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements to be moved </td></tr>
+    <tr><td class="paramname">iNewReadIdx</td><td>new position </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00158">158</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_function" href="a00368.html#a87ca0915c944985f41129403aa3d7aa0">CVector::moveInMem</a>(pfSrcDest, iDestIdx, iSrcIdx, iLength);</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-<div class="ttc" id="aa00368_html_a87ca0915c944985f41129403aa3d7aa0"><div class="ttname"><a href="a00368.html#a87ca0915c944985f41129403aa3d7aa0">CVector::moveInMem</a></div><div class="ttdeci">static void moveInMem(T *pfSrcDest, int iDestIdx, int iSrcIdx, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00093">Vector.h:93</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00182">182</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>    {</div>
+<div class="line"><span class="lineno">  184</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>, iNewReadIdx - <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>);</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00093">CVector::moveInMem()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_aa61715dbd068db45281c419aa004b309_cgraph.png" border="0" usemap="#aa00372_aa61715dbd068db45281c419aa004b309_cgraph" alt=""/></div>
-<map name="aa00372_aa61715dbd068db45281c419aa004b309_cgraph" id="aa00372_aa61715dbd068db45281c419aa004b309_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,181,32"/>
-<area shape="rect" href="a00368.html#a87ca0915c944985f41129403aa3d7aa0" title=" " alt="" coords="229,5,376,32"/>
+<div class="center"><img src="a00372_af265a6322c4b1584c880def00d31e663_cgraph.png" border="0" usemap="#aa00372_af265a6322c4b1584c880def00d31e663_cgraph" alt=""/></div>
+<map name="aa00372_af265a6322c4b1584c880def00d31e663_cgraph" id="aa00372_af265a6322c4b1584c880def00d31e663_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="216,5,347,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a46b380667a11bdeea9255e5370bd5a78" name="a46b380667a11bdeea9255e5370bd5a78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46b380667a11bdeea9255e5370bd5a78">&#9670;&nbsp;</a></span>mul_I()</h2>
+<a id="a408e0ec5855fca27bd2dc5862fa913ab" name="a408e0ec5855fca27bd2dc5862fa913ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a408e0ec5855fca27bd2dc5862fa913ab">&#9670;&nbsp;</a></span>setWriteIdx()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::mul_I </td>
+          <td class="memname">void <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::setWriteIdx </td>
           <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iNewWriteIdx</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >element-wise vector multiplication </p><dl class="params"><dt>Parameters</dt><dd>
+<p >move the write index to a new position </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>one input and output buffer </td></tr>
-    <tr><td class="paramname">pfSrc</td><td>second input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of element to be multiplied </td></tr>
+    <tr><td class="paramname">iNewWriteIdx</td><td>new position </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00199">199</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  200</span>    {</div>
-<div class="line"><span class="lineno">  201</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  202</span>        assert (pfSrcDest);</div>
-<div class="line"><span class="lineno">  203</span>        assert (pfSrc);</div>
-<div class="line"><span class="lineno">  204</span> </div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  206</span>            pfSrcDest[i] *= pfSrc[i];</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00165">165</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>, iNewWriteIdx - <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>);</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00023_source.html#l00111">CFft::doFft()</a>, and <a class="el" href="a00023_source.html#l00135">CFft::doInvFft()</a>.</p>
+<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00087">CVibrato::init()</a>, <a class="el" href="a00032_source.html#l00048">CCombFilterBase::resetInstance()</a>, and <a class="el" href="a00032_source.html#l00059">CCombFilterBase::setParam()</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a46b380667a11bdeea9255e5370bd5a78_icgraph.png" border="0" usemap="#aa00372_a46b380667a11bdeea9255e5370bd5a78_icgraph" alt=""/></div>
-<map name="aa00372_a46b380667a11bdeea9255e5370bd5a78_icgraph" id="aa00372_a46b380667a11bdeea9255e5370bd5a78_icgraph">
-<area shape="rect" title=" " alt="" coords="253,31,389,57"/>
-<area shape="rect" href="a00352.html#a3f8575f19e7cbc3749ffb99fcb78e6e4" title=" " alt="" coords="113,5,196,32"/>
-<area shape="rect" href="a00352.html#a9d36e0324247b1a56f209c0079d898e4" title=" " alt="" coords="104,56,205,83"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<div class="center"><img src="a00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph.png" border="0" usemap="#aa00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph" alt=""/></div>
+<map name="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph" id="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="216,5,347,32"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="afc9a413a88b0c7143252dac95050af33" name="afc9a413a88b0c7143252dac95050af33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc9a413a88b0c7143252dac95050af33">&#9670;&nbsp;</a></span>mulC_I()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CVectorFloat::mulC_I </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fScale</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >multiplies a buffer with a scalar </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>buffer to be multiplied </td></tr>
-    <tr><td class="paramname">fScale</td><td>scalar </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of element to be multiplied </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00184">184</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>    {</div>
-<div class="line"><span class="lineno">  186</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  187</span>        assert (pfSrcDest);</div>
-<div class="line"><span class="lineno">  188</span>        </div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  190</span>            pfSrcDest[i] *= fScale;</div>
-<div class="line"><span class="lineno">  191</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="a00002_source.html#l00020">main()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_afc9a413a88b0c7143252dac95050af33_icgraph.png" border="0" usemap="#aa00372_afc9a413a88b0c7143252dac95050af33_icgraph" alt=""/></div>
-<map name="aa00372_afc9a413a88b0c7143252dac95050af33_icgraph" id="aa00372_afc9a413a88b0c7143252dac95050af33_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,249,32"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+<div class="center"><img src="a00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph.png" border="0" usemap="#aa00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph" alt=""/></div>
+<map name="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph" id="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph">
+<area shape="rect" title=" " alt="" coords="475,56,637,83"/>
+<area shape="rect" href="a00392.html#a58bfe8eb41a59d022121423d2874298a" title=" " alt="" coords="275,5,369,32"/>
+<area shape="rect" href="a00348.html#ad7c00802caed87adaf0294810e0a2733" title=" " alt="" coords="217,56,427,83"/>
+<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="229,107,415,133"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,5,113,32"/>
+<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,107,169,133"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab572a4fece01255657935ed18afdeadd" name="ab572a4fece01255657935ed18afdeadd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab572a4fece01255657935ed18afdeadd">&#9670;&nbsp;</a></span>mulScalar()</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3f35b48aa5632a863a85d09de775fb0b" name="a3f35b48aa5632a863a85d09de775fb0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f35b48aa5632a863a85d09de775fb0b">&#9670;&nbsp;</a></span>m_iBuffLength</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float CVectorFloat::mulScalar </td>
-          <td>(</td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">int <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::m_iBuffLength = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >computes the scalar product between two vectors </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrc1</td><td>vector one </td></tr>
-    <tr><td class="paramname">pfSrc2</td><td>vector two </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of dimenions </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00215">215</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
-<div class="line"><span class="lineno">  217</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  218</span>        assert (pfSrc1);</div>
-<div class="line"><span class="lineno">  219</span>        assert (pfSrc2);</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordtype">float</span>  fResult = 0;</div>
-<div class="line"><span class="lineno">  221</span> </div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  223</span>            fResult += pfSrc1[i] * pfSrc2[i];</div>
-<div class="line"><span class="lineno">  224</span> </div>
-<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">return</span> fResult;</div>
-<div class="line"><span class="lineno">  226</span>    }</div>
-</div><!-- fragment -->
+<p>length of the internal buffer </p>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00216">216</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00198">CRingBuffer&lt; T &gt;::getLength()</a>, <a class="el" href="a00047_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00047_source.html#l00068">CRingBuffer&lt; T &gt;::put()</a>, and <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>.</p>
+
 </div>
 </div>
-<a id="a35da686af8fe05cbd3681dc8ee9ea093" name="a35da686af8fe05cbd3681dc8ee9ea093"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35da686af8fe05cbd3681dc8ee9ea093">&#9670;&nbsp;</a></span>setValue()</h2>
+<a id="a17237cdeda2b10e77e1815def129debd" name="a17237cdeda2b10e77e1815def129debd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17237cdeda2b10e77e1815def129debd">&#9670;&nbsp;</a></span>m_iReadIdx</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::setValue </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">int <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::m_iReadIdx = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >initializes the buffer to a specific value </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfDest</td><td>pointer to memory to be initialized </td></tr>
-    <tr><td class="paramname">fValue</td><td>value to use </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of elements to be set </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00169">169</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
-<div class="line"><span class="lineno">  171</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  172</span>        assert (pfDest);</div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  175</span>            pfDest[i] = fValue;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-</div><!-- fragment -->
+<p>current read index </p>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00217">217</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00047_source.html#l00173">CRingBuffer&lt; T &gt;::getReadIdx()</a>, <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00047_source.html#l00182">CRingBuffer&lt; T &gt;::setReadIdx()</a>.</p>
+
 </div>
 </div>
-<a id="a1d4dfb2b0462cadd25aae6fcd4cc978e" name="a1d4dfb2b0462cadd25aae6fcd4cc978e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d4dfb2b0462cadd25aae6fcd4cc978e">&#9670;&nbsp;</a></span>setZero()</h2>
+<a id="ad2bfd60fbefec3403b6a2a420b8695a5" name="ad2bfd60fbefec3403b6a2a420b8695a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bfd60fbefec3403b6a2a420b8695a5">&#9670;&nbsp;</a></span>m_iWriteIdx</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::setZero </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">int <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::m_iWriteIdx = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >sets a buffer to zero </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>pointer to memory to be modified </td></tr>
-    <tr><td class="paramname">iLength</td><td>buffer length </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00114">114</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_function" href="a00368.html#a4f3bd795de0ec95a8ebb0dc2a677ecd3">CVector::setZero</a>(pfSrcDest, iLength);</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="aa00368_html_a4f3bd795de0ec95a8ebb0dc2a677ecd3"><div class="ttname"><a href="a00368.html#a4f3bd795de0ec95a8ebb0dc2a677ecd3">CVector::setZero</a></div><div class="ttdeci">static void setZero(T *pfSrcDest, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00020">Vector.h:20</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00020">CVector::setZero()</a>.</p>
+<p>current write index </p>
 
-<p class="reference">Referenced by <a class="el" href="a00023_source.html#l00111">CFft::doFft()</a>, and <a class="el" href="a00002_source.html#l00020">main()</a>.</p>
-<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_cgraph.png" border="0" usemap="#aa00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_cgraph" alt=""/></div>
-<map name="aa00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_cgraph" id="aa00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" href="a00368.html#a4f3bd795de0ec95a8ebb0dc2a677ecd3" title=" " alt="" coords="201,5,320,32"/>
-</map>
-</div>
-<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_icgraph.png" border="0" usemap="#aa00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_icgraph" alt=""/></div>
-<map name="aa00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_icgraph" id="aa00372_a1d4dfb2b0462cadd25aae6fcd4cc978e_icgraph">
-<area shape="rect" title=" " alt="" coords="235,31,383,57"/>
-<area shape="rect" href="a00352.html#a3f8575f19e7cbc3749ffb99fcb78e6e4" title=" " alt="" coords="104,5,187,32"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,56,57"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00218">218</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00047_source.html#l00156">CRingBuffer&lt; T &gt;::getWriteIdx()</a>, <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>, <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>, <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00047_source.html#l00165">CRingBuffer&lt; T &gt;::setWriteIdx()</a>.</p>
 
 </div>
 </div>
-<a id="a7d436efcd4230e2c7573bf66a1c06fdf" name="a7d436efcd4230e2c7573bf66a1c06fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d436efcd4230e2c7573bf66a1c06fdf">&#9670;&nbsp;</a></span>setZeroBelowThresh()</h2>
+<a id="a6c82ffd2218093776e8952e15309c51e" name="a6c82ffd2218093776e8952e15309c51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c82ffd2218093776e8952e15309c51e">&#9670;&nbsp;</a></span>m_ptBuff</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void CVectorFloat::setZeroBelowThresh </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fThresh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">T* <a class="el" href="a00372.html">CRingBuffer</a>&lt; T &gt;::m_ptBuff = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >sets all values smaller than a threshold to 0 </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>pointer to memory to be modified </td></tr>
-    <tr><td class="paramname">iLength</td><td>buffer length </td></tr>
-    <tr><td class="paramname">fThresh</td><td>threshold value </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00125">125</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
-<div class="line"><span class="lineno">  127</span>        <a class="code hl_function" href="a00368.html#aded80b22871dd211421e0d0336c681d1">CVector::setZeroBelowThresh</a>(pfSrcDest, iLength, fThresh);</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="ttc" id="aa00368_html_aded80b22871dd211421e0d0336c681d1"><div class="ttname"><a href="a00368.html#aded80b22871dd211421e0d0336c681d1">CVector::setZeroBelowThresh</a></div><div class="ttdeci">static void setZeroBelowThresh(T *pfSrcDest, long long int iLength, T Thresh)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00035">Vector.h:35</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00053_source.html#l00035">CVector::setZeroBelowThresh()</a>.</p>
-<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-18-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00372_a7d436efcd4230e2c7573bf66a1c06fdf_cgraph.png" border="0" usemap="#aa00372_a7d436efcd4230e2c7573bf66a1c06fdf_cgraph" alt=""/></div>
-<map name="aa00372_a7d436efcd4230e2c7573bf66a1c06fdf_cgraph" id="aa00372_a7d436efcd4230e2c7573bf66a1c06fdf_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,189,47"/>
-<area shape="rect" href="a00368.html#aded80b22871dd211421e0d0336c681d1" title=" " alt="" coords="237,13,432,39"/>
-</map>
-</div>
+<p>data buffer </p>
 
-</div>
-</div>
-<a id="acb3a5019161f218ad15e52d103a653f3" name="acb3a5019161f218ad15e52d103a653f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb3a5019161f218ad15e52d103a653f3">&#9670;&nbsp;</a></span>sub_I()</h2>
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00220">220</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CVectorFloat::sub_I </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>pfSrcDest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>pfSrc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>iLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >element-wise vector subtraction </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pfSrcDest</td><td>one input and output buffer </td></tr>
-    <tr><td class="paramname">pfSrc</td><td>second input buffer </td></tr>
-    <tr><td class="paramname">iLength</td><td>number of element to be subtracted </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>, <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00047_source.html#l00027">CRingBuffer&lt; T &gt;::~CRingBuffer()</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00284">284</a> of file <a class="el" href="a00053_source.html">Vector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  285</span>    {</div>
-<div class="line"><span class="lineno">  286</span>        assert (iLength &gt;= 0);</div>
-<div class="line"><span class="lineno">  287</span>        assert (pfSrcDest);</div>
-<div class="line"><span class="lineno">  288</span>        assert (pfSrc);</div>
-<div class="line"><span class="lineno">  289</span> </div>
-<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; iLength; i++)</div>
-<div class="line"><span class="lineno">  291</span>            pfSrcDest[i] -= pfSrc[i];</div>
-<div class="line"><span class="lineno">  292</span>    }</div>
-</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00053_source.html">Vector.h</a></li>
+<li><a class="el" href="a00047_source.html">RingBuffer.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:30 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

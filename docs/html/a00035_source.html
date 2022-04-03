@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: Util.h Source File</title>
+<title>MUSI6106: CombFilterIf.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,99 +40,221 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd4489a5e8a0b10919d42ac6008fb276.html">CombFilter</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Util.h</div></div>
+  <div class="headertitle"><div class="title">CombFilterIf.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00035.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if !defined(__Util_hdr__)</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __Util_hdr__</span></div>
+<a href="a00035.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// standard headers</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"></span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/*! \brief class with static utility functions </span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="a00125.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="a00125.html">CUtil</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    /*! converts a float to an int</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    \param fInput float value</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">    \return T</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="a00125.html#a9032a8fbdc28520ed0c1703fc7151126">   18</a></span>    <span class="keyword">static</span> T <a class="code hl_function" href="a00125.html#a9032a8fbdc28520ed0c1703fc7151126">float2int</a> (<span class="keywordtype">float</span> fInput)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (fInput &gt;= 0.F)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(fInput + .5F);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(fInput - .5F);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }<span class="comment"></span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">    /*! converts a double to an int</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">    \param fInput double value</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    \return T</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00125.html#a8ea222b9c4ed128640db68568696dfbd">   30</a></span>    <span class="keyword">static</span> T <a class="code hl_function" href="a00125.html#a8ea222b9c4ed128640db68568696dfbd">double2int</a> (<span class="keywordtype">double</span> fInput)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (fInput &gt;= 0)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(fInput + .5);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(fInput - .5);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    /*! checks if the input is a power of 2</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    \param n integer value</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    \return bool</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00125.html#a6d0e75b0bcbbb243b7141cfc0126e443">   42</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="a00125.html#a6d0e75b0bcbbb243b7141cfc0126e443">isPowOf2</a> (<span class="keywordtype">int</span> n) </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> !(n &amp; (n-1));</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"></span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">    /*! converts an arbitrary integer (positive) to the next larger power of two</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">    \param n integer value</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">    \return int</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00125.html#a0fd55429d52515a9efb2fe602ce8f9ed">   51</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="a00125.html#a0fd55429d52515a9efb2fe602ce8f9ed">nextPowOf2</a>(<span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">int</span> iOrder = 0;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (n &lt;= 0)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">while</span> (n&gt;&gt;iOrder)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            iOrder++;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (!(n%(1&lt;&lt;(iOrder-1))))</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            iOrder--;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> (1&lt;&lt;(iOrder));</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// project headers</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00317.html">MUSI6106Config.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="a00077.html">ErrorDef.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="a00041.html">Util.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">RingBuffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="a00062.html">CombFilterIf.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="a00050.html">CombFilter.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="a00035.html#ae3df409f71a622d577411ff3c724c07c">   14</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>*  <a class="code hl_variable" href="a00035.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a>             = __DATE__;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="a00360.html#adee1df157f2c971ce3fcf7746dcc7bc4">   17</a></span><a class="code hl_function" href="a00360.html#adee1df157f2c971ce3fcf7746dcc7bc4">CCombFilterIf::CCombFilterIf</a> () :</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    m_bIsInitialized(<a class="code hl_define" href="a00086.html#a65e9886d74aaee76545e83dd09011727">false</a>),</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    m_pCCombFilter(0),</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    m_fSampleRate(0)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// this never hurts</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    this-&gt;<a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">reset</a> ();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00360.html#acab2fa8232adea83247dfec1991bb533">   27</a></span><a class="code hl_function" href="a00360.html#acab2fa8232adea83247dfec1991bb533">CCombFilterIf::~CCombFilterIf</a> ()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    this-&gt;<a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">reset</a> ();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00360.html#aed3c9894a92aa2542f791dd7bb20f7bc">   32</a></span><span class="keyword">const</span> <span class="keywordtype">int</span>  <a class="code hl_function" href="a00360.html#aed3c9894a92aa2542f791dd7bb20f7bc">CCombFilterIf::getVersion</a> (<span class="keyword">const</span> <a class="code hl_enumeration" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23">Version_t</a> eVersionIdx)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">int</span> iVersion = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">switch</span> (eVersionIdx)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566">kMajor</a>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        iVersion    = <a class="code hl_define" href="a00317.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a>; </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b">kMinor</a>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        iVersion    = <a class="code hl_define" href="a00317.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2">kPatch</a>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        iVersion    = <a class="code hl_define" href="a00317.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b">kNumVersionInts</a>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        iVersion    = -1;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> iVersion;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00360.html#afda0247e8f9f1c7e36c9117ee1f03ac8">   54</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>*  <a class="code hl_function" href="a00360.html#afda0247e8f9f1c7e36c9117ee1f03ac8">CCombFilterIf::getBuildDate</a> ()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00035.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="a00360.html#afe4fce0b8bcb6e4fb5b2d71c62051f74">   59</a></span><a class="code hl_enumeration" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> <a class="code hl_function" href="a00360.html#afe4fce0b8bcb6e4fb5b2d71c62051f74">CCombFilterIf::create</a>( <a class="code hl_class" href="a00360.html">CCombFilterIf</a>*&amp; pCCombFilterIf )</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    pCCombFilterIf = <span class="keyword">new</span> <a class="code hl_function" href="a00360.html#adee1df157f2c971ce3fcf7746dcc7bc4">CCombFilterIf</a> ();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!pCCombFilterIf)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="a00125.html#a4518cf65aacb5732281b35ee427d0fc2">   68</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00125.html#a4518cf65aacb5732281b35ee427d0fc2">swap</a> (T &amp;tValue1, T &amp;tValue2)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        T tTmp = tValue1;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        tValue1 = tValue2;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        tValue2 = tTmp;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// __Util_hdr__</span></div>
-<div class="ttc" id="aa00125_html"><div class="ttname"><a href="a00125.html">CUtil</a></div><div class="ttdoc">class with static utility functions</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00010">Util.h:11</a></div></div>
-<div class="ttc" id="aa00125_html_a0fd55429d52515a9efb2fe602ce8f9ed"><div class="ttname"><a href="a00125.html#a0fd55429d52515a9efb2fe602ce8f9ed">CUtil::nextPowOf2</a></div><div class="ttdeci">static int nextPowOf2(int n)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00051">Util.h:51</a></div></div>
-<div class="ttc" id="aa00125_html_a4518cf65aacb5732281b35ee427d0fc2"><div class="ttname"><a href="a00125.html#a4518cf65aacb5732281b35ee427d0fc2">CUtil::swap</a></div><div class="ttdeci">static void swap(T &amp;tValue1, T &amp;tValue2)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00068">Util.h:68</a></div></div>
-<div class="ttc" id="aa00125_html_a6d0e75b0bcbbb243b7141cfc0126e443"><div class="ttname"><a href="a00125.html#a6d0e75b0bcbbb243b7141cfc0126e443">CUtil::isPowOf2</a></div><div class="ttdeci">static bool isPowOf2(int n)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00042">Util.h:42</a></div></div>
-<div class="ttc" id="aa00125_html_a8ea222b9c4ed128640db68568696dfbd"><div class="ttname"><a href="a00125.html#a8ea222b9c4ed128640db68568696dfbd">CUtil::double2int</a></div><div class="ttdeci">static T double2int(double fInput)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00030">Util.h:30</a></div></div>
-<div class="ttc" id="aa00125_html_a9032a8fbdc28520ed0c1703fc7151126"><div class="ttname"><a href="a00125.html#a9032a8fbdc28520ed0c1703fc7151126">CUtil::float2int</a></div><div class="ttdeci">static T float2int(float fInput)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00018">Util.h:18</a></div></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="a00360.html#ac027c6f7a97b032a24535e8f4877aa3a">   70</a></span><a class="code hl_enumeration" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> <a class="code hl_function" href="a00360.html#ac027c6f7a97b032a24535e8f4877aa3a">CCombFilterIf::destroy</a> (<a class="code hl_class" href="a00360.html">CCombFilterIf</a>*&amp; pCCombFilterIf)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> (!pCCombFilterIf)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    pCCombFilterIf-&gt;<a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">reset</a> ();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">delete</span> pCCombFilterIf;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    pCCombFilterIf = 0;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="a00360.html#a21c98d82311b45795433e81f5cf4e491">   84</a></span><a class="code hl_enumeration" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> <a class="code hl_function" href="a00360.html#a21c98d82311b45795433e81f5cf4e491">CCombFilterIf::init</a>( <a class="code hl_enumeration" href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6c">CombFilterType_t</a> eFilterType, <span class="keywordtype">float</span> fMaxDelayLengthInS, <span class="keywordtype">float</span> fSampleRateInHz, <span class="keywordtype">int</span> iNumChannels )</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">reset</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (fMaxDelayLengthInS &lt;= 0 ||</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        fSampleRateInHz &lt;= 0 ||</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        iNumChannels &lt;= 0)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">Error_t::kFunctionInvalidArgsError</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">switch</span> (eFilterType)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b">kCombFIR</a>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>  = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="a00348.html">CCombFilterBase</a>*<span class="keyword">&gt;</span> (<span class="keyword">new</span> <a class="code hl_class" href="a00352.html">CCombFilterFir</a> (CUtil::float2int&lt;int&gt;(fMaxDelayLengthInS * fSampleRateInHz), iNumChannels));</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9">kCombIIR</a>:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>  = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="a00348.html">CCombFilterBase</a>*<span class="keyword">&gt;</span> (<span class="keyword">new</span> <a class="code hl_class" href="a00356.html">CCombFilterIir</a> (CUtil::float2int&lt;int&gt;(fMaxDelayLengthInS * fSampleRateInHz), iNumChannels));</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_variable" href="a00360.html#a999417616935767c84647148264a33c0">m_fSampleRate</a>       = fSampleRateInHz;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>    = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="a00360.html#addb1b5c6cb81115d10e100171153860e">  109</a></span><a class="code hl_enumeration" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> <a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">CCombFilterIf::reset</a> ()</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>      = 0;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_variable" href="a00360.html#a999417616935767c84647148264a33c0">m_fSampleRate</a>       = 0;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="a00360.html#aba7940209b0859282191b22ed1708df3">  120</a></span><a class="code hl_enumeration" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> <a class="code hl_function" href="a00360.html#aba7940209b0859282191b22ed1708df3">CCombFilterIf::process</a>(<span class="keywordtype">float</span> **ppfInputBuffer, <span class="keywordtype">float</span> **ppfOutputBuffer, <span class="keywordtype">int</span> iNumberOfFrames )</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>-&gt;<a class="code hl_function" href="a00348.html#a1678f8ddaa2f34e15b36367b9f2b3be0">process</a>(ppfInputBuffer, ppfOutputBuffer, iNumberOfFrames);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="a00360.html#a47e0979e162e23e217829fee0140a3de">  128</a></span><a class="code hl_enumeration" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> <a class="code hl_function" href="a00360.html#a47e0979e162e23e217829fee0140a3de">CCombFilterIf::setParam</a>( <a class="code hl_enumeration" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1">FilterParam_t</a> eParam, <span class="keywordtype">float</span> fParamValue )</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">switch</span> (eParam)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251">kParamDelay</a>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>-&gt;<a class="code hl_function" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec">setParam</a>(eParam, fParamValue * <a class="code hl_variable" href="a00360.html#a999417616935767c84647148264a33c0">m_fSampleRate</a>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">kParamGain</a>:</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>-&gt;<a class="code hl_function" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec">setParam</a>(eParam, fParamValue);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="a00360.html#a6f40c111e2393e840d1a06e4f5271ec1">  143</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="a00360.html#a6f40c111e2393e840d1a06e4f5271ec1">CCombFilterIf::getParam</a>( <a class="code hl_enumeration" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1">FilterParam_t</a> eParam )<span class="keyword"> const</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">switch</span> (eParam)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251">kParamDelay</a>:</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>-&gt;<a class="code hl_function" href="a00348.html#a494d31970d8e8e52058cfa34393b0662">getParam</a>(eParam) / <a class="code hl_variable" href="a00360.html#a999417616935767c84647148264a33c0">m_fSampleRate</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">kParamGain</a>:</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>-&gt;<a class="code hl_function" href="a00348.html#a494d31970d8e8e52058cfa34393b0662">getParam</a> (eParam);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
+<div class="ttc" id="aa00035_html_ae3df409f71a622d577411ff3c724c07c"><div class="ttname"><a href="a00035.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a></div><div class="ttdeci">static const char * kCMyProjectBuildDate</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00014">CombFilterIf.cpp:14</a></div></div>
+<div class="ttc" id="aa00041_html"><div class="ttname"><a href="a00041.html">Util.h</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">RingBuffer.h</a></div></div>
+<div class="ttc" id="aa00050_html"><div class="ttname"><a href="a00050.html">CombFilter.h</a></div></div>
+<div class="ttc" id="aa00062_html"><div class="ttname"><a href="a00062.html">CombFilterIf.h</a></div></div>
+<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">ErrorDef.h</a></div></div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7f"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a></div><div class="ttdeci">Error_t</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00004">ErrorDef.h:5</a></div></div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a></div><div class="ttdeci">@ kUnknownError</div></div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">Error_t::kFunctionInvalidArgsError</a></div><div class="ttdeci">@ kFunctionInvalidArgsError</div></div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a></div><div class="ttdeci">@ kNotInitializedError</div></div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a></div><div class="ttdeci">@ kNoError</div></div>
+<div class="ttc" id="aa00086_html_a65e9886d74aaee76545e83dd09011727"><div class="ttname"><a href="a00086.html#a65e9886d74aaee76545e83dd09011727">false</a></div><div class="ttdeci">#define false</div><div class="ttdef"><b>Definition:</b> <a href="a00086_source.html#l00098">s7.h:98</a></div></div>
+<div class="ttc" id="aa00317_html"><div class="ttname"><a href="a00317.html">MUSI6106Config.h</a></div></div>
+<div class="ttc" id="aa00317_html_a1de30c60ae3b063ebab4d30e7ccbb9c7"><div class="ttname"><a href="a00317.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00028">MUSI6106Config.h:28</a></div></div>
+<div class="ttc" id="aa00317_html_a36f0698e09f5575ef7e2d132c1625476"><div class="ttname"><a href="a00317.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00029">MUSI6106Config.h:29</a></div></div>
+<div class="ttc" id="aa00317_html_ac5bc7ad1f89346fef556af1ee27930dd"><div class="ttname"><a href="a00317.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a></div><div class="ttdeci">#define MUSI6106_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00030">MUSI6106Config.h:30</a></div></div>
+<div class="ttc" id="aa00348_html"><div class="ttname"><a href="a00348.html">CCombFilterBase</a></div><div class="ttdoc">base class for the comb filter (FIR &amp; IIR)</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00008">CombFilter.h:9</a></div></div>
+<div class="ttc" id="aa00348_html_a1678f8ddaa2f34e15b36367b9f2b3be0"><div class="ttname"><a href="a00348.html#a1678f8ddaa2f34e15b36367b9f2b3be0">CCombFilterBase::process</a></div><div class="ttdeci">virtual Error_t process(float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)=0</div></div>
+<div class="ttc" id="aa00348_html_a494d31970d8e8e52058cfa34393b0662"><div class="ttname"><a href="a00348.html#a494d31970d8e8e52058cfa34393b0662">CCombFilterBase::getParam</a></div><div class="ttdeci">float getParam(CCombFilterIf::FilterParam_t eParam) const</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00093">CombFilter.cpp:93</a></div></div>
+<div class="ttc" id="aa00348_html_acde2c44a0c01416cd700c646f1c21cec"><div class="ttname"><a href="a00348.html#acde2c44a0c01416cd700c646f1c21cec">CCombFilterBase::setParam</a></div><div class="ttdeci">Error_t setParam(CCombFilterIf::FilterParam_t eParam, float fParamValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00059">CombFilter.cpp:59</a></div></div>
+<div class="ttc" id="aa00352_html"><div class="ttname"><a href="a00352.html">CCombFilterFir</a></div><div class="ttdoc">FIR comb filter implementation.</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00038">CombFilter.h:39</a></div></div>
+<div class="ttc" id="aa00356_html"><div class="ttname"><a href="a00356.html">CCombFilterIir</a></div><div class="ttdoc">IIR comb filter implementation.</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00049">CombFilter.h:50</a></div></div>
+<div class="ttc" id="aa00360_html"><div class="ttname"><a href="a00360.html">CCombFilterIf</a></div><div class="ttdoc">interface class for the comb filter (FIR &amp; IIR)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00010">CombFilterIf.h:11</a></div></div>
+<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6c"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6c">CCombFilterIf::CombFilterType_t</a></div><div class="ttdeci">CombFilterType_t</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00024">CombFilterIf.h:25</a></div></div>
+<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b">CCombFilterIf::kCombFIR</a></div><div class="ttdeci">@ kCombFIR</div><div class="ttdoc">finite impulse response filter</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00026">CombFilterIf.h:26</a></div></div>
+<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9">CCombFilterIf::kCombIIR</a></div><div class="ttdeci">@ kCombIIR</div><div class="ttdoc">infinite impulse response filter</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00027">CombFilterIf.h:27</a></div></div>
+<div class="ttc" id="aa00360_html_a21c98d82311b45795433e81f5cf4e491"><div class="ttname"><a href="a00360.html#a21c98d82311b45795433e81f5cf4e491">CCombFilterIf::init</a></div><div class="ttdeci">Error_t init(CombFilterType_t eFilterType, float fMaxDelayLengthInS, float fSampleRateInHz, int iNumChannels)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00084">CombFilterIf.cpp:84</a></div></div>
+<div class="ttc" id="aa00360_html_a3dca2624e47fa1b574ae01fac9d6d707"><div class="ttname"><a href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">CCombFilterIf::m_bIsInitialized</a></div><div class="ttdeci">bool m_bIsInitialized</div><div class="ttdoc">internal bool to check whether the init function has been called</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00104">CombFilterIf.h:104</a></div></div>
+<div class="ttc" id="aa00360_html_a47e0979e162e23e217829fee0140a3de"><div class="ttname"><a href="a00360.html#a47e0979e162e23e217829fee0140a3de">CCombFilterIf::setParam</a></div><div class="ttdeci">Error_t setParam(FilterParam_t eParam, float fParamValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00128">CombFilterIf.cpp:128</a></div></div>
+<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1">CCombFilterIf::FilterParam_t</a></div><div class="ttdeci">FilterParam_t</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00033">CombFilterIf.h:34</a></div></div>
+<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a></div><div class="ttdeci">@ kParamGain</div><div class="ttdoc">gain as factor (usually -1...1)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00035">CombFilterIf.h:35</a></div></div>
+<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251">CCombFilterIf::kParamDelay</a></div><div class="ttdeci">@ kParamDelay</div><div class="ttdoc">delay in seconds for specification of comb width</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00036">CombFilterIf.h:36</a></div></div>
+<div class="ttc" id="aa00360_html_a5a8973e3297f5643aac503427ba57cf0"><div class="ttname"><a href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">CCombFilterIf::m_pCCombFilter</a></div><div class="ttdeci">CCombFilterBase * m_pCCombFilter</div><div class="ttdoc">handle of the comb filter</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00105">CombFilterIf.h:105</a></div></div>
+<div class="ttc" id="aa00360_html_a6f40c111e2393e840d1a06e4f5271ec1"><div class="ttname"><a href="a00360.html#a6f40c111e2393e840d1a06e4f5271ec1">CCombFilterIf::getParam</a></div><div class="ttdeci">float getParam(FilterParam_t eParam) const</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00143">CombFilterIf.cpp:143</a></div></div>
+<div class="ttc" id="aa00360_html_a999417616935767c84647148264a33c0"><div class="ttname"><a href="a00360.html#a999417616935767c84647148264a33c0">CCombFilterIf::m_fSampleRate</a></div><div class="ttdeci">float m_fSampleRate</div><div class="ttdoc">audio sample rate in Hz</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00107">CombFilterIf.h:107</a></div></div>
+<div class="ttc" id="aa00360_html_aba7940209b0859282191b22ed1708df3"><div class="ttname"><a href="a00360.html#aba7940209b0859282191b22ed1708df3">CCombFilterIf::process</a></div><div class="ttdeci">Error_t process(float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00120">CombFilterIf.cpp:120</a></div></div>
+<div class="ttc" id="aa00360_html_ac027c6f7a97b032a24535e8f4877aa3a"><div class="ttname"><a href="a00360.html#ac027c6f7a97b032a24535e8f4877aa3a">CCombFilterIf::destroy</a></div><div class="ttdeci">static Error_t destroy(CCombFilterIf *&amp;pCCombFilterIf)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00070">CombFilterIf.cpp:70</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23">CCombFilterIf::Version_t</a></div><div class="ttdeci">Version_t</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00014">CombFilterIf.h:15</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b">CCombFilterIf::kNumVersionInts</a></div><div class="ttdeci">@ kNumVersionInts</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00021">CombFilterIf.h:20</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2">CCombFilterIf::kPatch</a></div><div class="ttdeci">@ kPatch</div><div class="ttdoc">patch version number</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00018">CombFilterIf.h:18</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b">CCombFilterIf::kMinor</a></div><div class="ttdeci">@ kMinor</div><div class="ttdoc">minor version number</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00017">CombFilterIf.h:17</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566">CCombFilterIf::kMajor</a></div><div class="ttdeci">@ kMajor</div><div class="ttdoc">major version number</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00016">CombFilterIf.h:16</a></div></div>
+<div class="ttc" id="aa00360_html_acab2fa8232adea83247dfec1991bb533"><div class="ttname"><a href="a00360.html#acab2fa8232adea83247dfec1991bb533">CCombFilterIf::~CCombFilterIf</a></div><div class="ttdeci">virtual ~CCombFilterIf()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00027">CombFilterIf.cpp:27</a></div></div>
+<div class="ttc" id="aa00360_html_addb1b5c6cb81115d10e100171153860e"><div class="ttname"><a href="a00360.html#addb1b5c6cb81115d10e100171153860e">CCombFilterIf::reset</a></div><div class="ttdeci">Error_t reset()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00109">CombFilterIf.cpp:109</a></div></div>
+<div class="ttc" id="aa00360_html_adee1df157f2c971ce3fcf7746dcc7bc4"><div class="ttname"><a href="a00360.html#adee1df157f2c971ce3fcf7746dcc7bc4">CCombFilterIf::CCombFilterIf</a></div><div class="ttdeci">CCombFilterIf()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00017">CombFilterIf.cpp:17</a></div></div>
+<div class="ttc" id="aa00360_html_aed3c9894a92aa2542f791dd7bb20f7bc"><div class="ttname"><a href="a00360.html#aed3c9894a92aa2542f791dd7bb20f7bc">CCombFilterIf::getVersion</a></div><div class="ttdeci">static const int getVersion(const Version_t eVersionIdx)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00032">CombFilterIf.cpp:32</a></div></div>
+<div class="ttc" id="aa00360_html_afda0247e8f9f1c7e36c9117ee1f03ac8"><div class="ttname"><a href="a00360.html#afda0247e8f9f1c7e36c9117ee1f03ac8">CCombFilterIf::getBuildDate</a></div><div class="ttdeci">static const char * getBuildDate()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00054">CombFilterIf.cpp:54</a></div></div>
+<div class="ttc" id="aa00360_html_afe4fce0b8bcb6e4fb5b2d71c62051f74"><div class="ttname"><a href="a00360.html#afe4fce0b8bcb6e4fb5b2d71c62051f74">CCombFilterIf::create</a></div><div class="ttdeci">static Error_t create(CCombFilterIf *&amp;pCCombFilterIf)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00059">CombFilterIf.cpp:59</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 19:52:02 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:28 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

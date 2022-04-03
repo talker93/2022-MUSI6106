@@ -1,5 +1,4 @@
-<map id="CCombFilterBase" name="CCombFilterBase">
-<area shape="rect" id="node1" title="base class for the comb filter (FIR &amp; IIR)" alt="" coords="76,5,227,229"/>
-<area shape="rect" id="node2" href="$a00340.html" title="FIR comb filter implementation." alt="" coords="5,277,140,384"/>
-<area shape="rect" id="node3" href="$a00344.html" title="IIR comb filter implementation." alt="" coords="165,277,295,384"/>
+<map id="CAudioFileSndLib" name="CAudioFileSndLib">
+<area shape="rect" id="node1" title="open, read, and write audio files with sndlib (CMake option WITH_SNDLIB has to be ON)" alt="" coords="21,703,173,1015"/>
+<area shape="rect" id="node2" href="$a00340.html" title="open, read, and write audio files" alt="" coords="5,5,188,655"/>
 </map>

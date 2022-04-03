@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: sample2.h File Reference</title>
+<title>MUSI6106: gmock-actions.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,25 +40,103 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_f12498a9b3b01f7557dfe344f3ca0a3a.html">googletest</a></li><li class="navelem"><a class="el" href="dir_b0bc461411f317819f83da89819c0369.html">googletest</a></li><li class="navelem"><a class="el" href="dir_c22799770fa9b75926bb02c09cbfb424.html">samples</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_f12498a9b3b01f7557dfe344f3ca0a3a.html">googletest</a></li><li class="navelem"><a class="el" href="dir_76b6a47ab5cf193a370abf4fcae112aa.html">googlemock</a></li><li class="navelem"><a class="el" href="dir_f04fd9da824c7d16e8b42029801bc028.html">include</a></li><li class="navelem"><a class="el" href="dir_4da6f07d2602a6ec326bf87ca5fb812b.html">gmock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">sample2.h File Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">gmock-actions.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00215_source.html">gmock/internal/gmock-internal-utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00209_source.html">gmock/internal/gmock-port.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00206_source.html">gmock/internal/gmock-pp.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for sample2.h:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for gmock-actions.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00219.png" border="0" usemap="#asample2_8h" alt=""/></div>
-<map name="asample2_8h" id="asample2_8h">
-<area shape="rect" title=" " alt="" coords="5,5,87,32"/>
-<area shape="rect" title=" " alt="" coords="14,80,78,107"/>
+<div class="center"><img src="a00219.png" border="0" usemap="#agmock-actions_8h" alt=""/></div>
+<map name="agmock-actions_8h" id="agmock-actions_8h">
+<area shape="rect" title=" " alt="" coords="1237,5,1355,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,67,114"/>
+<area shape="rect" title=" " alt="" coords="91,87,165,114"/>
+<area shape="rect" title=" " alt="" coords="443,401,522,427"/>
+<area shape="rect" title=" " alt="" coords="549,669,617,695"/>
+<area shape="rect" title=" " alt="" coords="757,669,811,695"/>
+<area shape="rect" title=" " alt="" coords="2697,669,2748,695"/>
+<area shape="rect" title=" " alt="" coords="2367,669,2449,695"/>
+<area shape="rect" title=" " alt="" coords="2109,401,2161,427"/>
+<area shape="rect" href="a00215.html" title=" " alt="" coords="1221,80,1371,121"/>
+<area shape="rect" href="a00209.html" title=" " alt="" coords="2367,483,2518,524"/>
+<area shape="rect" href="a00206.html" title=" " alt="" coords="2811,87,2989,114"/>
+<area shape="rect" title=" " alt="" coords="857,669,917,695"/>
+<area shape="rect" title=" " alt="" coords="1964,401,2033,427"/>
+<area shape="rect" title=" " alt="" coords="249,669,308,695"/>
+<area shape="rect" href="a00260.html" title=" " alt="" coords="1249,169,1343,196"/>
+<area shape="rect" title=" " alt="" coords="2566,579,2634,606"/>
+<area shape="rect" title=" " alt="" coords="2474,669,2537,695"/>
+<area shape="rect" title=" " alt="" coords="1129,669,1191,695"/>
+<area shape="rect" title=" " alt="" coords="2588,669,2660,695"/>
+<area shape="rect" href="a00293.html" title=" " alt="" coords="1623,572,1753,613"/>
+<area shape="rect" href="a01781.html" title=" " alt="" coords="2388,572,2543,613"/>
+<area shape="rect" title=" " alt="" coords="1215,669,1278,695"/>
+<area shape="rect" title=" " alt="" coords="1483,669,1551,695"/>
+<area shape="rect" title=" " alt="" coords="1041,669,1105,695"/>
+<area shape="rect" title=" " alt="" coords="1576,669,1635,695"/>
+<area shape="rect" title=" " alt="" coords="961,669,1015,695"/>
+<area shape="rect" title=" " alt="" coords="1659,669,1715,695"/>
+<area shape="rect" title=" " alt="" coords="1739,669,1826,695"/>
+<area shape="rect" title=" " alt="" coords="1850,669,1929,695"/>
+<area shape="rect" href="a01790.html" title=" " alt="" coords="1953,661,2097,703"/>
+<area shape="rect" href="a00278.html" title=" " alt="" coords="2121,661,2252,703"/>
+<area shape="rect" title=" " alt="" coords="2276,669,2343,695"/>
+<area shape="rect" title=" " alt="" coords="1302,669,1373,695"/>
+<area shape="rect" title=" " alt="" coords="1397,669,1459,695"/>
+<area shape="rect" title=" " alt="" coords="1735,244,1801,271"/>
+<area shape="rect" href="a00284.html" title=" " alt="" coords="1308,393,1439,435"/>
+<area shape="rect" href="a00263.html" title=" " alt="" coords="849,490,999,517"/>
+<area shape="rect" href="a00299.html" title=" " alt="" coords="1075,483,1205,524"/>
+<area shape="rect" href="a00257.html" title=" " alt="" coords="1903,244,2059,271"/>
+<area shape="rect" href="a00305.html" title=" " alt="" coords="1457,244,1609,271"/>
+<area shape="rect" href="a00296.html" title=" " alt="" coords="1303,319,1444,345"/>
+<area shape="rect" href="a00272.html" title=" " alt="" coords="1849,319,2009,345"/>
+<area shape="rect" href="a00311.html" title=" " alt="" coords="1074,244,1201,271"/>
+<area shape="rect" href="a00308.html" title=" " alt="" coords="851,319,997,345"/>
+<area shape="rect" href="a00275.html" title=" " alt="" coords="1569,319,1724,345"/>
+<area shape="rect" href="a00269.html" title=" " alt="" coords="1276,244,1433,271"/>
+<area shape="rect" title=" " alt="" coords="1331,490,1387,517"/>
+<area shape="rect" title=" " alt="" coords="1411,490,1477,517"/>
+<area shape="rect" title=" " alt="" coords="1502,490,1549,517"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00220.png" border="0" usemap="#agmock-actions_8hdep" alt=""/></div>
+<map name="agmock-actions_8hdep" id="agmock-actions_8hdep">
+<area shape="rect" title=" " alt="" coords="135,5,253,32"/>
+<area shape="rect" href="a00221.html" title=" " alt="" coords="5,80,156,107"/>
+<area shape="rect" href="a00188.html" title=" " alt="" coords="219,229,289,256"/>
+<area shape="rect" href="a00203.html" title=" " alt="" coords="239,80,391,107"/>
+<area shape="rect" href="a00185.html" title=" " alt="" coords="191,304,317,331"/>
+<area shape="rect" href="a00200.html" title=" " alt="" coords="231,155,399,181"/>
+<area shape="rect" href="a00197.html" title=" " alt="" coords="424,155,556,181"/>
 </map>
 </div>
 </div>
@@ -66,13 +144,1250 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01256.html">MyString</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00396.html">testing::internal::BuiltInDefaultValueGetter&lt; T, kDefaultConstructible &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00400.html">testing::internal::BuiltInDefaultValueGetter&lt; T, false &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00404.html">testing::internal::BuiltInDefaultValue&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html">testing::internal::BuiltInDefaultValue&lt; const T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html">testing::internal::BuiltInDefaultValue&lt; T * &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00416.html">testing::DefaultValue&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00420.html">testing::DefaultValue&lt; T &gt;::ValueProducer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00424.html">testing::DefaultValue&lt; T &gt;::FixedValueProducer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00428.html">testing::DefaultValue&lt; T &gt;::FactoryValueProducer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00432.html">testing::DefaultValue&lt; T &amp; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00436.html">testing::DefaultValue&lt; void &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00440.html">testing::ActionInterface&lt; F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00444.html">testing::Action&lt; F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00448.html">testing::Action&lt; F &gt;::ActionAdapter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00452.html">testing::Action&lt; F &gt;::IgnoreArgs&lt; FunctionImpl &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00456.html">testing::PolymorphicAction&lt; Impl &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00460.html">testing::PolymorphicAction&lt; Impl &gt;::MonomorphicImpl&lt; F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00464.html">testing::internal::ByMoveWrapper&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00468.html">testing::internal::ReturnAction&lt; R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00472.html">testing::internal::ReturnAction&lt; R &gt;::Impl&lt; R_, F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html">testing::internal::ReturnAction&lt; R &gt;::Impl&lt; ByMoveWrapper&lt; R_ &gt;, F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00480.html">testing::internal::ReturnNullAction</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00484.html">testing::internal::ReturnVoidAction</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html">testing::internal::ReturnRefAction&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00492.html">testing::internal::ReturnRefAction&lt; T &gt;::Impl&lt; F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00496.html">testing::internal::ReturnRefOfCopyAction&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00500.html">testing::internal::ReturnRefOfCopyAction&lt; T &gt;::Impl&lt; F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00504.html">testing::internal::ReturnRoundRobinAction&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00508.html">testing::internal::ReturnRoundRobinAction&lt; T &gt;::State</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html">testing::internal::DoDefaultAction</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00516.html">testing::internal::AssignAction&lt; T1, T2 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00520.html">testing::internal::SetErrnoAndReturnAction&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00524.html">testing::internal::SetArgumentPointeeAction&lt; N, A, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00528.html">testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00532.html">testing::internal::InvokeWithoutArgsAction&lt; FunctionImpl &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00536.html">testing::internal::InvokeMethodWithoutArgsAction&lt; Class, MethodPtr &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00540.html">testing::internal::IgnoreResultAction&lt; A &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00544.html">testing::internal::IgnoreResultAction&lt; A &gt;::Impl&lt; F &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00548.html">testing::internal::WithArgsAction&lt; InnerAction, I &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00552.html">testing::internal::DoAllAction&lt; Actions &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00556.html">testing::internal::ReturnNewAction&lt; T, Params &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00560.html">testing::internal::ReturnArgAction&lt; k &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00564.html">testing::internal::SaveArgAction&lt; k, Ptr &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00568.html">testing::internal::SaveArgPointeeAction&lt; k, Ptr &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00572.html">testing::internal::SetArgRefereeAction&lt; k, T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00576.html">testing::internal::SetArrayArgumentAction&lt; k, I1, I2 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00580.html">testing::internal::DeleteArgAction&lt; k &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00584.html">testing::internal::ReturnPointeeAction&lt; Ptr &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00588.html">testing::internal::ExcessiveArg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00596.html">testing::internal::ImplBase&lt; Impl &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00600.html">testing::internal::ImplBase&lt; Impl &gt;::Holder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00604.html">testing::internal::ActionImpl&lt; R(Args...), Impl &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a00321"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html">testing</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00322"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html">testing::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a06b1e6cd1145acf7849e4a112976016b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a06b1e6cd1145acf7849e4a112976016b">GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a>(type,  value)</td></tr>
+<tr class="separator:a06b1e6cd1145acf7849e4a112976016b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc458b779043b35afe85acb9014fc658"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#afc458b779043b35afe85acb9014fc658">GMOCK_INTERNAL_ARG_UNUSED</a>(i,  data,  el)&#160;&#160;&#160;  , const arg##i##_type&amp; arg##i <a class="el" href="a00293.html#acdd47601a9376161c349a5881ccc6918">GTEST_ATTRIBUTE_UNUSED_</a></td></tr>
+<tr class="separator:afc458b779043b35afe85acb9014fc658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069f37fdbe36aabe65da6eb6221b9b19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a069f37fdbe36aabe65da6eb6221b9b19">GMOCK_ACTION_ARG_TYPES_AND_NAMES_UNUSED_</a></td></tr>
+<tr class="separator:a069f37fdbe36aabe65da6eb6221b9b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac94295873740ce64580d366a433ea9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a8ac94295873740ce64580d366a433ea9">GMOCK_INTERNAL_ARG</a>(i,  data,  el)&#160;&#160;&#160;, const arg##i##_type&amp; arg##i</td></tr>
+<tr class="separator:a8ac94295873740ce64580d366a433ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2ae4aac2083dfed61e5f679a7db0e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aee2ae4aac2083dfed61e5f679a7db0e9">GMOCK_ACTION_ARG_TYPES_AND_NAMES_</a>&#160;&#160;&#160;  const args_type&amp; args <a class="el" href="a00206.html#ab2a0d358d2eb3f04395d0494ab7aab01">GMOCK_PP_REPEAT</a>(<a class="el" href="a00218.html#a8ac94295873740ce64580d366a433ea9">GMOCK_INTERNAL_ARG</a>, , 10)</td></tr>
+<tr class="separator:aee2ae4aac2083dfed61e5f679a7db0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab694ec868889ce00bd71fd4b2fb8d083"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ab694ec868889ce00bd71fd4b2fb8d083">GMOCK_INTERNAL_TEMPLATE_ARG</a>(i,  data,  el)&#160;&#160;&#160;, typename arg##i##_type</td></tr>
+<tr class="separator:ab694ec868889ce00bd71fd4b2fb8d083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a421f180fc492cf08339cf085ada235e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a421f180fc492cf08339cf085ada235e3">GMOCK_ACTION_TEMPLATE_ARGS_NAMES_</a>&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#ab2a0d358d2eb3f04395d0494ab7aab01">GMOCK_PP_REPEAT</a>(<a class="el" href="a00218.html#ab694ec868889ce00bd71fd4b2fb8d083">GMOCK_INTERNAL_TEMPLATE_ARG</a>, , 10))</td></tr>
+<tr class="separator:a421f180fc492cf08339cf085ada235e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53750f768fa5de7295c6a82885ea181d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a53750f768fa5de7295c6a82885ea181d">GMOCK_INTERNAL_TYPENAME_PARAM</a>(i,  data,  param)&#160;&#160;&#160;, typename param##_type</td></tr>
+<tr class="separator:a53750f768fa5de7295c6a82885ea181d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca13a68b9cfec576f30a4b0026667b4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aca13a68b9cfec576f30a4b0026667b4b">GMOCK_ACTION_TYPENAME_PARAMS_</a>(params)&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a53750f768fa5de7295c6a82885ea181d">GMOCK_INTERNAL_TYPENAME_PARAM</a>, , params))</td></tr>
+<tr class="separator:aca13a68b9cfec576f30a4b0026667b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9377b2c0985c30959d7f1e8ba25bd75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aa9377b2c0985c30959d7f1e8ba25bd75">GMOCK_INTERNAL_TYPE_PARAM</a>(i,  data,  param)&#160;&#160;&#160;, param##_type</td></tr>
+<tr class="separator:aa9377b2c0985c30959d7f1e8ba25bd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa365f234afbe48f989b84c8d7870e05a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aa365f234afbe48f989b84c8d7870e05a">GMOCK_ACTION_TYPE_PARAMS_</a>(params)&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#aa9377b2c0985c30959d7f1e8ba25bd75">GMOCK_INTERNAL_TYPE_PARAM</a>, , params))</td></tr>
+<tr class="separator:aa365f234afbe48f989b84c8d7870e05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd35c38040c76565d0fd3db8d5d4d132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#acd35c38040c76565d0fd3db8d5d4d132">GMOCK_INTERNAL_TYPE_GVALUE_PARAM</a>(i,  data,  param)&#160;&#160;&#160;  , param##_type gmock_p##i</td></tr>
+<tr class="separator:acd35c38040c76565d0fd3db8d5d4d132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeebe2b4b398d472fbabf6a998fd89e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aaeebe2b4b398d472fbabf6a998fd89e0">GMOCK_ACTION_TYPE_GVALUE_PARAMS_</a>(params)&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#acd35c38040c76565d0fd3db8d5d4d132">GMOCK_INTERNAL_TYPE_GVALUE_PARAM</a>, , params))</td></tr>
+<tr class="separator:aaeebe2b4b398d472fbabf6a998fd89e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05191e66d8f832f250311323db07dd5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a05191e66d8f832f250311323db07dd5a">GMOCK_INTERNAL_GVALUE_PARAM</a>(i,  data,  param)&#160;&#160;&#160;  , std::forward&lt;param##_type&gt;(gmock_p##i)</td></tr>
+<tr class="separator:a05191e66d8f832f250311323db07dd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e6035a6eabc83d59d6955755e6f33f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a78e6035a6eabc83d59d6955755e6f33f">GMOCK_ACTION_GVALUE_PARAMS_</a>(params)&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a05191e66d8f832f250311323db07dd5a">GMOCK_INTERNAL_GVALUE_PARAM</a>, , params))</td></tr>
+<tr class="separator:a78e6035a6eabc83d59d6955755e6f33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a10dfdcfed7f3747dac32042e2b3c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a82a10dfdcfed7f3747dac32042e2b3c1">GMOCK_INTERNAL_INIT_PARAM</a>(i,  data,  param)&#160;&#160;&#160;  , param(::std::forward&lt;param##_type&gt;(gmock_p##i))</td></tr>
+<tr class="separator:a82a10dfdcfed7f3747dac32042e2b3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a86b24d2be85a91983923579ace081b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a0a86b24d2be85a91983923579ace081b">GMOCK_ACTION_INIT_PARAMS_</a>(params)&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a82a10dfdcfed7f3747dac32042e2b3c1">GMOCK_INTERNAL_INIT_PARAM</a>, , params))</td></tr>
+<tr class="separator:a0a86b24d2be85a91983923579ace081b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b6c0fc86f975781666cd89b48636a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a16b6c0fc86f975781666cd89b48636a2">GMOCK_INTERNAL_FIELD_PARAM</a>(i,  data,  param)&#160;&#160;&#160;param##_type param;</td></tr>
+<tr class="separator:a16b6c0fc86f975781666cd89b48636a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9988a03009790aa85418b69723acf186"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a9988a03009790aa85418b69723acf186">GMOCK_ACTION_FIELD_PARAMS_</a>(params)&#160;&#160;&#160;  <a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a16b6c0fc86f975781666cd89b48636a2">GMOCK_INTERNAL_FIELD_PARAM</a>, , params)</td></tr>
+<tr class="separator:a9988a03009790aa85418b69723acf186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b532c2710a42d3e41911c10f4be38d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name,  full_name,  params)</td></tr>
+<tr class="separator:ab7b532c2710a42d3e41911c10f4be38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af7137aa4871df4235881af377205fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a7af7137aa4871df4235881af377205fe">ACTION</a>(name)</td></tr>
+<tr class="separator:a7af7137aa4871df4235881af377205fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f47e069acb517db9f743f029471aa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#af5f47e069acb517db9f743f029471aa7">ACTION_P</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP, (__VA_ARGS__))</td></tr>
+<tr class="separator:af5f47e069acb517db9f743f029471aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0284b965683ea4d6449322becf3ba6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ade0284b965683ea4d6449322becf3ba6">ACTION_P2</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP2, (__VA_ARGS__))</td></tr>
+<tr class="separator:ade0284b965683ea4d6449322becf3ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db847f0e74eea776dd7868ca73376bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a4db847f0e74eea776dd7868ca73376bc">ACTION_P3</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP3, (__VA_ARGS__))</td></tr>
+<tr class="separator:a4db847f0e74eea776dd7868ca73376bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae399d6c7462647c024e8de2ea9a65160"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ae399d6c7462647c024e8de2ea9a65160">ACTION_P4</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP4, (__VA_ARGS__))</td></tr>
+<tr class="separator:ae399d6c7462647c024e8de2ea9a65160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc061a73229bbfcf2720915e48d5454"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a1bc061a73229bbfcf2720915e48d5454">ACTION_P5</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP5, (__VA_ARGS__))</td></tr>
+<tr class="separator:a1bc061a73229bbfcf2720915e48d5454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5422cef04a3034c5f957ba7216f7981"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aa5422cef04a3034c5f957ba7216f7981">ACTION_P6</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP6, (__VA_ARGS__))</td></tr>
+<tr class="separator:aa5422cef04a3034c5f957ba7216f7981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4294a132f8b01a098bfc14619ebe99d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a4294a132f8b01a098bfc14619ebe99d6">ACTION_P7</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP7, (__VA_ARGS__))</td></tr>
+<tr class="separator:a4294a132f8b01a098bfc14619ebe99d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25238e96d7438ce1db5ce806e41a9068"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a25238e96d7438ce1db5ce806e41a9068">ACTION_P8</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP8, (__VA_ARGS__))</td></tr>
+<tr class="separator:a25238e96d7438ce1db5ce806e41a9068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1465d122062a21fbdd9ddb5b174166a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a1465d122062a21fbdd9ddb5b174166a6">ACTION_P9</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP9, (__VA_ARGS__))</td></tr>
+<tr class="separator:a1465d122062a21fbdd9ddb5b174166a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0708603c79b2da1e552a212a23e5e62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ac0708603c79b2da1e552a212a23e5e62">ACTION_P10</a>(name, ...)&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP10, (__VA_ARGS__))</td></tr>
+<tr class="separator:ac0708603c79b2da1e552a212a23e5e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1cb539b10f51b71cf103a2e7a422aedc"><td class="memTemplParams" colspan="2">template&lt;typename P , typename Q &gt; </td></tr>
+<tr class="memitem:a1cb539b10f51b71cf103a2e7a422aedc"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#a1cb539b10f51b71cf103a2e7a422aedc">testing::internal::disjunction</a> = typename ::std::conditional&lt; P::value, P, Q &gt;::type</td></tr>
+<tr class="separator:a1cb539b10f51b71cf103a2e7a422aedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603e329ec0263ebfcf16f712810bd511"><td class="memItemLeft" align="right" valign="top">typedef internal::IgnoredValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a603e329ec0263ebfcf16f712810bd511">testing::Unused</a></td></tr>
+<tr class="separator:a603e329ec0263ebfcf16f712810bd511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8fe6f7c11d6d3dd6e42b75c9a5b43861"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a8fe6f7c11d6d3dd6e42b75c9a5b43861">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (void,)</td></tr>
+<tr class="separator:a8fe6f7c11d6d3dd6e42b75c9a5b43861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a961f38f341d40237252babcb3767b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a0a961f38f341d40237252babcb3767b7">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (::std::string, &quot;&quot;)</td></tr>
+<tr class="separator:a0a961f38f341d40237252babcb3767b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6670915f42119e4ba20d8cb74fc1eea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#aa6670915f42119e4ba20d8cb74fc1eea">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (<a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>, <a class="el" href="a00083.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="separator:aa6670915f42119e4ba20d8cb74fc1eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab203e2c4c54f2ca86439344347a3e43f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ab203e2c4c54f2ca86439344347a3e43f">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (unsigned char, '\0')</td></tr>
+<tr class="separator:ab203e2c4c54f2ca86439344347a3e43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedb3b1b5307625bc84dc660742da3c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#aaedb3b1b5307625bc84dc660742da3c6">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (signed char, '\0')</td></tr>
+<tr class="separator:aaedb3b1b5307625bc84dc660742da3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaaa7101572f283fe70a85ad5e6c65dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#aeaaa7101572f283fe70a85ad5e6c65dc">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (char, '\0')</td></tr>
+<tr class="separator:aeaaa7101572f283fe70a85ad5e6c65dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2965a6078670393812e67f8e5fcb072"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ab2965a6078670393812e67f8e5fcb072">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (unsigned short, 0U)</td></tr>
+<tr class="separator:ab2965a6078670393812e67f8e5fcb072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ea5db83b290e2412f321c3b1eb8c47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ae6ea5db83b290e2412f321c3b1eb8c47">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (signed short, 0)</td></tr>
+<tr class="separator:ae6ea5db83b290e2412f321c3b1eb8c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4285332d8eae4bdfffc13b6c05252c30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a4285332d8eae4bdfffc13b6c05252c30">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (unsigned int, 0U)</td></tr>
+<tr class="separator:a4285332d8eae4bdfffc13b6c05252c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200a33af38e17df617883567c4fd96ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a200a33af38e17df617883567c4fd96ab">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (signed int, 0)</td></tr>
+<tr class="separator:a200a33af38e17df617883567c4fd96ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4167b954a7ff0074ce8a5bb855f86f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a1f4167b954a7ff0074ce8a5bb855f86f">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (unsigned long, 0UL)</td></tr>
+<tr class="separator:a1f4167b954a7ff0074ce8a5bb855f86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8804e25537427755c324ab03a72e776"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#ad8804e25537427755c324ab03a72e776">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (signed long, 0L)</td></tr>
+<tr class="separator:ad8804e25537427755c324ab03a72e776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9320ef876df4a3dff276a9df2965b81f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a9320ef876df4a3dff276a9df2965b81f">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (unsigned long long, 0)</td></tr>
+<tr class="separator:a9320ef876df4a3dff276a9df2965b81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a816b3e5d95850b4111fc9a3459d796"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a9a816b3e5d95850b4111fc9a3459d796">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (signed long long, 0)</td></tr>
+<tr class="separator:a9a816b3e5d95850b4111fc9a3459d796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c697e5b567365fd3ff6c720769633b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a71c697e5b567365fd3ff6c720769633b">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (float, 0)</td></tr>
+<tr class="separator:a71c697e5b567365fd3ff6c720769633b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba92aa33f4968c902623cd02e445020"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a7ba92aa33f4968c902623cd02e445020">testing::internal::GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</a> (double, 0)</td></tr>
+<tr class="separator:a7ba92aa33f4968c902623cd02e445020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa254d28c8d883899cbf11ea2f05fc195"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:aa254d28c8d883899cbf11ea2f05fc195"><td class="memTemplItemLeft" align="right" valign="top">Action&lt; F &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#aa254d28c8d883899cbf11ea2f05fc195">testing::MakeAction</a> (ActionInterface&lt; F &gt; *impl)</td></tr>
+<tr class="separator:aa254d28c8d883899cbf11ea2f05fc195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45df529b8166936d970884383f0ede82"><td class="memTemplParams" colspan="2">template&lt;typename Impl &gt; </td></tr>
+<tr class="memitem:a45df529b8166936d970884383f0ede82"><td class="memTemplItemLeft" align="right" valign="top">PolymorphicAction&lt; Impl &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a45df529b8166936d970884383f0ede82">testing::MakePolymorphicAction</a> (const Impl &amp;impl)</td></tr>
+<tr class="separator:a45df529b8166936d970884383f0ede82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3824c79dc6e9e05c337a675e82da2045"><td class="memTemplParams" colspan="2">template&lt;typename... Action&gt; </td></tr>
+<tr class="memitem:a3824c79dc6e9e05c337a675e82da2045"><td class="memTemplItemLeft" align="right" valign="top">internal::DoAllAction&lt; typename std::decay&lt; Action &gt;::type... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a3824c79dc6e9e05c337a675e82da2045">testing::DoAll</a> (Action &amp;&amp;... action)</td></tr>
+<tr class="separator:a3824c79dc6e9e05c337a675e82da2045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27beef02a13e44e0448b9c50e763e0b"><td class="memTemplParams" colspan="2">template&lt;size_t k, typename InnerAction &gt; </td></tr>
+<tr class="memitem:ab27beef02a13e44e0448b9c50e763e0b"><td class="memTemplItemLeft" align="right" valign="top">internal::WithArgsAction&lt; typename std::decay&lt; InnerAction &gt;::type, k &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ab27beef02a13e44e0448b9c50e763e0b">testing::WithArg</a> (InnerAction &amp;&amp;action)</td></tr>
+<tr class="separator:ab27beef02a13e44e0448b9c50e763e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8dc8233e7b92226ffe51e0d0040604"><td class="memTemplParams" colspan="2">template&lt;size_t k, size_t... ks, typename InnerAction &gt; </td></tr>
+<tr class="memitem:a4b8dc8233e7b92226ffe51e0d0040604"><td class="memTemplItemLeft" align="right" valign="top">internal::WithArgsAction&lt; typename std::decay&lt; InnerAction &gt;::type, k, ks... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a4b8dc8233e7b92226ffe51e0d0040604">testing::WithArgs</a> (InnerAction &amp;&amp;action)</td></tr>
+<tr class="separator:a4b8dc8233e7b92226ffe51e0d0040604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5b756e6cf3ebf3abfdc1c913eb6376"><td class="memTemplParams" colspan="2">template&lt;typename InnerAction &gt; </td></tr>
+<tr class="memitem:a0e5b756e6cf3ebf3abfdc1c913eb6376"><td class="memTemplItemLeft" align="right" valign="top">internal::WithArgsAction&lt; typename std::decay&lt; InnerAction &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a0e5b756e6cf3ebf3abfdc1c913eb6376">testing::WithoutArgs</a> (InnerAction &amp;&amp;action)</td></tr>
+<tr class="separator:a0e5b756e6cf3ebf3abfdc1c913eb6376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae3994eb444d1ad2dd602454b854663"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:adae3994eb444d1ad2dd602454b854663"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnAction&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#adae3994eb444d1ad2dd602454b854663">testing::Return</a> (R value)</td></tr>
+<tr class="separator:adae3994eb444d1ad2dd602454b854663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05e07c0484961f2a30ba44d1d1816fe"><td class="memItemLeft" align="right" valign="top">PolymorphicAction&lt; internal::ReturnNullAction &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#af05e07c0484961f2a30ba44d1d1816fe">testing::ReturnNull</a> ()</td></tr>
+<tr class="separator:af05e07c0484961f2a30ba44d1d1816fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492ba67db1dfe5dc8257b6e3d38b8183"><td class="memItemLeft" align="right" valign="top">PolymorphicAction&lt; internal::ReturnVoidAction &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a492ba67db1dfe5dc8257b6e3d38b8183">testing::Return</a> ()</td></tr>
+<tr class="separator:a492ba67db1dfe5dc8257b6e3d38b8183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17089d5ca6377944d3792fbdc5c5d9b"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:ac17089d5ca6377944d3792fbdc5c5d9b"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnRefAction&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ac17089d5ca6377944d3792fbdc5c5d9b">testing::ReturnRef</a> (R &amp;x)</td></tr>
+<tr class="separator:ac17089d5ca6377944d3792fbdc5c5d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b8e12c383e05cb3e8add91c79fe878"><td class="memTemplParams" colspan="2">template&lt;typename R , R *  = nullptr&gt; </td></tr>
+<tr class="memitem:a23b8e12c383e05cb3e8add91c79fe878"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnRefAction&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a23b8e12c383e05cb3e8add91c79fe878">testing::ReturnRef</a> (R &amp;&amp;)=delete</td></tr>
+<tr class="separator:a23b8e12c383e05cb3e8add91c79fe878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84f2bf2f22aa75d8b52887bfc7d218c"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:ab84f2bf2f22aa75d8b52887bfc7d218c"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnRefOfCopyAction&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ab84f2bf2f22aa75d8b52887bfc7d218c">testing::ReturnRefOfCopy</a> (const R &amp;x)</td></tr>
+<tr class="separator:ab84f2bf2f22aa75d8b52887bfc7d218c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38293837852ef2c406b063741018d108"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a38293837852ef2c406b063741018d108"><td class="memTemplItemLeft" align="right" valign="top">internal::ByMoveWrapper&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a38293837852ef2c406b063741018d108">testing::ByMove</a> (R x)</td></tr>
+<tr class="separator:a38293837852ef2c406b063741018d108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a177b55d76950626dd514dc154d030119"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a177b55d76950626dd514dc154d030119"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnRoundRobinAction&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a177b55d76950626dd514dc154d030119">testing::ReturnRoundRobin</a> (std::vector&lt; T &gt; vals)</td></tr>
+<tr class="separator:a177b55d76950626dd514dc154d030119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e38e41b46d5cbb777ef2395b9208af"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a13e38e41b46d5cbb777ef2395b9208af"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnRoundRobinAction&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a13e38e41b46d5cbb777ef2395b9208af">testing::ReturnRoundRobin</a> (std::initializer_list&lt; T &gt; vals)</td></tr>
+<tr class="separator:a13e38e41b46d5cbb777ef2395b9208af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae041df61ff61ccb9753ba15b4309e1a6"><td class="memItemLeft" align="right" valign="top">internal::DoDefaultAction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ae041df61ff61ccb9753ba15b4309e1a6">testing::DoDefault</a> ()</td></tr>
+<tr class="separator:ae041df61ff61ccb9753ba15b4309e1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0d2e2c84a1fc7477fcb84be09d5560"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T &gt; </td></tr>
+<tr class="memitem:a6e0d2e2c84a1fc7477fcb84be09d5560"><td class="memTemplItemLeft" align="right" valign="top">internal::SetArgumentPointeeAction&lt; N, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a6e0d2e2c84a1fc7477fcb84be09d5560">testing::SetArgPointee</a> (T value)</td></tr>
+<tr class="separator:a6e0d2e2c84a1fc7477fcb84be09d5560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe3c511cc79b6258e870c2da80f3db6"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T &gt; </td></tr>
+<tr class="memitem:acbe3c511cc79b6258e870c2da80f3db6"><td class="memTemplItemLeft" align="right" valign="top">internal::SetArgumentPointeeAction&lt; N, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#acbe3c511cc79b6258e870c2da80f3db6">testing::SetArgumentPointee</a> (T value)</td></tr>
+<tr class="separator:acbe3c511cc79b6258e870c2da80f3db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630f14770743960d9d1b7c71cfd9034c"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a630f14770743960d9d1b7c71cfd9034c"><td class="memTemplItemLeft" align="right" valign="top">PolymorphicAction&lt; internal::AssignAction&lt; T1, T2 &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a630f14770743960d9d1b7c71cfd9034c">testing::Assign</a> (T1 *ptr, T2 val)</td></tr>
+<tr class="separator:a630f14770743960d9d1b7c71cfd9034c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f466024040fa05349773514ce1c6647"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6f466024040fa05349773514ce1c6647"><td class="memTemplItemLeft" align="right" valign="top">PolymorphicAction&lt; internal::SetErrnoAndReturnAction&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a6f466024040fa05349773514ce1c6647">testing::SetErrnoAndReturn</a> (int errval, T result)</td></tr>
+<tr class="separator:a6f466024040fa05349773514ce1c6647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5cacf4475557b5a3e37af3836564235"><td class="memTemplParams" colspan="2">template&lt;typename FunctionImpl &gt; </td></tr>
+<tr class="memitem:af5cacf4475557b5a3e37af3836564235"><td class="memTemplItemLeft" align="right" valign="top">std::decay&lt; FunctionImpl &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#af5cacf4475557b5a3e37af3836564235">testing::Invoke</a> (FunctionImpl &amp;&amp;function_impl)</td></tr>
+<tr class="separator:af5cacf4475557b5a3e37af3836564235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a7c9befa6ff00198434995586151c3"><td class="memTemplParams" colspan="2">template&lt;class Class , typename MethodPtr &gt; </td></tr>
+<tr class="memitem:af6a7c9befa6ff00198434995586151c3"><td class="memTemplItemLeft" align="right" valign="top">internal::InvokeMethodAction&lt; Class, MethodPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#af6a7c9befa6ff00198434995586151c3">testing::Invoke</a> (Class *obj_ptr, MethodPtr method_ptr)</td></tr>
+<tr class="separator:af6a7c9befa6ff00198434995586151c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc08d610483908c8346f2e3318ad449"><td class="memTemplParams" colspan="2">template&lt;typename FunctionImpl &gt; </td></tr>
+<tr class="memitem:aabc08d610483908c8346f2e3318ad449"><td class="memTemplItemLeft" align="right" valign="top">internal::InvokeWithoutArgsAction&lt; typename std::decay&lt; FunctionImpl &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#aabc08d610483908c8346f2e3318ad449">testing::InvokeWithoutArgs</a> (FunctionImpl function_impl)</td></tr>
+<tr class="separator:aabc08d610483908c8346f2e3318ad449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2961856113ff9af02fdf12c71b8a5f5"><td class="memTemplParams" colspan="2">template&lt;class Class , typename MethodPtr &gt; </td></tr>
+<tr class="memitem:ab2961856113ff9af02fdf12c71b8a5f5"><td class="memTemplItemLeft" align="right" valign="top">internal::InvokeMethodWithoutArgsAction&lt; Class, MethodPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ab2961856113ff9af02fdf12c71b8a5f5">testing::InvokeWithoutArgs</a> (Class *obj_ptr, MethodPtr method_ptr)</td></tr>
+<tr class="separator:ab2961856113ff9af02fdf12c71b8a5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257c9395b54e9267a0348a6310128889"><td class="memTemplParams" colspan="2">template&lt;typename A &gt; </td></tr>
+<tr class="memitem:a257c9395b54e9267a0348a6310128889"><td class="memTemplItemLeft" align="right" valign="top">internal::IgnoreResultAction&lt; A &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a257c9395b54e9267a0348a6310128889">testing::IgnoreResult</a> (const A &amp;an_action)</td></tr>
+<tr class="separator:a257c9395b54e9267a0348a6310128889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36843a208feed24c25663fbd331db103"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a36843a208feed24c25663fbd331db103"><td class="memTemplItemLeft" align="right" valign="top">inline ::std::reference_wrapper&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a36843a208feed24c25663fbd331db103">testing::ByRef</a> (T &amp;l_value)</td></tr>
+<tr class="separator:a36843a208feed24c25663fbd331db103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad653b4acaeec008716b858f57317181a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Params&gt; </td></tr>
+<tr class="memitem:ad653b4acaeec008716b858f57317181a"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnNewAction&lt; T, typename std::decay&lt; Params &gt;::type... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ad653b4acaeec008716b858f57317181a">testing::ReturnNew</a> (Params &amp;&amp;... params)</td></tr>
+<tr class="separator:ad653b4acaeec008716b858f57317181a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea717b997f1e68f55d4b65f3396f4d7"><td class="memTemplParams" colspan="2">template&lt;size_t k&gt; </td></tr>
+<tr class="memitem:aaea717b997f1e68f55d4b65f3396f4d7"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnArgAction&lt; k &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#aaea717b997f1e68f55d4b65f3396f4d7">testing::ReturnArg</a> ()</td></tr>
+<tr class="separator:aaea717b997f1e68f55d4b65f3396f4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fee053995e93f1b1efc97a33ae1a5b2"><td class="memTemplParams" colspan="2">template&lt;size_t k, typename Ptr &gt; </td></tr>
+<tr class="memitem:a0fee053995e93f1b1efc97a33ae1a5b2"><td class="memTemplItemLeft" align="right" valign="top">internal::SaveArgAction&lt; k, Ptr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a0fee053995e93f1b1efc97a33ae1a5b2">testing::SaveArg</a> (Ptr pointer)</td></tr>
+<tr class="separator:a0fee053995e93f1b1efc97a33ae1a5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6014fcd3899eedea3f54bfe4c96de8"><td class="memTemplParams" colspan="2">template&lt;size_t k, typename Ptr &gt; </td></tr>
+<tr class="memitem:a1b6014fcd3899eedea3f54bfe4c96de8"><td class="memTemplItemLeft" align="right" valign="top">internal::SaveArgPointeeAction&lt; k, Ptr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a1b6014fcd3899eedea3f54bfe4c96de8">testing::SaveArgPointee</a> (Ptr pointer)</td></tr>
+<tr class="separator:a1b6014fcd3899eedea3f54bfe4c96de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5991b5b7130eafa3d00c2f10297fdd"><td class="memTemplParams" colspan="2">template&lt;size_t k, typename T &gt; </td></tr>
+<tr class="memitem:a2d5991b5b7130eafa3d00c2f10297fdd"><td class="memTemplItemLeft" align="right" valign="top">internal::SetArgRefereeAction&lt; k, typename std::decay&lt; T &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a2d5991b5b7130eafa3d00c2f10297fdd">testing::SetArgReferee</a> (T &amp;&amp;value)</td></tr>
+<tr class="separator:a2d5991b5b7130eafa3d00c2f10297fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7c63dd6a2f46c354608d99ba35e761"><td class="memTemplParams" colspan="2">template&lt;size_t k, typename I1 , typename I2 &gt; </td></tr>
+<tr class="memitem:a2a7c63dd6a2f46c354608d99ba35e761"><td class="memTemplItemLeft" align="right" valign="top">internal::SetArrayArgumentAction&lt; k, I1, I2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a2a7c63dd6a2f46c354608d99ba35e761">testing::SetArrayArgument</a> (I1 first, I2 last)</td></tr>
+<tr class="separator:a2a7c63dd6a2f46c354608d99ba35e761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07fc507392118e742af3b0463709c943"><td class="memTemplParams" colspan="2">template&lt;size_t k&gt; </td></tr>
+<tr class="memitem:a07fc507392118e742af3b0463709c943"><td class="memTemplItemLeft" align="right" valign="top">internal::DeleteArgAction&lt; k &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a07fc507392118e742af3b0463709c943">testing::DeleteArg</a> ()</td></tr>
+<tr class="separator:a07fc507392118e742af3b0463709c943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3277ba2ea50e4a7b5db1f36a9ea8b070"><td class="memTemplParams" colspan="2">template&lt;typename Ptr &gt; </td></tr>
+<tr class="memitem:a3277ba2ea50e4a7b5db1f36a9ea8b070"><td class="memTemplItemLeft" align="right" valign="top">internal::ReturnPointeeAction&lt; Ptr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#a3277ba2ea50e4a7b5db1f36a9ea8b070">testing::ReturnPointee</a> (Ptr pointer)</td></tr>
+<tr class="separator:a3277ba2ea50e4a7b5db1f36a9ea8b070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547fec1adf93915b51ae73e0efe0db18"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Impl &gt; </td></tr>
+<tr class="memitem:a547fec1adf93915b51ae73e0efe0db18"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00444.html">::testing::Action</a>&lt; F &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#a547fec1adf93915b51ae73e0efe0db18">testing::internal::MakeAction</a> ()</td></tr>
+<tr class="separator:a547fec1adf93915b51ae73e0efe0db18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c28221deb152dc3a2ff2c6f6816909f"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Impl &gt; </td></tr>
+<tr class="memitem:a4c28221deb152dc3a2ff2c6f6816909f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00444.html">::testing::Action</a>&lt; F &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00322.html#a4c28221deb152dc3a2ff2c6f6816909f">testing::internal::MakeAction</a> (std::shared_ptr&lt; Impl &gt; impl)</td></tr>
+<tr class="separator:a4c28221deb152dc3a2ff2c6f6816909f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7af7137aa4871df4235881af377205fe" name="a7af7137aa4871df4235881af377205fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af7137aa4871df4235881af377205fe">&#9670;&nbsp;</a></span>ACTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">class </span>name##Action {                                                        \</div>
+<div class="line">   public:                                                                    \</div>
+<div class="line">   explicit name##Action() noexcept {}                                        \</div>
+<div class="line">   name##Action(<span class="keyword">const</span> name##Action&amp;) <span class="keyword">noexcept</span> {}                              \</div>
+<div class="line">    template &lt;typename F&gt;                                                     \</div>
+<div class="line">    operator ::testing::Action&lt;F&gt;()<span class="keyword"> const </span>{                                   \</div>
+<div class="line">      return ::testing::internal::MakeAction&lt;F, gmock_Impl&gt;();                \</div>
+<div class="line">    }                                                                         \</div>
+<div class="line">   private:                                                                   \</div>
+<div class="line">    class gmock_Impl {                                                        \</div>
+<div class="line">     public:                                                                  \</div>
+<div class="line">      template &lt;<span class="keyword">typename</span> function_type, <span class="keyword">typename</span> return_type,                 \</div>
+<div class="line">                typename args_type, <a class="code hl_define" href="a00218.html#a421f180fc492cf08339cf085ada235e3">GMOCK_ACTION_TEMPLATE_ARGS_NAMES_</a>&gt;        \</div>
+<div class="line">      return_type gmock_PerformImpl(<a class="code hl_define" href="a00218.html#aee2ae4aac2083dfed61e5f679a7db0e9">GMOCK_ACTION_ARG_TYPES_AND_NAMES_</a>) <span class="keyword">const</span>; \</div>
+<div class="line">    };                                                                        \</div>
+<div class="line">  };                                                                          \</div>
+<div class="line">  inline name##Action name() <a class="code hl_define" href="a00293.html#a8e5aab8276b2645f64f41c9e3021b935">GTEST_MUST_USE_RESULT_</a>;                          \</div>
+<div class="line">  inline name<span class="preprocessor">##Action name() { return name##Action(); }                       \</span></div>
+<div class="line"><span class="preprocessor">  template &lt;typename function_type, typename return_type, typename args_type, \</span></div>
+<div class="line"><span class="preprocessor">            GMOCK_ACTION_TEMPLATE_ARGS_NAMES_&gt;                                \</span></div>
+<div class="line"><span class="preprocessor">  return_type name##Action::gmock_Impl::gmock_PerformImpl(                    \</span></div>
+<div class="line"><span class="preprocessor">      GMOCK_ACTION_ARG_TYPES_AND_NAMES_UNUSED_) const</span></div>
+<div class="ttc" id="aa00218_html_a421f180fc492cf08339cf085ada235e3"><div class="ttname"><a href="a00218.html#a421f180fc492cf08339cf085ada235e3">GMOCK_ACTION_TEMPLATE_ARGS_NAMES_</a></div><div class="ttdeci">#define GMOCK_ACTION_TEMPLATE_ARGS_NAMES_</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01555">gmock-actions.h:1555</a></div></div>
+<div class="ttc" id="aa00218_html_aee2ae4aac2083dfed61e5f679a7db0e9"><div class="ttname"><a href="a00218.html#aee2ae4aac2083dfed61e5f679a7db0e9">GMOCK_ACTION_ARG_TYPES_AND_NAMES_</a></div><div class="ttdeci">#define GMOCK_ACTION_ARG_TYPES_AND_NAMES_</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01551">gmock-actions.h:1551</a></div></div>
+<div class="ttc" id="aa00293_html_a8e5aab8276b2645f64f41c9e3021b935"><div class="ttname"><a href="a00293.html#a8e5aab8276b2645f64f41c9e3021b935">GTEST_MUST_USE_RESULT_</a></div><div class="ttdeci">#define GTEST_MUST_USE_RESULT_</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l00724">gtest-port.h:724</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01625">1625</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="af5f47e069acb517db9f743f029471aa7" name="af5f47e069acb517db9f743f029471aa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f47e069acb517db9f743f029471aa7">&#9670;&nbsp;</a></span>ACTION_P</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01649">1649</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="ac0708603c79b2da1e552a212a23e5e62" name="ac0708603c79b2da1e552a212a23e5e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0708603c79b2da1e552a212a23e5e62">&#9670;&nbsp;</a></span>ACTION_P10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P10</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP10, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01676">1676</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="ade0284b965683ea4d6449322becf3ba6" name="ade0284b965683ea4d6449322becf3ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade0284b965683ea4d6449322becf3ba6">&#9670;&nbsp;</a></span>ACTION_P2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP2, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01652">1652</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a4db847f0e74eea776dd7868ca73376bc" name="a4db847f0e74eea776dd7868ca73376bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4db847f0e74eea776dd7868ca73376bc">&#9670;&nbsp;</a></span>ACTION_P3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP3, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01655">1655</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="ae399d6c7462647c024e8de2ea9a65160" name="ae399d6c7462647c024e8de2ea9a65160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae399d6c7462647c024e8de2ea9a65160">&#9670;&nbsp;</a></span>ACTION_P4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P4</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP4, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01658">1658</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a1bc061a73229bbfcf2720915e48d5454" name="a1bc061a73229bbfcf2720915e48d5454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc061a73229bbfcf2720915e48d5454">&#9670;&nbsp;</a></span>ACTION_P5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P5</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP5, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01661">1661</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="aa5422cef04a3034c5f957ba7216f7981" name="aa5422cef04a3034c5f957ba7216f7981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5422cef04a3034c5f957ba7216f7981">&#9670;&nbsp;</a></span>ACTION_P6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P6</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP6, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01664">1664</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a4294a132f8b01a098bfc14619ebe99d6" name="a4294a132f8b01a098bfc14619ebe99d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4294a132f8b01a098bfc14619ebe99d6">&#9670;&nbsp;</a></span>ACTION_P7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P7</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP7, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01667">1667</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a25238e96d7438ce1db5ce806e41a9068" name="a25238e96d7438ce1db5ce806e41a9068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25238e96d7438ce1db5ce806e41a9068">&#9670;&nbsp;</a></span>ACTION_P8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P8</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP8, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01670">1670</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a1465d122062a21fbdd9ddb5b174166a6" name="a1465d122062a21fbdd9ddb5b174166a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1465d122062a21fbdd9ddb5b174166a6">&#9670;&nbsp;</a></span>ACTION_P9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ACTION_P9</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  <a class="el" href="a00218.html#ab7b532c2710a42d3e41911c10f4be38d">GMOCK_INTERNAL_ACTION</a>(name, name##ActionP9, (__VA_ARGS__))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01673">1673</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="aee2ae4aac2083dfed61e5f679a7db0e9" name="aee2ae4aac2083dfed61e5f679a7db0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2ae4aac2083dfed61e5f679a7db0e9">&#9670;&nbsp;</a></span>GMOCK_ACTION_ARG_TYPES_AND_NAMES_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_ARG_TYPES_AND_NAMES_&#160;&#160;&#160;  const args_type&amp; args <a class="el" href="a00206.html#ab2a0d358d2eb3f04395d0494ab7aab01">GMOCK_PP_REPEAT</a>(<a class="el" href="a00218.html#a8ac94295873740ce64580d366a433ea9">GMOCK_INTERNAL_ARG</a>, , 10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01551">1551</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a069f37fdbe36aabe65da6eb6221b9b19" name="a069f37fdbe36aabe65da6eb6221b9b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069f37fdbe36aabe65da6eb6221b9b19">&#9670;&nbsp;</a></span>GMOCK_ACTION_ARG_TYPES_AND_NAMES_UNUSED_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_ARG_TYPES_AND_NAMES_UNUSED_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">const</span> args_type&amp; args <a class="code hl_define" href="a00293.html#acdd47601a9376161c349a5881ccc6918">GTEST_ATTRIBUTE_UNUSED_</a> <a class="code hl_define" href="a00206.html#ab2a0d358d2eb3f04395d0494ab7aab01">GMOCK_PP_REPEAT</a>( \</div>
+<div class="line">      <a class="code hl_define" href="a00218.html#afc458b779043b35afe85acb9014fc658">GMOCK_INTERNAL_ARG_UNUSED</a>, , 10)</div>
+<div class="ttc" id="aa00206_html_ab2a0d358d2eb3f04395d0494ab7aab01"><div class="ttname"><a href="a00206.html#ab2a0d358d2eb3f04395d0494ab7aab01">GMOCK_PP_REPEAT</a></div><div class="ttdeci">#define GMOCK_PP_REPEAT(_Macro, _Data, _N)</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00139">gmock-pp.h:139</a></div></div>
+<div class="ttc" id="aa00218_html_afc458b779043b35afe85acb9014fc658"><div class="ttname"><a href="a00218.html#afc458b779043b35afe85acb9014fc658">GMOCK_INTERNAL_ARG_UNUSED</a></div><div class="ttdeci">#define GMOCK_INTERNAL_ARG_UNUSED(i, data, el)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01544">gmock-actions.h:1544</a></div></div>
+<div class="ttc" id="aa00293_html_acdd47601a9376161c349a5881ccc6918"><div class="ttname"><a href="a00293.html#acdd47601a9376161c349a5881ccc6918">GTEST_ATTRIBUTE_UNUSED_</a></div><div class="ttdeci">#define GTEST_ATTRIBUTE_UNUSED_</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l00669">gtest-port.h:669</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01546">1546</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a9988a03009790aa85418b69723acf186" name="a9988a03009790aa85418b69723acf186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9988a03009790aa85418b69723acf186">&#9670;&nbsp;</a></span>GMOCK_ACTION_FIELD_PARAMS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_FIELD_PARAMS_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">params</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a16b6c0fc86f975781666cd89b48636a2">GMOCK_INTERNAL_FIELD_PARAM</a>, , params)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01582">1582</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a78e6035a6eabc83d59d6955755e6f33f" name="a78e6035a6eabc83d59d6955755e6f33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e6035a6eabc83d59d6955755e6f33f">&#9670;&nbsp;</a></span>GMOCK_ACTION_GVALUE_PARAMS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_GVALUE_PARAMS_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">params</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a05191e66d8f832f250311323db07dd5a">GMOCK_INTERNAL_GVALUE_PARAM</a>, , params))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01573">1573</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a0a86b24d2be85a91983923579ace081b" name="a0a86b24d2be85a91983923579ace081b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a86b24d2be85a91983923579ace081b">&#9670;&nbsp;</a></span>GMOCK_ACTION_INIT_PARAMS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_INIT_PARAMS_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">params</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a82a10dfdcfed7f3747dac32042e2b3c1">GMOCK_INTERNAL_INIT_PARAM</a>, , params))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01578">1578</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a421f180fc492cf08339cf085ada235e3" name="a421f180fc492cf08339cf085ada235e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421f180fc492cf08339cf085ada235e3">&#9670;&nbsp;</a></span>GMOCK_ACTION_TEMPLATE_ARGS_NAMES_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_TEMPLATE_ARGS_NAMES_&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#ab2a0d358d2eb3f04395d0494ab7aab01">GMOCK_PP_REPEAT</a>(<a class="el" href="a00218.html#ab694ec868889ce00bd71fd4b2fb8d083">GMOCK_INTERNAL_TEMPLATE_ARG</a>, , 10))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01555">1555</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="aaeebe2b4b398d472fbabf6a998fd89e0" name="aaeebe2b4b398d472fbabf6a998fd89e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeebe2b4b398d472fbabf6a998fd89e0">&#9670;&nbsp;</a></span>GMOCK_ACTION_TYPE_GVALUE_PARAMS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_TYPE_GVALUE_PARAMS_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">params</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#acd35c38040c76565d0fd3db8d5d4d132">GMOCK_INTERNAL_TYPE_GVALUE_PARAM</a>, , params))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01568">1568</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="aa365f234afbe48f989b84c8d7870e05a" name="aa365f234afbe48f989b84c8d7870e05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa365f234afbe48f989b84c8d7870e05a">&#9670;&nbsp;</a></span>GMOCK_ACTION_TYPE_PARAMS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_TYPE_PARAMS_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">params</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#aa9377b2c0985c30959d7f1e8ba25bd75">GMOCK_INTERNAL_TYPE_PARAM</a>, , params))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01563">1563</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="aca13a68b9cfec576f30a4b0026667b4b" name="aca13a68b9cfec576f30a4b0026667b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca13a68b9cfec576f30a4b0026667b4b">&#9670;&nbsp;</a></span>GMOCK_ACTION_TYPENAME_PARAMS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_ACTION_TYPENAME_PARAMS_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">params</td><td>)</td>
+          <td>&#160;&#160;&#160;  <a class="el" href="a00206.html#a1373615930e6eb6772c914fa8416f88e">GMOCK_PP_TAIL</a>(<a class="el" href="a00206.html#abc9368d9b0960531e3cfb9e5d6a41816">GMOCK_PP_FOR_EACH</a>(<a class="el" href="a00218.html#a53750f768fa5de7295c6a82885ea181d">GMOCK_INTERNAL_TYPENAME_PARAM</a>, , params))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01559">1559</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a06b1e6cd1145acf7849e4a112976016b" name="a06b1e6cd1145acf7849e4a112976016b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06b1e6cd1145acf7849e4a112976016b">&#9670;&nbsp;</a></span>GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_DEFINE_DEFAULT_ACTION_FOR_RETURN_TYPE_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">template</span> &lt;&gt; \</div>
+<div class="line">  class BuiltInDefaultValue&lt;type&gt; { \</div>
+<div class="line">   public: \</div>
+<div class="line">    static <span class="keywordtype">bool</span> Exists() { <span class="keywordflow">return</span> <span class="keyword">true</span>; } \</div>
+<div class="line">    static type Get() { <span class="keywordflow">return</span> value; } \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00227">227</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="ab7b532c2710a42d3e41911c10f4be38d" name="ab7b532c2710a42d3e41911c10f4be38d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b532c2710a42d3e41911c10f4be38d">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_ACTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_ACTION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">full_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">params&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01585">1585</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a8ac94295873740ce64580d366a433ea9" name="a8ac94295873740ce64580d366a433ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac94295873740ce64580d366a433ea9">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_ARG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_ARG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">el&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;, const arg##i##_type&amp; arg##i</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01550">1550</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="afc458b779043b35afe85acb9014fc658" name="afc458b779043b35afe85acb9014fc658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc458b779043b35afe85acb9014fc658">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_ARG_UNUSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_ARG_UNUSED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">el&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  , const arg##i##_type&amp; arg##i <a class="el" href="a00293.html#acdd47601a9376161c349a5881ccc6918">GTEST_ATTRIBUTE_UNUSED_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01544">1544</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a16b6c0fc86f975781666cd89b48636a2" name="a16b6c0fc86f975781666cd89b48636a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b6c0fc86f975781666cd89b48636a2">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_FIELD_PARAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_FIELD_PARAM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;param##_type param;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01581">1581</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a05191e66d8f832f250311323db07dd5a" name="a05191e66d8f832f250311323db07dd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05191e66d8f832f250311323db07dd5a">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_GVALUE_PARAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_GVALUE_PARAM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  , std::forward&lt;param##_type&gt;(gmock_p##i)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01571">1571</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a82a10dfdcfed7f3747dac32042e2b3c1" name="a82a10dfdcfed7f3747dac32042e2b3c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82a10dfdcfed7f3747dac32042e2b3c1">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_INIT_PARAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_INIT_PARAM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  , param(::std::forward&lt;param##_type&gt;(gmock_p##i))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01576">1576</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="ab694ec868889ce00bd71fd4b2fb8d083" name="ab694ec868889ce00bd71fd4b2fb8d083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab694ec868889ce00bd71fd4b2fb8d083">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_TEMPLATE_ARG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_TEMPLATE_ARG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">el&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;, typename arg##i##_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01554">1554</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="acd35c38040c76565d0fd3db8d5d4d132" name="acd35c38040c76565d0fd3db8d5d4d132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd35c38040c76565d0fd3db8d5d4d132">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_TYPE_GVALUE_PARAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_TYPE_GVALUE_PARAM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  , param##_type gmock_p##i</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01566">1566</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="aa9377b2c0985c30959d7f1e8ba25bd75" name="aa9377b2c0985c30959d7f1e8ba25bd75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9377b2c0985c30959d7f1e8ba25bd75">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_TYPE_PARAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_TYPE_PARAM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;, param##_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01562">1562</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
+<a id="a53750f768fa5de7295c6a82885ea181d" name="a53750f768fa5de7295c6a82885ea181d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53750f768fa5de7295c6a82885ea181d">&#9670;&nbsp;</a></span>GMOCK_INTERNAL_TYPENAME_PARAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GMOCK_INTERNAL_TYPENAME_PARAM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;, typename param##_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01558">1558</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:09 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:28 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

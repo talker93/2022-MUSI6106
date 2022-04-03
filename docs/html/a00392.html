@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::BuiltInDefaultValue&lt; T * &gt; Class Template Reference</title>
+<title>MUSI6106: CVibrato Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,56 +38,183 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a00392.html">BuiltInDefaultValue&lt; T * &gt;</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="a00389.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::BuiltInDefaultValue&lt; T * &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">CVibrato Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00206_source.html">gmock-actions.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00053_source.html">Vibrato.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::BuiltInDefaultValue&lt; T * &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for CVibrato:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00390.png" border="0" usemap="#atesting_1_1internal_1_1BuiltInDefaultValue_3_01T_01_5_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1BuiltInDefaultValue_3_01T_01_5_01_4_coll__map" id="atesting_1_1internal_1_1BuiltInDefaultValue_3_01T_01_5_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,139,127"/>
+<div class="center"><img src="a00390.png" border="0" usemap="#aCVibrato_coll__map" alt="Collaboration graph"/></div>
+<map name="aCVibrato_coll__map" id="aCVibrato_coll__map">
+<area shape="rect" title=" " alt="" coords="5,1041,145,1324"/>
+<area shape="rect" href="a00368.html" title=" " alt="" coords="175,755,327,979"/>
+<area shape="rect" href="a00372.html" title=" " alt="" coords="7,380,144,692"/>
+<area shape="rect" href="a00372.html" title="implement a circular buffer of type T" alt="" coords="15,5,136,317"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:afc5a8c077f90ccbbfe4023926cf7d70d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70d">Version_t</a> { <a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da9647db081da261cb06fd43a3d548d29c">kMajor</a>
+, <a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70daf7d9beab61c7ff1515b0eb953d545328">kMinor</a>
+, <a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70dae4eefa347e226a8945bfa692980eb2ed">kPatch</a>
+, <a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da218dc1866e70b43dfc1e8113428d692e">kNumVersionInts</a>
+ }</td></tr>
+<tr class="separator:afc5a8c077f90ccbbfe4023926cf7d70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fb75aa5ac372655166ff2eec8706b3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a> { <a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">kParamModWidthInS</a>
+, <a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">kParamModFreqInHz</a>
+, <a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa">kNumVibratoParams</a>
+ }</td></tr>
+<tr class="separator:a55fb75aa5ac372655166ff2eec8706b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a58bfe8eb41a59d022121423d2874298a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a58bfe8eb41a59d022121423d2874298a">init</a> (float fMaxModWidthInS, float fSampleRateInHz, int iNumChannels)</td></tr>
+<tr class="separator:a58bfe8eb41a59d022121423d2874298a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb63edf6be6c3f4354ae9b69135a220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220">reset</a> ()</td></tr>
+<tr class="separator:adbb63edf6be6c3f4354ae9b69135a220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b40cf60dc57c86c03fb35466b78d779"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779">setParam</a> (<a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a> eParam, float fParamValue)</td></tr>
+<tr class="separator:a3b40cf60dc57c86c03fb35466b78d779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c0dde8bedb5947944ee6c10a955816"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a26c0dde8bedb5947944ee6c10a955816">getParam</a> (<a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a> eParam) const</td></tr>
+<tr class="separator:a26c0dde8bedb5947944ee6c10a955816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a0b8a83679dd3ee9eed05d50bf14fd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1">process</a> (float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)</td></tr>
+<tr class="separator:a7a0b8a83679dd3ee9eed05d50bf14fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aafa7172f63d068305fb37d5db40bb543"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#aafa7172f63d068305fb37d5db40bb543">Exists</a> ()</td></tr>
-<tr class="separator:aafa7172f63d068305fb37d5db40bb543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1cd224d68a45efe2d6c13930a4fb688"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#ab1cd224d68a45efe2d6c13930a4fb688">Get</a> ()</td></tr>
-<tr class="separator:ab1cd224d68a45efe2d6c13930a4fb688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc842d045d1b898bb95ad1052db3729"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a7fc842d045d1b898bb95ad1052db3729">getVersion</a> (const <a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70d">Version_t</a> eVersionIdx)</td></tr>
+<tr class="separator:a7fc842d045d1b898bb95ad1052db3729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5216610ebe5e62fe9f42d45a57f875"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#aaf5216610ebe5e62fe9f42d45a57f875">getBuildDate</a> ()</td></tr>
+<tr class="separator:aaf5216610ebe5e62fe9f42d45a57f875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11024cb019d1c1c42a24bd1d8e26886d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a11024cb019d1c1c42a24bd1d8e26886d">create</a> (<a class="el" href="a00392.html">CVibrato</a> *&amp;pCVibrato)</td></tr>
+<tr class="separator:a11024cb019d1c1c42a24bd1d8e26886d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa62adeef0fef812e34ec9a48b1ca3d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#afa62adeef0fef812e34ec9a48b1ca3d1">destroy</a> (<a class="el" href="a00392.html">CVibrato</a> *&amp;pCVibrato)</td></tr>
+<tr class="separator:afa62adeef0fef812e34ec9a48b1ca3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:afb3c8a8bc2b68d344ef6fa14ab31251a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#afb3c8a8bc2b68d344ef6fa14ab31251a">CVibrato</a> ()</td></tr>
+<tr class="separator:afb3c8a8bc2b68d344ef6fa14ab31251a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1842f23f9362d582b246274623e92649"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a1842f23f9362d582b246274623e92649">~CVibrato</a> ()</td></tr>
+<tr class="separator:a1842f23f9362d582b246274623e92649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4c28343d878027510f064c4326bb595d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a4c28343d878027510f064c4326bb595d">isInParamRange</a> (<a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a> eParam, float fValue)</td></tr>
+<tr class="separator:a4c28343d878027510f064c4326bb595d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aeb0051d7194254f6d9fa8b6f5b41396c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#aeb0051d7194254f6d9fa8b6f5b41396c">m_bIsInitialized</a></td></tr>
+<tr class="separator:aeb0051d7194254f6d9fa8b6f5b41396c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56aa90a0698a504822ab6397a6e1bcfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00368.html">CLfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a></td></tr>
+<tr class="separator:a56aa90a0698a504822ab6397a6e1bcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65aaabefef26a2f84eb07d0a6a0bcc17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00372.html">CRingBuffer</a>&lt; float &gt; **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a></td></tr>
+<tr class="separator:a65aaabefef26a2f84eb07d0a6a0bcc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ad8a52011a4551fb0273833e08a640"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a></td></tr>
+<tr class="separator:af6ad8a52011a4551fb0273833e08a640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee5630ddf5a0e1b360eb3bccc3c6ffc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a></td></tr>
+<tr class="separator:a9ee5630ddf5a0e1b360eb3bccc3c6ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a105adc0f2ebce15fbab63b434d7dcc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">m_aafParamRange</a> [<a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa">kNumVibratoParams</a>][2]</td></tr>
+<tr class="separator:a1a105adc0f2ebce15fbab63b434d7dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class testing::internal::BuiltInDefaultValue&lt; T * &gt;</div>
-<p class="definition">Definition at line <a class="el" href="a00206_source.html#l00219">219</a> of file <a class="el" href="a00206_source.html">gmock-actions.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aafa7172f63d068305fb37d5db40bb543" name="aafa7172f63d068305fb37d5db40bb543"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafa7172f63d068305fb37d5db40bb543">&#9670;&nbsp;</a></span>Exists()</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00010">10</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="afc5a8c077f90ccbbfe4023926cf7d70d" name="afc5a8c077f90ccbbfe4023926cf7d70d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5a8c077f90ccbbfe4023926cf7d70d">&#9670;&nbsp;</a></span>Version_t</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70d">CVibrato::Version_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >version number </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afc5a8c077f90ccbbfe4023926cf7d70da9647db081da261cb06fd43a3d548d29c" name="afc5a8c077f90ccbbfe4023926cf7d70da9647db081da261cb06fd43a3d548d29c"></a>kMajor&#160;</td><td class="fielddoc"><p >major version number </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc5a8c077f90ccbbfe4023926cf7d70daf7d9beab61c7ff1515b0eb953d545328" name="afc5a8c077f90ccbbfe4023926cf7d70daf7d9beab61c7ff1515b0eb953d545328"></a>kMinor&#160;</td><td class="fielddoc"><p >minor version number </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc5a8c077f90ccbbfe4023926cf7d70dae4eefa347e226a8945bfa692980eb2ed" name="afc5a8c077f90ccbbfe4023926cf7d70dae4eefa347e226a8945bfa692980eb2ed"></a>kPatch&#160;</td><td class="fielddoc"><p >patch version number </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc5a8c077f90ccbbfe4023926cf7d70da218dc1866e70b43dfc1e8113428d692e" name="afc5a8c077f90ccbbfe4023926cf7d70da218dc1866e70b43dfc1e8113428d692e"></a>kNumVersionInts&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00014">14</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da9647db081da261cb06fd43a3d548d29c">kMajor</a>, <span class="comment">//!&lt; major version number</span></div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70daf7d9beab61c7ff1515b0eb953d545328">kMinor</a>, <span class="comment">//!&lt; minor version number</span></div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70dae4eefa347e226a8945bfa692980eb2ed">kPatch</a>, <span class="comment">//!&lt; patch version number</span></div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da218dc1866e70b43dfc1e8113428d692e">kNumVersionInts</a></div>
+<div class="line"><span class="lineno">   21</span>    };</div>
+<div class="ttc" id="aa00392_html_afc5a8c077f90ccbbfe4023926cf7d70da218dc1866e70b43dfc1e8113428d692e"><div class="ttname"><a href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da218dc1866e70b43dfc1e8113428d692e">CVibrato::kNumVersionInts</a></div><div class="ttdeci">@ kNumVersionInts</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00021">Vibrato.h:20</a></div></div>
+<div class="ttc" id="aa00392_html_afc5a8c077f90ccbbfe4023926cf7d70da9647db081da261cb06fd43a3d548d29c"><div class="ttname"><a href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da9647db081da261cb06fd43a3d548d29c">CVibrato::kMajor</a></div><div class="ttdeci">@ kMajor</div><div class="ttdoc">major version number</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00016">Vibrato.h:16</a></div></div>
+<div class="ttc" id="aa00392_html_afc5a8c077f90ccbbfe4023926cf7d70dae4eefa347e226a8945bfa692980eb2ed"><div class="ttname"><a href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70dae4eefa347e226a8945bfa692980eb2ed">CVibrato::kPatch</a></div><div class="ttdeci">@ kPatch</div><div class="ttdoc">patch version number</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00018">Vibrato.h:18</a></div></div>
+<div class="ttc" id="aa00392_html_afc5a8c077f90ccbbfe4023926cf7d70daf7d9beab61c7ff1515b0eb953d545328"><div class="ttname"><a href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70daf7d9beab61c7ff1515b0eb953d545328">CVibrato::kMinor</a></div><div class="ttdeci">@ kMinor</div><div class="ttdoc">minor version number</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00017">Vibrato.h:17</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a55fb75aa5ac372655166ff2eec8706b3" name="a55fb75aa5ac372655166ff2eec8706b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fb75aa5ac372655166ff2eec8706b3">&#9670;&nbsp;</a></span>VibratoParam_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">CVibrato::VibratoParam_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88" name="a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88"></a>kParamModWidthInS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2" name="a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2"></a>kParamModFreqInHz&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa" name="a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa"></a>kNumVibratoParams&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00023">23</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">kParamModWidthInS</a>,</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">kParamModFreqInHz</a>,</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa">kNumVibratoParams</a></div>
+<div class="line"><span class="lineno">   29</span>    };</div>
+<div class="ttc" id="aa00392_html_a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88"><div class="ttname"><a href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">CVibrato::kParamModWidthInS</a></div><div class="ttdeci">@ kParamModWidthInS</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00025">Vibrato.h:25</a></div></div>
+<div class="ttc" id="aa00392_html_a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2"><div class="ttname"><a href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">CVibrato::kParamModFreqInHz</a></div><div class="ttdeci">@ kParamModFreqInHz</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00026">Vibrato.h:26</a></div></div>
+<div class="ttc" id="aa00392_html_a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa"><div class="ttname"><a href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa">CVibrato::kNumVibratoParams</a></div><div class="ttdeci">@ kNumVibratoParams</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00029">Vibrato.h:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afb3c8a8bc2b68d344ef6fa14ab31251a" name="afb3c8a8bc2b68d344ef6fa14ab31251a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb3c8a8bc2b68d344ef6fa14ab31251a">&#9670;&nbsp;</a></span>CVibrato()</h2>
+
+<div class="memitem">
+<div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00071.html#abb452686968e48b67397da5f97445f5b">bool</a> <a class="el" href="a00384.html">testing::internal::BuiltInDefaultValue</a>&lt; T * &gt;::Exists </td>
+          <td class="memname">CVibrato::CVibrato </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -95,29 +222,73 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00206_source.html#l00221">221</a> of file <a class="el" href="a00206_source.html">gmock-actions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00017">17</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                    :</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="a00392.html#aeb0051d7194254f6d9fa8b6f5b41396c">m_bIsInitialized</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>(0),</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>(0),</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_variable" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a>(44100),</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_variable" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a>(0)</div>
+<div class="line"><span class="lineno">   23</span>{</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>    <span class="comment">// this never hurts</span></div>
+<div class="line"><span class="lineno">   26</span>    this-&gt;<a class="code hl_function" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220">reset</a> ();</div>
+<div class="line"><span class="lineno">   27</span>}</div>
+<div class="ttc" id="aa00392_html_a56aa90a0698a504822ab6397a6e1bcfb"><div class="ttname"><a href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">CVibrato::m_pCLfo</a></div><div class="ttdeci">CLfo * m_pCLfo</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00053">Vibrato.h:53</a></div></div>
+<div class="ttc" id="aa00392_html_a65aaabefef26a2f84eb07d0a6a0bcc17"><div class="ttname"><a href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">CVibrato::m_ppCRingBuff</a></div><div class="ttdeci">CRingBuffer&lt; float &gt; ** m_ppCRingBuff</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00054">Vibrato.h:54</a></div></div>
+<div class="ttc" id="aa00392_html_a9ee5630ddf5a0e1b360eb3bccc3c6ffc"><div class="ttname"><a href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">CVibrato::m_iNumChannels</a></div><div class="ttdeci">int m_iNumChannels</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00057">Vibrato.h:57</a></div></div>
+<div class="ttc" id="aa00392_html_adbb63edf6be6c3f4354ae9b69135a220"><div class="ttname"><a href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220">CVibrato::reset</a></div><div class="ttdeci">Error_t reset()</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00115">Vibrato.cpp:115</a></div></div>
+<div class="ttc" id="aa00392_html_aeb0051d7194254f6d9fa8b6f5b41396c"><div class="ttname"><a href="a00392.html#aeb0051d7194254f6d9fa8b6f5b41396c">CVibrato::m_bIsInitialized</a></div><div class="ttdeci">bool m_bIsInitialized</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00051">Vibrato.h:51</a></div></div>
+<div class="ttc" id="aa00392_html_af6ad8a52011a4551fb0273833e08a640"><div class="ttname"><a href="a00392.html#af6ad8a52011a4551fb0273833e08a640">CVibrato::m_fSampleRate</a></div><div class="ttdeci">float m_fSampleRate</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00056">Vibrato.h:56</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00026_source.html#l00115">reset()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00062">create()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_afb3c8a8bc2b68d344ef6fa14ab31251a_cgraph.png" border="0" usemap="#aa00392_afb3c8a8bc2b68d344ef6fa14ab31251a_cgraph" alt=""/></div>
+<map name="aa00392_afb3c8a8bc2b68d344ef6fa14ab31251a_cgraph" id="aa00392_afb3c8a8bc2b68d344ef6fa14ab31251a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,133,57"/>
+<area shape="rect" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220" title=" " alt="" coords="181,31,288,57"/>
+<area shape="rect" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779" title=" " alt="" coords="336,31,471,57"/>
+<area shape="rect" href="a00392.html#a4c28343d878027510f064c4326bb595d" title=" " alt="" coords="519,5,693,32"/>
+<area shape="rect" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca" title=" " alt="" coords="550,56,662,83"/>
+</map>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_afb3c8a8bc2b68d344ef6fa14ab31251a_icgraph.png" border="0" usemap="#aa00392_afb3c8a8bc2b68d344ef6fa14ab31251a_icgraph" alt=""/></div>
+<map name="aa00392_afb3c8a8bc2b68d344ef6fa14ab31251a_icgraph" id="aa00392_afb3c8a8bc2b68d344ef6fa14ab31251a_icgraph">
+<area shape="rect" title=" " alt="" coords="267,5,395,32"/>
+<area shape="rect" href="a00392.html#a11024cb019d1c1c42a24bd1d8e26886d" title=" " alt="" coords="104,5,219,32"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="ab1cd224d68a45efe2d6c13930a4fb688" name="ab1cd224d68a45efe2d6c13930a4fb688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1cd224d68a45efe2d6c13930a4fb688">&#9670;&nbsp;</a></span>Get()</h2>
+<a id="a1842f23f9362d582b246274623e92649" name="a1842f23f9362d582b246274623e92649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1842f23f9362d582b246274623e92649">&#9670;&nbsp;</a></span>~CVibrato()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static T * <a class="el" href="a00384.html">testing::internal::BuiltInDefaultValue</a>&lt; T * &gt;::Get </td>
+          <td class="memname">CVibrato::~CVibrato </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -125,23 +296,876 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00206_source.html#l00222">222</a> of file <a class="el" href="a00206_source.html">gmock-actions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; }</div>
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00030">30</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{</div>
+<div class="line"><span class="lineno">   32</span>    this-&gt;<a class="code hl_function" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220">reset</a> ();</div>
+<div class="line"><span class="lineno">   33</span>}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00026_source.html#l00115">reset()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a1842f23f9362d582b246274623e92649_cgraph.png" border="0" usemap="#aa00392_a1842f23f9362d582b246274623e92649_cgraph" alt=""/></div>
+<map name="aa00392_a1842f23f9362d582b246274623e92649_cgraph" id="aa00392_a1842f23f9362d582b246274623e92649_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,140,57"/>
+<area shape="rect" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220" title=" " alt="" coords="188,31,295,57"/>
+<area shape="rect" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779" title=" " alt="" coords="343,31,477,57"/>
+<area shape="rect" href="a00392.html#a4c28343d878027510f064c4326bb595d" title=" " alt="" coords="525,5,700,32"/>
+<area shape="rect" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca" title=" " alt="" coords="557,56,669,83"/>
+</map>
+</div>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00206_source.html">gmock-actions.h</a></li>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a11024cb019d1c1c42a24bd1d8e26886d" name="a11024cb019d1c1c42a24bd1d8e26886d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11024cb019d1c1c42a24bd1d8e26886d">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> CVibrato::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00392.html">CVibrato</a> *&amp;&#160;</td>
+          <td class="paramname"><em>pCVibrato</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00062">62</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>    pCVibrato = <span class="keyword">new</span> <a class="code hl_function" href="a00392.html#afb3c8a8bc2b68d344ef6fa14ab31251a">CVibrato</a> ();</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (!pCVibrato)</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a>;</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a></div><div class="ttdeci">@ kUnknownError</div></div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a></div><div class="ttdeci">@ kNoError</div></div>
+<div class="ttc" id="aa00392_html_afb3c8a8bc2b68d344ef6fa14ab31251a"><div class="ttname"><a href="a00392.html#afb3c8a8bc2b68d344ef6fa14ab31251a">CVibrato::CVibrato</a></div><div class="ttdeci">CVibrato()</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00017">Vibrato.cpp:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00026_source.html#l00017">CVibrato()</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, and <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">kUnknownError</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00002_source.html#l00018">main()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a11024cb019d1c1c42a24bd1d8e26886d_cgraph.png" border="0" usemap="#aa00392_a11024cb019d1c1c42a24bd1d8e26886d_cgraph" alt=""/></div>
+<map name="aa00392_a11024cb019d1c1c42a24bd1d8e26886d_cgraph" id="aa00392_a11024cb019d1c1c42a24bd1d8e26886d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,120,57"/>
+<area shape="rect" href="a00392.html#afb3c8a8bc2b68d344ef6fa14ab31251a" title=" " alt="" coords="168,31,296,57"/>
+<area shape="rect" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220" title=" " alt="" coords="344,31,451,57"/>
+<area shape="rect" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779" title=" " alt="" coords="499,31,633,57"/>
+<area shape="rect" href="a00392.html#a4c28343d878027510f064c4326bb595d" title=" " alt="" coords="681,5,856,32"/>
+<area shape="rect" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca" title=" " alt="" coords="713,56,825,83"/>
+</map>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a11024cb019d1c1c42a24bd1d8e26886d_icgraph.png" border="0" usemap="#aa00392_a11024cb019d1c1c42a24bd1d8e26886d_icgraph" alt=""/></div>
+<map name="aa00392_a11024cb019d1c1c42a24bd1d8e26886d_icgraph" id="aa00392_a11024cb019d1c1c42a24bd1d8e26886d_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,219,32"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afa62adeef0fef812e34ec9a48b1ca3d1" name="afa62adeef0fef812e34ec9a48b1ca3d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa62adeef0fef812e34ec9a48b1ca3d1">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> CVibrato::destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00392.html">CVibrato</a> *&amp;&#160;</td>
+          <td class="paramname"><em>pCVibrato</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00073">73</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (!pCVibrato)</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a>;</div>
+<div class="line"><span class="lineno">   77</span>    </div>
+<div class="line"><span class="lineno">   78</span>    pCVibrato-&gt;<a class="code hl_function" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220">reset</a> ();</div>
+<div class="line"><span class="lineno">   79</span>    </div>
+<div class="line"><span class="lineno">   80</span>    <span class="keyword">delete</span> pCVibrato;</div>
+<div class="line"><span class="lineno">   81</span>    pCVibrato = 0;</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">kUnknownError</a>, and <a class="el" href="a00026_source.html#l00115">reset()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00002_source.html#l00018">main()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_afa62adeef0fef812e34ec9a48b1ca3d1_cgraph.png" border="0" usemap="#aa00392_afa62adeef0fef812e34ec9a48b1ca3d1_cgraph" alt=""/></div>
+<map name="aa00392_afa62adeef0fef812e34ec9a48b1ca3d1_cgraph" id="aa00392_afa62adeef0fef812e34ec9a48b1ca3d1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,125,57"/>
+<area shape="rect" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220" title=" " alt="" coords="173,31,280,57"/>
+<area shape="rect" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779" title=" " alt="" coords="328,31,463,57"/>
+<area shape="rect" href="a00392.html#a4c28343d878027510f064c4326bb595d" title=" " alt="" coords="511,5,685,32"/>
+<area shape="rect" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca" title=" " alt="" coords="542,56,654,83"/>
+</map>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_afa62adeef0fef812e34ec9a48b1ca3d1_icgraph.png" border="0" usemap="#aa00392_afa62adeef0fef812e34ec9a48b1ca3d1_icgraph" alt=""/></div>
+<map name="aa00392_afa62adeef0fef812e34ec9a48b1ca3d1_icgraph" id="aa00392_afa62adeef0fef812e34ec9a48b1ca3d1_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,224,32"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaf5216610ebe5e62fe9f42d45a57f875" name="aaf5216610ebe5e62fe9f42d45a57f875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5216610ebe5e62fe9f42d45a57f875">&#9670;&nbsp;</a></span>getBuildDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * CVibrato::getBuildDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00057">57</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00026.html#a0e42063f4677bf66777a8003550f7f20">kCVibratoBuildDate</a>;</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="aa00026_html_a0e42063f4677bf66777a8003550f7f20"><div class="ttname"><a href="a00026.html#a0e42063f4677bf66777a8003550f7f20">kCVibratoBuildDate</a></div><div class="ttdeci">static const char * kCVibratoBuildDate</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00014">Vibrato.cpp:14</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00026_source.html#l00014">kCVibratoBuildDate</a>.</p>
+
+</div>
+</div>
+<a id="a26c0dde8bedb5947944ee6c10a955816" name="a26c0dde8bedb5947944ee6c10a955816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c0dde8bedb5947944ee6c10a955816">&#9670;&nbsp;</a></span>getParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CVibrato::getParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a>&#160;</td>
+          <td class="paramname"><em>eParam</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00153">153</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>{</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">switch</span> (eParam)</div>
+<div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">kParamModFreqInHz</a>:</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>-&gt;<a class="code hl_function" href="a00368.html#a48e2c9e14216431f343ffdbde98d710c">getParam</a>(<a class="code hl_enumvalue" href="a00368.html#a79f4a1b3586fd7315f9bce8e5b88b674a2234a0979994157c9a18eb242ebec91a">CLfo::kLfoParamFrequency</a>);</div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">kParamModWidthInS</a>:</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>-&gt;<a class="code hl_function" href="a00368.html#a48e2c9e14216431f343ffdbde98d710c">getParam</a>(<a class="code hl_enumvalue" href="a00368.html#a79f4a1b3586fd7315f9bce8e5b88b674a58590a2366a7f40f2ce300c627b65ed8">CLfo::kLfoParamAmplitude</a>) / <a class="code hl_variable" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a>;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  163</span>}</div>
+<div class="ttc" id="aa00368_html_a48e2c9e14216431f343ffdbde98d710c"><div class="ttname"><a href="a00368.html#a48e2c9e14216431f343ffdbde98d710c">CLfo::getParam</a></div><div class="ttdeci">float getParam(LfoParam_t eParam) const</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00059">Lfo.h:59</a></div></div>
+<div class="ttc" id="aa00368_html_a79f4a1b3586fd7315f9bce8e5b88b674a2234a0979994157c9a18eb242ebec91a"><div class="ttname"><a href="a00368.html#a79f4a1b3586fd7315f9bce8e5b88b674a2234a0979994157c9a18eb242ebec91a">CLfo::kLfoParamFrequency</a></div><div class="ttdeci">@ kLfoParamFrequency</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00043">Lfo.h:43</a></div></div>
+<div class="ttc" id="aa00368_html_a79f4a1b3586fd7315f9bce8e5b88b674a58590a2366a7f40f2ce300c627b65ed8"><div class="ttname"><a href="a00368.html#a79f4a1b3586fd7315f9bce8e5b88b674a58590a2366a7f40f2ce300c627b65ed8">CLfo::kLfoParamAmplitude</a></div><div class="ttdeci">@ kLfoParamAmplitude</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00042">Lfo.h:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00044_source.html#l00059">CLfo::getParam()</a>, <a class="el" href="a00044_source.html#l00042">CLfo::kLfoParamAmplitude</a>, <a class="el" href="a00044_source.html#l00043">CLfo::kLfoParamFrequency</a>, <a class="el" href="a00053_source.html#l00026">kParamModFreqInHz</a>, <a class="el" href="a00053_source.html#l00025">kParamModWidthInS</a>, <a class="el" href="a00053_source.html#l00056">m_fSampleRate</a>, and <a class="el" href="a00053_source.html#l00053">m_pCLfo</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a26c0dde8bedb5947944ee6c10a955816_cgraph.png" border="0" usemap="#aa00392_a26c0dde8bedb5947944ee6c10a955816_cgraph" alt=""/></div>
+<map name="aa00392_a26c0dde8bedb5947944ee6c10a955816_cgraph" id="aa00392_a26c0dde8bedb5947944ee6c10a955816_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" href="a00368.html#a48e2c9e14216431f343ffdbde98d710c" title=" " alt="" coords="188,5,300,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7fc842d045d1b898bb95ad1052db3729" name="a7fc842d045d1b898bb95ad1052db3729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc842d045d1b898bb95ad1052db3729">&#9670;&nbsp;</a></span>getVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int CVibrato::getVersion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70d">Version_t</a>&#160;</td>
+          <td class="paramname"><em>eVersionIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00035">35</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordtype">int</span> iVersion = 0;</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">switch</span> (eVersionIdx)</div>
+<div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da9647db081da261cb06fd43a3d548d29c">kMajor</a>:</div>
+<div class="line"><span class="lineno">   42</span>        iVersion    = <a class="code hl_define" href="a00317.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a>; </div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70daf7d9beab61c7ff1515b0eb953d545328">kMinor</a>:</div>
+<div class="line"><span class="lineno">   45</span>        iVersion    = <a class="code hl_define" href="a00317.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a>; </div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70dae4eefa347e226a8945bfa692980eb2ed">kPatch</a>:</div>
+<div class="line"><span class="lineno">   48</span>        iVersion    = <a class="code hl_define" href="a00317.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a>; </div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#afc5a8c077f90ccbbfe4023926cf7d70da218dc1866e70b43dfc1e8113428d692e">kNumVersionInts</a>:</div>
+<div class="line"><span class="lineno">   51</span>        iVersion    = -1;</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">return</span> iVersion;</div>
+<div class="line"><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aa00317_html_a1de30c60ae3b063ebab4d30e7ccbb9c7"><div class="ttname"><a href="a00317.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00028">MUSI6106Config.h:28</a></div></div>
+<div class="ttc" id="aa00317_html_a36f0698e09f5575ef7e2d132c1625476"><div class="ttname"><a href="a00317.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00029">MUSI6106Config.h:29</a></div></div>
+<div class="ttc" id="aa00317_html_ac5bc7ad1f89346fef556af1ee27930dd"><div class="ttname"><a href="a00317.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a></div><div class="ttdeci">#define MUSI6106_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00030">MUSI6106Config.h:30</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00053_source.html#l00016">kMajor</a>, <a class="el" href="a00053_source.html#l00017">kMinor</a>, <a class="el" href="a00053_source.html#l00020">kNumVersionInts</a>, <a class="el" href="a00053_source.html#l00018">kPatch</a>, <a class="el" href="a00317_source.html#l00028">MUSI6106_VERSION_MAJOR</a>, <a class="el" href="a00317_source.html#l00029">MUSI6106_VERSION_MINOR</a>, and <a class="el" href="a00317_source.html#l00030">MUSI6106_VERSION_PATCH</a>.</p>
+
+</div>
+</div>
+<a id="a58bfe8eb41a59d022121423d2874298a" name="a58bfe8eb41a59d022121423d2874298a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58bfe8eb41a59d022121423d2874298a">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> CVibrato::init </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fMaxModWidthInS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fSampleRateInHz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iNumChannels</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00087">87</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>{</div>
+<div class="line"><span class="lineno">   89</span>    <span class="comment">// set parameters</span></div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_variable" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a>       = fSampleRateInHz;</div>
+<div class="line"><span class="lineno">   91</span>    <a class="code hl_variable" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a>      = iNumChannels;</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">// set parameter ranges</span></div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_variable" href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">m_aafParamRange</a>[<a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">kParamModFreqInHz</a>][0] = 0;</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_variable" href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">m_aafParamRange</a>[<a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">kParamModFreqInHz</a>][1] = fSampleRateInHz*.5F;</div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_variable" href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">m_aafParamRange</a>[<a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">kParamModWidthInS</a>][0] = 0;</div>
+<div class="line"><span class="lineno">   97</span>    <a class="code hl_variable" href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">m_aafParamRange</a>[<a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">kParamModWidthInS</a>][1] = fMaxModWidthInS;</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">// create instances</span></div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>       = <span class="keyword">new</span> <a class="code hl_class" href="a00372.html">CRingBuffer&lt;float&gt;</a>*[<a class="code hl_variable" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a>];</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c= 0; c &lt; <a class="code hl_variable" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a>; c++)</div>
+<div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>[c]= <span class="keyword">new</span> <a class="code hl_class" href="a00372.html">CRingBuffer&lt;float&gt;</a>(CUtil::float2int&lt;int&gt;(fMaxModWidthInS*<a class="code hl_variable" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a>*2+1));</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab">setWriteIdx</a>(CUtil::float2int&lt;int&gt;(fMaxModWidthInS*<a class="code hl_variable" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a>+1));</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>             = <span class="keyword">new</span> <a class="code hl_class" href="a00368.html">CLfo</a>(<a class="code hl_variable" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a>);</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_variable" href="a00392.html#aeb0051d7194254f6d9fa8b6f5b41396c">m_bIsInitialized</a>    = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+<div class="ttc" id="aa00368_html"><div class="ttname"><a href="a00368.html">CLfo</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00011">Lfo.h:12</a></div></div>
+<div class="ttc" id="aa00372_html"><div class="ttname"><a href="a00372.html">CRingBuffer&lt; float &gt;</a></div></div>
+<div class="ttc" id="aa00372_html_a408e0ec5855fca27bd2dc5862fa913ab"><div class="ttname"><a href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab">CRingBuffer::setWriteIdx</a></div><div class="ttdeci">void setWriteIdx(int iNewWriteIdx)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00165">RingBuffer.h:165</a></div></div>
+<div class="ttc" id="aa00392_html_a1a105adc0f2ebce15fbab63b434d7dcc"><div class="ttname"><a href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">CVibrato::m_aafParamRange</a></div><div class="ttdeci">float m_aafParamRange[kNumVibratoParams][2]</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00058">Vibrato.h:58</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00053_source.html#l00026">kParamModFreqInHz</a>, <a class="el" href="a00053_source.html#l00025">kParamModWidthInS</a>, <a class="el" href="a00053_source.html#l00058">m_aafParamRange</a>, <a class="el" href="a00053_source.html#l00051">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00056">m_fSampleRate</a>, <a class="el" href="a00053_source.html#l00057">m_iNumChannels</a>, <a class="el" href="a00053_source.html#l00053">m_pCLfo</a>, <a class="el" href="a00053_source.html#l00054">m_ppCRingBuff</a>, and <a class="el" href="a00047_source.html#l00165">CRingBuffer&lt; T &gt;::setWriteIdx()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00002_source.html#l00018">main()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a58bfe8eb41a59d022121423d2874298a_cgraph.png" border="0" usemap="#aa00392_a58bfe8eb41a59d022121423d2874298a_cgraph" alt=""/></div>
+<map name="aa00392_a58bfe8eb41a59d022121423d2874298a_cgraph" id="aa00392_a58bfe8eb41a59d022121423d2874298a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,100,32"/>
+<area shape="rect" href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab" title=" " alt="" coords="148,5,311,32"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="359,5,489,32"/>
+</map>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a58bfe8eb41a59d022121423d2874298a_icgraph.png" border="0" usemap="#aa00392_a58bfe8eb41a59d022121423d2874298a_icgraph" alt=""/></div>
+<map name="aa00392_a58bfe8eb41a59d022121423d2874298a_icgraph" id="aa00392_a58bfe8eb41a59d022121423d2874298a_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,199,32"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c28343d878027510f064c4326bb595d" name="a4c28343d878027510f064c4326bb595d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c28343d878027510f064c4326bb595d">&#9670;&nbsp;</a></span>isInParamRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> CVibrato::isInParamRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a>&#160;</td>
+          <td class="paramname"><em>eParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00166">166</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>{</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">if</span> (fValue &lt; <a class="code hl_variable" href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">m_aafParamRange</a>[eParam][0] || fValue &gt; <a class="code hl_variable" href="a00392.html#a1a105adc0f2ebce15fbab63b434d7dcc">m_aafParamRange</a>[eParam][1])</div>
+<div class="line"><span class="lineno">  169</span>    {</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  173</span>    {</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  175</span>    }</div>
+<div class="line"><span class="lineno">  176</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00053_source.html#l00058">m_aafParamRange</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00133">setParam()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a4c28343d878027510f064c4326bb595d_icgraph.png" border="0" usemap="#aa00392_a4c28343d878027510f064c4326bb595d_icgraph" alt=""/></div>
+<map name="aa00392_a4c28343d878027510f064c4326bb595d_icgraph" id="aa00392_a4c28343d878027510f064c4326bb595d_icgraph">
+<area shape="rect" title=" " alt="" coords="792,32,967,59"/>
+<area shape="rect" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779" title=" " alt="" coords="609,32,744,59"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,32,56,59"/>
+<area shape="rect" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220" title=" " alt="" coords="455,58,561,84"/>
+<area shape="rect" href="a00392.html#afb3c8a8bc2b68d344ef6fa14ab31251a" title=" " alt="" coords="275,32,403,59"/>
+<area shape="rect" href="a00392.html#afa62adeef0fef812e34ec9a48b1ca3d1" title=" " alt="" coords="104,83,224,110"/>
+<area shape="rect" href="a00392.html#a1842f23f9362d582b246274623e92649" title=" " alt="" coords="272,134,407,160"/>
+<area shape="rect" href="a00392.html#a11024cb019d1c1c42a24bd1d8e26886d" title=" " alt="" coords="107,32,221,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a0b8a83679dd3ee9eed05d50bf14fd1" name="a7a0b8a83679dd3ee9eed05d50bf14fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0b8a83679dd3ee9eed05d50bf14fd1">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> CVibrato::process </td>
+          <td>(</td>
+          <td class="paramtype">float **&#160;</td>
+          <td class="paramname"><em>ppfInputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float **&#160;</td>
+          <td class="paramname"><em>ppfOutputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iNumberOfFrames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00178">178</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>{</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">if</span> (!ppfInputBuffer || !ppfOutputBuffer || iNumberOfFrames &lt; 0)</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">Error_t::kFunctionInvalidArgsError</a>;</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iNumberOfFrames; i++)</div>
+<div class="line"><span class="lineno">  184</span>    {</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordtype">float</span> fOffset = <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>-&gt;<a class="code hl_function" href="a00368.html#a9e71576cbcfc7af6667778053335efaf">getNext</a>();</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_variable" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a>; c++)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a2bd848181a662312600bc590b9040d2a">putPostInc</a>(ppfInputBuffer[c][i]);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>            ppfOutputBuffer[c][i]   = <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a23d9877584d712c17811a9833835605e">get</a>(fOffset);</div>
+<div class="line"><span class="lineno">  191</span>            <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">getPostInc</a>(); <span class="comment">// dummy call to keep write and read idx in sync</span></div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><span class="lineno">  196</span>}</div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">Error_t::kFunctionInvalidArgsError</a></div><div class="ttdeci">@ kFunctionInvalidArgsError</div></div>
+<div class="ttc" id="aa00368_html_a9e71576cbcfc7af6667778053335efaf"><div class="ttname"><a href="a00368.html#a9e71576cbcfc7af6667778053335efaf">CLfo::getNext</a></div><div class="ttdeci">float getNext()</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00064">Lfo.h:64</a></div></div>
+<div class="ttc" id="aa00372_html_a0f25eadaafa6a2e7bfe2f9ef6af1104b"><div class="ttname"><a href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">CRingBuffer::getPostInc</a></div><div class="ttdeci">T getPostInc()</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00083">RingBuffer.h:83</a></div></div>
+<div class="ttc" id="aa00372_html_a23d9877584d712c17811a9833835605e"><div class="ttname"><a href="a00372.html#a23d9877584d712c17811a9833835605e">CRingBuffer::get</a></div><div class="ttdeci">T get(float fOffset=0) const</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00105">RingBuffer.h:105</a></div></div>
+<div class="ttc" id="aa00372_html_a2bd848181a662312600bc590b9040d2a"><div class="ttname"><a href="a00372.html#a2bd848181a662312600bc590b9040d2a">CRingBuffer::putPostInc</a></div><div class="ttdeci">void putPostInc(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00037">RingBuffer.h:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00044_source.html#l00064">CLfo::getNext()</a>, <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">kFunctionInvalidArgsError</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00053_source.html#l00057">m_iNumChannels</a>, <a class="el" href="a00053_source.html#l00053">m_pCLfo</a>, <a class="el" href="a00053_source.html#l00054">m_ppCRingBuff</a>, and <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00002_source.html#l00018">main()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_cgraph.png" border="0" usemap="#aa00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_cgraph" alt=""/></div>
+<map name="aa00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_cgraph" id="aa00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,51,129,77"/>
+<area shape="rect" href="a00372.html#a23d9877584d712c17811a9833835605e" title=" " alt="" coords="393,25,508,52"/>
+<area shape="rect" href="a00368.html#a9e71576cbcfc7af6667778053335efaf" title=" " alt="" coords="207,25,308,52"/>
+<area shape="rect" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b" title=" " alt="" coords="177,76,337,103"/>
+<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="177,127,337,153"/>
+<area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="385,76,516,103"/>
+<area shape="rect" href="a00372.html#a702eb6314380082795f735df74a816c9" title=" " alt="" coords="393,127,508,153"/>
+</map>
+</div>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_icgraph.png" border="0" usemap="#aa00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_icgraph" alt=""/></div>
+<map name="aa00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_icgraph" id="aa00392_a7a0b8a83679dd3ee9eed05d50bf14fd1_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,228,32"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adbb63edf6be6c3f4354ae9b69135a220" name="adbb63edf6be6c3f4354ae9b69135a220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb63edf6be6c3f4354ae9b69135a220">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> CVibrato::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00115">115</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa">kNumVibratoParams</a>; i++)</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_function" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779">setParam</a>((<a class="code hl_enumeration" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a>)i, 0);</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c= 0; c &lt; <a class="code hl_variable" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a>; c++)</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keyword">delete</span> <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>[c];</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keyword">delete</span> [] <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>;</div>
+<div class="line"><span class="lineno">  123</span>    <a class="code hl_variable" href="a00392.html#a65aaabefef26a2f84eb07d0a6a0bcc17">m_ppCRingBuff</a>       = 0;</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>;</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>             = 0;</div>
+<div class="line"><span class="lineno">  126</span>    </div>
+<div class="line"><span class="lineno">  127</span>    <a class="code hl_variable" href="a00392.html#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">m_iNumChannels</a>      = 0;</div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_variable" href="a00392.html#aeb0051d7194254f6d9fa8b6f5b41396c">m_bIsInitialized</a>    = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><span class="lineno">  131</span>}</div>
+<div class="ttc" id="aa00392_html_a3b40cf60dc57c86c03fb35466b78d779"><div class="ttname"><a href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779">CVibrato::setParam</a></div><div class="ttdeci">Error_t setParam(VibratoParam_t eParam, float fParamValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00133">Vibrato.cpp:133</a></div></div>
+<div class="ttc" id="aa00392_html_a55fb75aa5ac372655166ff2eec8706b3"><div class="ttname"><a href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">CVibrato::VibratoParam_t</a></div><div class="ttdeci">VibratoParam_t</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00023">Vibrato.h:24</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00053_source.html#l00028">kNumVibratoParams</a>, <a class="el" href="a00053_source.html#l00051">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00057">m_iNumChannels</a>, <a class="el" href="a00053_source.html#l00053">m_pCLfo</a>, <a class="el" href="a00053_source.html#l00054">m_ppCRingBuff</a>, and <a class="el" href="a00026_source.html#l00133">setParam()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00017">CVibrato()</a>, <a class="el" href="a00026_source.html#l00073">destroy()</a>, and <a class="el" href="a00026_source.html#l00030">~CVibrato()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_adbb63edf6be6c3f4354ae9b69135a220_cgraph.png" border="0" usemap="#aa00392_adbb63edf6be6c3f4354ae9b69135a220_cgraph" alt=""/></div>
+<map name="aa00392_adbb63edf6be6c3f4354ae9b69135a220_cgraph" id="aa00392_adbb63edf6be6c3f4354ae9b69135a220_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,112,57"/>
+<area shape="rect" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779" title=" " alt="" coords="160,31,295,57"/>
+<area shape="rect" href="a00392.html#a4c28343d878027510f064c4326bb595d" title=" " alt="" coords="343,5,517,32"/>
+<area shape="rect" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca" title=" " alt="" coords="374,56,486,83"/>
+</map>
+</div>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_adbb63edf6be6c3f4354ae9b69135a220_icgraph.png" border="0" usemap="#aa00392_adbb63edf6be6c3f4354ae9b69135a220_icgraph" alt=""/></div>
+<map name="aa00392_adbb63edf6be6c3f4354ae9b69135a220_icgraph" id="aa00392_adbb63edf6be6c3f4354ae9b69135a220_icgraph">
+<area shape="rect" title=" " alt="" coords="455,56,561,83"/>
+<area shape="rect" href="a00392.html#afb3c8a8bc2b68d344ef6fa14ab31251a" title=" " alt="" coords="275,5,403,32"/>
+<area shape="rect" href="a00392.html#afa62adeef0fef812e34ec9a48b1ca3d1" title=" " alt="" coords="104,56,224,83"/>
+<area shape="rect" href="a00392.html#a1842f23f9362d582b246274623e92649" title=" " alt="" coords="272,107,407,133"/>
+<area shape="rect" href="a00392.html#a11024cb019d1c1c42a24bd1d8e26886d" title=" " alt="" coords="107,5,221,32"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,56,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b40cf60dc57c86c03fb35466b78d779" name="a3b40cf60dc57c86c03fb35466b78d779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b40cf60dc57c86c03fb35466b78d779">&#9670;&nbsp;</a></span>setParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> CVibrato::setParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3">VibratoParam_t</a>&#160;</td>
+          <td class="paramname"><em>eParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fParamValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00133">133</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00392.html#aeb0051d7194254f6d9fa8b6f5b41396c">m_bIsInitialized</a>)</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a>;</div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="a00392.html#a4c28343d878027510f064c4326bb595d">isInParamRange</a>(eParam, fParamValue))</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">Error_t::kFunctionInvalidArgsError</a>;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">switch</span> (eParam)</div>
+<div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">kParamModFreqInHz</a>:</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>-&gt;<a class="code hl_function" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca">setParam</a>(<a class="code hl_enumvalue" href="a00368.html#a79f4a1b3586fd7315f9bce8e5b88b674a2234a0979994157c9a18eb242ebec91a">CLfo::kLfoParamFrequency</a>, fParamValue);</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">kParamModWidthInS</a>:</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00392.html#a56aa90a0698a504822ab6397a6e1bcfb">m_pCLfo</a>-&gt;<a class="code hl_function" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca">setParam</a>(<a class="code hl_enumvalue" href="a00368.html#a79f4a1b3586fd7315f9bce8e5b88b674a58590a2366a7f40f2ce300c627b65ed8">CLfo::kLfoParamAmplitude</a>, fParamValue * <a class="code hl_variable" href="a00392.html#af6ad8a52011a4551fb0273833e08a640">m_fSampleRate</a>);</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa">kNumVibratoParams</a>:</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">Error_t::kFunctionInvalidArgsError</a>;</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><span class="lineno">  151</span>}</div>
+<div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a></div><div class="ttdeci">@ kNotInitializedError</div></div>
+<div class="ttc" id="aa00368_html_a03a1198e1f45a5db183c7340553bd0ca"><div class="ttname"><a href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca">CLfo::setParam</a></div><div class="ttdeci">Error_t setParam(LfoParam_t eParam, float fValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00053">Lfo.h:53</a></div></div>
+<div class="ttc" id="aa00392_html_a4c28343d878027510f064c4326bb595d"><div class="ttname"><a href="a00392.html#a4c28343d878027510f064c4326bb595d">CVibrato::isInParamRange</a></div><div class="ttdeci">bool isInParamRange(VibratoParam_t eParam, float fValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00166">Vibrato.cpp:166</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00026_source.html#l00166">isInParamRange()</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">kFunctionInvalidArgsError</a>, <a class="el" href="a00044_source.html#l00042">CLfo::kLfoParamAmplitude</a>, <a class="el" href="a00044_source.html#l00043">CLfo::kLfoParamFrequency</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">kNotInitializedError</a>, <a class="el" href="a00053_source.html#l00028">kNumVibratoParams</a>, <a class="el" href="a00053_source.html#l00026">kParamModFreqInHz</a>, <a class="el" href="a00053_source.html#l00025">kParamModWidthInS</a>, <a class="el" href="a00053_source.html#l00051">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00056">m_fSampleRate</a>, <a class="el" href="a00053_source.html#l00053">m_pCLfo</a>, and <a class="el" href="a00044_source.html#l00053">CLfo::setParam()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00002_source.html#l00018">main()</a>, and <a class="el" href="a00026_source.html#l00115">reset()</a>.</p>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a3b40cf60dc57c86c03fb35466b78d779_cgraph.png" border="0" usemap="#aa00392_a3b40cf60dc57c86c03fb35466b78d779_cgraph" alt=""/></div>
+<map name="aa00392_a3b40cf60dc57c86c03fb35466b78d779_cgraph" id="aa00392_a3b40cf60dc57c86c03fb35466b78d779_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,140,57"/>
+<area shape="rect" href="a00392.html#a4c28343d878027510f064c4326bb595d" title=" " alt="" coords="188,5,363,32"/>
+<area shape="rect" href="a00368.html#a03a1198e1f45a5db183c7340553bd0ca" title=" " alt="" coords="219,56,331,83"/>
+</map>
+</div>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00392_a3b40cf60dc57c86c03fb35466b78d779_icgraph.png" border="0" usemap="#aa00392_a3b40cf60dc57c86c03fb35466b78d779_icgraph" alt=""/></div>
+<map name="aa00392_a3b40cf60dc57c86c03fb35466b78d779_icgraph" id="aa00392_a3b40cf60dc57c86c03fb35466b78d779_icgraph">
+<area shape="rect" title=" " alt="" coords="609,32,744,59"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,32,56,59"/>
+<area shape="rect" href="a00392.html#adbb63edf6be6c3f4354ae9b69135a220" title=" " alt="" coords="455,58,561,84"/>
+<area shape="rect" href="a00392.html#afb3c8a8bc2b68d344ef6fa14ab31251a" title=" " alt="" coords="275,32,403,59"/>
+<area shape="rect" href="a00392.html#afa62adeef0fef812e34ec9a48b1ca3d1" title=" " alt="" coords="104,83,224,110"/>
+<area shape="rect" href="a00392.html#a1842f23f9362d582b246274623e92649" title=" " alt="" coords="272,134,407,160"/>
+<area shape="rect" href="a00392.html#a11024cb019d1c1c42a24bd1d8e26886d" title=" " alt="" coords="107,32,221,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1a105adc0f2ebce15fbab63b434d7dcc" name="a1a105adc0f2ebce15fbab63b434d7dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a105adc0f2ebce15fbab63b434d7dcc">&#9670;&nbsp;</a></span>m_aafParamRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CVibrato::m_aafParamRange[<a class="el" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a82c515df94e5f075144f1b2fe91a2eaa">kNumVibratoParams</a>][2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00058">58</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00087">init()</a>, and <a class="el" href="a00026_source.html#l00166">isInParamRange()</a>.</p>
+
+</div>
+</div>
+<a id="aeb0051d7194254f6d9fa8b6f5b41396c" name="aeb0051d7194254f6d9fa8b6f5b41396c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0051d7194254f6d9fa8b6f5b41396c">&#9670;&nbsp;</a></span>m_bIsInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> CVibrato::m_bIsInitialized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00051">51</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00087">init()</a>, <a class="el" href="a00026_source.html#l00115">reset()</a>, and <a class="el" href="a00026_source.html#l00133">setParam()</a>.</p>
+
+</div>
+</div>
+<a id="af6ad8a52011a4551fb0273833e08a640" name="af6ad8a52011a4551fb0273833e08a640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ad8a52011a4551fb0273833e08a640">&#9670;&nbsp;</a></span>m_fSampleRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CVibrato::m_fSampleRate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00056">56</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00153">getParam()</a>, <a class="el" href="a00026_source.html#l00087">init()</a>, and <a class="el" href="a00026_source.html#l00133">setParam()</a>.</p>
+
+</div>
+</div>
+<a id="a9ee5630ddf5a0e1b360eb3bccc3c6ffc" name="a9ee5630ddf5a0e1b360eb3bccc3c6ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee5630ddf5a0e1b360eb3bccc3c6ffc">&#9670;&nbsp;</a></span>m_iNumChannels</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CVibrato::m_iNumChannels</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00057">57</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00087">init()</a>, <a class="el" href="a00026_source.html#l00178">process()</a>, and <a class="el" href="a00026_source.html#l00115">reset()</a>.</p>
+
+</div>
+</div>
+<a id="a56aa90a0698a504822ab6397a6e1bcfb" name="a56aa90a0698a504822ab6397a6e1bcfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56aa90a0698a504822ab6397a6e1bcfb">&#9670;&nbsp;</a></span>m_pCLfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00368.html">CLfo</a>* CVibrato::m_pCLfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00053">53</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00153">getParam()</a>, <a class="el" href="a00026_source.html#l00087">init()</a>, <a class="el" href="a00026_source.html#l00178">process()</a>, <a class="el" href="a00026_source.html#l00115">reset()</a>, and <a class="el" href="a00026_source.html#l00133">setParam()</a>.</p>
+
+</div>
+</div>
+<a id="a65aaabefef26a2f84eb07d0a6a0bcc17" name="a65aaabefef26a2f84eb07d0a6a0bcc17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65aaabefef26a2f84eb07d0a6a0bcc17">&#9670;&nbsp;</a></span>m_ppCRingBuff</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00372.html">CRingBuffer</a>&lt;float&gt;** CVibrato::m_ppCRingBuff</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00054">54</a> of file <a class="el" href="a00053_source.html">Vibrato.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00087">init()</a>, <a class="el" href="a00026_source.html#l00178">process()</a>, and <a class="el" href="a00026_source.html#l00115">reset()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00053_source.html">Vibrato.h</a></li>
+<li><a class="el" href="a00026_source.html">Vibrato.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:30 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

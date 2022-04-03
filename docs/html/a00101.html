@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: CCombFilterFir Class Reference</title>
+<title>MUSI6106: clm2xen.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,178 +38,357 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_a0f72a9b6cbd6178b1a9d40a8cc47498.html">sndlib</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="a00098.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">CCombFilterFir Class Reference</div></div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">clm2xen.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>FIR comb filter implementation.  
- <a href="a00101.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00041_source.html">CombFilter.h</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for CCombFilterFir:</div>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00095_source.html">vct.h</a>&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for clm2xen.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00100.png" border="0" usemap="#aCCombFilterFir_inherit__map" alt="Inheritance graph"/></div>
-<map name="aCCombFilterFir_inherit__map" id="aCCombFilterFir_inherit__map">
-<area shape="rect" title="FIR comb filter implementation." alt="" coords="13,277,148,384"/>
-<area shape="rect" href="a00097.html" title="base class for the comb filter (FIR &amp; IIR)" alt="" coords="5,5,156,229"/>
+<div class="center"><img src="a00102.png" border="0" usemap="#aclm2xen_8h" alt=""/></div>
+<map name="aclm2xen_8h" id="aclm2xen_8h">
+<area shape="rect" title=" " alt="" coords="5,5,85,32"/>
+<area shape="rect" href="a00095.html" title=" " alt="" coords="20,80,71,107"/>
 </map>
 </div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for CCombFilterFir:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00099.png" border="0" usemap="#aCCombFilterFir_coll__map" alt="Collaboration graph"/></div>
-<map name="aCCombFilterFir_coll__map" id="aCCombFilterFir_coll__map">
-<area shape="rect" title="FIR comb filter implementation." alt="" coords="13,1013,148,1120"/>
-<area shape="rect" href="a00097.html" title="base class for the comb filter (FIR &amp; IIR)" alt="" coords="5,755,156,964"/>
-<area shape="rect" href="a00117.html" title=" " alt="" coords="12,380,149,692"/>
-<area shape="rect" href="a00117.html" title="implement a circular buffer of type T" alt="" coords="20,5,141,317"/>
-</map>
-</div>
+<p><a href="a00101_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a9bf992eaff9f1c602ea2427b2b32b8a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a9bf992eaff9f1c602ea2427b2b32b8a0">CCombFilterFir</a> (int iMaxDelayInFrames, int iNumChannels)</td></tr>
-<tr class="separator:a9bf992eaff9f1c602ea2427b2b32b8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11eaefde3a7ae5f128c526cf6dd81149"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a11eaefde3a7ae5f128c526cf6dd81149">~CCombFilterFir</a> ()</td></tr>
-<tr class="separator:a11eaefde3a7ae5f128c526cf6dd81149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae189e7502fcc8d0556ffb6a171d03e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ae189e7502fcc8d0556ffb6a171d03e37">process</a> (float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames) override</td></tr>
-<tr class="separator:ae189e7502fcc8d0556ffb6a171d03e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00097"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00097')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00097.html">CCombFilterBase</a></td></tr>
-<tr class="memitem:ab49f1327a3d113f46273884d9fb9a583 inherit pub_methods_a00097"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#ab49f1327a3d113f46273884d9fb9a583">CCombFilterBase</a> (int iMaxDelayInFrames, int iNumChannels)</td></tr>
-<tr class="separator:ab49f1327a3d113f46273884d9fb9a583 inherit pub_methods_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5434e4f858fe44272f4557722e0a4e89 inherit pub_methods_a00097"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a5434e4f858fe44272f4557722e0a4e89">~CCombFilterBase</a> ()</td></tr>
-<tr class="separator:a5434e4f858fe44272f4557722e0a4e89 inherit pub_methods_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7c00802caed87adaf0294810e0a2733 inherit pub_methods_a00097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#ad7c00802caed87adaf0294810e0a2733">resetInstance</a> ()</td></tr>
-<tr class="separator:ad7c00802caed87adaf0294810e0a2733 inherit pub_methods_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde2c44a0c01416cd700c646f1c21cec inherit pub_methods_a00097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#acde2c44a0c01416cd700c646f1c21cec">setParam</a> (<a class="el" href="a00109.html#a538d460bd9eed45d364d22ade0d8c2a1">CCombFilterIf::FilterParam_t</a> eParam, float fParamValue)</td></tr>
-<tr class="separator:acde2c44a0c01416cd700c646f1c21cec inherit pub_methods_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a494d31970d8e8e52058cfa34393b0662 inherit pub_methods_a00097"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a494d31970d8e8e52058cfa34393b0662">getParam</a> (<a class="el" href="a00109.html#a538d460bd9eed45d364d22ade0d8c2a1">CCombFilterIf::FilterParam_t</a> eParam) const</td></tr>
-<tr class="separator:a494d31970d8e8e52058cfa34393b0662 inherit pub_methods_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1678f8ddaa2f34e15b36367b9f2b3be0 inherit pub_methods_a00097"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a1678f8ddaa2f34e15b36367b9f2b3be0">process</a> (float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)=0</td></tr>
-<tr class="separator:a1678f8ddaa2f34e15b36367b9f2b3be0 inherit pub_methods_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abe155e48570197827ab9d13aa2cd5650"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#abe155e48570197827ab9d13aa2cd5650">XEN_TO_MUS_XEN</a>(arg)&#160;&#160;&#160;((<a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *)<a class="el" href="a00083.html#a817fb971eaaaee0aa460fe91dfb3c2c0">XEN_OBJECT_REF</a>(arg))</td></tr>
+<tr class="separator:abe155e48570197827ab9d13aa2cd5650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e9cd8e777e83b85bd83ed4a02006db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a53e9cd8e777e83b85bd83ed4a02006db">XEN_TO_MUS_ANY</a>(obj)&#160;&#160;&#160;<a class="el" href="a00101.html#aec9f64e6be5d23ce1ae36489544a72f7">mus_xen_gen</a>(<a class="el" href="a00101.html#abe155e48570197827ab9d13aa2cd5650">XEN_TO_MUS_XEN</a>(obj))</td></tr>
+<tr class="separator:a53e9cd8e777e83b85bd83ed4a02006db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf216b674a01b1e82c1f1442da83da62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#abf216b674a01b1e82c1f1442da83da62">MUS_CLM_DEFAULT_TABLE_SIZE</a>&#160;&#160;&#160;512</td></tr>
+<tr class="separator:abf216b674a01b1e82c1f1442da83da62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef489003fcd5ba668c1e144fc5c6d7d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aef489003fcd5ba668c1e144fc5c6d7d5">MUS_CLM_DEFAULT_FREQUENCY</a>&#160;&#160;&#160;0.0</td></tr>
+<tr class="separator:aef489003fcd5ba668c1e144fc5c6d7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_a00097"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00097')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00097.html">CCombFilterBase</a></td></tr>
-<tr class="memitem:a04666c1cc44b82b56820d0f5ad32082d inherit pro_attribs_a00097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00117.html">CRingBuffer</a>&lt; float &gt; **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a04666c1cc44b82b56820d0f5ad32082d">m_ppCRingBuffer</a></td></tr>
-<tr class="separator:a04666c1cc44b82b56820d0f5ad32082d inherit pro_attribs_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31021db1c697caa6d4611d215a0f4165 inherit pro_attribs_a00097"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a31021db1c697caa6d4611d215a0f4165">m_afParam</a> [<a class="el" href="a00109.html#a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc">CCombFilterIf::kNumFilterParams</a>]</td></tr>
-<tr class="separator:a31021db1c697caa6d4611d215a0f4165 inherit pro_attribs_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2ee2ed57201b65ebf9d4c3310bb271e inherit pro_attribs_a00097"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#aa2ee2ed57201b65ebf9d4c3310bb271e">m_aafParamRange</a> [<a class="el" href="a00109.html#a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc">CCombFilterIf::kNumFilterParams</a>][2]</td></tr>
-<tr class="separator:aa2ee2ed57201b65ebf9d4c3310bb271e inherit pro_attribs_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64ee391277e8794da4d465d36f976dd1 inherit pro_attribs_a00097"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a64ee391277e8794da4d465d36f976dd1">m_iNumChannels</a></td></tr>
-<tr class="separator:a64ee391277e8794da4d465d36f976dd1 inherit pro_attribs_a00097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ad78ab07eb569d8301dc7f2681b6f0c1d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a></td></tr>
+<tr class="separator:ad78ab07eb569d8301dc7f2681b6f0c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5acf362d587835740a39e9735b8ce1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00089.html#a3efa54550781ffe2f5ce2cc9a5a2abbd">mus_long_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a5acf362d587835740a39e9735b8ce1c3">clm_default_table_size_c</a> (void)</td></tr>
+<tr class="separator:a5acf362d587835740a39e9735b8ce1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fe8aa9215d93e51a00e9e6b69eaf0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a90fe8aa9215d93e51a00e9e6b69eaf0c">clm_default_frequency_c</a> (void)</td></tr>
+<tr class="separator:a90fe8aa9215d93e51a00e9e6b69eaf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec9f64e6be5d23ce1ae36489544a72f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a01348.html">mus_any</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aec9f64e6be5d23ce1ae36489544a72f7">mus_xen_gen</a> (<a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *x)</td></tr>
+<tr class="separator:aec9f64e6be5d23ce1ae36489544a72f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3899aa65f0b588e354320ea026fbde61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a3899aa65f0b588e354320ea026fbde61">mus_xen_p</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> obj)</td></tr>
+<tr class="separator:a3899aa65f0b588e354320ea026fbde61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae6d3ba7cc977aac7581fdf1ecd5628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a5ae6d3ba7cc977aac7581fdf1ecd5628">mus_fft_window_xen_name</a> (<a class="el" href="a00113.html#a178d24cc164e5d43a37efac5718741de">mus_fft_window_t</a> i)</td></tr>
+<tr class="separator:a5ae6d3ba7cc977aac7581fdf1ecd5628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91bb8ad262dbd0708859cf0f442c087"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ac91bb8ad262dbd0708859cf0f442c087">mus_xen_to_object</a> (<a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *gn)</td></tr>
+<tr class="separator:ac91bb8ad262dbd0708859cf0f442c087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cf17cc7484e749162d76de16fae2dfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a4cf17cc7484e749162d76de16fae2dfb">mus_xen_to_object_with_vct</a> (<a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *gn, <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> v)</td></tr>
+<tr class="separator:a4cf17cc7484e749162d76de16fae2dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361de3df0610452ba9b8a158f5f322ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a01348.html">mus_any</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a361de3df0610452ba9b8a158f5f322ea">mus_optkey_to_mus_any</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> key, const char *caller, int n, <a class="el" href="a01348.html">mus_any</a> *def)</td></tr>
+<tr class="separator:a361de3df0610452ba9b8a158f5f322ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb30f99db59601fa124cfa227dc88018"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#adb30f99db59601fa124cfa227dc88018">mus_optkey_unscramble</a> (const char *caller, int nkeys, <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> *keys, <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> *args, int *orig)</td></tr>
+<tr class="separator:adb30f99db59601fa124cfa227dc88018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3459ab23a7df5cd53593cdecbd0799"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00089.html#a0a196ab9e6f9225338bbf58dbbf3083f">mus_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#afc3459ab23a7df5cd53593cdecbd0799">mus_optkey_to_float</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> key, const char *caller, int n, <a class="el" href="a00089.html#a0a196ab9e6f9225338bbf58dbbf3083f">mus_float_t</a> def)</td></tr>
+<tr class="separator:afc3459ab23a7df5cd53593cdecbd0799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca3235c6a34f075918d7c4ef02ef78c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a4ca3235c6a34f075918d7c4ef02ef78c">mus_optkey_to_int</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> key, const char *caller, int n, int def)</td></tr>
+<tr class="separator:a4ca3235c6a34f075918d7c4ef02ef78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dace60ece13b56b1c16e5d1e0bb2cde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a4dace60ece13b56b1c16e5d1e0bb2cde">mus_optkey_to_bool</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> key, const char *caller, int n, <a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> def)</td></tr>
+<tr class="separator:a4dace60ece13b56b1c16e5d1e0bb2cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb8bf19ac1e5539c697109c1419800a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00089.html#a3efa54550781ffe2f5ce2cc9a5a2abbd">mus_long_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aeb8bf19ac1e5539c697109c1419800a8">mus_optkey_to_mus_long_t</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> key, const char *caller, int n, <a class="el" href="a00089.html#a3efa54550781ffe2f5ce2cc9a5a2abbd">mus_long_t</a> def)</td></tr>
+<tr class="separator:aeb8bf19ac1e5539c697109c1419800a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fa0e33eb07f7e9aa1c4bd262eb6877"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ab2fa0e33eb07f7e9aa1c4bd262eb6877">mus_optkey_to_string</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> key, const char *caller, int n, char *def)</td></tr>
+<tr class="separator:ab2fa0e33eb07f7e9aa1c4bd262eb6877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab624def2fb0046125e70bd0877ce33f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ab624def2fb0046125e70bd0877ce33f4">mus_optkey_to_procedure</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> key, const char *caller, int n, <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> def, int required_args, const char *err)</td></tr>
+<tr class="separator:ab624def2fb0046125e70bd0877ce33f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11f6d4ddabdc2efb8552bbde579f1cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#af11f6d4ddabdc2efb8552bbde579f1cc">mus_any_to_mus_xen</a> (<a class="el" href="a01348.html">mus_any</a> *ge)</td></tr>
+<tr class="separator:af11f6d4ddabdc2efb8552bbde579f1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace24f2a3b48df5025b91c4da7e3c5b6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ace24f2a3b48df5025b91c4da7e3c5b6e">mus_any_to_mus_xen_with_vct</a> (<a class="el" href="a01348.html">mus_any</a> *ge, <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> v)</td></tr>
+<tr class="separator:ace24f2a3b48df5025b91c4da7e3c5b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3379ed91cbb0544c138ca6ffc3517b98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a3379ed91cbb0544c138ca6ffc3517b98">mus_any_to_mus_xen_with_two_vcts</a> (<a class="el" href="a01348.html">mus_any</a> *ge, <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> v1, <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> v2)</td></tr>
+<tr class="separator:a3379ed91cbb0544c138ca6ffc3517b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebad0f47b02b98cc23a9d04d648ea066"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aebad0f47b02b98cc23a9d04d648ea066">g_mus_channels</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> obj)</td></tr>
+<tr class="separator:aebad0f47b02b98cc23a9d04d648ea066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55596ddf3e954dab8a75d0c3496a28cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a55596ddf3e954dab8a75d0c3496a28cb">g_mus_length</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> gen)</td></tr>
+<tr class="separator:a55596ddf3e954dab8a75d0c3496a28cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c056f6d3d3f373103af0bb0d1854d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a70c056f6d3d3f373103af0bb0d1854d0">g_mus_file_name</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> gen)</td></tr>
+<tr class="separator:a70c056f6d3d3f373103af0bb0d1854d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f7b2caa20fc57aa15bc23d61d4f90e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a8f7b2caa20fc57aa15bc23d61d4f90e5">g_mus_data</a> (<a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> gen)</td></tr>
+<tr class="separator:a8f7b2caa20fc57aa15bc23d61d4f90e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada6de56e2075136727bacb9e29a3ab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aada6de56e2075136727bacb9e29a3ab7">Init_sndlib</a> (void)</td></tr>
+<tr class="separator:aada6de56e2075136727bacb9e29a3ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >FIR comb filter implementation. </p>
-
-<p class="definition">Definition at line <a class="el" href="a00041_source.html#l00038">38</a> of file <a class="el" href="a00041_source.html">CombFilter.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9bf992eaff9f1c602ea2427b2b32b8a0" name="a9bf992eaff9f1c602ea2427b2b32b8a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bf992eaff9f1c602ea2427b2b32b8a0">&#9670;&nbsp;</a></span>CCombFilterFir()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aef489003fcd5ba668c1e144fc5c6d7d5" name="aef489003fcd5ba668c1e144fc5c6d7d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef489003fcd5ba668c1e144fc5c6d7d5">&#9670;&nbsp;</a></span>MUS_CLM_DEFAULT_FREQUENCY</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CCombFilterFir::CCombFilterFir </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iMaxDelayInFrames</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iNumChannels</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">#define MUS_CLM_DEFAULT_FREQUENCY&#160;&#160;&#160;0.0</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00041_source.html#l00041">41</a> of file <a class="el" href="a00041_source.html">CombFilter.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>:<a class="code hl_function" href="a00097.html#ab49f1327a3d113f46273884d9fb9a583">CCombFilterBase</a>(iMaxDelayInFrames, iNumChannels){};</div>
-<div class="ttc" id="aa00097_html_ab49f1327a3d113f46273884d9fb9a583"><div class="ttname"><a href="a00097.html#ab49f1327a3d113f46273884d9fb9a583">CCombFilterBase::CCombFilterBase</a></div><div class="ttdeci">CCombFilterBase(int iMaxDelayInFrames, int iNumChannels)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00016">CombFilter.cpp:16</a></div></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00101_source.html#l00011">11</a> of file <a class="el" href="a00101_source.html">clm2xen.h</a>.</p>
+
 </div>
 </div>
-<a id="a11eaefde3a7ae5f128c526cf6dd81149" name="a11eaefde3a7ae5f128c526cf6dd81149"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11eaefde3a7ae5f128c526cf6dd81149">&#9670;&nbsp;</a></span>~CCombFilterFir()</h2>
+<a id="abf216b674a01b1e82c1f1442da83da62" name="abf216b674a01b1e82c1f1442da83da62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf216b674a01b1e82c1f1442da83da62">&#9670;&nbsp;</a></span>MUS_CLM_DEFAULT_TABLE_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual CCombFilterFir::~CCombFilterFir </td>
+          <td class="memname">#define MUS_CLM_DEFAULT_TABLE_SIZE&#160;&#160;&#160;512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00101_source.html#l00010">10</a> of file <a class="el" href="a00101_source.html">clm2xen.h</a>.</p>
+
+</div>
+</div>
+<a id="a53e9cd8e777e83b85bd83ed4a02006db" name="a53e9cd8e777e83b85bd83ed4a02006db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e9cd8e777e83b85bd83ed4a02006db">&#9670;&nbsp;</a></span>XEN_TO_MUS_ANY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XEN_TO_MUS_ANY</td>
           <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">obj</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="a00101.html#aec9f64e6be5d23ce1ae36489544a72f7">mus_xen_gen</a>(<a class="el" href="a00101.html#abe155e48570197827ab9d13aa2cd5650">XEN_TO_MUS_XEN</a>(obj))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00101_source.html#l00009">9</a> of file <a class="el" href="a00101_source.html">clm2xen.h</a>.</p>
+
+</div>
+</div>
+<a id="abe155e48570197827ab9d13aa2cd5650" name="abe155e48570197827ab9d13aa2cd5650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe155e48570197827ab9d13aa2cd5650">&#9670;&nbsp;</a></span>XEN_TO_MUS_XEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XEN_TO_MUS_XEN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg</td><td>)</td>
+          <td>&#160;&#160;&#160;((<a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *)<a class="el" href="a00083.html#a817fb971eaaaee0aa460fe91dfb3c2c0">XEN_OBJECT_REF</a>(arg))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00101_source.html#l00008">8</a> of file <a class="el" href="a00101_source.html">clm2xen.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ad78ab07eb569d8301dc7f2681b6f0c1d" name="ad78ab07eb569d8301dc7f2681b6f0c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78ab07eb569d8301dc7f2681b6f0c1d">&#9670;&nbsp;</a></span>mus_xen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00101_source.html#l00006">6</a> of file <a class="el" href="a00101_source.html">clm2xen.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a90fe8aa9215d93e51a00e9e6b69eaf0c" name="a90fe8aa9215d93e51a00e9e6b69eaf0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fe8aa9215d93e51a00e9e6b69eaf0c">&#9670;&nbsp;</a></span>clm_default_frequency_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> double clm_default_frequency_c </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00041_source.html#l00042">42</a> of file <a class="el" href="a00041_source.html">CombFilter.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{};</div>
-</div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae189e7502fcc8d0556ffb6a171d03e37" name="ae189e7502fcc8d0556ffb6a171d03e37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae189e7502fcc8d0556ffb6a171d03e37">&#9670;&nbsp;</a></span>process()</h2>
+<a id="a5acf362d587835740a39e9735b8ce1c3" name="a5acf362d587835740a39e9735b8ce1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acf362d587835740a39e9735b8ce1c3">&#9670;&nbsp;</a></span>clm_default_table_size_c()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7f">Error_t</a> CCombFilterFir::process </td>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00089.html#a3efa54550781ffe2f5ce2cc9a5a2abbd">mus_long_t</a> clm_default_table_size_c </td>
           <td>(</td>
-          <td class="paramtype">float **&#160;</td>
-          <td class="paramname"><em>ppfInputBuffer</em>, </td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebad0f47b02b98cc23a9d04d648ea066" name="aebad0f47b02b98cc23a9d04d648ea066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebad0f47b02b98cc23a9d04d648ea066">&#9670;&nbsp;</a></span>g_mus_channels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> g_mus_channels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f7b2caa20fc57aa15bc23d61d4f90e5" name="a8f7b2caa20fc57aa15bc23d61d4f90e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f7b2caa20fc57aa15bc23d61d4f90e5">&#9670;&nbsp;</a></span>g_mus_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> g_mus_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>gen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70c056f6d3d3f373103af0bb0d1854d0" name="a70c056f6d3d3f373103af0bb0d1854d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c056f6d3d3f373103af0bb0d1854d0">&#9670;&nbsp;</a></span>g_mus_file_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> g_mus_file_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>gen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55596ddf3e954dab8a75d0c3496a28cb" name="a55596ddf3e954dab8a75d0c3496a28cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55596ddf3e954dab8a75d0c3496a28cb">&#9670;&nbsp;</a></span>g_mus_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> g_mus_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>gen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aada6de56e2075136727bacb9e29a3ab7" name="aada6de56e2075136727bacb9e29a3ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada6de56e2075136727bacb9e29a3ab7">&#9670;&nbsp;</a></span>Init_sndlib()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> void Init_sndlib </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af11f6d4ddabdc2efb8552bbde579f1cc" name="af11f6d4ddabdc2efb8552bbde579f1cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11f6d4ddabdc2efb8552bbde579f1cc">&#9670;&nbsp;</a></span>mus_any_to_mus_xen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> * mus_any_to_mus_xen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01348.html">mus_any</a> *&#160;</td>
+          <td class="paramname"><em>ge</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3379ed91cbb0544c138ca6ffc3517b98" name="a3379ed91cbb0544c138ca6ffc3517b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3379ed91cbb0544c138ca6ffc3517b98">&#9670;&nbsp;</a></span>mus_any_to_mus_xen_with_two_vcts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> * mus_any_to_mus_xen_with_two_vcts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01348.html">mus_any</a> *&#160;</td>
+          <td class="paramname"><em>ge</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float **&#160;</td>
-          <td class="paramname"><em>ppfOutputBuffer</em>, </td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iNumberOfFrames</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,62 +396,480 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="a00097.html#a1678f8ddaa2f34e15b36367b9f2b3be0">CCombFilterBase</a>.</p>
+</div>
+</div>
+<a id="ace24f2a3b48df5025b91c4da7e3c5b6e" name="ace24f2a3b48df5025b91c4da7e3c5b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace24f2a3b48df5025b91c4da7e3c5b6e">&#9670;&nbsp;</a></span>mus_any_to_mus_xen_with_vct()</h2>
 
-<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00110">110</a> of file <a class="el" href="a00026_source.html">CombFilter.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>{</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_variable" href="a00097.html#a64ee391277e8794da4d465d36f976dd1">m_iNumChannels</a>; c++)</div>
-<div class="line"><span class="lineno">  113</span>    {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iNumberOfFrames; i++)</div>
-<div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="a00097.html#a04666c1cc44b82b56820d0f5ad32082d">m_ppCRingBuffer</a>[c]-&gt;<a class="code hl_function" href="a00117.html#a2bd848181a662312600bc590b9040d2a">putPostInc</a>(ppfInputBuffer[c][i]);</div>
-<div class="line"><span class="lineno">  117</span>            ppfOutputBuffer[c][i] = ppfInputBuffer[c][i] + <a class="code hl_variable" href="a00097.html#a31021db1c697caa6d4611d215a0f4165">m_afParam</a>[<a class="code hl_enumvalue" href="a00109.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a>] * <a class="code hl_variable" href="a00097.html#a04666c1cc44b82b56820d0f5ad32082d">m_ppCRingBuffer</a>[c]-&gt;<a class="code hl_function" href="a00117.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">getPostInc</a>();</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
-<div class="line"><span class="lineno">  121</span>}</div>
-<div class="ttc" id="aa00065_html_a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b"><div class="ttname"><a href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a></div><div class="ttdeci">@ kNoError</div></div>
-<div class="ttc" id="aa00097_html_a04666c1cc44b82b56820d0f5ad32082d"><div class="ttname"><a href="a00097.html#a04666c1cc44b82b56820d0f5ad32082d">CCombFilterBase::m_ppCRingBuffer</a></div><div class="ttdeci">CRingBuffer&lt; float &gt; ** m_ppCRingBuffer</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00022">CombFilter.h:22</a></div></div>
-<div class="ttc" id="aa00097_html_a31021db1c697caa6d4611d215a0f4165"><div class="ttname"><a href="a00097.html#a31021db1c697caa6d4611d215a0f4165">CCombFilterBase::m_afParam</a></div><div class="ttdeci">float m_afParam[CCombFilterIf::kNumFilterParams]</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00024">CombFilter.h:24</a></div></div>
-<div class="ttc" id="aa00097_html_a64ee391277e8794da4d465d36f976dd1"><div class="ttname"><a href="a00097.html#a64ee391277e8794da4d465d36f976dd1">CCombFilterBase::m_iNumChannels</a></div><div class="ttdeci">int m_iNumChannels</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00027">CombFilter.h:27</a></div></div>
-<div class="ttc" id="aa00109_html_a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d"><div class="ttname"><a href="a00109.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a></div><div class="ttdeci">@ kParamGain</div><div class="ttdoc">gain as factor (usually -1...1)</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00035">CombFilterIf.h:35</a></div></div>
-<div class="ttc" id="aa00117_html_a0f25eadaafa6a2e7bfe2f9ef6af1104b"><div class="ttname"><a href="a00117.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">CRingBuffer::getPostInc</a></div><div class="ttdeci">T getPostInc()</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00083">RingBuffer.h:83</a></div></div>
-<div class="ttc" id="aa00117_html_a2bd848181a662312600bc590b9040d2a"><div class="ttname"><a href="a00117.html#a2bd848181a662312600bc590b9040d2a">CRingBuffer::putPostInc</a></div><div class="ttdeci">void putPostInc(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00037">RingBuffer.h:37</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00038_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00065.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00050_source.html#l00035">CCombFilterIf::kParamGain</a>, <a class="el" href="a00041_source.html#l00024">CCombFilterBase::m_afParam</a>, <a class="el" href="a00041_source.html#l00027">CCombFilterBase::m_iNumChannels</a>, <a class="el" href="a00041_source.html#l00022">CCombFilterBase::m_ppCRingBuffer</a>, and <a class="el" href="a00038_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00101_ae189e7502fcc8d0556ffb6a171d03e37_cgraph.png" border="0" usemap="#aa00101_ae189e7502fcc8d0556ffb6a171d03e37_cgraph" alt=""/></div>
-<map name="aa00101_ae189e7502fcc8d0556ffb6a171d03e37_cgraph" id="aa00101_ae189e7502fcc8d0556ffb6a171d03e37_cgraph">
-<area shape="rect" title=" " alt="" coords="5,56,167,83"/>
-<area shape="rect" href="a00117.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b" title=" " alt="" coords="215,31,375,57"/>
-<area shape="rect" href="a00117.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="215,81,375,108"/>
-<area shape="rect" href="a00117.html#a076e9a255df4557d8313f0b99796c1f8" title=" " alt="" coords="431,5,545,32"/>
-<area shape="rect" href="a00117.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="423,56,553,83"/>
-<area shape="rect" href="a00117.html#a702eb6314380082795f735df74a816c9" title=" " alt="" coords="431,107,545,133"/>
-</map>
-</div>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> * mus_any_to_mus_xen_with_vct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01348.html">mus_any</a> *&#160;</td>
+          <td class="paramname"><em>ge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00041_source.html">CombFilter.h</a></li>
-<li><a class="el" href="a00026_source.html">CombFilter.cpp</a></li>
-</ul>
+<a id="a5ae6d3ba7cc977aac7581fdf1ecd5628" name="a5ae6d3ba7cc977aac7581fdf1ecd5628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae6d3ba7cc977aac7581fdf1ecd5628">&#9670;&nbsp;</a></span>mus_fft_window_xen_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> const char * mus_fft_window_xen_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00113.html#a178d24cc164e5d43a37efac5718741de">mus_fft_window_t</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dace60ece13b56b1c16e5d1e0bb2cde" name="a4dace60ece13b56b1c16e5d1e0bb2cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dace60ece13b56b1c16e5d1e0bb2cde">&#9670;&nbsp;</a></span>mus_optkey_to_bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> mus_optkey_to_bool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc3459ab23a7df5cd53593cdecbd0799" name="afc3459ab23a7df5cd53593cdecbd0799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc3459ab23a7df5cd53593cdecbd0799">&#9670;&nbsp;</a></span>mus_optkey_to_float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00089.html#a0a196ab9e6f9225338bbf58dbbf3083f">mus_float_t</a> mus_optkey_to_float </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00089.html#a0a196ab9e6f9225338bbf58dbbf3083f">mus_float_t</a>&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ca3235c6a34f075918d7c4ef02ef78c" name="a4ca3235c6a34f075918d7c4ef02ef78c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca3235c6a34f075918d7c4ef02ef78c">&#9670;&nbsp;</a></span>mus_optkey_to_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> int mus_optkey_to_int </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a361de3df0610452ba9b8a158f5f322ea" name="a361de3df0610452ba9b8a158f5f322ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a361de3df0610452ba9b8a158f5f322ea">&#9670;&nbsp;</a></span>mus_optkey_to_mus_any()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a01348.html">mus_any</a> * mus_optkey_to_mus_any </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a01348.html">mus_any</a> *&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb8bf19ac1e5539c697109c1419800a8" name="aeb8bf19ac1e5539c697109c1419800a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8bf19ac1e5539c697109c1419800a8">&#9670;&nbsp;</a></span>mus_optkey_to_mus_long_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00089.html#a3efa54550781ffe2f5ce2cc9a5a2abbd">mus_long_t</a> mus_optkey_to_mus_long_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00089.html#a3efa54550781ffe2f5ce2cc9a5a2abbd">mus_long_t</a>&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab624def2fb0046125e70bd0877ce33f4" name="ab624def2fb0046125e70bd0877ce33f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab624def2fb0046125e70bd0877ce33f4">&#9670;&nbsp;</a></span>mus_optkey_to_procedure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> mus_optkey_to_procedure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>def</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>required_args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2fa0e33eb07f7e9aa1c4bd262eb6877" name="ab2fa0e33eb07f7e9aa1c4bd262eb6877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2fa0e33eb07f7e9aa1c4bd262eb6877">&#9670;&nbsp;</a></span>mus_optkey_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> const char * mus_optkey_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb30f99db59601fa124cfa227dc88018" name="adb30f99db59601fa124cfa227dc88018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb30f99db59601fa124cfa227dc88018">&#9670;&nbsp;</a></span>mus_optkey_unscramble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> int mus_optkey_unscramble </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nkeys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> *&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> *&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>orig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec9f64e6be5d23ce1ae36489544a72f7" name="aec9f64e6be5d23ce1ae36489544a72f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec9f64e6be5d23ce1ae36489544a72f7">&#9670;&nbsp;</a></span>mus_xen_gen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a01348.html">mus_any</a> * mus_xen_gen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3899aa65f0b588e354320ea026fbde61" name="a3899aa65f0b588e354320ea026fbde61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3899aa65f0b588e354320ea026fbde61">&#9670;&nbsp;</a></span>mus_xen_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> mus_xen_p </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac91bb8ad262dbd0708859cf0f442c087" name="ac91bb8ad262dbd0708859cf0f442c087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91bb8ad262dbd0708859cf0f442c087">&#9670;&nbsp;</a></span>mus_xen_to_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> mus_xen_to_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *&#160;</td>
+          <td class="paramname"><em>gn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cf17cc7484e749162d76de16fae2dfb" name="a4cf17cc7484e749162d76de16fae2dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cf17cc7484e749162d76de16fae2dfb">&#9670;&nbsp;</a></span>mus_xen_to_object_with_vct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00089.html#a64c3cdf8a14cbb80d3c492a484ec2a6d">MUS_EXPORT</a> <a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a> mus_xen_to_object_with_vct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00101.html#ad78ab07eb569d8301dc7f2681b6f0c1d">mus_xen</a> *&#160;</td>
+          <td class="paramname"><em>gn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00083.html#a5e8e16988dd8c844d9288d7881694e8d">XEN</a>&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 19:52:02 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

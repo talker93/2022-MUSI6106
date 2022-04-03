@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: mus_any Struct Reference</title>
+<title>MUSI6106: testing::internal::TestResultAccessor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,59 +38,199 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a01328.html">TestResultAccessor</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01325.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">mus_any Struct Reference</div></div>
+  <div class="headertitle"><div class="title">testing::internal::TestResultAccessor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00101_source.html">clm.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00245_source.html">gtest-internal-inl.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for mus_any:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::TestResultAccessor:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01326.png" border="0" usemap="#amus__any_coll__map" alt="Collaboration graph"/></div>
-<map name="amus__any_coll__map" id="amus__any_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,80,83"/>
+<div class="center"><img src="a01326.png" border="0" usemap="#atesting_1_1internal_1_1TestResultAccessor_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1TestResultAccessor_coll__map" id="atesting_1_1internal_1_1TestResultAccessor_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,171,127"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ad308ef989baaa90bc273cc7f71620467"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00101.html#ac44221fd54bbe8a6574cca60dc937829">mus_any_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01328.html#ad308ef989baaa90bc273cc7f71620467">core</a></td></tr>
-<tr class="separator:ad308ef989baaa90bc273cc7f71620467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abcc4b32d1b201eeef92f0ec0ae161cf9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01328.html#abcc4b32d1b201eeef92f0ec0ae161cf9">RecordProperty</a> (<a class="el" href="a00832.html">TestResult</a> *test_result, const std::string &amp;xml_element, const <a class="el" href="a00828.html">TestProperty</a> &amp;property)</td></tr>
+<tr class="separator:abcc4b32d1b201eeef92f0ec0ae161cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c626632bac65d82d88e432072b866b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01328.html#a53c626632bac65d82d88e432072b866b">ClearTestPartResults</a> (<a class="el" href="a00832.html">TestResult</a> *test_result)</td></tr>
+<tr class="separator:a53c626632bac65d82d88e432072b866b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e3abe2186c23ebc4428cabb7ba6479"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; testing::TestPartResult &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01328.html#ab3e3abe2186c23ebc4428cabb7ba6479">test_part_results</a> (const <a class="el" href="a00832.html">TestResult</a> &amp;test_result)</td></tr>
+<tr class="separator:ab3e3abe2186c23ebc4428cabb7ba6479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00101_source.html#l00031">31</a> of file <a class="el" href="a00101_source.html">clm.h</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad308ef989baaa90bc273cc7f71620467" name="ad308ef989baaa90bc273cc7f71620467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad308ef989baaa90bc273cc7f71620467">&#9670;&nbsp;</a></span>core</h2>
+<p class="definition">Definition at line <a class="el" href="a00245_source.html#l01028">1028</a> of file <a class="el" href="a00245_source.html">gtest-internal-inl.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a53c626632bac65d82d88e432072b866b" name="a53c626632bac65d82d88e432072b866b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c626632bac65d82d88e432072b866b">&#9670;&nbsp;</a></span>ClearTestPartResults()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="a00101.html#ac44221fd54bbe8a6574cca60dc937829">mus_any_class</a>* mus_any::core</td>
+          <td class="memname">static void testing::internal::TestResultAccessor::ClearTestPartResults </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00832.html">TestResult</a> *&#160;</td>
+          <td class="paramname"><em>test_result</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00101_source.html#l00032">32</a> of file <a class="el" href="a00101_source.html">clm.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00245_source.html#l01036">1036</a> of file <a class="el" href="a00245_source.html">gtest-internal-inl.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1036</span>                                                            {</div>
+<div class="line"><span class="lineno"> 1037</span>    test_result-&gt;ClearTestPartResults();</div>
+<div class="line"><span class="lineno"> 1038</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00832.html#aa11ed718e0a76a39e6380e5ddce7cae2">testing::TestResult::ClearTestPartResults()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a01328_a53c626632bac65d82d88e432072b866b_cgraph.png" border="0" usemap="#aa01328_a53c626632bac65d82d88e432072b866b_cgraph" alt=""/></div>
+<map name="aa01328_a53c626632bac65d82d88e432072b866b_cgraph" id="aa01328_a53c626632bac65d82d88e432072b866b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,61"/>
+<area shape="rect" href="a00832.html#aa11ed718e0a76a39e6380e5ddce7cae2" title=" " alt="" coords="200,13,352,54"/>
+</map>
+</div>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00101_source.html">clm.h</a></li>
+<a id="abcc4b32d1b201eeef92f0ec0ae161cf9" name="abcc4b32d1b201eeef92f0ec0ae161cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc4b32d1b201eeef92f0ec0ae161cf9">&#9670;&nbsp;</a></span>RecordProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void testing::internal::TestResultAccessor::RecordProperty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00832.html">TestResult</a> *&#160;</td>
+          <td class="paramname"><em>test_result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>xml_element</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00828.html">TestProperty</a> &amp;&#160;</td>
+          <td class="paramname"><em>property</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00245_source.html#l01030">1030</a> of file <a class="el" href="a00245_source.html">gtest-internal-inl.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1032</span>                                                           {</div>
+<div class="line"><span class="lineno"> 1033</span>    test_result-&gt;RecordProperty(xml_element, property);</div>
+<div class="line"><span class="lineno"> 1034</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00832.html#ac253b0fd7ea70f457e9517e415eac32d">testing::TestResult::RecordProperty()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a01328_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph.png" border="0" usemap="#aa01328_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph" alt=""/></div>
+<map name="aa01328_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph" id="aa01328_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,61"/>
+<area shape="rect" href="a00832.html#ac253b0fd7ea70f457e9517e415eac32d" title=" " alt="" coords="200,13,331,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab3e3abe2186c23ebc4428cabb7ba6479" name="ab3e3abe2186c23ebc4428cabb7ba6479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3e3abe2186c23ebc4428cabb7ba6479">&#9670;&nbsp;</a></span>test_part_results()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const std::vector&lt; testing::TestPartResult &gt; &amp; testing::internal::TestResultAccessor::test_part_results </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00832.html">TestResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>test_result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00245_source.html#l01040">1040</a> of file <a class="el" href="a00245_source.html">gtest-internal-inl.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1041</span>                                     {</div>
+<div class="line"><span class="lineno"> 1042</span>    <span class="keywordflow">return</span> test_result.test_part_results();</div>
+<div class="line"><span class="lineno"> 1043</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00260_source.html#l00632">testing::TestResult::test_part_results()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a01328_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph.png" border="0" usemap="#aa01328_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph" alt=""/></div>
+<map name="aa01328_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph" id="aa01328_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,61"/>
+<area shape="rect" href="a00832.html#a07c4d0171e0a70c4506c09f01e14ba29" title=" " alt="" coords="200,13,331,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00245_source.html">gtest-internal-inl.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

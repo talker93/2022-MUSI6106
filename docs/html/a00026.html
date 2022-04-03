@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: CombFilter.cpp File Reference</title>
+<title>MUSI6106: Vibrato.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,47 +40,83 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd4489a5e8a0b10919d42ac6008fb276.html">CombFilter</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cb2e413f1dc13f7327ebcb0ccf07ea11.html">Vibrato</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">CombFilter.cpp File Reference</div></div>
+  <div class="summary">
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Vibrato.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;limits&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00071_source.html">MUSI6106Config.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00065_source.html">ErrorDef.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00035_source.html">Util.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00038_source.html">RingBuffer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00050_source.html">CombFilterIf.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00041_source.html">CombFilter.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00317_source.html">MUSI6106Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00077_source.html">ErrorDef.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00047_source.html">RingBuffer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00044_source.html">Lfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00053_source.html">Vibrato.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for CombFilter.cpp:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for Vibrato.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00027.png" border="0" usemap="#aCombFilter_8cpp" alt=""/></div>
-<map name="aCombFilter_8cpp" id="aCombFilter_8cpp">
-<area shape="rect" title=" " alt="" coords="289,5,399,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,59,181"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="279,80,409,107"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="497,155,575,181"/>
-<area shape="rect" href="a00035.html" title=" " alt="" coords="86,80,138,107"/>
-<area shape="rect" href="a00038.html" title=" " alt="" coords="162,80,254,107"/>
-<area shape="rect" href="a00050.html" title=" " alt="" coords="485,80,587,107"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="611,80,706,107"/>
-<area shape="rect" title=" " alt="" coords="83,155,149,181"/>
-<area shape="rect" title=" " alt="" coords="173,155,235,181"/>
-<area shape="rect" title=" " alt="" coords="259,155,333,181"/>
-<area shape="rect" title=" " alt="" coords="357,155,416,181"/>
+<div class="center"><img src="a00027.png" border="0" usemap="#aVibrato_8cpp" alt=""/></div>
+<map name="aVibrato_8cpp" id="aVibrato_8cpp">
+<area shape="rect" title=" " alt="" coords="205,5,291,32"/>
+<area shape="rect" href="a00317.html" title=" " alt="" coords="5,80,136,107"/>
+<area shape="rect" href="a00077.html" title=" " alt="" coords="193,229,271,256"/>
+<area shape="rect" href="a00047.html" title=" " alt="" coords="543,155,635,181"/>
+<area shape="rect" href="a00044.html" title=" " alt="" coords="380,80,431,107"/>
+<area shape="rect" href="a00053.html" title=" " alt="" coords="211,155,285,181"/>
+<area shape="rect" title=" " alt="" coords="470,304,535,331"/>
+<area shape="rect" title=" " alt="" coords="643,229,717,256"/>
+<area shape="rect" title=" " alt="" coords="741,229,800,256"/>
+<area shape="rect" title=" " alt="" coords="567,304,628,331"/>
+<area shape="rect" title=" " alt="" coords="456,229,517,256"/>
+<area shape="rect" href="a00038.html" title=" " alt="" coords="361,155,450,181"/>
+<area shape="rect" title=" " alt="" coords="295,229,355,256"/>
+<area shape="rect" href="a00041.html" title=" " alt="" coords="379,229,431,256"/>
+<area shape="rect" title=" " alt="" coords="379,304,432,331"/>
 </map>
 </div>
 </div>
 <p><a href="a00026_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0e42063f4677bf66777a8003550f7f20"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#a0e42063f4677bf66777a8003550f7f20">kCVibratoBuildDate</a> = __DATE__</td></tr>
+<tr class="separator:a0e42063f4677bf66777a8003550f7f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a0e42063f4677bf66777a8003550f7f20" name="a0e42063f4677bf66777a8003550f7f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e42063f4677bf66777a8003550f7f20">&#9670;&nbsp;</a></span>kCVibratoBuildDate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* kCVibratoBuildDate = __DATE__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00026_source.html#l00014">14</a> of file <a class="el" href="a00026_source.html">Vibrato.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00057">CVibrato::getBuildDate()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 19:52:02 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

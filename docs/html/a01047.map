@@ -1,4 +1,7 @@
-<map id="std::tuple_size&lt; testing::internal::FlatTuple&lt; Ts... &gt; &gt;" name="std::tuple_size&lt; testing::internal::FlatTuple&lt; Ts... &gt; &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,145,160,252"/>
-<area shape="rect" id="node2" title=" " alt="" coords="9,5,157,97"/>
+<map id="testing::internal::FlatTuple&lt; T &gt;" name="testing::internal::FlatTuple&lt; T &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="104,375,219,481"/>
+<area shape="rect" id="node4" href="$a01048.html" title=" " alt="" coords="5,544,157,651"/>
+<area shape="rect" id="node5" href="$a01048.html" title=" " alt="" coords="181,544,304,651"/>
+<area shape="rect" id="node2" href="$a01060.html" title=" " alt="" coords="67,204,256,325"/>
+<area shape="rect" id="node3" href="$a01060.html" title=" " alt="" coords="79,5,244,112"/>
 </map>

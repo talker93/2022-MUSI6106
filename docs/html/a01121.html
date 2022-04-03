@@ -40,28 +40,26 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a01124.html">ParameterizedTestSuiteRegistry</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a01124.html">ParameterizedTestSuiteInfoBase</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">testing::internal::ParameterizedTestSuiteRegistry Member List</div></div>
+  <div class="headertitle"><div class="title">testing::internal::ParameterizedTestSuiteInfoBase Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteInfoBase</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01124.html#a6ca2fb178b27fc002bdf7a642758ceb4">GetTestCasePatternHolder</a>(const char *test_case_name, CodeLocation code_location)</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a01124.html#a80a1d4f43b0b6c019db8eb09f9b32319">GetTestSuitePatternHolder</a>(const char *test_suite_name, CodeLocation code_location)</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01124.html#ac1454da4ff60ddeda6b4e60f1b6ce606">GTEST_DISALLOW_COPY_AND_ASSIGN_</a>(ParameterizedTestSuiteRegistry)</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a01124.html#ae3827c085ed16faaa9197486513292c0">ParameterizedTestSuiteRegistry</a>()</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01124.html#a44c2ee0296de42dc6ca7abbf48d00495">RegisterTests</a>()</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a01124.html#afb0271d017a518724a075986bd16c69c">test_suite_infos_</a></td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01124.html#a39a8d3dfa91cb48329bfcf0853f0e72b">TestSuiteInfoContainer</a> typedef</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a01124.html#ab29f7a321883945d7f86f3292c100eb5">~ParameterizedTestSuiteRegistry</a>()</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteRegistry</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01124.html#a9b14d82904635fb3d477641a43998b50">GetTestSuiteName</a>() const =0</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteInfoBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01124.html#ac5bcbf8c50a44472d697e0c80b54387d">GetTestSuiteTypeId</a>() const =0</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteInfoBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01124.html#a49431b7df609223c2a7fea67367e1d00">GTEST_DISALLOW_COPY_AND_ASSIGN_</a>(ParameterizedTestSuiteInfoBase)</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteInfoBase</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01124.html#a3b50ae419b0de858f3ad9b8dd49989de">ParameterizedTestSuiteInfoBase</a>()</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteInfoBase</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01124.html#a41d7d663014af0c1e614c5a61293cb5a">RegisterTests</a>()=0</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteInfoBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01124.html#ac2aa0664f56e84cacab823d345c7d67b">~ParameterizedTestSuiteInfoBase</a>()</td><td class="entry"><a class="el" href="a01124.html">testing::internal::ParameterizedTestSuiteInfoBase</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

@@ -51,237 +51,173 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00071.html">MUSI6106Config.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00317.html">MUSI6106Config.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">AudioFileIf.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="a00038.html">RingBuffer.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">Fft.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="a00053.html">Vector.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using</span> std::cout;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using</span> std::endl;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// local function declarations</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span>    <a class="code hl_function" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a>();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/////////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span><span class="comment">// main function</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">   20</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::string sInputFilePath,                 <span class="comment">//!&lt; file paths</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        sOutputFilePath;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">int</span> iBlockLength = 4096,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        iHopLength = 2048;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="a00056.html">AudioFileIf.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="a00053.html">Vibrato.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using</span> std::cout;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using</span> std::endl;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// local function declarations</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span>    <a class="code hl_function" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"></span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/////////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span><span class="comment">// main function</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">   18</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::string             sInputFilePath,                 <span class="comment">//!&lt; file paths</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        sOutputFilePath;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>            kBlockSize = 1024;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span>                   iNumFrames = kBlockSize;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">int</span>                         iNumChannels;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    clock_t time = 0;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">float</span>** ppfAudioData = 0;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">float</span>* pfSpectrum = 0;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="a00089.html">CAudioFileIf</a>* phAudioFile = 0;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    std::fstream hOutputFile;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_struct" href="a00093.html">CAudioFileIf::FileSpec_t</a> stFileSpec;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="a00117.html">CRingBuffer&lt;float&gt;</a> *pCRingBuffer = 0;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="a00113.html">CFft</a>* pCFft = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">float</span>                       fModFrequencyInHz;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">float</span>                       fModWidthInSec;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    clock_t                     time = 0;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">float</span>** ppfInputAudio = 0;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">float</span>** ppfOutputAudio = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="a00340.html">CAudioFileIf</a>* phAudioFile = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="a00340.html">CAudioFileIf</a>* phAudioOutputFile = 0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="a00344.html">CAudioFileIf::FileSpec_t</a>    stFileSpec;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_function" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"></span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span>    <span class="comment">// parse command line arguments</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (argc &lt; 2)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        cout &lt;&lt; <span class="stringliteral">&quot;Missing audio input path!&quot;</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (argc &gt; 3)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            iHopLength = std::stoi(argv[3]);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (argc &gt; 2)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            iBlockLength = std::stoi(argv[2]);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> (argc &gt; 1)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            sInputFilePath = argv[1];</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            sOutputFilePath = sInputFilePath + <span class="stringliteral">&quot;.txt&quot;</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"></span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment"></span>    <span class="comment">// initialize read buffer</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    pCRingBuffer = <span class="keyword">new</span> <a class="code hl_class" href="a00117.html">CRingBuffer&lt;float&gt;</a>(iBlockLength);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    pCRingBuffer-&gt;<a class="code hl_function" href="a00117.html#a408e0ec5855fca27bd2dc5862fa913ab">setWriteIdx</a>(iBlockLength - iHopLength);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"></span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"></span>    <span class="comment">// initialize FFT and fft output buffer</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="a00113.html#a644093f9174b8e127af0dc36b15116bc">CFft::createInstance</a>(pCFft);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    pCFft-&gt;<a class="code hl_function" href="a00113.html#a5f7dfac3132a98c056918bbd744982f1">initInstance</a>(iBlockLength);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    pfSpectrum = <span class="keyword">new</span> <span class="keywordtype">float</span>[iBlockLength];</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"></span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"></span>    <span class="comment">// open the input wave file</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_function" href="a00089.html#aab987b1a4ec96a8fc835b1733a1ee0c3">CAudioFileIf::create</a>(phAudioFile);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    phAudioFile-&gt;<a class="code hl_function" href="a00089.html#ac845c2e45bc7bab904b73d432b00a05b">openFile</a>(sInputFilePath, <a class="code hl_enumvalue" href="a00089.html#ad06ff073ba665b85c00694036aa31b99a552594691fd16d201f0fa94e0f792396">CAudioFileIf::kFileRead</a>);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (!phAudioFile-&gt;<a class="code hl_function" href="a00089.html#a7d946177a6591600dc03a423feb38cb3">isOpen</a>())</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        cout &lt;&lt; <span class="stringliteral">&quot;Wave file open error!&quot;</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="a00089.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    phAudioFile-&gt;<a class="code hl_function" href="a00089.html#a7ddbbf5f828e61db7fd75dbf47a33832">getFileSpec</a>(stFileSpec);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"></span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"></span>    <span class="comment">// open the output text file</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    hOutputFile.open(sOutputFilePath.c_str(), std::ios::out);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (!hOutputFile.is_open())</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        cout &lt;&lt; <span class="stringliteral">&quot;Text file open error!&quot;</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_function" href="a00089.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"></span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"></span>    <span class="comment">// allocate memory</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    ppfAudioData = <span class="keyword">new</span> <span class="keywordtype">float</span>* [stFileSpec.<a class="code hl_variable" href="a00093.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>];</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; stFileSpec.<a class="code hl_variable" href="a00093.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>; i++)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        ppfAudioData[i] = <span class="keyword">new</span> <span class="keywordtype">float</span>[iBlockLength];</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">if</span> (ppfAudioData == 0)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_function" href="a00089.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        hOutputFile.close();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> (ppfAudioData[0] == 0)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_function" href="a00089.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        hOutputFile.close();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    time = clock();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"></span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment"></span>    <span class="comment">// get audio data and write it to the output text file (one column per channel)</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">while</span> (!phAudioFile-&gt;<a class="code hl_function" href="a00089.html#a02a1c69fa0fc5b9aa8cb275315697be4">isEof</a>())</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="comment">// set block length variable</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> iNumFrames = iHopLength;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="comment">// read data (iNumOfFrames might be updated!)</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        phAudioFile-&gt;<a class="code hl_function" href="a00089.html#ad86676f86c5a0c1fb23617b5e00014c4">readData</a>(ppfAudioData, iNumFrames);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="a00392.html">CVibrato</a>* pCVibrato = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// command line args</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (argc &lt; 5)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        cout &lt;&lt; <span class="stringliteral">&quot;Incorrect number of arguments!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    sInputFilePath = argv[1];</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    sOutputFilePath = argv[2];</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    fModFrequencyInHz = atof(argv[3]);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    fModWidthInSec = atof(argv[4]);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"></span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">    ///////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"></span>    <a class="code hl_function" href="a00340.html#aab987b1a4ec96a8fc835b1733a1ee0c3">CAudioFileIf::create</a>(phAudioFile);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="a00340.html#aab987b1a4ec96a8fc835b1733a1ee0c3">CAudioFileIf::create</a>(phAudioOutputFile);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    phAudioFile-&gt;<a class="code hl_function" href="a00340.html#ac845c2e45bc7bab904b73d432b00a05b">openFile</a>(sInputFilePath, <a class="code hl_enumvalue" href="a00340.html#ad06ff073ba665b85c00694036aa31b99a552594691fd16d201f0fa94e0f792396">CAudioFileIf::kFileRead</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    phAudioFile-&gt;<a class="code hl_function" href="a00340.html#a7ddbbf5f828e61db7fd75dbf47a33832">getFileSpec</a>(stFileSpec);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    phAudioOutputFile-&gt;<a class="code hl_function" href="a00340.html#ac845c2e45bc7bab904b73d432b00a05b">openFile</a>(sOutputFilePath, <a class="code hl_enumvalue" href="a00340.html#ad06ff073ba665b85c00694036aa31b99a833b4efa141e34586b049a51dcbb8eb4">CAudioFileIf::kFileWrite</a>, &amp;stFileSpec);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    iNumChannels = stFileSpec.<a class="code hl_variable" href="a00344.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (!phAudioFile-&gt;<a class="code hl_function" href="a00340.html#a7d946177a6591600dc03a423feb38cb3">isOpen</a>())</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        cout &lt;&lt; <span class="stringliteral">&quot;Input file open error!&quot;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_function" href="a00340.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_function" href="a00340.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioOutputFile);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!phAudioOutputFile-&gt;<a class="code hl_function" href="a00340.html#a7d946177a6591600dc03a423feb38cb3">isOpen</a>())</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        cout &lt;&lt; <span class="stringliteral">&quot;Output file cannot be initialized!&quot;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="a00340.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_function" href="a00340.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioOutputFile);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }<span class="comment"></span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    ////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"></span>    <a class="code hl_function" href="a00392.html#a11024cb019d1c1c42a24bd1d8e26886d">CVibrato::create</a>(pCVibrato);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    pCVibrato-&gt;<a class="code hl_function" href="a00392.html#a58bfe8eb41a59d022121423d2874298a">init</a>(fModWidthInSec, stFileSpec.<a class="code hl_variable" href="a00344.html#a396cfc91903815b64eff8131b33a86d9">fSampleRateInHz</a>, iNumChannels);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// allocate memory</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    ppfInputAudio = <span class="keyword">new</span> <span class="keywordtype">float</span>* [stFileSpec.<a class="code hl_variable" href="a00344.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>];</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; stFileSpec.<a class="code hl_variable" href="a00344.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>; i++)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        ppfInputAudio[i] = <span class="keyword">new</span> <span class="keywordtype">float</span>[kBlockSize];</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    ppfOutputAudio = <span class="keyword">new</span> <span class="keywordtype">float</span>* [stFileSpec.<a class="code hl_variable" href="a00344.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>];</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; stFileSpec.<a class="code hl_variable" href="a00344.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>; i++)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        ppfOutputAudio[i] = <span class="keyword">new</span> <span class="keywordtype">float</span>[kBlockSize];</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Set parameters of vibrato</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    pCVibrato-&gt;<a class="code hl_function" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779">setParam</a>(<a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">CVibrato::kParamModFreqInHz</a>, fModFrequencyInHz);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    pCVibrato-&gt;<a class="code hl_function" href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779">setParam</a>(<a class="code hl_enumvalue" href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">CVibrato::kParamModWidthInS</a>, fModWidthInSec);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// processing</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">while</span> (!phAudioFile-&gt;<a class="code hl_function" href="a00340.html#a02a1c69fa0fc5b9aa8cb275315697be4">isEof</a>())</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        phAudioFile-&gt;<a class="code hl_function" href="a00340.html#ad86676f86c5a0c1fb23617b5e00014c4">readData</a>(ppfInputAudio, iNumFrames);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        pCVibrato-&gt;<a class="code hl_function" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1">process</a>(ppfInputAudio, ppfOutputAudio, iNumFrames);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        phAudioOutputFile-&gt;<a class="code hl_function" href="a00340.html#a4a8d479f325ed92f0b40b88d7675535e">writeData</a>(ppfOutputAudio, iNumFrames);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    phAudioFile-&gt;<a class="code hl_function" href="a00340.html#a7ddbbf5f828e61db7fd75dbf47a33832">getFileSpec</a>(stFileSpec);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    cout &lt;&lt; <span class="stringliteral">&quot;\nreading/writing done in: \t&quot;</span> &lt;&lt; (clock() - time) * 1.F / CLOCKS_PER_SEC &lt;&lt; <span class="stringliteral">&quot; seconds.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"></span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"></span>    <span class="comment">// clean-up</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_function" href="a00340.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_function" href="a00340.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioOutputFile);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_function" href="a00392.html#afa62adeef0fef812e34ec9a48b1ca3d1">CVibrato::destroy</a>(pCVibrato);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; stFileSpec.<a class="code hl_variable" href="a00344.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>; i++)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keyword">delete</span>[] ppfInputAudio[i];</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">delete</span>[] ppfOutputAudio[i];</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">delete</span>[] ppfInputAudio;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">delete</span>[] ppfOutputAudio;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    ppfInputAudio = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    ppfOutputAudio = 0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="comment">// all done</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="comment">// set buffer to zero if not written (EOF)</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (iNumFrames &lt; iHopLength)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; stFileSpec.<a class="code hl_variable" href="a00093.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>; c++)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                <a class="code hl_function" href="a00133.html#a1d4dfb2b0462cadd25aae6fcd4cc978e">CVectorFloat::setZero</a>(&amp;ppfAudioData[c][iNumFrames], iHopLength - iNumFrames);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">  132</a></span><span class="keywordtype">void</span>     <a class="code hl_function" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a>()</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    cout &lt;&lt; <span class="stringliteral">&quot;MUSI6106 Assignment Executable&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    cout &lt;&lt; <span class="stringliteral">&quot;(c) 2014-2022 by Alexander Lerch&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    cout &lt;&lt; endl;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="comment">// downmix in case of multichannel</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 1; c &lt; stFileSpec.<a class="code hl_variable" href="a00093.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>; c++)</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <a class="code hl_function" href="a00133.html#a8abbcfd075eabceada2f024773f11166">CVectorFloat::add_I</a>(ppfAudioData[0], ppfAudioData[c], iNumFrames);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_function" href="a00133.html#afc9a413a88b0c7143252dac95050af33">CVectorFloat::mulC_I</a>(ppfAudioData[0], 1.F / stFileSpec.<a class="code hl_variable" href="a00093.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>, iNumFrames);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="comment">// write data into ringbuffer</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        pCRingBuffer-&gt;<a class="code hl_function" href="a00117.html#a2bd848181a662312600bc590b9040d2a">putPostInc</a>(ppfAudioData[0], iHopLength);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        cout &lt;&lt; <span class="stringliteral">&quot;\r&quot;</span> &lt;&lt; <span class="stringliteral">&quot;computing FFT and writing file&quot;</span>;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="comment">// get data from ringbuffer and increment read index</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        pCRingBuffer-&gt;<a class="code hl_function" href="a00117.html#a076e9a255df4557d8313f0b99796c1f8">get</a>(ppfAudioData[0], iBlockLength);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        pCRingBuffer-&gt;<a class="code hl_function" href="a00117.html#af265a6322c4b1584c880def00d31e663">setReadIdx</a>(pCRingBuffer-&gt;<a class="code hl_function" href="a00117.html#ab18fac37cac4e8bde0419fe04845ac9d">getReadIdx</a>() + iHopLength);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="comment">// compute magnitude spectrum (hack</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        pCFft-&gt;<a class="code hl_function" href="a00113.html#a3f8575f19e7cbc3749ffb99fcb78e6e4">doFft</a>(pfSpectrum, ppfAudioData[0]);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        pCFft-&gt;<a class="code hl_function" href="a00113.html#a48428f0ac37a3c112c9598c784771d4a">getMagnitude</a>(ppfAudioData[0], pfSpectrum);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="comment">// write</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="comment">// note that this solution is, compared to the matlab reference, shifted by one block and scaled by 0.5</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (iBlockLength&gt;&gt;1) + 1; i++)</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            hOutputFile &lt;&lt; ppfAudioData[0][i] &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        hOutputFile &lt;&lt; endl;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    cout &lt;&lt; <span class="stringliteral">&quot;\nreading/writing done in: \t&quot;</span> &lt;&lt; (clock() - time) * 1.F / CLOCKS_PER_SEC &lt;&lt; <span class="stringliteral">&quot; seconds.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment"></span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">    //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment"></span>    <span class="comment">// clean-up (close files, delete instances, and free memory)</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_function" href="a00089.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a>(phAudioFile);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    hOutputFile.close();</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <a class="code hl_function" href="a00113.html#a632503d5ae7b9c46dfb032a558098395">CFft::destroyInstance</a>(pCFft);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    pCFft = 0;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">delete</span> pCRingBuffer;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    pCRingBuffer = 0;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keyword">delete</span>[] pfSpectrum;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    pfSpectrum = 0;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; stFileSpec.<a class="code hl_variable" href="a00093.html#a6bde1a697754401008208afbde6f368e">iNumChannels</a>; i++)</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keyword">delete</span>[] ppfAudioData[i];</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">delete</span>[] ppfAudioData;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    ppfAudioData = 0;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// all done</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>}</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">  190</a></span><span class="keywordtype">void</span>     <a class="code hl_function" href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a>()</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>{</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    cout &lt;&lt; <span class="stringliteral">&quot;MUSI6106 Assignment Executable&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    cout &lt;&lt; <span class="stringliteral">&quot;(c) 2014-2022 by Alexander Lerch&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    cout &lt;&lt; endl;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="ttc" id="aa00002_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00020">MUSI6106Exec.cpp:20</a></div></div>
-<div class="ttc" id="aa00002_html_a2d0a5ce28a4b0030ec0353c6f7a0fd64"><div class="ttname"><a href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a></div><div class="ttdeci">void showClInfo()</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00190">MUSI6106Exec.cpp:190</a></div></div>
-<div class="ttc" id="aa00038_html"><div class="ttname"><a href="a00038.html">RingBuffer.h</a></div></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">AudioFileIf.h</a></div></div>
-<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">Fft.h</a></div></div>
-<div class="ttc" id="aa00053_html"><div class="ttname"><a href="a00053.html">Vector.h</a></div></div>
-<div class="ttc" id="aa00071_html"><div class="ttname"><a href="a00071.html">MUSI6106Config.h</a></div></div>
-<div class="ttc" id="aa00089_html"><div class="ttname"><a href="a00089.html">CAudioFileIf</a></div><div class="ttdoc">open, read, and write audio files</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00011">AudioFileIf.h:12</a></div></div>
-<div class="ttc" id="aa00089_html_a02a1c69fa0fc5b9aa8cb275315697be4"><div class="ttname"><a href="a00089.html#a02a1c69fa0fc5b9aa8cb275315697be4">CAudioFileIf::isEof</a></div><div class="ttdeci">virtual bool isEof()=0</div></div>
-<div class="ttc" id="aa00089_html_a7d946177a6591600dc03a423feb38cb3"><div class="ttname"><a href="a00089.html#a7d946177a6591600dc03a423feb38cb3">CAudioFileIf::isOpen</a></div><div class="ttdeci">virtual bool isOpen()=0</div></div>
-<div class="ttc" id="aa00089_html_a7ddbbf5f828e61db7fd75dbf47a33832"><div class="ttname"><a href="a00089.html#a7ddbbf5f828e61db7fd75dbf47a33832">CAudioFileIf::getFileSpec</a></div><div class="ttdeci">Error_t getFileSpec(FileSpec_t &amp;sFileSpec)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00152">AudioFileIf.cpp:152</a></div></div>
-<div class="ttc" id="aa00089_html_aab987b1a4ec96a8fc835b1733a1ee0c3"><div class="ttname"><a href="a00089.html#aab987b1a4ec96a8fc835b1733a1ee0c3">CAudioFileIf::create</a></div><div class="ttdeci">static Error_t create(CAudioFileIf *&amp;pCInstance)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00015">AudioFileIf.cpp:15</a></div></div>
-<div class="ttc" id="aa00089_html_ab490b9d06c7efa0e4da3596cf4e7bec4"><div class="ttname"><a href="a00089.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a></div><div class="ttdeci">static Error_t destroy(CAudioFileIf *&amp;pCInstance)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00029">AudioFileIf.cpp:29</a></div></div>
-<div class="ttc" id="aa00089_html_ac845c2e45bc7bab904b73d432b00a05b"><div class="ttname"><a href="a00089.html#ac845c2e45bc7bab904b73d432b00a05b">CAudioFileIf::openFile</a></div><div class="ttdeci">virtual Error_t openFile(std::string cAudioFileName, FileIoType_t eIoType, FileSpec_t const *psFileSpec=0)=0</div></div>
-<div class="ttc" id="aa00089_html_ad06ff073ba665b85c00694036aa31b99a552594691fd16d201f0fa94e0f792396"><div class="ttname"><a href="a00089.html#ad06ff073ba665b85c00694036aa31b99a552594691fd16d201f0fa94e0f792396">CAudioFileIf::kFileRead</a></div><div class="ttdeci">@ kFileRead</div><div class="ttdoc">open file for reading</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00016">AudioFileIf.h:16</a></div></div>
-<div class="ttc" id="aa00089_html_ad86676f86c5a0c1fb23617b5e00014c4"><div class="ttname"><a href="a00089.html#ad86676f86c5a0c1fb23617b5e00014c4">CAudioFileIf::readData</a></div><div class="ttdeci">virtual Error_t readData(float **ppfAudioData, long long int &amp;iNumFrames)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00097">AudioFileIf.cpp:97</a></div></div>
-<div class="ttc" id="aa00093_html"><div class="ttname"><a href="a00093.html">CAudioFileIf::FileSpec_t</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00038">AudioFileIf.h:39</a></div></div>
-<div class="ttc" id="aa00093_html_a6bde1a697754401008208afbde6f368e"><div class="ttname"><a href="a00093.html#a6bde1a697754401008208afbde6f368e">CAudioFileIf::FileSpec_t::iNumChannels</a></div><div class="ttdeci">int iNumChannels</div><div class="ttdoc">number of audio channels</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00042">AudioFileIf.h:42</a></div></div>
-<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">CFft</a></div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00006">Fft.h:7</a></div></div>
-<div class="ttc" id="aa00113_html_a3f8575f19e7cbc3749ffb99fcb78e6e4"><div class="ttname"><a href="a00113.html#a3f8575f19e7cbc3749ffb99fcb78e6e4">CFft::doFft</a></div><div class="ttdeci">Error_t doFft(complex_t *pfSpectrum, const float *pfInput)</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00111">Fft.cpp:111</a></div></div>
-<div class="ttc" id="aa00113_html_a48428f0ac37a3c112c9598c784771d4a"><div class="ttname"><a href="a00113.html#a48428f0ac37a3c112c9598c784771d4a">CFft::getMagnitude</a></div><div class="ttdeci">Error_t getMagnitude(float *pfMag, const complex_t *pfSpectrum) const</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00156">Fft.cpp:156</a></div></div>
-<div class="ttc" id="aa00113_html_a5f7dfac3132a98c056918bbd744982f1"><div class="ttname"><a href="a00113.html#a5f7dfac3132a98c056918bbd744982f1">CFft::initInstance</a></div><div class="ttdeci">Error_t initInstance(int iBlockLength, int iZeroPadFactor=1, WindowFunction_t eWindow=kWindowHann, Windowing_t eWindowing=kPreWindow)</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00046">Fft.cpp:46</a></div></div>
-<div class="ttc" id="aa00113_html_a632503d5ae7b9c46dfb032a558098395"><div class="ttname"><a href="a00113.html#a632503d5ae7b9c46dfb032a558098395">CFft::destroyInstance</a></div><div class="ttdeci">static Error_t destroyInstance(CFft *&amp;pCFft)</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00035">Fft.cpp:35</a></div></div>
-<div class="ttc" id="aa00113_html_a644093f9174b8e127af0dc36b15116bc"><div class="ttname"><a href="a00113.html#a644093f9174b8e127af0dc36b15116bc">CFft::createInstance</a></div><div class="ttdeci">static Error_t createInstance(CFft *&amp;pCFft)</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00025">Fft.cpp:25</a></div></div>
-<div class="ttc" id="aa00117_html"><div class="ttname"><a href="a00117.html">CRingBuffer&lt; float &gt;</a></div></div>
-<div class="ttc" id="aa00117_html_a076e9a255df4557d8313f0b99796c1f8"><div class="ttname"><a href="a00117.html#a076e9a255df4557d8313f0b99796c1f8">CRingBuffer::get</a></div><div class="ttdeci">T get() const</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00104">RingBuffer.h:104</a></div></div>
-<div class="ttc" id="aa00117_html_a2bd848181a662312600bc590b9040d2a"><div class="ttname"><a href="a00117.html#a2bd848181a662312600bc590b9040d2a">CRingBuffer::putPostInc</a></div><div class="ttdeci">void putPostInc(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00037">RingBuffer.h:37</a></div></div>
-<div class="ttc" id="aa00117_html_a408e0ec5855fca27bd2dc5862fa913ab"><div class="ttname"><a href="a00117.html#a408e0ec5855fca27bd2dc5862fa913ab">CRingBuffer::setWriteIdx</a></div><div class="ttdeci">void setWriteIdx(int iNewWriteIdx)</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00148">RingBuffer.h:148</a></div></div>
-<div class="ttc" id="aa00117_html_ab18fac37cac4e8bde0419fe04845ac9d"><div class="ttname"><a href="a00117.html#ab18fac37cac4e8bde0419fe04845ac9d">CRingBuffer::getReadIdx</a></div><div class="ttdeci">int getReadIdx() const</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00156">RingBuffer.h:156</a></div></div>
-<div class="ttc" id="aa00117_html_af265a6322c4b1584c880def00d31e663"><div class="ttname"><a href="a00117.html#af265a6322c4b1584c880def00d31e663">CRingBuffer::setReadIdx</a></div><div class="ttdeci">void setReadIdx(int iNewReadIdx)</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00165">RingBuffer.h:165</a></div></div>
-<div class="ttc" id="aa00133_html_a1d4dfb2b0462cadd25aae6fcd4cc978e"><div class="ttname"><a href="a00133.html#a1d4dfb2b0462cadd25aae6fcd4cc978e">CVectorFloat::setZero</a></div><div class="ttdeci">static void setZero(float *pfSrcDest, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00114">Vector.h:114</a></div></div>
-<div class="ttc" id="aa00133_html_a8abbcfd075eabceada2f024773f11166"><div class="ttname"><a href="a00133.html#a8abbcfd075eabceada2f024773f11166">CVectorFloat::add_I</a></div><div class="ttdeci">static void add_I(float *pfSrcDest, const float *pfSrc, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00253">Vector.h:253</a></div></div>
-<div class="ttc" id="aa00133_html_afc9a413a88b0c7143252dac95050af33"><div class="ttname"><a href="a00133.html#afc9a413a88b0c7143252dac95050af33">CVectorFloat::mulC_I</a></div><div class="ttdeci">static void mulC_I(float *pfSrcDest, float fScale, long long int iLength)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00184">Vector.h:184</a></div></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="ttc" id="aa00002_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00018">MUSI6106Exec.cpp:18</a></div></div>
+<div class="ttc" id="aa00002_html_a2d0a5ce28a4b0030ec0353c6f7a0fd64"><div class="ttname"><a href="a00002.html#a2d0a5ce28a4b0030ec0353c6f7a0fd64">showClInfo</a></div><div class="ttdeci">void showClInfo()</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00132">MUSI6106Exec.cpp:132</a></div></div>
+<div class="ttc" id="aa00053_html"><div class="ttname"><a href="a00053.html">Vibrato.h</a></div></div>
+<div class="ttc" id="aa00056_html"><div class="ttname"><a href="a00056.html">AudioFileIf.h</a></div></div>
+<div class="ttc" id="aa00317_html"><div class="ttname"><a href="a00317.html">MUSI6106Config.h</a></div></div>
+<div class="ttc" id="aa00340_html"><div class="ttname"><a href="a00340.html">CAudioFileIf</a></div><div class="ttdoc">open, read, and write audio files</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00011">AudioFileIf.h:12</a></div></div>
+<div class="ttc" id="aa00340_html_a02a1c69fa0fc5b9aa8cb275315697be4"><div class="ttname"><a href="a00340.html#a02a1c69fa0fc5b9aa8cb275315697be4">CAudioFileIf::isEof</a></div><div class="ttdeci">virtual bool isEof()=0</div></div>
+<div class="ttc" id="aa00340_html_a4a8d479f325ed92f0b40b88d7675535e"><div class="ttname"><a href="a00340.html#a4a8d479f325ed92f0b40b88d7675535e">CAudioFileIf::writeData</a></div><div class="ttdeci">virtual Error_t writeData(float **ppfAudioData, long long int iNumFrames)</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00119">AudioFileIf.cpp:119</a></div></div>
+<div class="ttc" id="aa00340_html_a7d946177a6591600dc03a423feb38cb3"><div class="ttname"><a href="a00340.html#a7d946177a6591600dc03a423feb38cb3">CAudioFileIf::isOpen</a></div><div class="ttdeci">virtual bool isOpen()=0</div></div>
+<div class="ttc" id="aa00340_html_a7ddbbf5f828e61db7fd75dbf47a33832"><div class="ttname"><a href="a00340.html#a7ddbbf5f828e61db7fd75dbf47a33832">CAudioFileIf::getFileSpec</a></div><div class="ttdeci">Error_t getFileSpec(FileSpec_t &amp;sFileSpec)</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00152">AudioFileIf.cpp:152</a></div></div>
+<div class="ttc" id="aa00340_html_aab987b1a4ec96a8fc835b1733a1ee0c3"><div class="ttname"><a href="a00340.html#aab987b1a4ec96a8fc835b1733a1ee0c3">CAudioFileIf::create</a></div><div class="ttdeci">static Error_t create(CAudioFileIf *&amp;pCInstance)</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00015">AudioFileIf.cpp:15</a></div></div>
+<div class="ttc" id="aa00340_html_ab490b9d06c7efa0e4da3596cf4e7bec4"><div class="ttname"><a href="a00340.html#ab490b9d06c7efa0e4da3596cf4e7bec4">CAudioFileIf::destroy</a></div><div class="ttdeci">static Error_t destroy(CAudioFileIf *&amp;pCInstance)</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00029">AudioFileIf.cpp:29</a></div></div>
+<div class="ttc" id="aa00340_html_ac845c2e45bc7bab904b73d432b00a05b"><div class="ttname"><a href="a00340.html#ac845c2e45bc7bab904b73d432b00a05b">CAudioFileIf::openFile</a></div><div class="ttdeci">virtual Error_t openFile(std::string cAudioFileName, FileIoType_t eIoType, FileSpec_t const *psFileSpec=0)=0</div></div>
+<div class="ttc" id="aa00340_html_ad06ff073ba665b85c00694036aa31b99a552594691fd16d201f0fa94e0f792396"><div class="ttname"><a href="a00340.html#ad06ff073ba665b85c00694036aa31b99a552594691fd16d201f0fa94e0f792396">CAudioFileIf::kFileRead</a></div><div class="ttdeci">@ kFileRead</div><div class="ttdoc">open file for reading</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00016">AudioFileIf.h:16</a></div></div>
+<div class="ttc" id="aa00340_html_ad06ff073ba665b85c00694036aa31b99a833b4efa141e34586b049a51dcbb8eb4"><div class="ttname"><a href="a00340.html#ad06ff073ba665b85c00694036aa31b99a833b4efa141e34586b049a51dcbb8eb4">CAudioFileIf::kFileWrite</a></div><div class="ttdeci">@ kFileWrite</div><div class="ttdoc">open file for writing</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00017">AudioFileIf.h:17</a></div></div>
+<div class="ttc" id="aa00340_html_ad86676f86c5a0c1fb23617b5e00014c4"><div class="ttname"><a href="a00340.html#ad86676f86c5a0c1fb23617b5e00014c4">CAudioFileIf::readData</a></div><div class="ttdeci">virtual Error_t readData(float **ppfAudioData, long long int &amp;iNumFrames)</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00097">AudioFileIf.cpp:97</a></div></div>
+<div class="ttc" id="aa00344_html"><div class="ttname"><a href="a00344.html">CAudioFileIf::FileSpec_t</a></div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00038">AudioFileIf.h:39</a></div></div>
+<div class="ttc" id="aa00344_html_a396cfc91903815b64eff8131b33a86d9"><div class="ttname"><a href="a00344.html#a396cfc91903815b64eff8131b33a86d9">CAudioFileIf::FileSpec_t::fSampleRateInHz</a></div><div class="ttdeci">float fSampleRateInHz</div><div class="ttdoc">sample rate in Hz</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00043">AudioFileIf.h:43</a></div></div>
+<div class="ttc" id="aa00344_html_a6bde1a697754401008208afbde6f368e"><div class="ttname"><a href="a00344.html#a6bde1a697754401008208afbde6f368e">CAudioFileIf::FileSpec_t::iNumChannels</a></div><div class="ttdeci">int iNumChannels</div><div class="ttdoc">number of audio channels</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00042">AudioFileIf.h:42</a></div></div>
+<div class="ttc" id="aa00392_html"><div class="ttname"><a href="a00392.html">CVibrato</a></div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00010">Vibrato.h:11</a></div></div>
+<div class="ttc" id="aa00392_html_a11024cb019d1c1c42a24bd1d8e26886d"><div class="ttname"><a href="a00392.html#a11024cb019d1c1c42a24bd1d8e26886d">CVibrato::create</a></div><div class="ttdeci">static Error_t create(CVibrato *&amp;pCVibrato)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00062">Vibrato.cpp:62</a></div></div>
+<div class="ttc" id="aa00392_html_a3b40cf60dc57c86c03fb35466b78d779"><div class="ttname"><a href="a00392.html#a3b40cf60dc57c86c03fb35466b78d779">CVibrato::setParam</a></div><div class="ttdeci">Error_t setParam(VibratoParam_t eParam, float fParamValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00133">Vibrato.cpp:133</a></div></div>
+<div class="ttc" id="aa00392_html_a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88"><div class="ttname"><a href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a02d9f31d21ccd6da1f452a05a8ab8a88">CVibrato::kParamModWidthInS</a></div><div class="ttdeci">@ kParamModWidthInS</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00025">Vibrato.h:25</a></div></div>
+<div class="ttc" id="aa00392_html_a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2"><div class="ttname"><a href="a00392.html#a55fb75aa5ac372655166ff2eec8706b3a3871a3a112ee1583b74c587c14d267f2">CVibrato::kParamModFreqInHz</a></div><div class="ttdeci">@ kParamModFreqInHz</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00026">Vibrato.h:26</a></div></div>
+<div class="ttc" id="aa00392_html_a58bfe8eb41a59d022121423d2874298a"><div class="ttname"><a href="a00392.html#a58bfe8eb41a59d022121423d2874298a">CVibrato::init</a></div><div class="ttdeci">Error_t init(float fMaxModWidthInS, float fSampleRateInHz, int iNumChannels)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00087">Vibrato.cpp:87</a></div></div>
+<div class="ttc" id="aa00392_html_a7a0b8a83679dd3ee9eed05d50bf14fd1"><div class="ttname"><a href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1">CVibrato::process</a></div><div class="ttdeci">Error_t process(float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00178">Vibrato.cpp:178</a></div></div>
+<div class="ttc" id="aa00392_html_afa62adeef0fef812e34ec9a48b1ca3d1"><div class="ttname"><a href="a00392.html#afa62adeef0fef812e34ec9a48b1ca3d1">CVibrato::destroy</a></div><div class="ttdeci">static Error_t destroy(CVibrato *&amp;pCVibrato)</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00073">Vibrato.cpp:73</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 19:52:02 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:28 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

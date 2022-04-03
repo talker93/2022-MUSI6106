@@ -1,7 +1,3 @@
-<map id="testing::internal::InvokeArgumentAction&lt; index, Params &gt;" name="testing::internal::InvokeArgumentAction&lt; index, Params &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="28,713,183,820"/>
-<area shape="rect" id="node2" href="$a01028.html" title=" " alt="" coords="29,544,181,651"/>
-<area shape="rect" id="node3" href="$a01040.html" title=" " alt="" coords="5,204,195,325"/>
-<area shape="rect" id="node5" href="$a01028.html" title=" " alt="" coords="121,375,236,481"/>
-<area shape="rect" id="node4" href="$a01040.html" title=" " alt="" coords="17,5,183,112"/>
+<map id="testing::internal::ActionImpl&lt; F, Impl &gt;" name="testing::internal::ActionImpl&lt; F, Impl &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,152,97"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::Function&lt; R(Args...)&gt; Struct Template Reference</title>
+<title>MUSI6106: testing::internal::StlContainerView&lt; Element[N]&gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,200 +40,182 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a00660.html">Function&lt; R(Args...)&gt;</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a00660.html">StlContainerView&lt; Element[N]&gt;</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a00657.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::Function&lt; R(Args...)&gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">testing::internal::StlContainerView&lt; Element[N]&gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00203_source.html">gmock-internal-utils.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00215_source.html">gmock-internal-utils.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::Function&lt; R(Args...)&gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::StlContainerView&lt; Element[N]&gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00658.png" border="0" usemap="#atesting_1_1internal_1_1Function_3_01R_07Args_8_8_8_08_4_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1Function_3_01R_07Args_8_8_8_08_4_coll__map" id="atesting_1_1internal_1_1Function_3_01R_07Args_8_8_8_08_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,149,97"/>
+<div class="center"><img src="a00658.png" border="0" usemap="#atesting_1_1internal_1_1StlContainerView_3_01Element_0fN_0e_4_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1StlContainerView_3_01Element_0fN_0e_4_coll__map" id="atesting_1_1internal_1_1StlContainerView_3_01Element_0fN_0e_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,212,112"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a71efbc408f9ce64e36e2cc41df0da194"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#a71efbc408f9ce64e36e2cc41df0da194">Result</a> = R</td></tr>
-<tr class="separator:a71efbc408f9ce64e36e2cc41df0da194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacb86abf5791077bc9f3774fa0240ba2"><td class="memTemplParams" colspan="2">template&lt;size_t I&gt; </td></tr>
-<tr class="memitem:aacb86abf5791077bc9f3774fa0240ba2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00660.html#aacb86abf5791077bc9f3774fa0240ba2">Arg</a> = <a class="el" href="a01020.html">ElemFromList</a>&lt; I, Args... &gt;</td></tr>
-<tr class="separator:aacb86abf5791077bc9f3774fa0240ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc6bddfcfc78f9308c268123ebc2a99b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#afc6bddfcfc78f9308c268123ebc2a99b">ArgumentTuple</a> = std::tuple&lt; Args... &gt;</td></tr>
-<tr class="separator:afc6bddfcfc78f9308c268123ebc2a99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1b4dca988b45fea2307518af5ac8a09"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#aa1b4dca988b45fea2307518af5ac8a09">ArgumentMatcherTuple</a> = std::tuple&lt; <a class="el" href="a00620.html">Matcher</a>&lt; Args &gt;... &gt;</td></tr>
-<tr class="separator:aa1b4dca988b45fea2307518af5ac8a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a763920d3647641e1100bc4ade26d1d0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#a763920d3647641e1100bc4ade26d1d0c">MakeResultVoid</a> = void(Args...)</td></tr>
-<tr class="separator:a763920d3647641e1100bc4ade26d1d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23361a5e5eb49aad2e1dfe784e60b5da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#a23361a5e5eb49aad2e1dfe784e60b5da">MakeResultIgnoredValue</a> = <a class="el" href="a00876.html">IgnoredValue</a>(Args...)</td></tr>
-<tr class="separator:a23361a5e5eb49aad2e1dfe784e60b5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5675942dbaf84eee41e8e74f4c8864fb"><td class="memItemLeft" align="right" valign="top">typedef std::remove_const&lt; Element &gt;<a class="el" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">::type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#a5675942dbaf84eee41e8e74f4c8864fb">RawElement</a></td></tr>
+<tr class="separator:a5675942dbaf84eee41e8e74f4c8864fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364efca99cc5a02829b4e3413c506b09"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a01000.html">internal::NativeArray</a>&lt; <a class="el" href="a00660.html#a5675942dbaf84eee41e8e74f4c8864fb">RawElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">type</a></td></tr>
+<tr class="separator:a364efca99cc5a02829b4e3413c506b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481e6ab99316939484fad9c561af5e28"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#a481e6ab99316939484fad9c561af5e28">const_reference</a></td></tr>
+<tr class="separator:a481e6ab99316939484fad9c561af5e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a9fbf56d693d099df9f23ad175ccef781"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#a9fbf56d693d099df9f23ad175ccef781">ArgumentCount</a> = sizeof...(Args)</td></tr>
-<tr class="separator:a9fbf56d693d099df9f23ad175ccef781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aa1b15d7f43d38751ae19f6dbdcb6aba3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00660.html#a481e6ab99316939484fad9c561af5e28">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#aa1b15d7f43d38751ae19f6dbdcb6aba3">ConstReference</a> (const Element(&amp;array)[N])</td></tr>
+<tr class="separator:aa1b15d7f43d38751ae19f6dbdcb6aba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2cf79fbd7f829229a47b52f863c68f8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00660.html#af2cf79fbd7f829229a47b52f863c68f8">Copy</a> (const Element(&amp;array)[N])</td></tr>
+<tr class="separator:af2cf79fbd7f829229a47b52f863c68f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename R, typename... Args&gt;<br />
-struct testing::internal::Function&lt; R(Args...)&gt;</div>
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00447">447</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Element, size_t N&gt;<br />
+class testing::internal::StlContainerView&lt; Element[N]&gt;</div>
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00349">349</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aacb86abf5791077bc9f3774fa0240ba2" name="aacb86abf5791077bc9f3774fa0240ba2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacb86abf5791077bc9f3774fa0240ba2">&#9670;&nbsp;</a></span>Arg</h2>
+<a id="a481e6ab99316939484fad9c561af5e28" name="a481e6ab99316939484fad9c561af5e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481e6ab99316939484fad9c561af5e28">&#9670;&nbsp;</a></span>const_reference</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
-<div class="memtemplate">
-template&lt;size_t I&gt; </div>
+template&lt;typename Element , size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a00656.html">testing::internal::Function</a>&lt; R(Args...)&gt;::Arg =  <a class="el" href="a01020.html">ElemFromList</a>&lt;I, Args...&gt;</td>
+          <td class="memname">typedef const <a class="el" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">type</a> <a class="el" href="a00656.html">testing::internal::StlContainerView</a>&lt; Element[N]&gt;::const_reference</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00451">451</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00358">358</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
 
 </div>
 </div>
-<a id="aa1b4dca988b45fea2307518af5ac8a09" name="aa1b4dca988b45fea2307518af5ac8a09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1b4dca988b45fea2307518af5ac8a09">&#9670;&nbsp;</a></span>ArgumentMatcherTuple</h2>
+<a id="a5675942dbaf84eee41e8e74f4c8864fb" name="a5675942dbaf84eee41e8e74f4c8864fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5675942dbaf84eee41e8e74f4c8864fb">&#9670;&nbsp;</a></span>RawElement</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
+template&lt;typename Element , size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a00656.html">testing::internal::Function</a>&lt; R(Args...)&gt;::ArgumentMatcherTuple =  std::tuple&lt;<a class="el" href="a00620.html">Matcher</a>&lt;Args&gt;...&gt;</td>
+          <td class="memname">typedef std::remove_const&lt;Element&gt;<a class="el" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">::type</a> <a class="el" href="a00656.html">testing::internal::StlContainerView</a>&lt; Element[N]&gt;::RawElement</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00453">453</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00351">351</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
 
 </div>
 </div>
-<a id="afc6bddfcfc78f9308c268123ebc2a99b" name="afc6bddfcfc78f9308c268123ebc2a99b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc6bddfcfc78f9308c268123ebc2a99b">&#9670;&nbsp;</a></span>ArgumentTuple</h2>
+<a id="a364efca99cc5a02829b4e3413c506b09" name="a364efca99cc5a02829b4e3413c506b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364efca99cc5a02829b4e3413c506b09">&#9670;&nbsp;</a></span>type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
+template&lt;typename Element , size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a00656.html">testing::internal::Function</a>&lt; R(Args...)&gt;::ArgumentTuple =  std::tuple&lt;Args...&gt;</td>
+          <td class="memname">typedef <a class="el" href="a01000.html">internal::NativeArray</a>&lt;<a class="el" href="a00660.html#a5675942dbaf84eee41e8e74f4c8864fb">RawElement</a>&gt; <a class="el" href="a00656.html">testing::internal::StlContainerView</a>&lt; Element[N]&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00452">452</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00352">352</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
 
 </div>
 </div>
-<a id="a23361a5e5eb49aad2e1dfe784e60b5da" name="a23361a5e5eb49aad2e1dfe784e60b5da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23361a5e5eb49aad2e1dfe784e60b5da">&#9670;&nbsp;</a></span>MakeResultIgnoredValue</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa1b15d7f43d38751ae19f6dbdcb6aba3" name="aa1b15d7f43d38751ae19f6dbdcb6aba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b15d7f43d38751ae19f6dbdcb6aba3">&#9670;&nbsp;</a></span>ConstReference()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00656.html">testing::internal::Function</a>&lt; R(Args...)&gt;::MakeResultIgnoredValue =  <a class="el" href="a00876.html">IgnoredValue</a>(Args...)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00455">455</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
-
-</div>
-</div>
-<a id="a763920d3647641e1100bc4ade26d1d0c" name="a763920d3647641e1100bc4ade26d1d0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a763920d3647641e1100bc4ade26d1d0c">&#9670;&nbsp;</a></span>MakeResultVoid</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00656.html">testing::internal::Function</a>&lt; R(Args...)&gt;::MakeResultVoid =  void(Args...)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00454">454</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
-
-</div>
-</div>
-<a id="a71efbc408f9ce64e36e2cc41df0da194" name="a71efbc408f9ce64e36e2cc41df0da194"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71efbc408f9ce64e36e2cc41df0da194">&#9670;&nbsp;</a></span>Result</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00656.html">testing::internal::Function</a>&lt; R(Args...)&gt;::Result =  R</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00448">448</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9fbf56d693d099df9f23ad175ccef781" name="a9fbf56d693d099df9f23ad175ccef781"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fbf56d693d099df9f23ad175ccef781">&#9670;&nbsp;</a></span>ArgumentCount</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
+template&lt;typename Element , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr size_t <a class="el" href="a00656.html">testing::internal::Function</a>&lt; R(Args...)&gt;::ArgumentCount = sizeof...(Args)</td>
+          <td class="memname">static <a class="el" href="a00660.html#a481e6ab99316939484fad9c561af5e28">const_reference</a> <a class="el" href="a00656.html">testing::internal::StlContainerView</a>&lt; Element[N]&gt;::ConstReference </td>
+          <td>(</td>
+          <td class="paramtype">const Element(&amp;)&#160;</td>
+          <td class="paramname"><em>array</em>[N]</td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00449">449</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00360">360</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  360</span>                                                                   {</div>
+<div class="line"><span class="lineno">  361</span>    <span class="keyword">static_assert</span>(std::is_same&lt;Element, RawElement&gt;::value,</div>
+<div class="line"><span class="lineno">  362</span>                  <span class="stringliteral">&quot;Element type must not be const&quot;</span>);</div>
+<div class="line"><span class="lineno">  363</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">type</a>(array, N, RelationToSourceReference());</div>
+<div class="line"><span class="lineno">  364</span>  }</div>
+<div class="ttc" id="aa00660_html_a364efca99cc5a02829b4e3413c506b09"><div class="ttname"><a href="a00660.html#a364efca99cc5a02829b4e3413c506b09">testing::internal::StlContainerView&lt; Element[N]&gt;::type</a></div><div class="ttdeci">internal::NativeArray&lt; RawElement &gt; type</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00352">gmock-internal-utils.h:352</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af2cf79fbd7f829229a47b52f863c68f8" name="af2cf79fbd7f829229a47b52f863c68f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2cf79fbd7f829229a47b52f863c68f8">&#9670;&nbsp;</a></span>Copy()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Element , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">type</a> <a class="el" href="a00656.html">testing::internal::StlContainerView</a>&lt; Element[N]&gt;::Copy </td>
+          <td>(</td>
+          <td class="paramtype">const Element(&amp;)&#160;</td>
+          <td class="paramname"><em>array</em>[N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00215_source.html#l00365">365</a> of file <a class="el" href="a00215_source.html">gmock-internal-utils.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  365</span>                                              {</div>
+<div class="line"><span class="lineno">  366</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="a00660.html#a364efca99cc5a02829b4e3413c506b09">type</a>(array, N, RelationToSourceCopy());</div>
+<div class="line"><span class="lineno">  367</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00203_source.html">gmock-internal-utils.h</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00215_source.html">gmock-internal-utils.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

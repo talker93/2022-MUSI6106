@@ -1,3 +1,5 @@
-<map id="CAudioFileIf::FileSpec_t" name="CAudioFileIf::FileSpec_t">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,167,127"/>
+<map id="CAudioFileRaw" name="CAudioFileRaw">
+<area shape="rect" id="node1" title="open, read, and write raw audio files in 16 bit integer little endian format." alt="" coords="28,873,165,1185"/>
+<area shape="rect" id="node2" href="$a00340.html" title="open, read, and write audio files" alt="" coords="5,189,188,824"/>
+<area shape="rect" id="node3" href="$a00344.html" title=" " alt="" coords="16,5,177,127"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: README.md File Reference</title>
+<title>MUSI6106: Quickstart: Building with CMake</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,14 +39,113 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div class="header">
-  <div class="headertitle"><div class="title">README.md File Reference</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Quickstart: Building with CMake </div></div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p >This tutorial aims to get you up and running with GoogleTest using CMake. If you're using GoogleTest for the first time or need a refresher, we recommend this tutorial as a starting point. If your project uses Bazel, see the <a class="el" href="a01748.html">Quickstart for Bazel</a> instead.</p>
+<h1><a class="anchor" id="autotoc_md240"></a>
+Prerequisites</h1>
+<p >To complete this tutorial, you'll need:</p>
+<ul>
+<li>A compatible operating system (e.g. Linux, macOS, Windows).</li>
+<li>A compatible C++ compiler that supports at least C++11.</li>
+<li><a href="https://cmake.org/">CMake</a> and a compatible build tool for building the project.<ul>
+<li>Compatible build tools include <a href="https://www.gnu.org/software/make/">Make</a>, <a href="https://ninja-build.org/">Ninja</a>, and others - see <a href="https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html">CMake Generators</a> for more information.</li>
+</ul>
+</li>
+</ul>
+<p >See <a class="el" href="a01746.html">Supported Platforms</a> for more information about platforms compatible with GoogleTest.</p>
+<p >If you don't already have CMake installed, see the <a href="https://cmake.org/install">CMake installation guide</a>.</p>
+<p >{: .callout .note} Note: The terminal commands in this tutorial show a Unix shell prompt, but the commands work on the Windows command line as well.</p>
+<h1><a class="anchor" id="autotoc_md241"></a>
+Set up a project</h1>
+<p >CMake uses a file named <code>CMakeLists.txt</code> to configure the build system for a project. You'll use this file to set up your project and declare a dependency on GoogleTest.</p>
+<p >First, create a directory for your project:</p>
+<div class="fragment"><div class="line">$ mkdir my_project &amp;&amp; cd my_project</div>
+</div><!-- fragment --><p >Next, you'll create the <code>CMakeLists.txt</code> file and declare a dependency on GoogleTest. There are many ways to express dependencies in the CMake ecosystem; in this quickstart, you'll use the <a href="https://cmake.org/cmake/help/latest/module/FetchContent.html"><code>FetchContent</code> CMake module</a>. To do this, in your project directory (<code>my_project</code>), create a file named <code>CMakeLists.txt</code> with the following contents:</p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.14)</div>
+<div class="line">project(my_project)</div>
+<div class="line"> </div>
+<div class="line"># GoogleTest requires at least C++11</div>
+<div class="line">set(CMAKE_CXX_STANDARD 11)</div>
+<div class="line"> </div>
+<div class="line">include(FetchContent)</div>
+<div class="line">FetchContent_Declare(</div>
+<div class="line">  googletest</div>
+<div class="line">  URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip</div>
+<div class="line">)</div>
+<div class="line"># For Windows: Prevent overriding the parent project&#39;s compiler/linker settings</div>
+<div class="line">set(gtest_force_shared_crt ON CACHE BOOL &quot;&quot; FORCE)</div>
+<div class="line">FetchContent_MakeAvailable(googletest)</div>
+</div><!-- fragment --><p >The above configuration declares a dependency on GoogleTest which is downloaded from GitHub. In the above example, <code>609281088cfefc76f9d0ce82e1ff6c30cc3591e5</code> is the Git commit hash of the GoogleTest version to use; we recommend updating the hash often to point to the latest version.</p>
+<p >For more information about how to create <code>CMakeLists.txt</code> files, see the <a href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html">CMake Tutorial</a>.</p>
+<h1><a class="anchor" id="autotoc_md242"></a>
+Create and run a binary</h1>
+<p >With GoogleTest declared as a dependency, you can use GoogleTest code within your own project.</p>
+<p >As an example, create a file named <code>hello_test.cc</code> in your <code>my_project</code> directory with the following contents:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00260.html">gtest/gtest.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Demonstrate some basic assertions.</span></div>
+<div class="line"><a class="code hl_define" href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST</a>(HelloTest, BasicAssertions) {</div>
+<div class="line">  <span class="comment">// Expect two strings not to be equal.</span></div>
+<div class="line">  <a class="code hl_define" href="a00260.html#aee7e9c42f55549dbc0dfc42391eb9775">EXPECT_STRNE</a>(<span class="stringliteral">&quot;hello&quot;</span>, <span class="stringliteral">&quot;world&quot;</span>);</div>
+<div class="line">  <span class="comment">// Expect equality.</span></div>
+<div class="line">  <a class="code hl_define" href="a00260.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(7 * 6, 42);</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00260_html"><div class="ttname"><a href="a00260.html">gtest.h</a></div></div>
+<div class="ttc" id="aa00260_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="a00260.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02050">gtest.h:2050</a></div></div>
+<div class="ttc" id="aa00260_html_ab5540a6d621853916be8240ff51819cf"><div class="ttname"><a href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST</a></div><div class="ttdeci">#define TEST(test_suite_name, test_name)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02360">gtest.h:2360</a></div></div>
+<div class="ttc" id="aa00260_html_aee7e9c42f55549dbc0dfc42391eb9775"><div class="ttname"><a href="a00260.html#aee7e9c42f55549dbc0dfc42391eb9775">EXPECT_STRNE</a></div><div class="ttdeci">#define EXPECT_STRNE(s1, s2)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02121">gtest.h:2121</a></div></div>
+</div><!-- fragment --><p >GoogleTest provides <a href="primer.md#assertions">assertions</a> that you use to test the behavior of your code. The above sample includes the main GoogleTest header file and demonstrates some basic assertions.</p>
+<p >To build the code, add the following to the end of your <code>CMakeLists.txt</code> file:</p>
+<div class="fragment"><div class="line">enable_testing()</div>
+<div class="line"> </div>
+<div class="line">add_executable(</div>
+<div class="line">  hello_test</div>
+<div class="line">  hello_test.cc</div>
+<div class="line">)</div>
+<div class="line">target_link_libraries(</div>
+<div class="line">  hello_test</div>
+<div class="line">  gtest_main</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">include(GoogleTest)</div>
+<div class="line">gtest_discover_tests(hello_test)</div>
+</div><!-- fragment --><p >The above configuration enables testing in CMake, declares the C++ test binary you want to build (<code>hello_test</code>), and links it to GoogleTest (<code>gtest_main</code>). The last two lines enable CMake's test runner to discover the tests included in the binary, using the <a href="https://cmake.org/cmake/help/git-stage/module/GoogleTest.html"><code>GoogleTest</code> CMake module</a>.</p>
+<p >Now you can build and run your test:</p>
+<pre>
+<b>my_project$ cmake -S . -B build</b>
+-- The C compiler identification is GNU 10.2.1
+-- The CXX compiler identification is GNU 10.2.1
+...
+-- Build files have been written to: .../my_project/build
+
+<b>my_project$ cmake --build build</b>
+Scanning dependencies of target gtest
+...
+[100%] Built target gmock_main
+
+<b>my_project$ cd build &amp;&amp; ctest</b>
+Test project .../my_project/build
+    Start 1: HelloTest.BasicAssertions
+1/1 Test #1: HelloTest.BasicAssertions ........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec
+</pre><p >Congratulations! You've successfully built and run a test binary using GoogleTest.</p>
+<h1><a class="anchor" id="autotoc_md243"></a>
+Next steps</h1>
+<ul>
+<li><a class="el" href="a01747.html">Check out the Primer</a> to start learning how to write simple tests.</li>
+<li><a class="el" href="a01755.html">See the code samples</a> for more examples showing how to use a variety of GoogleTest features. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:08 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

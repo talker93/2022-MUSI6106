@@ -1,0 +1,5 @@
+<map id="CCombFilterBase" name="CCombFilterBase">
+<area shape="rect" id="node1" title="base class for the comb filter (FIR &amp; IIR)" alt="" coords="76,5,227,229"/>
+<area shape="rect" id="node2" href="$a00352.html" title="FIR comb filter implementation." alt="" coords="5,277,140,384"/>
+<area shape="rect" id="node3" href="$a00356.html" title="IIR comb filter implementation." alt="" coords="165,277,295,384"/>
+</map>

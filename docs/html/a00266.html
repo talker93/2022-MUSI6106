@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: gtest-port-arch.h File Reference</title>
+<title>MUSI6106: gtest-spi.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,62 +40,378 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_f12498a9b3b01f7557dfe344f3ca0a3a.html">googletest</a></li><li class="navelem"><a class="el" href="dir_b0bc461411f317819f83da89819c0369.html">googletest</a></li><li class="navelem"><a class="el" href="dir_943c241ef1853b02e7eaa4d020727e0e.html">include</a></li><li class="navelem"><a class="el" href="dir_e64b44ddfb081f905cb46b73b7adc956.html">gtest</a></li><li class="navelem"><a class="el" href="dir_893062d52c4cc7b4dbfe885df104f1a2.html">internal</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8cab8f464681f7cc51cee77e79a434cd.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_f12498a9b3b01f7557dfe344f3ca0a3a.html">googletest</a></li><li class="navelem"><a class="el" href="dir_b0bc461411f317819f83da89819c0369.html">googletest</a></li><li class="navelem"><a class="el" href="dir_943c241ef1853b02e7eaa4d020727e0e.html">include</a></li><li class="navelem"><a class="el" href="dir_e64b44ddfb081f905cb46b73b7adc956.html">gtest</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">gtest-port-arch.h File Reference</div></div>
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">gtest-spi.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00260_source.html">gtest/gtest.h</a>&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for gtest-spi.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00268.png" border="0" usemap="#agtest-port-arch_8hdep" alt=""/></div>
-<map name="agtest-port-arch_8hdep" id="agtest-port-arch_8hdep">
-<area shape="rect" title=" " alt="" coords="730,5,846,32"/>
-<area shape="rect" href="a00281.html" title=" " alt="" coords="745,80,831,107"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="370,677,467,704"/>
-<area shape="rect" href="a00173.html" title=" " alt="" coords="437,1140,563,1167"/>
-<area shape="rect" href="a00233.html" title=" " alt="" coords="1582,841,1706,868"/>
-<area shape="rect" href="a00272.html" title=" " alt="" coords="896,304,1003,331"/>
-<area shape="rect" href="a00293.html" title=" " alt="" coords="1098,453,1217,480"/>
-<area shape="rect" href="a00260.html" title=" " alt="" coords="654,528,781,555"/>
-<area shape="rect" href="a00269.html" title=" " alt="" coords="755,453,877,480"/>
-<area shape="rect" href="a00284.html" title=" " alt="" coords="1191,379,1299,405"/>
-<area shape="rect" href="a00263.html" title=" " alt="" coords="456,379,579,405"/>
-<area shape="rect" href="a00251.html" title=" " alt="" coords="1089,229,1207,256"/>
-<area shape="rect" href="a00287.html" title=" " alt="" coords="810,155,907,181"/>
-<area shape="rect" href="a00290.html" title=" " alt="" coords="518,229,629,256"/>
-<area shape="rect" href="a00206.html" title=" " alt="" coords="156,841,273,868"/>
-<area shape="rect" href="a00209.html" title=" " alt="" coords="43,916,194,943"/>
-<area shape="rect" href="a00191.html" title=" " alt="" coords="481,916,633,943"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="270,991,402,1017"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="348,841,492,868"/>
-<area shape="rect" href="a00203.html" title=" " alt="" coords="609,759,754,786"/>
-<area shape="rect" href="a00182.html" title=" " alt="" coords="723,841,853,868"/>
-<area shape="rect" href="a00176.html" title=" " alt="" coords="465,1065,535,1092"/>
-<area shape="rect" href="a00188.html" title=" " alt="" coords="477,991,645,1017"/>
-<area shape="rect" href="a00179.html" title=" " alt="" coords="669,991,832,1017"/>
-<area shape="rect" href="a00278.html" title=" " alt="" coords="805,528,974,555"/>
-<area shape="rect" href="a00248.html" title=" " alt="" coords="981,677,1043,704"/>
-<area shape="rect" href="a00296.html" title=" " alt="" coords="1002,379,1115,405"/>
-<area shape="rect" href="a00245.html" title=" " alt="" coords="840,603,963,629"/>
-<area shape="rect" href="a00020.html" title=" " alt="" coords="1187,759,1259,786"/>
-<area shape="rect" href="a00236.html" title=" " alt="" coords="1283,752,1431,793"/>
-<area shape="rect" href="a00254.html" title=" " alt="" coords="1080,759,1163,786"/>
-<area shape="rect" href="a00242.html" title=" " alt="" coords="1455,759,1606,786"/>
-<area shape="rect" href="a00257.html" title=" " alt="" coords="830,759,954,786"/>
-<area shape="rect" href="a00275.html" title=" " alt="" coords="805,229,912,256"/>
+<div class="center"><img src="a00267.png" border="0" usemap="#agtest-spi_8h" alt=""/></div>
+<map name="agtest-spi_8h" id="agtest-spi_8h">
+<area shape="rect" title=" " alt="" coords="1250,5,1333,32"/>
+<area shape="rect" href="a00260.html" title=" " alt="" coords="1244,80,1339,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,71,181"/>
+<area shape="rect" title=" " alt="" coords="545,847,598,874"/>
+<area shape="rect" title=" " alt="" coords="328,847,396,874"/>
+<area shape="rect" title=" " alt="" coords="458,490,527,517"/>
+<area shape="rect" title=" " alt="" coords="774,847,857,874"/>
+<area shape="rect" title=" " alt="" coords="2535,847,2594,874"/>
+<area shape="rect" href="a00284.html" title=" " alt="" coords="1490,483,1621,524"/>
+<area shape="rect" href="a00263.html" title=" " alt="" coords="672,579,823,606"/>
+<area shape="rect" href="a00299.html" title=" " alt="" coords="1202,661,1333,703"/>
+<area shape="rect" href="a00257.html" title=" " alt="" coords="723,155,879,181"/>
+<area shape="rect" href="a00305.html" title=" " alt="" coords="625,326,777,353"/>
+<area shape="rect" href="a00296.html" title=" " alt="" coords="1010,408,1151,435"/>
+<area shape="rect" href="a00272.html" title=" " alt="" coords="2010,237,2170,263"/>
+<area shape="rect" href="a00308.html" title=" " alt="" coords="1837,408,1983,435"/>
+<area shape="rect" href="a00311.html" title=" " alt="" coords="2096,155,2223,181"/>
+<area shape="rect" href="a00275.html" title=" " alt="" coords="2146,408,2301,435"/>
+<area shape="rect" href="a00269.html" title=" " alt="" coords="2247,155,2405,181"/>
+<area shape="rect" href="a00293.html" title=" " alt="" coords="1691,751,1822,792"/>
+<area shape="rect" title=" " alt="" coords="2421,847,2484,874"/>
+<area shape="rect" title=" " alt="" coords="1198,847,1262,874"/>
+<area shape="rect" title=" " alt="" coords="1286,847,1347,874"/>
+<area shape="rect" title=" " alt="" coords="1087,847,1141,874"/>
+<area shape="rect" title=" " alt="" coords="1559,579,1615,606"/>
+<area shape="rect" title=" " alt="" coords="1639,579,1706,606"/>
+<area shape="rect" title=" " alt="" coords="1731,579,1777,606"/>
+<area shape="rect" title=" " alt="" coords="2311,579,2351,606"/>
+<area shape="rect" href="a00287.html" title=" " alt="" coords="1354,572,1485,613"/>
+<area shape="rect" href="a00302.html" title=" " alt="" coords="2005,572,2135,613"/>
+<area shape="rect" title=" " alt="" coords="2084,847,2152,874"/>
+<area shape="rect" title=" " alt="" coords="677,847,737,874"/>
+<area shape="rect" title=" " alt="" coords="2176,847,2239,874"/>
+<area shape="rect" title=" " alt="" coords="2263,847,2322,874"/>
+<area shape="rect" title=" " alt="" coords="1371,847,1443,874"/>
+<area shape="rect" title=" " alt="" coords="1467,847,1523,874"/>
+<area shape="rect" title=" " alt="" coords="2346,847,2397,874"/>
+<area shape="rect" title=" " alt="" coords="1548,847,1635,874"/>
+<area shape="rect" title=" " alt="" coords="1659,847,1737,874"/>
+<area shape="rect" href="a01790.html" title=" " alt="" coords="1762,840,1906,881"/>
+<area shape="rect" href="a00278.html" title=" " alt="" coords="1930,840,2061,881"/>
+<area shape="rect" title=" " alt="" coords="805,669,874,695"/>
+<area shape="rect" href="a00290.html" title=" " alt="" coords="631,229,771,271"/>
+<area shape="rect" title=" " alt="" coords="602,408,663,435"/>
+<area shape="rect" title=" " alt="" coords="931,490,1009,517"/>
+<area shape="rect" title=" " alt="" coords="2428,490,2480,517"/>
+<area shape="rect" href="a01787.html" title=" " alt="" coords="1034,483,1178,524"/>
+<area shape="rect" title=" " alt="" coords="2008,408,2071,435"/>
+<area shape="rect" href="a00281.html" title=" " alt="" coords="2077,319,2207,360"/>
+<area shape="rect" title=" " alt="" coords="2089,490,2149,517"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00268.png" border="0" usemap="#agtest-spi_8hdep" alt=""/></div>
+<map name="agtest-spi_8hdep" id="agtest-spi_8hdep">
+<area shape="rect" title=" " alt="" coords="26,5,109,32"/>
+<area shape="rect" href="a00245.html" title=" " alt="" coords="5,80,129,107"/>
 </map>
 </div>
 </div>
 <p><a href="a00266_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a819a3fd7f8b8cf24b6f1b3a26708973d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00266.html#a819a3fd7f8b8cf24b6f1b3a26708973d">EXPECT_FATAL_FAILURE</a>(statement,  substr)</td></tr>
+<tr class="separator:a819a3fd7f8b8cf24b6f1b3a26708973d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8aac5bc859b2ddc07583636ae4f45cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00266.html#ad8aac5bc859b2ddc07583636ae4f45cf">EXPECT_FATAL_FAILURE_ON_ALL_THREADS</a>(statement,  substr)</td></tr>
+<tr class="separator:ad8aac5bc859b2ddc07583636ae4f45cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8376fd6821bd88fd806697355e79e138"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00266.html#a8376fd6821bd88fd806697355e79e138">EXPECT_NONFATAL_FAILURE</a>(statement,  substr)</td></tr>
+<tr class="separator:a8376fd6821bd88fd806697355e79e138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4cf1f150fe9facfc4cbf0bae646ee9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00266.html#a9f4cf1f150fe9facfc4cbf0bae646ee9">EXPECT_NONFATAL_FAILURE_ON_ALL_THREADS</a>(statement,  substr)</td></tr>
+<tr class="separator:a9f4cf1f150fe9facfc4cbf0bae646ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a88f79832f9d045112a76e9da8611cc13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00266.html#a88f79832f9d045112a76e9da8611cc13">GTEST_DISABLE_MSC_WARNINGS_PUSH_</a> (4251) namespace testing</td></tr>
+<tr class="separator:a88f79832f9d045112a76e9da8611cc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a819a3fd7f8b8cf24b6f1b3a26708973d" name="a819a3fd7f8b8cf24b6f1b3a26708973d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819a3fd7f8b8cf24b6f1b3a26708973d">&#9670;&nbsp;</a></span>EXPECT_FATAL_FAILURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXPECT_FATAL_FAILURE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">statement, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">substr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> { \</div>
+<div class="line">    class GTestExpectFatalFailureHelper {\</div>
+<div class="line">     public:\</div>
+<div class="line">      static <span class="keywordtype">void</span> Execute() { statement; }\</div>
+<div class="line">    };\</div>
+<div class="line">    ::testing::TestPartResultArray gtest_failures;\</div>
+<div class="line">    ::testing::internal::SingleFailureChecker gtest_checker(\</div>
+<div class="line">        &amp;gtest_failures, ::testing::TestPartResult::kFatalFailure, (substr));\</div>
+<div class="line">    {\</div>
+<div class="line">      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\</div>
+<div class="line">          ::testing::ScopedFakeTestPartResultReporter:: \</div>
+<div class="line">          INTERCEPT_ONLY_CURRENT_THREAD, &amp;gtest_failures);\</div>
+<div class="line">      GTestExpectFatalFailureHelper::Execute();\</div>
+<div class="line">    }\</div>
+<div class="line">  } <span class="keywordflow">while</span> (<a class="code hl_function" href="a00322.html#a4b24c851ab13569b1b15b3d259b60d2e">::testing::internal::AlwaysFalse</a>())</div>
+<div class="ttc" id="aa00322_html_a4b24c851ab13569b1b15b3d259b60d2e"><div class="ttname"><a href="a00322.html#a4b24c851ab13569b1b15b3d259b60d2e">testing::internal::AlwaysFalse</a></div><div class="ttdeci">bool AlwaysFalse()</div><div class="ttdef"><b>Definition:</b> <a href="a00284_source.html#l00842">gtest-internal.h:842</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad8aac5bc859b2ddc07583636ae4f45cf" name="ad8aac5bc859b2ddc07583636ae4f45cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8aac5bc859b2ddc07583636ae4f45cf">&#9670;&nbsp;</a></span>EXPECT_FATAL_FAILURE_ON_ALL_THREADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXPECT_FATAL_FAILURE_ON_ALL_THREADS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">statement, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">substr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> { \</div>
+<div class="line">    class GTestExpectFatalFailureHelper {\</div>
+<div class="line">     public:\</div>
+<div class="line">      static <span class="keywordtype">void</span> Execute() { statement; }\</div>
+<div class="line">    };\</div>
+<div class="line">    ::testing::TestPartResultArray gtest_failures;\</div>
+<div class="line">    ::testing::internal::SingleFailureChecker gtest_checker(\</div>
+<div class="line">        &amp;gtest_failures, ::testing::TestPartResult::kFatalFailure, (substr));\</div>
+<div class="line">    {\</div>
+<div class="line">      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\</div>
+<div class="line">          ::testing::ScopedFakeTestPartResultReporter:: \</div>
+<div class="line">          INTERCEPT_ALL_THREADS, &amp;gtest_failures);\</div>
+<div class="line">      GTestExpectFatalFailureHelper::Execute();\</div>
+<div class="line">    }\</div>
+<div class="line">  } <span class="keywordflow">while</span> (<a class="code hl_function" href="a00322.html#a4b24c851ab13569b1b15b3d259b60d2e">::testing::internal::AlwaysFalse</a>())</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8376fd6821bd88fd806697355e79e138" name="a8376fd6821bd88fd806697355e79e138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8376fd6821bd88fd806697355e79e138">&#9670;&nbsp;</a></span>EXPECT_NONFATAL_FAILURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXPECT_NONFATAL_FAILURE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">statement, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">substr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> {\</div>
+<div class="line">    ::testing::TestPartResultArray gtest_failures;\</div>
+<div class="line">    ::testing::internal::SingleFailureChecker gtest_checker(\</div>
+<div class="line">        &amp;gtest_failures, ::testing::TestPartResult::kNonFatalFailure, \</div>
+<div class="line">        (substr));\</div>
+<div class="line">    {\</div>
+<div class="line">      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\</div>
+<div class="line">          ::testing::ScopedFakeTestPartResultReporter:: \</div>
+<div class="line">          INTERCEPT_ONLY_CURRENT_THREAD, &amp;gtest_failures);\</div>
+<div class="line">      if (<a class="code hl_function" href="a00322.html#a4d46f09c3bfe68700b7f728d2cc3782f">::testing::internal::AlwaysTrue</a>()) { statement; }\</div>
+<div class="line">    }\</div>
+<div class="line">  } <span class="keywordflow">while</span> (<a class="code hl_function" href="a00322.html#a4b24c851ab13569b1b15b3d259b60d2e">::testing::internal::AlwaysFalse</a>())</div>
+<div class="ttc" id="aa00322_html_a4d46f09c3bfe68700b7f728d2cc3782f"><div class="ttname"><a href="a00322.html#a4d46f09c3bfe68700b7f728d2cc3782f">testing::internal::AlwaysTrue</a></div><div class="ttdeci">GTEST_API_ bool AlwaysTrue()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f4cf1f150fe9facfc4cbf0bae646ee9" name="a9f4cf1f150fe9facfc4cbf0bae646ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4cf1f150fe9facfc4cbf0bae646ee9">&#9670;&nbsp;</a></span>EXPECT_NONFATAL_FAILURE_ON_ALL_THREADS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXPECT_NONFATAL_FAILURE_ON_ALL_THREADS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">statement, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">substr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> {\</div>
+<div class="line">    ::testing::TestPartResultArray gtest_failures;\</div>
+<div class="line">    ::testing::internal::SingleFailureChecker gtest_checker(\</div>
+<div class="line">        &amp;gtest_failures, ::testing::TestPartResult::kNonFatalFailure, \</div>
+<div class="line">        (substr));\</div>
+<div class="line">    {\</div>
+<div class="line">      ::testing::ScopedFakeTestPartResultReporter gtest_reporter(\</div>
+<div class="line">          ::testing::ScopedFakeTestPartResultReporter::INTERCEPT_ALL_THREADS, \</div>
+<div class="line">          &amp;gtest_failures);\</div>
+<div class="line">      if (<a class="code hl_function" href="a00322.html#a4d46f09c3bfe68700b7f728d2cc3782f">::testing::internal::AlwaysTrue</a>()) { statement; }\</div>
+<div class="line">    }\</div>
+<div class="line">  } <span class="keywordflow">while</span> (<a class="code hl_function" href="a00322.html#a4b24c851ab13569b1b15b3d259b60d2e">::testing::internal::AlwaysFalse</a>())</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a88f79832f9d045112a76e9da8611cc13" name="a88f79832f9d045112a76e9da8611cc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f79832f9d045112a76e9da8611cc13">&#9670;&nbsp;</a></span>GTEST_DISABLE_MSC_WARNINGS_PUSH_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GTEST_DISABLE_MSC_WARNINGS_PUSH_ </td>
+          <td>(</td>
+          <td class="paramtype">4251&#160;</td>
+          <td class="paramname"><em>GMOCK_MAYBE_5046_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00266_source.html#l00039">39</a> of file <a class="el" href="a00266_source.html">gtest-spi.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                  {</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span><span class="comment">// This helper class can be used to mock out Google Test failure reporting</span></div>
+<div class="line"><span class="lineno">   45</span><span class="comment">// so that we can test Google Test or code that builds on Google Test.</span></div>
+<div class="line"><span class="lineno">   46</span><span class="comment">//</span></div>
+<div class="line"><span class="lineno">   47</span><span class="comment">// An object of this class appends a TestPartResult object to the</span></div>
+<div class="line"><span class="lineno">   48</span><span class="comment">// TestPartResultArray object given in the constructor whenever a Google Test</span></div>
+<div class="line"><span class="lineno">   49</span><span class="comment">// failure is reported. It can either intercept only failures that are</span></div>
+<div class="line"><span class="lineno">   50</span><span class="comment">// generated in the same thread that created this object or it can intercept</span></div>
+<div class="line"><span class="lineno">   51</span><span class="comment">// all generated failures. The scope of this mock object can be controlled with</span></div>
+<div class="line"><span class="lineno">   52</span><span class="comment">// the second argument to the two arguments constructor.</span></div>
+<div class="line"><span class="lineno">   53</span><span class="keyword">class </span><a class="code hl_define" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> ScopedFakeTestPartResultReporter</div>
+<div class="line"><span class="lineno">   54</span>    : <span class="keyword">public</span> TestPartResultReporterInterface {</div>
+<div class="line"><span class="lineno">   55</span> <span class="keyword">public</span>:</div>
+<div class="line"><span class="lineno">   56</span>  <span class="comment">// The two possible mocking modes of this object.</span></div>
+<div class="line"><span class="lineno">   57</span>  <span class="keyword">enum</span> InterceptMode {</div>
+<div class="line"><span class="lineno">   58</span>    INTERCEPT_ONLY_CURRENT_THREAD,  <span class="comment">// Intercepts only thread local failures.</span></div>
+<div class="line"><span class="lineno">   59</span>    INTERCEPT_ALL_THREADS           <span class="comment">// Intercepts all failures.</span></div>
+<div class="line"><span class="lineno">   60</span>  };</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  <span class="comment">// The c&#39;tor sets this object as the test part result reporter used</span></div>
+<div class="line"><span class="lineno">   63</span>  <span class="comment">// by Google Test.  The &#39;result&#39; parameter specifies where to report the</span></div>
+<div class="line"><span class="lineno">   64</span>  <span class="comment">// results. This reporter will only catch failures generated in the current</span></div>
+<div class="line"><span class="lineno">   65</span>  <span class="comment">// thread. DEPRECATED</span></div>
+<div class="line"><span class="lineno">   66</span>  <span class="keyword">explicit</span> ScopedFakeTestPartResultReporter(TestPartResultArray* result);</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>  <span class="comment">// Same as above, but you can choose the interception scope of this object.</span></div>
+<div class="line"><span class="lineno">   69</span>  ScopedFakeTestPartResultReporter(InterceptMode intercept_mode,</div>
+<div class="line"><span class="lineno">   70</span>                                   TestPartResultArray* result);</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>  <span class="comment">// The d&#39;tor restores the previous test part result reporter.</span></div>
+<div class="line"><span class="lineno">   73</span>  ~ScopedFakeTestPartResultReporter() <span class="keyword">override</span>;</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>  <span class="comment">// Appends the TestPartResult object to the TestPartResultArray</span></div>
+<div class="line"><span class="lineno">   76</span>  <span class="comment">// received in the constructor.</span></div>
+<div class="line"><span class="lineno">   77</span>  <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   78</span>  <span class="comment">// This method is from the TestPartResultReporterInterface</span></div>
+<div class="line"><span class="lineno">   79</span>  <span class="comment">// interface.</span></div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordtype">void</span> ReportTestPartResult(<span class="keyword">const</span> TestPartResult&amp; result) <span class="keyword">override</span>;</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span> <span class="keyword">private</span>:</div>
+<div class="line"><span class="lineno">   83</span>  <span class="keywordtype">void</span> Init();</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>  <span class="keyword">const</span> InterceptMode intercept_mode_;</div>
+<div class="line"><span class="lineno">   86</span>  TestPartResultReporterInterface* old_reporter_;</div>
+<div class="line"><span class="lineno">   87</span>  TestPartResultArray* <span class="keyword">const</span> result_;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <a class="code hl_define" href="a00293.html#aed8c1888c32b588b0681e88b95031e29">GTEST_DISALLOW_COPY_AND_ASSIGN_</a>(ScopedFakeTestPartResultReporter);</div>
+<div class="line"><span class="lineno">   90</span>};</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span><span class="keyword">namespace </span>internal {</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span><span class="comment">// A helper class for implementing EXPECT_FATAL_FAILURE() and</span></div>
+<div class="line"><span class="lineno">   95</span><span class="comment">// EXPECT_NONFATAL_FAILURE().  Its destructor verifies that the given</span></div>
+<div class="line"><span class="lineno">   96</span><span class="comment">// TestPartResultArray contains exactly one failure that has the given</span></div>
+<div class="line"><span class="lineno">   97</span><span class="comment">// type and contains the given substring.  If that&#39;s not the case, a</span></div>
+<div class="line"><span class="lineno">   98</span><span class="comment">// non-fatal failure will be generated.</span></div>
+<div class="line"><span class="lineno">   99</span><span class="keyword">class </span><a class="code hl_define" href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> SingleFailureChecker {</div>
+<div class="line"><span class="lineno">  100</span> <span class="keyword">public</span>:</div>
+<div class="line"><span class="lineno">  101</span>  <span class="comment">// The constructor remembers the arguments.</span></div>
+<div class="line"><span class="lineno">  102</span>  SingleFailureChecker(<span class="keyword">const</span> TestPartResultArray* results,</div>
+<div class="line"><span class="lineno">  103</span>                       TestPartResult::Type type, <span class="keyword">const</span> std::string&amp; substr);</div>
+<div class="line"><span class="lineno">  104</span>  ~SingleFailureChecker();</div>
+<div class="line"><span class="lineno">  105</span> <span class="keyword">private</span>:</div>
+<div class="line"><span class="lineno">  106</span>  <span class="keyword">const</span> TestPartResultArray* <span class="keyword">const</span> results_;</div>
+<div class="line"><span class="lineno">  107</span>  <span class="keyword">const</span> TestPartResult::Type type_;</div>
+<div class="line"><span class="lineno">  108</span>  <span class="keyword">const</span> std::string substr_;</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>  <a class="code hl_define" href="a00293.html#aed8c1888c32b588b0681e88b95031e29">GTEST_DISALLOW_COPY_AND_ASSIGN_</a>(SingleFailureChecker);</div>
+<div class="line"><span class="lineno">  111</span>};</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>}  <span class="comment">// namespace internal</span></div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>}  <span class="comment">// namespace testing</span></div>
+<div class="ttc" id="aa00293_html_aa73be6f0ba4a7456180a94904ce17790"><div class="ttname"><a href="a00293.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a></div><div class="ttdeci">#define GTEST_API_</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l00789">gtest-port.h:789</a></div></div>
+<div class="ttc" id="aa00293_html_aed8c1888c32b588b0681e88b95031e29"><div class="ttname"><a href="a00293.html#aed8c1888c32b588b0681e88b95031e29">GTEST_DISALLOW_COPY_AND_ASSIGN_</a></div><div class="ttdeci">#define GTEST_DISALLOW_COPY_AND_ASSIGN_(type)</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l00699">gtest-port.h:699</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00293_source.html#l00789">GTEST_API_</a>, and <a class="el" href="a00293_source.html#l00699">GTEST_DISALLOW_COPY_AND_ASSIGN_</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:09 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

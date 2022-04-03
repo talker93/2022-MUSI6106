@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::WithArgsAction&lt; InnerAction, I &gt; Struct Template Reference</title>
+<title>MUSI6106: testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,7 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a00528.html">WithArgsAction</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a00528.html">InvokeMethodAction</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -48,57 +48,59 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a00525.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::WithArgsAction&lt; InnerAction, I &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00206_source.html">gmock-actions.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00218_source.html">gmock-actions.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::WithArgsAction&lt; InnerAction, I &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00526.png" border="0" usemap="#atesting_1_1internal_1_1WithArgsAction_3_01InnerAction_00_01I_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1WithArgsAction_3_01InnerAction_00_01I_01_4_coll__map" id="atesting_1_1internal_1_1WithArgsAction_3_01InnerAction_00_01I_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,216,97"/>
+<div class="center"><img src="a00526.png" border="0" usemap="#atesting_1_1internal_1_1InvokeMethodAction_3_01Class_00_01MethodPtr_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1InvokeMethodAction_3_01Class_00_01MethodPtr_01_4_coll__map" id="atesting_1_1internal_1_1InvokeMethodAction_3_01Class_00_01MethodPtr_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,155,127"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2c4bbb449ac39c58035fa85c2716ee64"><td class="memTemplParams" colspan="2">template&lt;typename R , typename... Args&gt; </td></tr>
-<tr class="memitem:a2c4bbb449ac39c58035fa85c2716ee64"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00528.html#a2c4bbb449ac39c58035fa85c2716ee64">operator Action&lt; R</a> (Args...)&gt;() const</td></tr>
-<tr class="separator:a2c4bbb449ac39c58035fa85c2716ee64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152a1d71805ff44a9ad9fcd01a506eb8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a152a1d71805ff44a9ad9fcd01a506eb8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00528.html#a152a1d71805ff44a9ad9fcd01a506eb8">operator()</a> (Args &amp;&amp;... args) const -&gt; decltype((<a class="el" href="a00528.html#a385b218f5e83060df70d56bc85699e9c">obj_ptr</a>-&gt; *<a class="el" href="a00528.html#a3101d543f56f7d010fac4d8eaa03acfb">method_ptr</a>)(std::forward&lt; Args &gt;(args)...))</td></tr>
+<tr class="separator:a152a1d71805ff44a9ad9fcd01a506eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af1676990dc34762bb0eab2ff6047cf52"><td class="memItemLeft" align="right" valign="top">InnerAction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00528.html#af1676990dc34762bb0eab2ff6047cf52">action</a></td></tr>
-<tr class="separator:af1676990dc34762bb0eab2ff6047cf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385b218f5e83060df70d56bc85699e9c"><td class="memItemLeft" align="right" valign="top">Class *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00528.html#a385b218f5e83060df70d56bc85699e9c">obj_ptr</a></td></tr>
+<tr class="separator:a385b218f5e83060df70d56bc85699e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3101d543f56f7d010fac4d8eaa03acfb"><td class="memItemLeft" align="right" valign="top">const MethodPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00528.html#a3101d543f56f7d010fac4d8eaa03acfb">method_ptr</a></td></tr>
+<tr class="separator:a3101d543f56f7d010fac4d8eaa03acfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename InnerAction, size_t... I&gt;<br />
-struct testing::internal::WithArgsAction&lt; InnerAction, I &gt;</div>
-<p class="definition">Definition at line <a class="el" href="a00206_source.html#l01013">1013</a> of file <a class="el" href="a00206_source.html">gmock-actions.h</a>.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Class, typename MethodPtr&gt;<br />
+struct testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt;</div>
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00920">920</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2c4bbb449ac39c58035fa85c2716ee64" name="a2c4bbb449ac39c58035fa85c2716ee64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c4bbb449ac39c58035fa85c2716ee64">&#9670;&nbsp;</a></span>operator Action&lt; R()</h2>
+<a id="a152a1d71805ff44a9ad9fcd01a506eb8" name="a152a1d71805ff44a9ad9fcd01a506eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152a1d71805ff44a9ad9fcd01a506eb8">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename InnerAction , size_t... I&gt; </div>
+template&lt;class Class , typename MethodPtr &gt; </div>
 <div class="memtemplate">
-template&lt;typename R , typename... Args&gt; </div>
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00528.html">testing::internal::WithArgsAction</a>&lt; InnerAction, I &gt;::operator <a class="el" href="a00424.html">Action</a>&lt; R </td>
+          <td class="memname">auto <a class="el" href="a00528.html">testing::internal::InvokeMethodAction</a>&lt; Class, MethodPtr &gt;::operator() </td>
           <td>(</td>
-          <td class="paramtype">Args...&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td> const -&gt; decltype((<a class="el" href="a00528.html#a385b218f5e83060df70d56bc85699e9c">obj_ptr</a>-&gt;*<a class="el" href="a00528.html#a3101d543f56f7d010fac4d8eaa03acfb">method_ptr</a>)(std::forward&lt;Args&gt;(args)...)) </td>
         </tr>
       </table>
   </td>
@@ -108,66 +110,65 @@ template&lt;typename R , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00206_source.html#l01019">1019</a> of file <a class="el" href="a00206_source.html">gmock-actions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1019</span>                                      {  <span class="comment">// NOLINT</span></div>
-<div class="line"><span class="lineno"> 1020</span>    <span class="keyword">using</span> TupleType = std::tuple&lt;Args...&gt;;</div>
-<div class="line"><span class="lineno"> 1021</span>    Action&lt;R(<span class="keyword">typename</span> std::tuple_element&lt;I, TupleType&gt;::type...)&gt;</div>
-<div class="line"><span class="lineno"> 1022</span>        converted(<a class="code hl_variable" href="a00528.html#af1676990dc34762bb0eab2ff6047cf52">action</a>);</div>
-<div class="line"><span class="lineno"> 1023</span> </div>
-<div class="line"><span class="lineno"> 1024</span>    <span class="keywordflow">return</span> [converted](Args... args) -&gt; R {</div>
-<div class="line"><span class="lineno"> 1025</span>      <span class="keywordflow">return</span> converted.Perform(std::forward_as_tuple(</div>
-<div class="line"><span class="lineno"> 1026</span>        std::get&lt;I&gt;(std::forward_as_tuple(std::forward&lt;Args&gt;(args)...))...));</div>
-<div class="line"><span class="lineno"> 1027</span>    };</div>
-<div class="line"><span class="lineno"> 1028</span>  }</div>
-<div class="ttc" id="aa00528_html_af1676990dc34762bb0eab2ff6047cf52"><div class="ttname"><a href="a00528.html#af1676990dc34762bb0eab2ff6047cf52">testing::internal::WithArgsAction::action</a></div><div class="ttdeci">InnerAction action</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l01014">gmock-actions.h:1014</a></div></div>
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00925">925</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  926</span>                                                                     {</div>
+<div class="line"><span class="lineno">  927</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="a00528.html#a385b218f5e83060df70d56bc85699e9c">obj_ptr</a>-&gt;*<a class="code hl_variable" href="a00528.html#a3101d543f56f7d010fac4d8eaa03acfb">method_ptr</a>)(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  928</span>  }</div>
+<div class="ttc" id="aa00528_html_a3101d543f56f7d010fac4d8eaa03acfb"><div class="ttname"><a href="a00528.html#a3101d543f56f7d010fac4d8eaa03acfb">testing::internal::InvokeMethodAction::method_ptr</a></div><div class="ttdeci">const MethodPtr method_ptr</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00922">gmock-actions.h:922</a></div></div>
+<div class="ttc" id="aa00528_html_a385b218f5e83060df70d56bc85699e9c"><div class="ttname"><a href="a00528.html#a385b218f5e83060df70d56bc85699e9c">testing::internal::InvokeMethodAction::obj_ptr</a></div><div class="ttdeci">Class *const obj_ptr</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00921">gmock-actions.h:921</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00206_source.html#l01014">testing::internal::WithArgsAction&lt; InnerAction, I &gt;::action</a>, and <a class="el" href="a00206_source.html#l00492">testing::Action&lt; F &gt;::Perform()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00528_a2c4bbb449ac39c58035fa85c2716ee64_cgraph.png" border="0" usemap="#aa00528_a2c4bbb449ac39c58035fa85c2716ee64_cgraph" alt=""/></div>
-<map name="aa00528_a2c4bbb449ac39c58035fa85c2716ee64_cgraph" id="aa00528_a2c4bbb449ac39c58035fa85c2716ee64_cgraph">
-<area shape="rect" title=" " alt="" coords="5,63,171,119"/>
-<area shape="rect" href="a00424.html#a5489a68def1d82eb61df819eae52dc8f" title=" " alt="" coords="219,78,375,105"/>
-<area shape="rect" href="a00310.html#a4aeac7ea6170d7347ff9212026e115e8" title=" " alt="" coords="455,5,569,47"/>
-<area shape="rect" href="a00310.html#aa67e1e9d28122eedffbb7b6636824f2d" title=" " alt="" coords="455,71,569,112"/>
-<area shape="rect" href="a00424.html#a4468ca2ea5e9f7363271145992d09dba" title=" " alt="" coords="423,137,601,163"/>
-<area shape="rect" href="a00310.html#a6d3a67138bf4d8de81606b37127509df" title=" " alt="" coords="649,5,764,47"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="a00218_source.html#l00922">testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt;::method_ptr</a>, and <a class="el" href="a00218_source.html#l00921">testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt;::obj_ptr</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af1676990dc34762bb0eab2ff6047cf52" name="af1676990dc34762bb0eab2ff6047cf52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1676990dc34762bb0eab2ff6047cf52">&#9670;&nbsp;</a></span>action</h2>
+<a id="a3101d543f56f7d010fac4d8eaa03acfb" name="a3101d543f56f7d010fac4d8eaa03acfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3101d543f56f7d010fac4d8eaa03acfb">&#9670;&nbsp;</a></span>method_ptr</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename InnerAction , size_t... I&gt; </div>
+template&lt;class Class , typename MethodPtr &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">InnerAction <a class="el" href="a00528.html">testing::internal::WithArgsAction</a>&lt; InnerAction, I &gt;::action</td>
+          <td class="memname">const MethodPtr <a class="el" href="a00528.html">testing::internal::InvokeMethodAction</a>&lt; Class, MethodPtr &gt;::method_ptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00206_source.html#l01014">1014</a> of file <a class="el" href="a00206_source.html">gmock-actions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00922">922</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00206_source.html#l01019">testing::internal::WithArgsAction&lt; InnerAction, I &gt;::operator Action&lt; R()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00218_source.html#l00925">testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt;::operator()()</a>.</p>
+
+</div>
+</div>
+<a id="a385b218f5e83060df70d56bc85699e9c" name="a385b218f5e83060df70d56bc85699e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385b218f5e83060df70d56bc85699e9c">&#9670;&nbsp;</a></span>obj_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Class , typename MethodPtr &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Class* const <a class="el" href="a00528.html">testing::internal::InvokeMethodAction</a>&lt; Class, MethodPtr &gt;::obj_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00921">921</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00218_source.html#l00925">testing::internal::InvokeMethodAction&lt; Class, MethodPtr &gt;::operator()()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00206_source.html">gmock-actions.h</a></li>
+<li><a class="el" href="a00218_source.html">gmock-actions.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:11 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

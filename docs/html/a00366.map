@@ -1,3 +1,5 @@
-<map id="CVector" name="CVector">
-<area shape="rect" id="node1" title="class with static functions for buffer operations with type T" alt="" coords="5,5,167,141"/>
+<map id="CLfo" name="CLfo">
+<area shape="rect" id="node1" title=" " alt="" coords="5,755,157,979"/>
+<area shape="rect" id="node2" href="$a00372.html" title=" " alt="" coords="13,380,150,692"/>
+<area shape="rect" id="node3" href="$a00372.html" title="implement a circular buffer of type T" alt="" coords="21,5,142,317"/>
 </map>

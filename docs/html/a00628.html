@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::FailureReporterInterface Class Reference</title>
+<title>MUSI6106: testing::internal::NiceMockImpl&lt; Base &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,85 +40,66 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a00628.html">FailureReporterInterface</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a00628.html">NiceMockImpl</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00625.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::FailureReporterInterface Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">testing::internal::NiceMockImpl&lt; Base &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00203_source.html">gmock-internal-utils.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00197_source.html">gmock-nice-strict.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::FailureReporterInterface:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for testing::internal::NiceMockImpl&lt; Base &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00626.png" border="0" usemap="#atesting_1_1internal_1_1FailureReporterInterface_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1FailureReporterInterface_coll__map" id="atesting_1_1internal_1_1FailureReporterInterface_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,192,112"/>
+<div class="center"><img src="a00627.png" border="0" usemap="#atesting_1_1internal_1_1NiceMockImpl_3_01Base_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="atesting_1_1internal_1_1NiceMockImpl_3_01Base_01_4_inherit__map" id="atesting_1_1internal_1_1NiceMockImpl_3_01Base_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="23,5,181,112"/>
+<area shape="rect" href="a00628.html" title=" " alt="" coords="5,175,199,281"/>
+<area shape="rect" href="a00616.html" title=" " alt="" coords="6,331,198,481"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::NiceMockImpl&lt; Base &gt;:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00626.png" border="0" usemap="#atesting_1_1internal_1_1NiceMockImpl_3_01Base_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1NiceMockImpl_3_01Base_01_4_coll__map" id="atesting_1_1internal_1_1NiceMockImpl_3_01Base_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,164,112"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:aba34db997df0aefbfdc9d199d7d2ab5e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5e">FailureType</a> { <a class="el" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5ea3b78f131b8ed15245f44e48ba297838d">kNonfatal</a>
-, <a class="el" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5ea39560d6222d07508d8ef9f0ea6b030dd">kFatal</a>
- }</td></tr>
-<tr class="separator:aba34db997df0aefbfdc9d199d7d2ab5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a860ca547b5b8c801b9b41b2f7ecb9a8f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00628.html#a860ca547b5b8c801b9b41b2f7ecb9a8f">~FailureReporterInterface</a> ()</td></tr>
-<tr class="separator:a860ca547b5b8c801b9b41b2f7ecb9a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c43ec1946cb4ab51279c96ce1ad941d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00628.html#a0c43ec1946cb4ab51279c96ce1ad941d">ReportFailure</a> (<a class="el" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5e">FailureType</a> type, const char *file, int line, const std::string &amp;message)=0</td></tr>
-<tr class="separator:a0c43ec1946cb4ab51279c96ce1ad941d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07bf73b1762559d45304e4a586064eef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00628.html#a07bf73b1762559d45304e4a586064eef">NiceMockImpl</a> ()</td></tr>
+<tr class="separator:a07bf73b1762559d45304e4a586064eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891d073294758a22996263fff0edc99c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00628.html#a891d073294758a22996263fff0edc99c">~NiceMockImpl</a> ()</td></tr>
+<tr class="separator:a891d073294758a22996263fff0edc99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00202">202</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="aba34db997df0aefbfdc9d199d7d2ab5e" name="aba34db997df0aefbfdc9d199d7d2ab5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba34db997df0aefbfdc9d199d7d2ab5e">&#9670;&nbsp;</a></span>FailureType</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Base&gt;<br />
+class testing::internal::NiceMockImpl&lt; Base &gt;</div>
+<p class="definition">Definition at line <a class="el" href="a00197_source.html#l00108">108</a> of file <a class="el" href="a00197_source.html">gmock-nice-strict.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a07bf73b1762559d45304e4a586064eef" name="a07bf73b1762559d45304e4a586064eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07bf73b1762559d45304e4a586064eef">&#9670;&nbsp;</a></span>NiceMockImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5e">testing::internal::FailureReporterInterface::FailureType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aba34db997df0aefbfdc9d199d7d2ab5ea3b78f131b8ed15245f44e48ba297838d" name="aba34db997df0aefbfdc9d199d7d2ab5ea3b78f131b8ed15245f44e48ba297838d"></a>kNonfatal&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aba34db997df0aefbfdc9d199d7d2ab5ea39560d6222d07508d8ef9f0ea6b030dd" name="aba34db997df0aefbfdc9d199d7d2ab5ea39560d6222d07508d8ef9f0ea6b030dd"></a>kFatal&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00205">205</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>                   {</div>
-<div class="line"><span class="lineno">  206</span>    <a class="code hl_enumvalue" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5ea3b78f131b8ed15245f44e48ba297838d">kNonfatal</a>, <a class="code hl_enumvalue" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5ea39560d6222d07508d8ef9f0ea6b030dd">kFatal</a></div>
-<div class="line"><span class="lineno">  207</span>  };</div>
-<div class="ttc" id="aa00628_html_aba34db997df0aefbfdc9d199d7d2ab5ea39560d6222d07508d8ef9f0ea6b030dd"><div class="ttname"><a href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5ea39560d6222d07508d8ef9f0ea6b030dd">testing::internal::FailureReporterInterface::kFatal</a></div><div class="ttdeci">@ kFatal</div><div class="ttdef"><b>Definition:</b> <a href="a00203_source.html#l00207">gmock-internal-utils.h:206</a></div></div>
-<div class="ttc" id="aa00628_html_aba34db997df0aefbfdc9d199d7d2ab5ea3b78f131b8ed15245f44e48ba297838d"><div class="ttname"><a href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5ea3b78f131b8ed15245f44e48ba297838d">testing::internal::FailureReporterInterface::kNonfatal</a></div><div class="ttdeci">@ kNonfatal</div><div class="ttdef"><b>Definition:</b> <a href="a00203_source.html#l00206">gmock-internal-utils.h:206</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a860ca547b5b8c801b9b41b2f7ecb9a8f" name="a860ca547b5b8c801b9b41b2f7ecb9a8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a860ca547b5b8c801b9b41b2f7ecb9a8f">&#9670;&nbsp;</a></span>~FailureReporterInterface()</h2>
-
-<div class="memitem">
-<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Base &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual testing::internal::FailureReporterInterface::~FailureReporterInterface </td>
+          <td class="memname"><a class="el" href="a00628.html">testing::internal::NiceMockImpl</a>&lt; Base &gt;::NiceMockImpl </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -126,91 +107,53 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00209">209</a> of file <a class="el" href="a00203_source.html">gmock-internal-utils.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="a00197_source.html#l00110">110</a> of file <a class="el" href="a00197_source.html">gmock-nice-strict.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>{ ::testing::Mock::AllowUninterestingCalls(<span class="keyword">this</span>); }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0c43ec1946cb4ab51279c96ce1ad941d" name="a0c43ec1946cb4ab51279c96ce1ad941d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c43ec1946cb4ab51279c96ce1ad941d">&#9670;&nbsp;</a></span>ReportFailure()</h2>
+<a id="a891d073294758a22996263fff0edc99c" name="a891d073294758a22996263fff0edc99c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891d073294758a22996263fff0edc99c">&#9670;&nbsp;</a></span>~NiceMockImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Base &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void testing::internal::FailureReporterInterface::ReportFailure </td>
+          <td class="memname"><a class="el" href="a00628.html">testing::internal::NiceMockImpl</a>&lt; Base &gt;::~<a class="el" href="a00628.html">NiceMockImpl</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00628.html#aba34db997df0aefbfdc9d199d7d2ab5e">FailureType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="a00203_source.html#l00224">testing::internal::Assert()</a>, and <a class="el" href="a00203_source.html#l00237">testing::internal::Expect()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00628_a0c43ec1946cb4ab51279c96ce1ad941d_icgraph.png" border="0" usemap="#aa00628_a0c43ec1946cb4ab51279c96ce1ad941d_icgraph" alt=""/></div>
-<map name="aa00628_a0c43ec1946cb4ab51279c96ce1ad941d_icgraph" id="aa00628_a0c43ec1946cb4ab51279c96ce1ad941d_icgraph">
-<area shape="rect" title=" " alt="" coords="460,175,621,231"/>
-<area shape="rect" href="a00310.html#aa46ca46a5898b2ac75184c62e0355621" title=" " alt="" coords="297,149,412,191"/>
-<area shape="rect" href="a00310.html#ad93379317e10862a77b9fb90aa96e083" title=" " alt="" coords="297,215,412,256"/>
-<area shape="rect" href="a00310.html#a23e71d198ce26b51f84a0b024dc3e054" title=" " alt="" coords="70,5,185,47"/>
-<area shape="rect" href="a00380.html#a8c8e929666f61272961eea21a60de4ad" title=" " alt="" coords="43,70,212,126"/>
-<area shape="rect" href="a00191.html#a88f79832f9d045112a76e9da8611cc13" title=" " alt="" coords="5,215,249,256"/>
-<area shape="rect" href="a00310.html#a3316c24e8a79f5def3e85d763ae50854" title=" " alt="" coords="70,149,185,191"/>
-<area shape="rect" href="a00310.html#a0dfe8a755bd02aa5ea162764b61a9d97" title=" " alt="" coords="70,280,185,321"/>
-</map>
-</div>
-
+<p class="definition">Definition at line <a class="el" href="a00197_source.html#l00112">112</a> of file <a class="el" href="a00197_source.html">gmock-nice-strict.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>{ ::testing::Mock::UnregisterCallReaction(<span class="keyword">this</span>); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00203_source.html">gmock-internal-utils.h</a></li>
+<li><a class="el" href="a00197_source.html">gmock-nice-strict.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

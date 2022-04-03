@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::TestResultAccessor Class Reference</title>
+<title>MUSI6106: testing::internal::OsStackTraceGetter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,44 +40,77 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a01308.html">TestResultAccessor</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a01308.html">OsStackTraceGetter</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="a01305.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::TestResultAccessor Class Reference</div></div>
+  <div class="headertitle"><div class="title">testing::internal::OsStackTraceGetter Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00233_source.html">gtest-internal-inl.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00245_source.html">gtest-internal-inl.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::TestResultAccessor:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for testing::internal::OsStackTraceGetter:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01306.png" border="0" usemap="#atesting_1_1internal_1_1TestResultAccessor_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1TestResultAccessor_coll__map" id="atesting_1_1internal_1_1TestResultAccessor_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,171,127"/>
+<div class="center"><img src="a01307.png" border="0" usemap="#atesting_1_1internal_1_1OsStackTraceGetter_inherit__map" alt="Inheritance graph"/></div>
+<map name="atesting_1_1internal_1_1OsStackTraceGetter_inherit__map" id="atesting_1_1internal_1_1OsStackTraceGetter_inherit__map">
+<area shape="rect" title=" " alt="" coords="19,219,211,369"/>
+<area shape="rect" href="a01304.html" title=" " alt="" coords="5,5,224,171"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::OsStackTraceGetter:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a01306.png" border="0" usemap="#atesting_1_1internal_1_1OsStackTraceGetter_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1OsStackTraceGetter_coll__map" id="atesting_1_1internal_1_1OsStackTraceGetter_coll__map">
+<area shape="rect" title=" " alt="" coords="19,219,211,369"/>
+<area shape="rect" href="a01304.html" title=" " alt="" coords="5,5,224,171"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:abcc4b32d1b201eeef92f0ec0ae161cf9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html#abcc4b32d1b201eeef92f0ec0ae161cf9">RecordProperty</a> (<a class="el" href="a00812.html">TestResult</a> *test_result, const std::string &amp;xml_element, const <a class="el" href="a00808.html">TestProperty</a> &amp;property)</td></tr>
-<tr class="separator:abcc4b32d1b201eeef92f0ec0ae161cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53c626632bac65d82d88e432072b866b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html#a53c626632bac65d82d88e432072b866b">ClearTestPartResults</a> (<a class="el" href="a00812.html">TestResult</a> *test_result)</td></tr>
-<tr class="separator:a53c626632bac65d82d88e432072b866b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3e3abe2186c23ebc4428cabb7ba6479"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; testing::TestPartResult &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html#ab3e3abe2186c23ebc4428cabb7ba6479">test_part_results</a> (const <a class="el" href="a00812.html">TestResult</a> &amp;test_result)</td></tr>
-<tr class="separator:ab3e3abe2186c23ebc4428cabb7ba6479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa40b3120c0ae4ec640de8b577ab7da17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html#aa40b3120c0ae4ec640de8b577ab7da17">OsStackTraceGetter</a> ()</td></tr>
+<tr class="separator:aa40b3120c0ae4ec640de8b577ab7da17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd831383d555bd50cc9191b0d450854a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html#acd831383d555bd50cc9191b0d450854a">CurrentStackTrace</a> (int max_depth, int skip_count) override</td></tr>
+<tr class="separator:acd831383d555bd50cc9191b0d450854a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b20f2494de8869c3a1df106c477a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html#ac4b20f2494de8869c3a1df106c477a85">UponLeavingGTest</a> () override</td></tr>
+<tr class="separator:ac4b20f2494de8869c3a1df106c477a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a01304"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a01304')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a01304.html">testing::internal::OsStackTraceGetterInterface</a></td></tr>
+<tr class="memitem:afbe9eb0ca8775fbb98ff0720011b6708 inherit pub_methods_a01304"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01304.html#afbe9eb0ca8775fbb98ff0720011b6708">OsStackTraceGetterInterface</a> ()</td></tr>
+<tr class="separator:afbe9eb0ca8775fbb98ff0720011b6708 inherit pub_methods_a01304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193f4a1de4af9b78010c659912df5a15 inherit pub_methods_a01304"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01304.html#a193f4a1de4af9b78010c659912df5a15">~OsStackTraceGetterInterface</a> ()</td></tr>
+<tr class="separator:a193f4a1de4af9b78010c659912df5a15 inherit pub_methods_a01304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c41724e4e47647a7fe2ace8e70c0ec7 inherit pub_methods_a01304"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01304.html#a0c41724e4e47647a7fe2ace8e70c0ec7">CurrentStackTrace</a> (int max_depth, int skip_count)=0</td></tr>
+<tr class="separator:a0c41724e4e47647a7fe2ace8e70c0ec7 inherit pub_methods_a01304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a791bd120428b5a53d5eeba1b27296a39 inherit pub_methods_a01304"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01304.html#a791bd120428b5a53d5eeba1b27296a39">UponLeavingGTest</a> ()=0</td></tr>
+<tr class="separator:a791bd120428b5a53d5eeba1b27296a39 inherit pub_methods_a01304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a51caf2b97d8ef86e5e279387bbab1278"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html#a51caf2b97d8ef86e5e279387bbab1278">GTEST_DISALLOW_COPY_AND_ASSIGN_</a> (<a class="el" href="a01308.html">OsStackTraceGetter</a>)</td></tr>
+<tr class="separator:a51caf2b97d8ef86e5e279387bbab1278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_a01304"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_a01304')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="a01304.html">testing::internal::OsStackTraceGetterInterface</a></td></tr>
+<tr class="memitem:a685bc0c5df3fe58bc49444319a67ead2 inherit pub_static_attribs_a01304"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01304.html#a685bc0c5df3fe58bc49444319a67ead2">kElidedFramesMarker</a></td></tr>
+<tr class="separator:a685bc0c5df3fe58bc49444319a67ead2 inherit pub_static_attribs_a01304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00233_source.html#l01028">1028</a> of file <a class="el" href="a00233_source.html">gtest-internal-inl.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a53c626632bac65d82d88e432072b866b" name="a53c626632bac65d82d88e432072b866b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53c626632bac65d82d88e432072b866b">&#9670;&nbsp;</a></span>ClearTestPartResults()</h2>
+<p class="definition">Definition at line <a class="el" href="a00245_source.html#l00431">431</a> of file <a class="el" href="a00245_source.html">gtest-internal-inl.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa40b3120c0ae4ec640de8b577ab7da17" name="aa40b3120c0ae4ec640de8b577ab7da17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa40b3120c0ae4ec640de8b577ab7da17">&#9670;&nbsp;</a></span>OsStackTraceGetter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -86,42 +119,27 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void testing::internal::TestResultAccessor::ClearTestPartResults </td>
+          <td class="memname">testing::internal::OsStackTraceGetter::OsStackTraceGetter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00812.html">TestResult</a> *&#160;</td>
-          <td class="paramname"><em>test_result</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00233_source.html#l01036">1036</a> of file <a class="el" href="a00233_source.html">gtest-internal-inl.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1036</span>                                                            {</div>
-<div class="line"><span class="lineno"> 1037</span>    test_result-&gt;ClearTestPartResults();</div>
-<div class="line"><span class="lineno"> 1038</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="a00245_source.html#l00433">433</a> of file <a class="el" href="a00245_source.html">gtest-internal-inl.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  433</span>{}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00812.html#aa11ed718e0a76a39e6380e5ddce7cae2">testing::TestResult::ClearTestPartResults()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01308_a53c626632bac65d82d88e432072b866b_cgraph.png" border="0" usemap="#aa01308_a53c626632bac65d82d88e432072b866b_cgraph" alt=""/></div>
-<map name="aa01308_a53c626632bac65d82d88e432072b866b_cgraph" id="aa01308_a53c626632bac65d82d88e432072b866b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,152,61"/>
-<area shape="rect" href="a00812.html#aa11ed718e0a76a39e6380e5ddce7cae2" title=" " alt="" coords="200,13,352,54"/>
-</map>
-</div>
-
 </div>
 </div>
-<a id="abcc4b32d1b201eeef92f0ec0ae161cf9" name="abcc4b32d1b201eeef92f0ec0ae161cf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcc4b32d1b201eeef92f0ec0ae161cf9">&#9670;&nbsp;</a></span>RecordProperty()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acd831383d555bd50cc9191b0d450854a" name="acd831383d555bd50cc9191b0d450854a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd831383d555bd50cc9191b0d450854a">&#9670;&nbsp;</a></span>CurrentStackTrace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,22 +148,16 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void testing::internal::TestResultAccessor::RecordProperty </td>
+          <td class="memname">std::string testing::internal::OsStackTraceGetter::CurrentStackTrace </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00812.html">TestResult</a> *&#160;</td>
-          <td class="paramname"><em>test_result</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_depth</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>xml_element</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00808.html">TestProperty</a> &amp;&#160;</td>
-          <td class="paramname"><em>property</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_count</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,33 +167,17 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00233_source.html#l01030">1030</a> of file <a class="el" href="a00233_source.html">gtest-internal-inl.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1032</span>                                                           {</div>
-<div class="line"><span class="lineno"> 1033</span>    test_result-&gt;RecordProperty(xml_element, property);</div>
-<div class="line"><span class="lineno"> 1034</span>  }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00812.html#ac253b0fd7ea70f457e9517e415eac32d">testing::TestResult::RecordProperty()</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01308_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph.png" border="0" usemap="#aa01308_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph" alt=""/></div>
-<map name="aa01308_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph" id="aa01308_abcc4b32d1b201eeef92f0ec0ae161cf9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,152,61"/>
-<area shape="rect" href="a00812.html#ac253b0fd7ea70f457e9517e415eac32d" title=" " alt="" coords="200,13,331,54"/>
-</map>
-</div>
+<p>Implements <a class="el" href="a01304.html#a0c41724e4e47647a7fe2ace8e70c0ec7">testing::internal::OsStackTraceGetterInterface</a>.</p>
 
 </div>
 </div>
-<a id="ab3e3abe2186c23ebc4428cabb7ba6479" name="ab3e3abe2186c23ebc4428cabb7ba6479"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3e3abe2186c23ebc4428cabb7ba6479">&#9670;&nbsp;</a></span>test_part_results()</h2>
+<a id="a51caf2b97d8ef86e5e279387bbab1278" name="a51caf2b97d8ef86e5e279387bbab1278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51caf2b97d8ef86e5e279387bbab1278">&#9670;&nbsp;</a></span>GTEST_DISALLOW_COPY_AND_ASSIGN_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,47 +186,56 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static const std::vector&lt; testing::TestPartResult &gt; &amp; testing::internal::TestResultAccessor::test_part_results </td>
+          <td class="memname">testing::internal::OsStackTraceGetter::GTEST_DISALLOW_COPY_AND_ASSIGN_ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00812.html">TestResult</a> &amp;&#160;</td>
-          <td class="paramname"><em>test_result</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a01308.html">OsStackTraceGetter</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00233_source.html#l01040">1040</a> of file <a class="el" href="a00233_source.html">gtest-internal-inl.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1041</span>                                     {</div>
-<div class="line"><span class="lineno"> 1042</span>    <span class="keywordflow">return</span> test_result.test_part_results();</div>
-<div class="line"><span class="lineno"> 1043</span>  }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00248_source.html#l00632">testing::TestResult::test_part_results()</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01308_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph.png" border="0" usemap="#aa01308_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph" alt=""/></div>
-<map name="aa01308_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph" id="aa01308_ab3e3abe2186c23ebc4428cabb7ba6479_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,152,61"/>
-<area shape="rect" href="a00812.html#a07c4d0171e0a70c4506c09f01e14ba29" title=" " alt="" coords="200,13,331,54"/>
-</map>
 </div>
+<a id="ac4b20f2494de8869c3a1df106c477a85" name="ac4b20f2494de8869c3a1df106c477a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b20f2494de8869c3a1df106c477a85">&#9670;&nbsp;</a></span>UponLeavingGTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::internal::OsStackTraceGetter::UponLeavingGTest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="a01304.html#a791bd120428b5a53d5eeba1b27296a39">testing::internal::OsStackTraceGetterInterface</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00233_source.html">gtest-internal-inl.h</a></li>
+<li><a class="el" href="a00245_source.html">gtest-internal-inl.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:11 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

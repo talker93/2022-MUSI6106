@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::InvokeArgumentAction&lt; index, Params &gt; Struct Template Reference</title>
+<title>MUSI6106: testing::internal::ActionImpl&lt; F, Impl &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,136 +40,34 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a00592.html">InvokeArgumentAction</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00322.html">internal</a></li><li class="navelem"><a class="el" href="a00592.html">ActionImpl</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a00589.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::InvokeArgumentAction&lt; index, Params &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">testing::internal::ActionImpl&lt; F, Impl &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="a00209_source.html">gmock-more-actions.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::InvokeArgumentAction&lt; index, Params &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::ActionImpl&lt; F, Impl &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00590.png" border="0" usemap="#atesting_1_1internal_1_1InvokeArgumentAction_3_01index_00_01Params_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1InvokeArgumentAction_3_01index_00_01Params_01_4_coll__map" id="atesting_1_1internal_1_1InvokeArgumentAction_3_01index_00_01Params_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="28,713,183,820"/>
-<area shape="rect" href="a01028.html" title=" " alt="" coords="29,544,181,651"/>
-<area shape="rect" href="a01040.html" title=" " alt="" coords="5,204,195,325"/>
-<area shape="rect" href="a01028.html" title=" " alt="" coords="121,375,236,481"/>
-<area shape="rect" href="a01040.html" title=" " alt="" coords="17,5,183,112"/>
+<div class="center"><img src="a00590.png" border="0" usemap="#atesting_1_1internal_1_1ActionImpl_3_01F_00_01Impl_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1internal_1_1ActionImpl_3_01F_00_01Impl_01_4_coll__map" id="atesting_1_1internal_1_1ActionImpl_3_01F_00_01Impl_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,152,97"/>
 </map>
 </div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7650af9e9588be25a899dcb56dd344c"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ab7650af9e9588be25a899dcb56dd344c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00592.html#ab7650af9e9588be25a899dcb56dd344c">operator()</a> (Args &amp;&amp;... args) const -&gt; decltype(<a class="el" href="a00310.html#a4c6f0469015303fe29a4f08ba036e6d6">internal::InvokeArgument</a>(std::get&lt; index &gt;(std::forward_as_tuple(std::forward&lt; Args &gt;(args)...)), std::declval&lt; const Params &amp; &gt;()...))</td></tr>
-<tr class="separator:ab7650af9e9588be25a899dcb56dd344c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a7f5d847630b6bfc6474da4d174b30bd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01028.html">internal::FlatTuple</a>&lt; Params... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00592.html#a7f5d847630b6bfc6474da4d174b30bd3">params</a></td></tr>
-<tr class="separator:a7f5d847630b6bfc6474da4d174b30bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;std::size_t index, typename... Params&gt;<br />
-struct testing::internal::InvokeArgumentAction&lt; index, Params &gt;</div>
-<p class="definition">Definition at line <a class="el" href="a00209_source.html#l00512">512</a> of file <a class="el" href="a00209_source.html">gmock-more-actions.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab7650af9e9588be25a899dcb56dd344c" name="ab7650af9e9588be25a899dcb56dd344c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7650af9e9588be25a899dcb56dd344c">&#9670;&nbsp;</a></span>operator()()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::size_t index, typename... Params&gt; </div>
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="a00592.html">testing::internal::InvokeArgumentAction</a>&lt; index, Params &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
-          <td> const -&gt; decltype(<a class="el" href="a00310.html#a4c6f0469015303fe29a4f08ba036e6d6">internal::InvokeArgument</a>(
-      std::get&lt;index&gt;(std::forward_as_tuple(std::forward&lt;Args&gt;(args)...)),
-      std::declval&lt;const Params&amp;&gt;()...)) </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00209_source.html#l00514">514</a> of file <a class="el" href="a00209_source.html">gmock-more-actions.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  516</span>                                       {</div>
-<div class="line"><span class="lineno">  517</span>    internal::FlatTuple&lt;Args&amp;&amp;...&gt; args_tuple(FlatTupleConstructTag{},</div>
-<div class="line"><span class="lineno">  518</span>                                              std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><span class="lineno">  519</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00592.html#a7f5d847630b6bfc6474da4d174b30bd3">params</a>.Apply([&amp;](<span class="keyword">const</span> Params&amp;... unpacked_params) {</div>
-<div class="line"><span class="lineno">  520</span>      <span class="keyword">auto</span>&amp;&amp; callable = args_tuple.template Get&lt;index&gt;();</div>
-<div class="line"><span class="lineno">  521</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="a00310.html#a4c6f0469015303fe29a4f08ba036e6d6">internal::InvokeArgument</a>(</div>
-<div class="line"><span class="lineno">  522</span>          std::forward&lt;<span class="keyword">decltype</span>(callable)&gt;(callable), unpacked_params...);</div>
-<div class="line"><span class="lineno">  523</span>    });</div>
-<div class="line"><span class="lineno">  524</span>  }</div>
-<div class="ttc" id="aa00310_html_a4c6f0469015303fe29a4f08ba036e6d6"><div class="ttname"><a href="a00310.html#a4c6f0469015303fe29a4f08ba036e6d6">testing::internal::InvokeArgument</a></div><div class="ttdeci">auto InvokeArgument(F f, Args... args) -&gt; decltype(f(args...))</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00507">gmock-more-actions.h:507</a></div></div>
-<div class="ttc" id="aa00592_html_a7f5d847630b6bfc6474da4d174b30bd3"><div class="ttname"><a href="a00592.html#a7f5d847630b6bfc6474da4d174b30bd3">testing::internal::InvokeArgumentAction::params</a></div><div class="ttdeci">internal::FlatTuple&lt; Params... &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00526">gmock-more-actions.h:526</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00209_source.html#l00507">testing::internal::InvokeArgument()</a>, and <a class="el" href="a00209_source.html#l00526">testing::internal::InvokeArgumentAction&lt; index, Params &gt;::params</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00592_ab7650af9e9588be25a899dcb56dd344c_cgraph.png" border="0" usemap="#aa00592_ab7650af9e9588be25a899dcb56dd344c_cgraph" alt=""/></div>
-<map name="aa00592_ab7650af9e9588be25a899dcb56dd344c_cgraph" id="aa00592_ab7650af9e9588be25a899dcb56dd344c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,160,61"/>
-<area shape="rect" href="a00310.html#a4c6f0469015303fe29a4f08ba036e6d6" title=" " alt="" coords="208,13,325,54"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a7f5d847630b6bfc6474da4d174b30bd3" name="a7f5d847630b6bfc6474da4d174b30bd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f5d847630b6bfc6474da4d174b30bd3">&#9670;&nbsp;</a></span>params</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::size_t index, typename... Params&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01028.html">internal::FlatTuple</a>&lt;Params...&gt; <a class="el" href="a00592.html">testing::internal::InvokeArgumentAction</a>&lt; index, Params &gt;::params</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00209_source.html#l00526">526</a> of file <a class="el" href="a00209_source.html">gmock-more-actions.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="a00209_source.html#l00514">testing::internal::InvokeArgumentAction&lt; index, Params &gt;::operator()()</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00209_source.html">gmock-more-actions.h</a></li>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename F, typename Impl&gt;<br />
+struct testing::internal::ActionImpl&lt; F, Impl &gt;</div>
+<p class="definition">Definition at line <a class="el" href="a00218_source.html#l01483">1483</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00218_source.html">gmock-actions.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:10 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:30 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: testing::internal::internal_stream_operator_without_lexical_name_lookup::StreamPrinter Struct Reference</title>
+<title>MUSI6106: testing::Message Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,91 +40,474 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00309.html">testing</a></li><li class="navelem"><a class="el" href="a00310.html">internal</a></li><li class="navelem"><a class="el" href="a00312.html">internal_stream_operator_without_lexical_name_lookup</a></li><li class="navelem"><a class="el" href="a00700.html">StreamPrinter</a></li>  </ul>
+<li class="navelem"><a class="el" href="a00321.html">testing</a></li><li class="navelem"><a class="el" href="a00700.html">Message</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="a00697.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">testing::internal::internal_stream_operator_without_lexical_name_lookup::StreamPrinter Struct Reference</div></div>
+  <div class="headertitle"><div class="title">testing::Message Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00284_source.html">gtest-printers.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00263_source.html">gtest-message.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::internal_stream_operator_without_lexical_name_lookup::StreamPrinter:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::Message:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00698.png" border="0" usemap="#atesting_1_1internal_1_1internal__stream__operator__without__lexical__name__lookup_1_1StreamPrinter_coll__map" alt="Collaboration graph"/></div>
-<map name="atesting_1_1internal_1_1internal__stream__operator__without__lexical__name__lookup_1_1StreamPrinter_coll__map" id="atesting_1_1internal_1_1internal__stream__operator__without__lexical__name__lookup_1_1StreamPrinter_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,204,127"/>
+<div class="center"><img src="a00698.png" border="0" usemap="#atesting_1_1Message_coll__map" alt="Collaboration graph"/></div>
+<map name="atesting_1_1Message_coll__map" id="atesting_1_1Message_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,125,229"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aca4bf42998648f056632024e5ec6740f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = typename std::enable_if&lt;                !std::is_member_pointer&lt;T&gt;::value&gt;::type, typename  = decltype(std::declval&lt;std::ostream&amp;&gt;()                                &lt;&lt; std::declval&lt;const T&amp;&gt;())&gt; </td></tr>
-<tr class="memitem:aca4bf42998648f056632024e5ec6740f"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00700.html#aca4bf42998648f056632024e5ec6740f">PrintValue</a> (const T &amp;value, ::std::ostream *os)</td></tr>
-<tr class="separator:aca4bf42998648f056632024e5ec6740f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af5ba7216630df9845f18feb64b1a5383"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#af5ba7216630df9845f18feb64b1a5383">Message</a> ()</td></tr>
+<tr class="separator:af5ba7216630df9845f18feb64b1a5383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac126e24804817a053bebba0920d94a11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#ac126e24804817a053bebba0920d94a11">Message</a> (const <a class="el" href="a00700.html">Message</a> &amp;msg)</td></tr>
+<tr class="separator:ac126e24804817a053bebba0920d94a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de694ca239486809fc99fbbea8ac21d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#a9de694ca239486809fc99fbbea8ac21d">Message</a> (const char *str)</td></tr>
+<tr class="separator:a9de694ca239486809fc99fbbea8ac21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bb8aed013ca36093eb36525a8ffc5d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac3bb8aed013ca36093eb36525a8ffc5d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00700.html">Message</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00700.html#ac3bb8aed013ca36093eb36525a8ffc5d">operator&lt;&lt;</a> (const T &amp;val)</td></tr>
+<tr class="separator:ac3bb8aed013ca36093eb36525a8ffc5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11abae9dc33149b17ec3fd3899086568"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a11abae9dc33149b17ec3fd3899086568"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00700.html">Message</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00700.html#a11abae9dc33149b17ec3fd3899086568">operator&lt;&lt;</a> (T *const &amp;pointer)</td></tr>
+<tr class="separator:a11abae9dc33149b17ec3fd3899086568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af674418e31abc5320bd16420ec02b81d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00700.html">Message</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#af674418e31abc5320bd16420ec02b81d">operator&lt;&lt;</a> (<a class="el" href="a00700.html#a391c6b2afc501b8a94ac363e38d5c4ca">BasicNarrowIoManip</a> val)</td></tr>
+<tr class="separator:af674418e31abc5320bd16420ec02b81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd60257232a5ea7994e58cb96b05ced8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00700.html">Message</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#afd60257232a5ea7994e58cb96b05ced8">operator&lt;&lt;</a> (<a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> b)</td></tr>
+<tr class="separator:afd60257232a5ea7994e58cb96b05ced8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0db9c22535b28bc863bfd0a1fdf7e14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00700.html">Message</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#ac0db9c22535b28bc863bfd0a1fdf7e14">operator&lt;&lt;</a> (const wchar_t *wide_c_str)</td></tr>
+<tr class="separator:ac0db9c22535b28bc863bfd0a1fdf7e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d3a041ac4bb9c929ee746b31a13d6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00700.html">Message</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#ac1d3a041ac4bb9c929ee746b31a13d6a">operator&lt;&lt;</a> (wchar_t *wide_c_str)</td></tr>
+<tr class="separator:ac1d3a041ac4bb9c929ee746b31a13d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cdc4df62bdcc9df37651a1cf527704e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#a2cdc4df62bdcc9df37651a1cf527704e">GetString</a> () const</td></tr>
+<tr class="separator:a2cdc4df62bdcc9df37651a1cf527704e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a391c6b2afc501b8a94ac363e38d5c4ca"><td class="memItemLeft" align="right" valign="top">typedef std::ostream &amp;(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#a391c6b2afc501b8a94ac363e38d5c4ca">BasicNarrowIoManip</a>) (std::ostream &amp;)</td></tr>
+<tr class="separator:a391c6b2afc501b8a94ac363e38d5c4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5a0462b539ffb88f15ea0c67977774af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#a5a0462b539ffb88f15ea0c67977774af">operator=</a> (const <a class="el" href="a00700.html">Message</a> &amp;)</td></tr>
+<tr class="separator:a5a0462b539ffb88f15ea0c67977774af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a22a52314ba644b1eda454a82ac1fabd8"><td class="memItemLeft" align="right" valign="top">const std::unique_ptr&lt; ::std::stringstream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a></td></tr>
+<tr class="separator:a22a52314ba644b1eda454a82ac1fabd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00284_source.html#l00200">200</a> of file <a class="el" href="a00284_source.html">gtest-printers.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aca4bf42998648f056632024e5ec6740f" name="aca4bf42998648f056632024e5ec6740f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca4bf42998648f056632024e5ec6740f">&#9670;&nbsp;</a></span>PrintValue()</h2>
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00089">89</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a391c6b2afc501b8a94ac363e38d5c4ca" name="a391c6b2afc501b8a94ac363e38d5c4ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a391c6b2afc501b8a94ac363e38d5c4ca">&#9670;&nbsp;</a></span>BasicNarrowIoManip</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename  = typename std::enable_if&lt;                !std::is_member_pointer&lt;T&gt;::value&gt;::type, typename  = decltype(std::declval&lt;std::ostream&amp;&gt;()                                &lt;&lt; std::declval&lt;const T&amp;&gt;())&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void testing::internal::internal_stream_operator_without_lexical_name_lookup::StreamPrinter::PrintValue </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">::std::ostream *&#160;</td>
-          <td class="paramname"><em>os</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">typedef std::ostream &amp;(* testing::Message::BasicNarrowIoManip) (std::ostream &amp;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00284_source.html#l00210">210</a> of file <a class="el" href="a00284_source.html">gtest-printers.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                         {</div>
-<div class="line"><span class="lineno">  211</span>    <span class="comment">// Call streaming operator found by ADL, possibly with implicit conversions</span></div>
-<div class="line"><span class="lineno">  212</span>    <span class="comment">// of the arguments.</span></div>
-<div class="line"><span class="lineno">  213</span>    *os &lt;&lt; value;</div>
-<div class="line"><span class="lineno">  214</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00093">93</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af5ba7216630df9845f18feb64b1a5383" name="af5ba7216630df9845f18feb64b1a5383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ba7216630df9845f18feb64b1a5383">&#9670;&nbsp;</a></span>Message() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">testing::Message::Message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac126e24804817a053bebba0920d94a11" name="ac126e24804817a053bebba0920d94a11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac126e24804817a053bebba0920d94a11">&#9670;&nbsp;</a></span>Message() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">testing::Message::Message </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00700.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00100">100</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                              : <a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a>(new ::std::stringstream) {  <span class="comment">// NOLINT</span></div>
+<div class="line"><span class="lineno">  101</span>    *<a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a> &lt;&lt; msg.GetString();</div>
+<div class="line"><span class="lineno">  102</span>  }</div>
+<div class="ttc" id="aa00700_html_a22a52314ba644b1eda454a82ac1fabd8"><div class="ttname"><a href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">testing::Message::ss_</a></div><div class="ttdeci">const std::unique_ptr&lt; ::std::stringstream &gt; ss_</div><div class="ttdef"><b>Definition:</b> <a href="a00263_source.html#l00189">gtest-message.h:189</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="a00700.html#a2cdc4df62bdcc9df37651a1cf527704e">GetString()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00700_ac126e24804817a053bebba0920d94a11_cgraph.png" border="0" usemap="#aa00700_ac126e24804817a053bebba0920d94a11_cgraph" alt=""/></div>
+<map name="aa00700_ac126e24804817a053bebba0920d94a11_cgraph" id="aa00700_ac126e24804817a053bebba0920d94a11_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" href="a00700.html#a2cdc4df62bdcc9df37651a1cf527704e" title=" " alt="" coords="232,5,413,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9de694ca239486809fc99fbbea8ac21d" name="a9de694ca239486809fc99fbbea8ac21d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9de694ca239486809fc99fbbea8ac21d">&#9670;&nbsp;</a></span>Message() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">testing::Message::Message </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00105">105</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                    : <a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a>(new ::std::stringstream) {</div>
+<div class="line"><span class="lineno">  106</span>    *<a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a> &lt;&lt; str;</div>
+<div class="line"><span class="lineno">  107</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00284_source.html">gtest-printers.h</a></li>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2cdc4df62bdcc9df37651a1cf527704e" name="a2cdc4df62bdcc9df37651a1cf527704e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cdc4df62bdcc9df37651a1cf527704e">&#9670;&nbsp;</a></span>GetString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string testing::Message::GetString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="a00260_source.html#l00358">testing::AssertionResult::AppendMessage()</a>, <a class="el" href="a00281_source.html#l00374">testing::internal::DefaultParamName()</a>, <a class="el" href="a00263_source.html#l00100">Message()</a>, <a class="el" href="a00263_source.html#l00197">testing::operator&lt;&lt;()</a>, and <a class="el" href="a00281_source.html#l00541">testing::internal::ParameterizedTestSuiteInfo&lt; TestSuite &gt;::RegisterTests()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00700_a2cdc4df62bdcc9df37651a1cf527704e_icgraph.png" border="0" usemap="#aa00700_a2cdc4df62bdcc9df37651a1cf527704e_icgraph" alt=""/></div>
+<map name="aa00700_a2cdc4df62bdcc9df37651a1cf527704e_icgraph" id="aa00700_a2cdc4df62bdcc9df37651a1cf527704e_icgraph">
+<area shape="rect" title=" " alt="" coords="528,137,709,163"/>
+<area shape="rect" href="a00816.html#a5b55e01f1321d744a594dbe51d46a139" title=" " alt="" coords="309,5,468,47"/>
+<area shape="rect" href="a00322.html#a954ec4a8a932dac7743e77e459ffefdc" title=" " alt="" coords="321,71,457,112"/>
+<area shape="rect" href="a00700.html#ac126e24804817a053bebba0920d94a11" title=" " alt="" coords="299,137,478,163"/>
+<area shape="rect" href="a00321.html#a2d038049296f23fb404311f974788cd3" title=" " alt="" coords="323,187,454,214"/>
+<area shape="rect" href="a01132.html#a8c0af866d3c291a63d3f4581ccd452d1" title=" " alt="" coords="297,238,480,294"/>
+<area shape="rect" href="a00305.html#ae9b7a8d33bcb4bbad774b324eeeb23d6" title=" " alt="" coords="5,180,249,221"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af674418e31abc5320bd16420ec02b81d" name="af674418e31abc5320bd16420ec02b81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af674418e31abc5320bd16420ec02b81d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00700.html">Message</a> &amp; testing::Message::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00700.html#a391c6b2afc501b8a94ac363e38d5c4ca">BasicNarrowIoManip</a>&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00160">160</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>                                               {</div>
+<div class="line"><span class="lineno">  161</span>    *<a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  163</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afd60257232a5ea7994e58cb96b05ced8" name="afd60257232a5ea7994e58cb96b05ced8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd60257232a5ea7994e58cb96b05ced8">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00700.html">Message</a> &amp; testing::Message::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00166">166</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>                               {</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span> &lt;&lt; (b ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"><span class="lineno">  168</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3bb8aed013ca36093eb36525a8ffc5d" name="ac3bb8aed013ca36093eb36525a8ffc5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bb8aed013ca36093eb36525a8ffc5d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00700.html">Message</a> &amp; testing::Message::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00111">111</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                            {</div>
+<div class="line"><span class="lineno">  112</span>    <span class="comment">// Some libraries overload &lt;&lt; for STL containers.  These</span></div>
+<div class="line"><span class="lineno">  113</span>    <span class="comment">// overloads are defined in the global namespace instead of ::std.</span></div>
+<div class="line"><span class="lineno">  114</span>    <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  115</span>    <span class="comment">// C++&#39;s symbol lookup rule (i.e. Koenig lookup) says that these</span></div>
+<div class="line"><span class="lineno">  116</span>    <span class="comment">// overloads are visible in either the std namespace or the global</span></div>
+<div class="line"><span class="lineno">  117</span>    <span class="comment">// namespace, but not other namespaces, including the testing</span></div>
+<div class="line"><span class="lineno">  118</span>    <span class="comment">// namespace which Google Test&#39;s Message class is in.</span></div>
+<div class="line"><span class="lineno">  119</span>    <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  120</span>    <span class="comment">// To allow STL containers (and other types that has a &lt;&lt; operator</span></div>
+<div class="line"><span class="lineno">  121</span>    <span class="comment">// defined in the global namespace) to be used in Google Test</span></div>
+<div class="line"><span class="lineno">  122</span>    <span class="comment">// assertions, testing::Message must access the custom &lt;&lt; operator</span></div>
+<div class="line"><span class="lineno">  123</span>    <span class="comment">// from the global namespace.  With this using declaration,</span></div>
+<div class="line"><span class="lineno">  124</span>    <span class="comment">// overloads of &lt;&lt; defined in the global namespace and those</span></div>
+<div class="line"><span class="lineno">  125</span>    <span class="comment">// visible via Koenig lookup are both exposed in this function.</span></div>
+<div class="line"><span class="lineno">  126</span>    using ::operator &lt;&lt;;</div>
+<div class="line"><span class="lineno">  127</span>    *<a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a> &lt;&lt; val;</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  129</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0db9c22535b28bc863bfd0a1fdf7e14" name="ac0db9c22535b28bc863bfd0a1fdf7e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0db9c22535b28bc863bfd0a1fdf7e14">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00700.html">Message</a> &amp; testing::Message::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>wide_c_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11abae9dc33149b17ec3fd3899086568" name="a11abae9dc33149b17ec3fd3899086568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11abae9dc33149b17ec3fd3899086568">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00700.html">Message</a> &amp; testing::Message::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">T *const &amp;&#160;</td>
+          <td class="paramname"><em>pointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00145">145</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                 {  <span class="comment">// NOLINT</span></div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">if</span> (pointer == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  147</span>      *<a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a> &lt;&lt; <span class="stringliteral">&quot;(null)&quot;</span>;</div>
+<div class="line"><span class="lineno">  148</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  149</span>      *<a class="code hl_variable" href="a00700.html#a22a52314ba644b1eda454a82ac1fabd8">ss_</a> &lt;&lt; pointer;</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  152</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac1d3a041ac4bb9c929ee746b31a13d6a" name="ac1d3a041ac4bb9c929ee746b31a13d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d3a041ac4bb9c929ee746b31a13d6a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00700.html">Message</a> &amp; testing::Message::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>wide_c_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a0462b539ffb88f15ea0c67977774af" name="a5a0462b539ffb88f15ea0c67977774af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0462b539ffb88f15ea0c67977774af">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testing::Message::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00700.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a22a52314ba644b1eda454a82ac1fabd8" name="a22a52314ba644b1eda454a82ac1fabd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a52314ba644b1eda454a82ac1fabd8">&#9670;&nbsp;</a></span>ss_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unique_ptr&lt; ::std::stringstream&gt; testing::Message::ss_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00263_source.html#l00189">189</a> of file <a class="el" href="a00263_source.html">gtest-message.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00263_source.html">gtest-message.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 4 2022 19:31:11 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun Apr 3 2022 20:31:30 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>
