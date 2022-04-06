@@ -1,25 +1,52 @@
-<map id="gtest&#45;port.h" name="gtest&#45;port.h">
-<area shape="rect" id="node1" title=" " alt="" coords="899,5,985,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,87,68,114"/>
-<area shape="rect" id="node3" title=" " alt="" coords="92,87,160,114"/>
-<area shape="rect" id="node4" title=" " alt="" coords="184,87,244,114"/>
-<area shape="rect" id="node5" title=" " alt="" coords="268,87,331,114"/>
-<area shape="rect" id="node6" title=" " alt="" coords="355,87,419,114"/>
-<area shape="rect" id="node7" title=" " alt="" coords="443,87,502,114"/>
-<area shape="rect" id="node8" title=" " alt="" coords="526,87,587,114"/>
-<area shape="rect" id="node9" title=" " alt="" coords="611,87,683,114"/>
-<area shape="rect" id="node10" title=" " alt="" coords="707,87,761,114"/>
-<area shape="rect" id="node11" title=" " alt="" coords="785,87,841,114"/>
-<area shape="rect" id="node12" title=" " alt="" coords="865,87,933,114"/>
-<area shape="rect" id="node13" title=" " alt="" coords="957,87,1012,114"/>
-<area shape="rect" id="node14" title=" " alt="" coords="1037,87,1087,114"/>
-<area shape="rect" id="node15" title=" " alt="" coords="1111,87,1194,114"/>
-<area shape="rect" id="node16" title=" " alt="" coords="1218,87,1277,114"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1301,87,1388,114"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1412,87,1491,114"/>
-<area shape="rect" id="node19" href="$a01790.html" title=" " alt="" coords="1515,80,1659,121"/>
-<area shape="rect" id="node20" href="$a00278.html" title=" " alt="" coords="1683,80,1814,121"/>
-<area shape="rect" id="node21" title=" " alt="" coords="1838,87,1905,114"/>
-<area shape="rect" id="node22" title=" " alt="" coords="1929,87,2000,114"/>
-<area shape="rect" id="node23" title=" " alt="" coords="2024,87,2087,114"/>
+<map id="gmock&#45;more&#45;actions.h" name="gmock&#45;more&#45;actions.h">
+<area shape="rect" id="node1" title=" " alt="" coords="2367,5,2518,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="2358,758,2426,785"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1390,490,1442,517"/>
+<area shape="rect" id="node4" href="$a00311.html" title=" " alt="" coords="2019,87,2179,114"/>
+<area shape="rect" id="node15" href="$a00284.html" title=" " alt="" coords="1966,572,2117,613"/>
+<area shape="rect" id="node50" href="$a00278.html" title=" " alt="" coords="2582,80,2765,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="2035,177,2096,203"/>
+<area shape="rect" id="node6" title=" " alt="" coords="2229,177,2304,203"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1763,490,1842,517"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1814,758,1869,785"/>
+<area shape="rect" id="node9" title=" " alt="" coords="2076,758,2127,785"/>
+<area shape="rect" id="node10" title=" " alt="" coords="303,758,385,785"/>
+<area shape="rect" id="node11" href="$a00290.html" title=" " alt="" coords="1485,169,1635,211"/>
+<area shape="rect" id="node49" href="$a00287.html" title=" " alt="" coords="1781,177,1960,203"/>
+<area shape="rect" id="node12" title=" " alt="" coords="51,758,111,785"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1669,490,1739,517"/>
+<area shape="rect" id="node14" title=" " alt="" coords="220,758,279,785"/>
+<area shape="rect" id="node35" href="$a00191.html" title=" " alt="" coords="945,259,1039,285"/>
+<area shape="rect" id="node16" title=" " alt="" coords="2007,669,2075,695"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1893,758,1955,785"/>
+<area shape="rect" id="node18" title=" " alt="" coords="663,758,724,785"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1980,758,2052,785"/>
+<area shape="rect" id="node20" href="$a00197.html" title=" " alt="" coords="1149,661,1280,703"/>
+<area shape="rect" id="node34" href="$a01760.html" title=" " alt="" coords="2099,661,2253,703"/>
+<area shape="rect" id="node21" title=" " alt="" coords="575,758,638,785"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1558,758,1626,785"/>
+<area shape="rect" id="node23" title=" " alt="" coords="487,758,551,785"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1651,758,1709,785"/>
+<area shape="rect" id="node25" title=" " alt="" coords="409,758,463,785"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1733,758,1789,785"/>
+<area shape="rect" id="node27" title=" " alt="" coords="749,758,835,785"/>
+<area shape="rect" id="node28" title=" " alt="" coords="859,758,938,785"/>
+<area shape="rect" id="node29" href="$a01763.html" title=" " alt="" coords="963,751,1107,792"/>
+<area shape="rect" id="node30" href="$a00203.html" title=" " alt="" coords="1131,751,1261,792"/>
+<area shape="rect" id="node31" title=" " alt="" coords="1285,758,1352,785"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1377,758,1447,785"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1471,758,1534,785"/>
+<area shape="rect" id="node36" title=" " alt="" coords="297,333,362,360"/>
+<area shape="rect" id="node37" href="$a00212.html" title=" " alt="" coords="780,483,911,524"/>
+<area shape="rect" id="node39" href="$a00221.html" title=" " alt="" coords="1139,579,1290,606"/>
+<area shape="rect" id="node40" href="$a00218.html" title=" " alt="" coords="933,572,1064,613"/>
+<area shape="rect" id="node41" href="$a00245.html" title=" " alt="" coords="386,333,542,360"/>
+<area shape="rect" id="node42" href="$a00239.html" title=" " alt="" coords="1464,333,1616,360"/>
+<area shape="rect" id="node43" href="$a00194.html" title=" " alt="" coords="1565,408,1707,435"/>
+<area shape="rect" id="node44" href="$a00242.html" title=" " alt="" coords="1155,408,1315,435"/>
+<area shape="rect" id="node45" href="$a00224.html" title=" " alt="" coords="929,333,1055,360"/>
+<area shape="rect" id="node46" href="$a00233.html" title=" " alt="" coords="473,408,620,435"/>
+<area shape="rect" id="node47" href="$a00227.html" title=" " alt="" coords="820,408,975,435"/>
+<area shape="rect" id="node48" href="$a00230.html" title=" " alt="" coords="1181,333,1339,360"/>
+<area shape="rect" id="node38" title=" " alt="" coords="651,579,707,606"/>
 </map>

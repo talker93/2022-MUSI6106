@@ -50,7 +50,7 @@ $(function() {
 <p>FIR comb filter implementation.  
  <a href="a00352.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00050_source.html">CombFilter.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00056_source.html">CombFilter.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for CCombFilterFir:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -113,7 +113,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >FIR comb filter implementation. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00050_source.html#l00038">38</a> of file <a class="el" href="a00050_source.html">CombFilter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00056_source.html#l00038">38</a> of file <a class="el" href="a00056_source.html">CombFilter.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9bf992eaff9f1c602ea2427b2b32b8a0" name="a9bf992eaff9f1c602ea2427b2b32b8a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bf992eaff9f1c602ea2427b2b32b8a0">&#9670;&nbsp;</a></span>CCombFilterFir()</h2>
@@ -149,9 +149,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00050_source.html#l00041">41</a> of file <a class="el" href="a00050_source.html">CombFilter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00056_source.html#l00041">41</a> of file <a class="el" href="a00056_source.html">CombFilter.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   41</span>:<a class="code hl_function" href="a00348.html#ab49f1327a3d113f46273884d9fb9a583">CCombFilterBase</a>(iMaxDelayInFrames, iNumChannels){};</div>
-<div class="ttc" id="aa00348_html_ab49f1327a3d113f46273884d9fb9a583"><div class="ttname"><a href="a00348.html#ab49f1327a3d113f46273884d9fb9a583">CCombFilterBase::CCombFilterBase</a></div><div class="ttdeci">CCombFilterBase(int iMaxDelayInFrames, int iNumChannels)</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00016">CombFilter.cpp:16</a></div></div>
+<div class="ttc" id="aa00348_html_ab49f1327a3d113f46273884d9fb9a583"><div class="ttname"><a href="a00348.html#ab49f1327a3d113f46273884d9fb9a583">CCombFilterBase::CCombFilterBase</a></div><div class="ttdeci">CCombFilterBase(int iMaxDelayInFrames, int iNumChannels)</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00016">CombFilter.cpp:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -178,7 +178,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00050_source.html#l00042">42</a> of file <a class="el" href="a00050_source.html">CombFilter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00056_source.html#l00042">42</a> of file <a class="el" href="a00056_source.html">CombFilter.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   42</span>{};</div>
 </div><!-- fragment -->
 </div>
@@ -226,27 +226,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="a00348.html#a1678f8ddaa2f34e15b36367b9f2b3be0">CCombFilterBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="a00032_source.html#l00110">110</a> of file <a class="el" href="a00032_source.html">CombFilter.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>{</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_variable" href="a00348.html#a64ee391277e8794da4d465d36f976dd1">m_iNumChannels</a>; c++)</div>
-<div class="line"><span class="lineno">  113</span>    {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iNumberOfFrames; i++)</div>
-<div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="a00348.html#a04666c1cc44b82b56820d0f5ad32082d">m_ppCRingBuffer</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a2bd848181a662312600bc590b9040d2a">putPostInc</a>(ppfInputBuffer[c][i]);</div>
-<div class="line"><span class="lineno">  117</span>            ppfOutputBuffer[c][i] = ppfInputBuffer[c][i] + <a class="code hl_variable" href="a00348.html#a31021db1c697caa6d4611d215a0f4165">m_afParam</a>[<a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a>] * <a class="code hl_variable" href="a00348.html#a04666c1cc44b82b56820d0f5ad32082d">m_ppCRingBuffer</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">getPostInc</a>();</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
-<div class="line"><span class="lineno">  121</span>}</div>
+<p class="definition">Definition at line <a class="el" href="a00014_source.html#l00115">115</a> of file <a class="el" href="a00014_source.html">CombFilter.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_variable" href="a00348.html#a64ee391277e8794da4d465d36f976dd1">m_iNumChannels</a>; c++)</div>
+<div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iNumberOfFrames; i++)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="a00348.html#a04666c1cc44b82b56820d0f5ad32082d">m_ppCRingBuffer</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a2bd848181a662312600bc590b9040d2a">putPostInc</a>(ppfInputBuffer[c][i]);</div>
+<div class="line"><span class="lineno">  122</span>            ppfOutputBuffer[c][i] = ppfInputBuffer[c][i] + <a class="code hl_variable" href="a00348.html#a31021db1c697caa6d4611d215a0f4165">m_afParam</a>[<a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a>] * <a class="code hl_variable" href="a00348.html#a04666c1cc44b82b56820d0f5ad32082d">m_ppCRingBuffer</a>[c]-&gt;<a class="code hl_function" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">getPostInc</a>();</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
+<div class="line"><span class="lineno">  126</span>}</div>
 <div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a></div><div class="ttdeci">@ kNoError</div></div>
-<div class="ttc" id="aa00348_html_a04666c1cc44b82b56820d0f5ad32082d"><div class="ttname"><a href="a00348.html#a04666c1cc44b82b56820d0f5ad32082d">CCombFilterBase::m_ppCRingBuffer</a></div><div class="ttdeci">CRingBuffer&lt; float &gt; ** m_ppCRingBuffer</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00022">CombFilter.h:22</a></div></div>
-<div class="ttc" id="aa00348_html_a31021db1c697caa6d4611d215a0f4165"><div class="ttname"><a href="a00348.html#a31021db1c697caa6d4611d215a0f4165">CCombFilterBase::m_afParam</a></div><div class="ttdeci">float m_afParam[CCombFilterIf::kNumFilterParams]</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00024">CombFilter.h:24</a></div></div>
-<div class="ttc" id="aa00348_html_a64ee391277e8794da4d465d36f976dd1"><div class="ttname"><a href="a00348.html#a64ee391277e8794da4d465d36f976dd1">CCombFilterBase::m_iNumChannels</a></div><div class="ttdeci">int m_iNumChannels</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00027">CombFilter.h:27</a></div></div>
-<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a></div><div class="ttdeci">@ kParamGain</div><div class="ttdoc">gain as factor (usually -1...1)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00035">CombFilterIf.h:35</a></div></div>
-<div class="ttc" id="aa00372_html_a0f25eadaafa6a2e7bfe2f9ef6af1104b"><div class="ttname"><a href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">CRingBuffer::getPostInc</a></div><div class="ttdeci">T getPostInc()</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00083">RingBuffer.h:83</a></div></div>
-<div class="ttc" id="aa00372_html_a2bd848181a662312600bc590b9040d2a"><div class="ttname"><a href="a00372.html#a2bd848181a662312600bc590b9040d2a">CRingBuffer::putPostInc</a></div><div class="ttdeci">void putPostInc(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00037">RingBuffer.h:37</a></div></div>
+<div class="ttc" id="aa00348_html_a04666c1cc44b82b56820d0f5ad32082d"><div class="ttname"><a href="a00348.html#a04666c1cc44b82b56820d0f5ad32082d">CCombFilterBase::m_ppCRingBuffer</a></div><div class="ttdeci">CRingBuffer&lt; float &gt; ** m_ppCRingBuffer</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00022">CombFilter.h:22</a></div></div>
+<div class="ttc" id="aa00348_html_a31021db1c697caa6d4611d215a0f4165"><div class="ttname"><a href="a00348.html#a31021db1c697caa6d4611d215a0f4165">CCombFilterBase::m_afParam</a></div><div class="ttdeci">float m_afParam[CCombFilterIf::kNumFilterParams]</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00024">CombFilter.h:24</a></div></div>
+<div class="ttc" id="aa00348_html_a64ee391277e8794da4d465d36f976dd1"><div class="ttname"><a href="a00348.html#a64ee391277e8794da4d465d36f976dd1">CCombFilterBase::m_iNumChannels</a></div><div class="ttdeci">int m_iNumChannels</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00027">CombFilter.h:27</a></div></div>
+<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a></div><div class="ttdeci">@ kParamGain</div><div class="ttdoc">gain as factor (usually -1...1)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00035">CombFilterIf.h:35</a></div></div>
+<div class="ttc" id="aa00372_html_a0f25eadaafa6a2e7bfe2f9ef6af1104b"><div class="ttname"><a href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b">CRingBuffer::getPostInc</a></div><div class="ttdeci">T getPostInc()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00083">RingBuffer.h:83</a></div></div>
+<div class="ttc" id="aa00372_html_a2bd848181a662312600bc590b9040d2a"><div class="ttname"><a href="a00372.html#a2bd848181a662312600bc590b9040d2a">CRingBuffer::putPostInc</a></div><div class="ttdeci">void putPostInc(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00037">RingBuffer.h:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00062_source.html#l00035">CCombFilterIf::kParamGain</a>, <a class="el" href="a00050_source.html#l00024">CCombFilterBase::m_afParam</a>, <a class="el" href="a00050_source.html#l00027">CCombFilterBase::m_iNumChannels</a>, <a class="el" href="a00050_source.html#l00022">CCombFilterBase::m_ppCRingBuffer</a>, and <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00053_source.html#l00035">CCombFilterIf::kParamGain</a>, <a class="el" href="a00056_source.html#l00024">CCombFilterBase::m_afParam</a>, <a class="el" href="a00056_source.html#l00027">CCombFilterBase::m_iNumChannels</a>, <a class="el" href="a00056_source.html#l00022">CCombFilterBase::m_ppCRingBuffer</a>, and <a class="el" href="a00035_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -266,13 +266,13 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00050_source.html">CombFilter.h</a></li>
-<li><a class="el" href="a00032_source.html">CombFilter.cpp</a></li>
+<li><a class="el" href="a00056_source.html">CombFilter.h</a></li>
+<li><a class="el" href="a00014_source.html">CombFilter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:30 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

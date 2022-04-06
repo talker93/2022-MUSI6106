@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: CombFilter.cpp File Reference</title>
+<title>MUSI6106: Vector.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,47 +40,61 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd4489a5e8a0b10919d42ac6008fb276.html">CombFilter</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">CombFilter.cpp File Reference</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle"><div class="title">Vector.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;limits&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00317_source.html">MUSI6106Config.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00077_source.html">ErrorDef.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00041_source.html">Util.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00047_source.html">RingBuffer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00062_source.html">CombFilterIf.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00050_source.html">CombFilter.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for CombFilter.cpp:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for Vector.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00033.png" border="0" usemap="#aCombFilter_8cpp" alt=""/></div>
-<map name="aCombFilter_8cpp" id="aCombFilter_8cpp">
-<area shape="rect" title=" " alt="" coords="289,5,399,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,59,181"/>
-<area shape="rect" href="a00317.html" title=" " alt="" coords="279,80,409,107"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="497,155,575,181"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="86,80,138,107"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="162,80,254,107"/>
-<area shape="rect" href="a00062.html" title=" " alt="" coords="485,80,587,107"/>
-<area shape="rect" href="a00050.html" title=" " alt="" coords="611,80,706,107"/>
-<area shape="rect" title=" " alt="" coords="83,155,149,181"/>
-<area shape="rect" title=" " alt="" coords="173,155,235,181"/>
-<area shape="rect" title=" " alt="" coords="259,155,333,181"/>
-<area shape="rect" title=" " alt="" coords="357,155,416,181"/>
+<div class="center"><img src="a00033.png" border="0" usemap="#aVector_8h" alt=""/></div>
+<map name="aVector_8h" id="aVector_8h">
+<area shape="rect" title=" " alt="" coords="131,5,201,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,71,107"/>
+<area shape="rect" title=" " alt="" coords="95,80,157,107"/>
+<area shape="rect" title=" " alt="" coords="181,80,234,107"/>
+<area shape="rect" title=" " alt="" coords="258,80,317,107"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00034.png" border="0" usemap="#aVector_8hdep" alt=""/></div>
+<map name="aVector_8hdep" id="aVector_8hdep">
+<area shape="rect" title=" " alt="" coords="72,5,143,32"/>
+<area shape="rect" href="a00020.html" title=" " alt="" coords="5,80,105,107"/>
+<area shape="rect" href="a00026.html" title=" " alt="" coords="129,80,192,107"/>
 </map>
 </div>
 </div>
 <p><a href="a00032_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00384.html">CVector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class with static functions for buffer operations with type T  <a href="a00384.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00388.html">CVectorFloat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class with static functions for buffer operations with type float  <a href="a00388.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

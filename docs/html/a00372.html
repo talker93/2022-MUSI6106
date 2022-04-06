@@ -52,7 +52,7 @@ $(function() {
 <p>implement a circular buffer of type T  
  <a href="a00372.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00047_source.html">RingBuffer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00035_source.html">RingBuffer.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for CRingBuffer&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -140,7 +140,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
 class CRingBuffer&lt; T &gt;</div><p >implement a circular buffer of type T </p>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00012">12</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00012">12</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0e007e130e9190892274dde988e40a59" name="a0e007e130e9190892274dde988e40a59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e007e130e9190892274dde988e40a59">&#9670;&nbsp;</a></span>CRingBuffer() <span class="overload">[1/3]</span></h2>
@@ -168,7 +168,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00015">15</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00015">15</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   15</span>                                                     :</div>
 <div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>(iBufferLengthInSamples),</div>
 <div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>(0),</div>
@@ -180,13 +180,13 @@ template&lt;class T &gt; </div>
 <div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a> = <span class="keyword">new</span> T[<a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>];</div>
 <div class="line"><span class="lineno">   24</span>        <a class="code hl_function" href="a00372.html#a716fb4acc03355a73cc7d96f3ceb2995">reset</a>();</div>
 <div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aa00372_html_a17237cdeda2b10e77e1815def129debd"><div class="ttname"><a href="a00372.html#a17237cdeda2b10e77e1815def129debd">CRingBuffer::m_iReadIdx</a></div><div class="ttdeci">int m_iReadIdx</div><div class="ttdoc">current read index</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00217">RingBuffer.h:217</a></div></div>
-<div class="ttc" id="aa00372_html_a3f35b48aa5632a863a85d09de775fb0b"><div class="ttname"><a href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">CRingBuffer::m_iBuffLength</a></div><div class="ttdeci">int m_iBuffLength</div><div class="ttdoc">length of the internal buffer</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00216">RingBuffer.h:216</a></div></div>
-<div class="ttc" id="aa00372_html_a6c82ffd2218093776e8952e15309c51e"><div class="ttname"><a href="a00372.html#a6c82ffd2218093776e8952e15309c51e">CRingBuffer::m_ptBuff</a></div><div class="ttdeci">T * m_ptBuff</div><div class="ttdoc">data buffer</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00220">RingBuffer.h:220</a></div></div>
-<div class="ttc" id="aa00372_html_a716fb4acc03355a73cc7d96f3ceb2995"><div class="ttname"><a href="a00372.html#a716fb4acc03355a73cc7d96f3ceb2995">CRingBuffer::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00146">RingBuffer.h:146</a></div></div>
-<div class="ttc" id="aa00372_html_ad2bfd60fbefec3403b6a2a420b8695a5"><div class="ttname"><a href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">CRingBuffer::m_iWriteIdx</a></div><div class="ttdeci">int m_iWriteIdx</div><div class="ttdoc">current write index</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00218">RingBuffer.h:218</a></div></div>
+<div class="ttc" id="aa00372_html_a17237cdeda2b10e77e1815def129debd"><div class="ttname"><a href="a00372.html#a17237cdeda2b10e77e1815def129debd">CRingBuffer::m_iReadIdx</a></div><div class="ttdeci">int m_iReadIdx</div><div class="ttdoc">current read index</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00217">RingBuffer.h:217</a></div></div>
+<div class="ttc" id="aa00372_html_a3f35b48aa5632a863a85d09de775fb0b"><div class="ttname"><a href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">CRingBuffer::m_iBuffLength</a></div><div class="ttdeci">int m_iBuffLength</div><div class="ttdoc">length of the internal buffer</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00216">RingBuffer.h:216</a></div></div>
+<div class="ttc" id="aa00372_html_a6c82ffd2218093776e8952e15309c51e"><div class="ttname"><a href="a00372.html#a6c82ffd2218093776e8952e15309c51e">CRingBuffer::m_ptBuff</a></div><div class="ttdeci">T * m_ptBuff</div><div class="ttdoc">data buffer</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00220">RingBuffer.h:220</a></div></div>
+<div class="ttc" id="aa00372_html_a716fb4acc03355a73cc7d96f3ceb2995"><div class="ttname"><a href="a00372.html#a716fb4acc03355a73cc7d96f3ceb2995">CRingBuffer::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00146">RingBuffer.h:146</a></div></div>
+<div class="ttc" id="aa00372_html_ad2bfd60fbefec3403b6a2a420b8695a5"><div class="ttname"><a href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">CRingBuffer::m_iWriteIdx</a></div><div class="ttdeci">int m_iWriteIdx</div><div class="ttdoc">current write index</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00218">RingBuffer.h:218</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>, and <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00035_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>, and <a class="el" href="a00035_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -226,13 +226,13 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00027">27</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00027">27</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
 <div class="line"><span class="lineno">   29</span>        <span class="keyword">delete</span>[] <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>;</div>
 <div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a> = 0;</div>
 <div class="line"><span class="lineno">   31</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
 
 </div>
 </div>
@@ -325,7 +325,7 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float the value from the read index </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00105">105</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00105">105</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
 <div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (fOffset == 0)</div>
 <div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>];</div>
@@ -346,9 +346,9 @@ template&lt;class T &gt; </div>
 <div class="line"><span class="lineno">  123</span>        }</div>
 <div class="line"><span class="lineno">  124</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00035_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00044_source.html#l00064">CLfo::getNext()</a>, <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, and <a class="el" href="a00026_source.html#l00178">CVibrato::process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00044_source.html#l00064">CLfo::getNext()</a>, <a class="el" href="a00035_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, and <a class="el" href="a00059_source.html#l00178">CVibrato::process()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -412,7 +412,7 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00131">131</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00131">131</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  132</span>    {</div>
 <div class="line"><span class="lineno">  133</span>        assert(iLength &lt;= m_iBuffLength &amp;&amp; iLength &gt;= 0);</div>
 <div class="line"><span class="lineno">  134</span> </div>
@@ -424,7 +424,7 @@ template&lt;class T &gt; </div>
 <div class="line"><span class="lineno">  140</span>            std::memcpy (&amp;ptBuff[iNumValues2End], <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>, <span class="keyword">sizeof</span>(T)*(iLength - iNumValues2End));</div>
 <div class="line"><span class="lineno">  141</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00035_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
 
 </div>
 </div>
@@ -454,12 +454,12 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p >returns the length of the internal buffer </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00198">198</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00198">198</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  199</span>    {</div>
 <div class="line"><span class="lineno">  200</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
 <div class="line"><span class="lineno">  201</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>.</p>
 
 </div>
 </div>
@@ -489,12 +489,12 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p >returns the number of values currently buffered (note: 0 could also mean the buffer is full!) </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00190">190</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00190">190</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  191</span>    {</div>
 <div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> (<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a> - <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a> + <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>) % <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
 <div class="line"><span class="lineno">  193</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, and <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
 
 </div>
 </div>
@@ -524,18 +524,18 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p >return the value at the current read index and increment the read pointer </p><dl class="section return"><dt>Returns</dt><dd>float the value from the read index </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00083">83</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00083">83</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
 <div class="line"><span class="lineno">   85</span>        T tValue = <a class="code hl_function" href="a00372.html#a23d9877584d712c17811a9833835605e">get</a>();</div>
 <div class="line"><span class="lineno">   86</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>);</div>
 <div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> tValue;</div>
 <div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aa00372_html_a23d9877584d712c17811a9833835605e"><div class="ttname"><a href="a00372.html#a23d9877584d712c17811a9833835605e">CRingBuffer::get</a></div><div class="ttdeci">T get(float fOffset=0) const</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00105">RingBuffer.h:105</a></div></div>
-<div class="ttc" id="aa00372_html_a67eddecd2a880c52c80093774bc37c24"><div class="ttname"><a href="a00372.html#a67eddecd2a880c52c80093774bc37c24">CRingBuffer::incIdx</a></div><div class="ttdeci">void incIdx(int &amp;iIdx, int iOffset=1)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00206">RingBuffer.h:206</a></div></div>
+<div class="ttc" id="aa00372_html_a23d9877584d712c17811a9833835605e"><div class="ttname"><a href="a00372.html#a23d9877584d712c17811a9833835605e">CRingBuffer::get</a></div><div class="ttdeci">T get(float fOffset=0) const</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00105">RingBuffer.h:105</a></div></div>
+<div class="ttc" id="aa00372_html_a67eddecd2a880c52c80093774bc37c24"><div class="ttname"><a href="a00372.html#a67eddecd2a880c52c80093774bc37c24">CRingBuffer::incIdx</a></div><div class="ttdeci">void incIdx(int &amp;iIdx, int iOffset=1)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00206">RingBuffer.h:206</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00035_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00178">CVibrato::process()</a>, <a class="el" href="a00032_source.html#l00110">CCombFilterFir::process()</a>, and <a class="el" href="a00032_source.html#l00131">CCombFilterIir::process()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00059_source.html#l00178">CVibrato::process()</a>, <a class="el" href="a00014_source.html#l00115">CCombFilterFir::process()</a>, and <a class="el" href="a00014_source.html#l00136">CCombFilterIir::process()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -609,13 +609,13 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00095">95</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00095">95</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
 <div class="line"><span class="lineno">   97</span>        <a class="code hl_function" href="a00372.html#a23d9877584d712c17811a9833835605e">get</a>(ptBuff, iLength);</div>
 <div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>, iLength);</div>
 <div class="line"><span class="lineno">   99</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00035_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -657,12 +657,12 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p >return the current index for reading/get </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00173">173</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00173">173</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  174</span>    {</div>
 <div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>;</div>
 <div class="line"><span class="lineno">  176</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
 
 </div>
 </div>
@@ -692,12 +692,12 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p >return the current index for writing/put </p><dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00156">156</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00156">156</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  157</span>    {</div>
 <div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>;</div>
 <div class="line"><span class="lineno">  159</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
 
 </div>
 </div>
@@ -737,7 +737,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00206">206</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00206">206</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  207</span>    {</div>
 <div class="line"><span class="lineno">  208</span>        <span class="keywordflow">while</span> ((iIdx + iOffset) &lt; 0)</div>
 <div class="line"><span class="lineno">  209</span>        {</div>
@@ -747,9 +747,9 @@ template&lt;class T &gt; </div>
 <div class="line"><span class="lineno">  213</span>        iIdx = (iIdx + iOffset) % <a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>;</div>
 <div class="line"><span class="lineno">  214</span>    };</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>, <a class="el" href="a00047_source.html#l00182">CRingBuffer&lt; T &gt;::setReadIdx()</a>, and <a class="el" href="a00047_source.html#l00165">CRingBuffer&lt; T &gt;::setWriteIdx()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00035_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>, <a class="el" href="a00035_source.html#l00182">CRingBuffer&lt; T &gt;::setReadIdx()</a>, and <a class="el" href="a00035_source.html#l00165">CRingBuffer&lt; T &gt;::setWriteIdx()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -757,19 +757,19 @@ template&lt;class T &gt; </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00372_a67eddecd2a880c52c80093774bc37c24_icgraph.png" border="0" usemap="#aa00372_a67eddecd2a880c52c80093774bc37c24_icgraph" alt=""/></div>
 <map name="aa00372_a67eddecd2a880c52c80093774bc37c24_icgraph" id="aa00372_a67eddecd2a880c52c80093774bc37c24_icgraph">
-<area shape="rect" title=" " alt="" coords="685,132,816,159"/>
-<area shape="rect" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b" title=" " alt="" coords="476,56,636,83"/>
-<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="476,107,636,133"/>
-<area shape="rect" href="a00372.html#af265a6322c4b1584c880def00d31e663" title=" " alt="" coords="475,208,637,235"/>
-<area shape="rect" href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab" title=" " alt="" coords="475,157,637,184"/>
-<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="260,5,384,32"/>
-<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="241,56,403,83"/>
-<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="243,107,401,133"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,208,113,235"/>
-<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="229,157,415,184"/>
-<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,157,169,184"/>
-<area shape="rect" href="a00392.html#a58bfe8eb41a59d022121423d2874298a" title=" " alt="" coords="275,208,369,235"/>
-<area shape="rect" href="a00348.html#ad7c00802caed87adaf0294810e0a2733" title=" " alt="" coords="217,259,427,285"/>
+<area shape="rect" title=" " alt="" coords="685,144,816,171"/>
+<area shape="rect" href="a00372.html#a0f25eadaafa6a2e7bfe2f9ef6af1104b" title=" " alt="" coords="476,119,636,145"/>
+<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="476,169,636,196"/>
+<area shape="rect" href="a00372.html#af265a6322c4b1584c880def00d31e663" title=" " alt="" coords="475,245,637,272"/>
+<area shape="rect" href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab" title=" " alt="" coords="475,56,637,83"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="260,107,384,133"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="241,157,403,184"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="243,208,401,235"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,56,113,83"/>
+<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="229,259,415,285"/>
+<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,259,169,285"/>
+<area shape="rect" href="a00392.html#a58bfe8eb41a59d022121423d2874298a" title=" " alt="" coords="275,5,369,32"/>
+<area shape="rect" href="a00348.html#ad7c00802caed87adaf0294810e0a2733" title=" " alt="" coords="217,56,427,83"/>
 </map>
 </div>
 
@@ -819,7 +819,7 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00068">68</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00068">68</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
 <div class="line"><span class="lineno">   70</span>        assert(iLength &lt;= m_iBuffLength &amp;&amp; iLength &gt;= 0);</div>
 <div class="line"><span class="lineno">   71</span> </div>
@@ -831,7 +831,7 @@ template&lt;class T &gt; </div>
 <div class="line"><span class="lineno">   77</span>            std::memcpy (<a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>, &amp;ptNewBuff[iNumValues2End], <span class="keyword">sizeof</span>(T)*(iLength - iNumValues2End));</div>
 <div class="line"><span class="lineno">   78</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00035_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
 
 </div>
 </div>
@@ -868,14 +868,14 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00058">58</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00058">58</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
 <div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>[<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>] = tNewValue;</div>
 <div class="line"><span class="lineno">   61</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00035_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00044_source.html#l00074">CLfo::computeWaveTable()</a>, and <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00044_source.html#l00074">CLfo::computeWaveTable()</a>, and <a class="el" href="a00035_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -883,17 +883,15 @@ template&lt;class T &gt; </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00372_a702eb6314380082795f735df74a816c9_icgraph.png" border="0" usemap="#aa00372_a702eb6314380082795f735df74a816c9_icgraph" alt=""/></div>
 <map name="aa00372_a702eb6314380082795f735df74a816c9_icgraph" id="aa00372_a702eb6314380082795f735df74a816c9_icgraph">
-<area shape="rect" title=" " alt="" coords="671,81,785,108"/>
-<area shape="rect" href="a00368.html#a5a7d25e5bee8e5e6648f4bbe9317367e" title=" " alt="" coords="452,31,623,57"/>
-<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="457,107,617,133"/>
-<area shape="rect" href="a00368.html#a33d44ada59f89aed15f510d7c5fe019a" title=" " alt="" coords="250,5,371,32"/>
-<area shape="rect" href="a00368.html#a12fc205ad6f6daeb3abd78e108cd6790" title=" " alt="" coords="45,5,129,32"/>
-<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="249,56,373,83"/>
-<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="230,107,391,133"/>
-<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="232,157,389,184"/>
-<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,208,404,235"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,56,113,83"/>
-<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,208,169,235"/>
+<area shape="rect" title=" " alt="" coords="565,56,680,83"/>
+<area shape="rect" href="a00368.html#a5a7d25e5bee8e5e6648f4bbe9317367e" title=" " alt="" coords="347,19,517,45"/>
+<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="352,81,512,108"/>
+<area shape="rect" href="a00368.html#a33d44ada59f89aed15f510d7c5fe019a" title=" " alt="" coords="157,5,279,32"/>
+<area shape="rect" href="a00368.html#a12fc205ad6f6daeb3abd78e108cd6790" title=" " alt="" coords="5,5,89,32"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="156,56,280,83"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="137,107,299,133"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="139,157,297,184"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="22,56,73,83"/>
 </map>
 </div>
 
@@ -943,14 +941,14 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00048">48</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00048">48</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
 <div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="a00372.html#a702eb6314380082795f735df74a816c9">put</a>(ptNewBuff, iLength);</div>
 <div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>, iLength);</div>
 <div class="line"><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aa00372_html_a702eb6314380082795f735df74a816c9"><div class="ttname"><a href="a00372.html#a702eb6314380082795f735df74a816c9">CRingBuffer::put</a></div><div class="ttdeci">void put(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00058">RingBuffer.h:58</a></div></div>
+<div class="ttc" id="aa00372_html_a702eb6314380082795f735df74a816c9"><div class="ttname"><a href="a00372.html#a702eb6314380082795f735df74a816c9">CRingBuffer::put</a></div><div class="ttdeci">void put(T tNewValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00058">RingBuffer.h:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00035_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -999,15 +997,15 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00037">37</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00037">37</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
 <div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="a00372.html#a702eb6314380082795f735df74a816c9">put</a>(tNewValue);</div>
 <div class="line"><span class="lineno">   40</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>);</div>
 <div class="line"><span class="lineno">   41</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00035_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00178">CVibrato::process()</a>, <a class="el" href="a00032_source.html#l00110">CCombFilterFir::process()</a>, <a class="el" href="a00032_source.html#l00131">CCombFilterIir::process()</a>, and <a class="el" href="a00032_source.html#l00059">CCombFilterBase::setParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00059_source.html#l00178">CVibrato::process()</a>, <a class="el" href="a00014_source.html#l00115">CCombFilterFir::process()</a>, and <a class="el" href="a00014_source.html#l00136">CCombFilterIir::process()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -1027,13 +1025,11 @@ template&lt;class T &gt; </div>
 <div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00372_a2bd848181a662312600bc590b9040d2a_icgraph.png" border="0" usemap="#aa00372_a2bd848181a662312600bc590b9040d2a_icgraph" alt=""/></div>
 <map name="aa00372_a2bd848181a662312600bc590b9040d2a_icgraph" id="aa00372_a2bd848181a662312600bc590b9040d2a_icgraph">
-<area shape="rect" title=" " alt="" coords="452,81,612,108"/>
-<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="249,5,373,32"/>
-<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="230,56,391,83"/>
-<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="232,107,389,133"/>
-<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,157,404,184"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,5,113,32"/>
-<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,157,169,184"/>
+<area shape="rect" title=" " alt="" coords="313,56,473,83"/>
+<area shape="rect" href="a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="123,5,247,32"/>
+<area shape="rect" href="a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="104,56,265,83"/>
+<area shape="rect" href="a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="106,107,263,133"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -1065,16 +1061,16 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 <p >set buffer content and indices to 0 </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00146">146</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00146">146</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
 <div class="line"><span class="lineno">  148</span>        std::memset (<a class="code hl_variable" href="a00372.html#a6c82ffd2218093776e8952e15309c51e">m_ptBuff</a>, 0, <span class="keyword">sizeof</span>(T)*<a class="code hl_variable" href="a00372.html#a3f35b48aa5632a863a85d09de775fb0b">m_iBuffLength</a>);</div>
 <div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>  = 0;</div>
 <div class="line"><span class="lineno">  150</span>        <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a> = 0;</div>
 <div class="line"><span class="lineno">  151</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00047_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00216">CRingBuffer&lt; T &gt;::m_iBuffLength</a>, <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>, <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>, and <a class="el" href="a00035_source.html#l00220">CRingBuffer&lt; T &gt;::m_ptBuff</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, and <a class="el" href="a00032_source.html#l00048">CCombFilterBase::resetInstance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, and <a class="el" href="a00014_source.html#l00048">CCombFilterBase::resetInstance()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -1123,12 +1119,14 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00182">182</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00182">182</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  183</span>    {</div>
 <div class="line"><span class="lineno">  184</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>, iNewReadIdx - <a class="code hl_variable" href="a00372.html#a17237cdeda2b10e77e1815def129debd">m_iReadIdx</a>);</div>
 <div class="line"><span class="lineno">  185</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00035_source.html#l00217">CRingBuffer&lt; T &gt;::m_iReadIdx</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a00014_source.html#l00059">CCombFilterBase::setParam()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1138,6 +1136,18 @@ template&lt;class T &gt; </div>
 <map name="aa00372_af265a6322c4b1584c880def00d31e663_cgraph" id="aa00372_af265a6322c4b1584c880def00d31e663_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,168,32"/>
 <area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="216,5,347,32"/>
+</map>
+</div>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00372_af265a6322c4b1584c880def00d31e663_icgraph.png" border="0" usemap="#aa00372_af265a6322c4b1584c880def00d31e663_icgraph" alt=""/></div>
+<map name="aa00372_af265a6322c4b1584c880def00d31e663_icgraph" id="aa00372_af265a6322c4b1584c880def00d31e663_icgraph">
+<area shape="rect" title=" " alt="" coords="452,5,615,32"/>
+<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,5,404,32"/>
+<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,5,169,32"/>
 </map>
 </div>
 
@@ -1176,38 +1186,36 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00165">165</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00165">165</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
 <div class="line"><span class="lineno">  167</span>        <a class="code hl_function" href="a00372.html#a67eddecd2a880c52c80093774bc37c24">incIdx</a>(<a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>, iNewWriteIdx - <a class="code hl_variable" href="a00372.html#ad2bfd60fbefec3403b6a2a420b8695a5">m_iWriteIdx</a>);</div>
 <div class="line"><span class="lineno">  168</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00047_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
+<p class="reference">References <a class="el" href="a00035_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, and <a class="el" href="a00035_source.html#l00218">CRingBuffer&lt; T &gt;::m_iWriteIdx</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00026_source.html#l00087">CVibrato::init()</a>, <a class="el" href="a00032_source.html#l00048">CCombFilterBase::resetInstance()</a>, and <a class="el" href="a00032_source.html#l00059">CCombFilterBase::setParam()</a>.</p>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="a00059_source.html#l00087">CVibrato::init()</a>, and <a class="el" href="a00014_source.html#l00048">CCombFilterBase::resetInstance()</a>.</p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph.png" border="0" usemap="#aa00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph" alt=""/></div>
 <map name="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph" id="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,168,32"/>
 <area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="216,5,347,32"/>
 </map>
 </div>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph.png" border="0" usemap="#aa00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph" alt=""/></div>
 <map name="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph" id="aa00372_a408e0ec5855fca27bd2dc5862fa913ab_icgraph">
-<area shape="rect" title=" " alt="" coords="475,56,637,83"/>
-<area shape="rect" href="a00392.html#a58bfe8eb41a59d022121423d2874298a" title=" " alt="" coords="275,5,369,32"/>
-<area shape="rect" href="a00348.html#ad7c00802caed87adaf0294810e0a2733" title=" " alt="" coords="217,56,427,83"/>
-<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="229,107,415,133"/>
-<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,5,113,32"/>
-<area shape="rect" href="a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,107,169,133"/>
+<area shape="rect" title=" " alt="" coords="361,31,524,57"/>
+<area shape="rect" href="a00392.html#a58bfe8eb41a59d022121423d2874298a" title=" " alt="" coords="161,5,256,32"/>
+<area shape="rect" href="a00348.html#ad7c00802caed87adaf0294810e0a2733" title=" " alt="" coords="104,56,313,83"/>
+<area shape="rect" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -1238,9 +1246,9 @@ template&lt;class T &gt; </div>
 
 <p>length of the internal buffer </p>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00216">216</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00216">216</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00198">CRingBuffer&lt; T &gt;::getLength()</a>, <a class="el" href="a00047_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00047_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00047_source.html#l00068">CRingBuffer&lt; T &gt;::put()</a>, and <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, <a class="el" href="a00035_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00035_source.html#l00198">CRingBuffer&lt; T &gt;::getLength()</a>, <a class="el" href="a00035_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00035_source.html#l00206">CRingBuffer&lt; T &gt;::incIdx()</a>, <a class="el" href="a00035_source.html#l00068">CRingBuffer&lt; T &gt;::put()</a>, and <a class="el" href="a00035_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>.</p>
 
 </div>
 </div>
@@ -1268,9 +1276,9 @@ template&lt;class T &gt; </div>
 
 <p>current read index </p>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00217">217</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00217">217</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00047_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00047_source.html#l00173">CRingBuffer&lt; T &gt;::getReadIdx()</a>, <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00047_source.html#l00182">CRingBuffer&lt; T &gt;::setReadIdx()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00035_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00035_source.html#l00083">CRingBuffer&lt; T &gt;::getPostInc()</a>, <a class="el" href="a00035_source.html#l00173">CRingBuffer&lt; T &gt;::getReadIdx()</a>, <a class="el" href="a00035_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00035_source.html#l00182">CRingBuffer&lt; T &gt;::setReadIdx()</a>.</p>
 
 </div>
 </div>
@@ -1298,9 +1306,9 @@ template&lt;class T &gt; </div>
 
 <p>current write index </p>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00218">218</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00218">218</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00047_source.html#l00156">CRingBuffer&lt; T &gt;::getWriteIdx()</a>, <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>, <a class="el" href="a00047_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>, <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00047_source.html#l00165">CRingBuffer&lt; T &gt;::setWriteIdx()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00190">CRingBuffer&lt; T &gt;::getNumValuesInBuffer()</a>, <a class="el" href="a00035_source.html#l00156">CRingBuffer&lt; T &gt;::getWriteIdx()</a>, <a class="el" href="a00035_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>, <a class="el" href="a00035_source.html#l00037">CRingBuffer&lt; T &gt;::putPostInc()</a>, <a class="el" href="a00035_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00035_source.html#l00165">CRingBuffer&lt; T &gt;::setWriteIdx()</a>.</p>
 
 </div>
 </div>
@@ -1328,19 +1336,19 @@ template&lt;class T &gt; </div>
 
 <p>data buffer </p>
 
-<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00220">220</a> of file <a class="el" href="a00047_source.html">RingBuffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00220">220</a> of file <a class="el" href="a00035_source.html">RingBuffer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00047_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, <a class="el" href="a00047_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00047_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>, <a class="el" href="a00047_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00047_source.html#l00027">CRingBuffer&lt; T &gt;::~CRingBuffer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00015">CRingBuffer&lt; T &gt;::CRingBuffer()</a>, <a class="el" href="a00035_source.html#l00105">CRingBuffer&lt; T &gt;::get()</a>, <a class="el" href="a00035_source.html#l00058">CRingBuffer&lt; T &gt;::put()</a>, <a class="el" href="a00035_source.html#l00146">CRingBuffer&lt; T &gt;::reset()</a>, and <a class="el" href="a00035_source.html#l00027">CRingBuffer&lt; T &gt;::~CRingBuffer()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00047_source.html">RingBuffer.h</a></li>
+<li><a class="el" href="a00035_source.html">RingBuffer.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:30 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

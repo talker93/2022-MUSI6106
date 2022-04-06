@@ -43,11 +43,11 @@ $(function() {
   <div class="headertitle"><div class="title">Assertions Reference </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >This page lists the assertion macros provided by GoogleTest for verifying code behavior. To use them, include the header <code><a class="el" href="a00260.html">gtest/gtest.h</a></code>.</p>
+<div class="textblock"><p >This page lists the assertion macros provided by GoogleTest for verifying code behavior. To use them, include the header <code><a class="el" href="a00191.html">gtest/gtest.h</a></code>.</p>
 <p >The majority of the macros listed below come as a pair with an <code>EXPECT_</code> variant and an <code>ASSERT_</code> variant. Upon failure, <code>EXPECT_</code> macros generate nonfatal failures and allow the current function to continue running, while <code>ASSERT_</code> macros generate fatal failures and abort the current function.</p>
 <p >All assertion macros support streaming a custom failure message into them with the <code>&lt;&lt;</code> operator, for example:</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="a00260.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE</a>(my_condition) &lt;&lt; <span class="stringliteral">&quot;My condition is not true&quot;</span>;</div>
-<div class="ttc" id="aa00260_html_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a"><div class="ttname"><a href="a00260.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE</a></div><div class="ttdeci">#define EXPECT_TRUE(condition)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l01989">gtest.h:1989</a></div></div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="a00191.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE</a>(my_condition) &lt;&lt; <span class="stringliteral">&quot;My condition is not true&quot;</span>;</div>
+<div class="ttc" id="aa00191_html_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a"><div class="ttname"><a href="a00191.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE</a></div><div class="ttdeci">#define EXPECT_TRUE(condition)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l01989">gtest.h:1989</a></div></div>
 </div><!-- fragment --><p >Anything that can be streamed to an <code>ostream</code> can be streamed to an assertion macro—in particular, C strings and string objects. If a wide string (<code>wchar_t*</code>, <code>TCHAR*</code> in <code>UNICODE</code> mode on Windows, or <code>std::wstring</code>) is streamed to an assertion, it will be translated to UTF-8 when printed.</p>
 <h1><a class="anchor" id="success-failure"></a>
 Explicit Success and Failure</h1>
@@ -63,17 +63,17 @@ Explicit Success and Failure</h1>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="SUCCEED"></a>
 SUCCEED</h2>
-<p ><code><a class="el" href="a00260.html#a75adcdf89f69b0b615e395daafc315af">SUCCEED()</a></code></p>
+<p ><code><a class="el" href="a00191.html#a75adcdf89f69b0b615e395daafc315af">SUCCEED()</a></code></p>
 <p >Generates a success. This <em>does not</em> make the overall test succeed. A test is considered successful only if none of its assertions fail during its execution.</p>
 <p >The <code>SUCCEED</code> assertion is purely documentary and currently doesn't generate any user-visible output. However, we may add <code>SUCCEED</code> messages to GoogleTest output in the future.</p>
 <h2><a class="anchor" id="FAIL"></a>
 FAIL</h2>
-<p ><code><a class="el" href="a00260.html#a3e26a8d27caa386ed0ea7ce9d5b7c4ed">FAIL()</a></code></p>
+<p ><code><a class="el" href="a00191.html#a3e26a8d27caa386ed0ea7ce9d5b7c4ed">FAIL()</a></code></p>
 <p >Generates a fatal failure, which returns from the current function.</p>
 <p >Can only be used in functions that return <code>void</code>. See <a href="../advanced.md#assertion-placement">Assertion Placement</a> for more information.</p>
 <h2><a class="anchor" id="ADD_FAILURE"></a>
 ADD_FAILURE</h2>
-<p ><code><a class="el" href="a00260.html#adc16b5b0a740c39084ea5c9e960e3063">ADD_FAILURE()</a></code></p>
+<p ><code><a class="el" href="a00191.html#adc16b5b0a740c39084ea5c9e960e3063">ADD_FAILURE()</a></code></p>
 <p >Generates a nonfatal failure, which allows the current function to continue running.</p>
 <h2><a class="anchor" id="ADD_FAILURE_AT"></a>
 ADD_FAILURE_AT</h2>
@@ -87,7 +87,7 @@ EXPECT_THAT</h2>
 <p ><code>EXPECT_THAT(</code>*<code>value</code>*<code>,</code>*<code>matcher</code>*<code>)</code> \ <code>ASSERT_THAT(</code>*<code>value</code>*<code>,</code>*<code>matcher</code>*<code>)</code></p>
 <p >Verifies that *<code>value</code>* matches the <a class="el" href="a01752.html">matcher</a> *<code>matcher</code>*.</p>
 <p >For example, the following code verifies that the string <code>value1</code> starts with <code>"Hello"</code>, <code>value2</code> matches a regular expression, and <code>value3</code> is between 5 and 10:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00188.html">gmock/gmock.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00305.html">gmock/gmock.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line">using ::testing::AllOf;</div>
 <div class="line">using ::testing::Gt;</div>
@@ -97,12 +97,12 @@ EXPECT_THAT</h2>
 <div class="line"> </div>
 <div class="line">...</div>
 <div class="line">EXPECT_THAT(value1, <a class="code hl_function" href="a00322.html#ae0522f740806da841ae21bc71804e038">StartsWith</a>(<span class="stringliteral">&quot;Hello&quot;</span>));</div>
-<div class="line"><a class="code hl_define" href="a00194.html#ac31e206123aa702e1152bb2735b31409">EXPECT_THAT</a>(value2, MatchesRegex(<span class="stringliteral">&quot;Line \\d+&quot;</span>));</div>
-<div class="line"><a class="code hl_define" href="a00194.html#a41d888579850c16583baea33ee8d057e">ASSERT_THAT</a>(value3, AllOf(Gt(5), Lt(10)));</div>
-<div class="ttc" id="aa00188_html"><div class="ttname"><a href="a00188.html">gmock.h</a></div></div>
-<div class="ttc" id="aa00194_html_a41d888579850c16583baea33ee8d057e"><div class="ttname"><a href="a00194.html#a41d888579850c16583baea33ee8d057e">ASSERT_THAT</a></div><div class="ttdeci">#define ASSERT_THAT(value, matcher)</div></div>
-<div class="ttc" id="aa00194_html_ac31e206123aa702e1152bb2735b31409"><div class="ttname"><a href="a00194.html#ac31e206123aa702e1152bb2735b31409">EXPECT_THAT</a></div><div class="ttdeci">#define EXPECT_THAT(value, matcher)</div></div>
-<div class="ttc" id="aa00322_html_ae0522f740806da841ae21bc71804e038"><div class="ttname"><a href="a00322.html#ae0522f740806da841ae21bc71804e038">testing::internal::StartsWith</a></div><div class="ttdeci">constexpr bool StartsWith(const char(&amp;prefix)[N], const char(&amp;str)[M])</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00070">gmock-function-mocker.h:70</a></div></div>
+<div class="line"><a class="code hl_define" href="a00281.html#ac31e206123aa702e1152bb2735b31409">EXPECT_THAT</a>(value2, MatchesRegex(<span class="stringliteral">&quot;Line \\d+&quot;</span>));</div>
+<div class="line"><a class="code hl_define" href="a00281.html#a41d888579850c16583baea33ee8d057e">ASSERT_THAT</a>(value3, AllOf(Gt(5), Lt(10)));</div>
+<div class="ttc" id="aa00281_html_a41d888579850c16583baea33ee8d057e"><div class="ttname"><a href="a00281.html#a41d888579850c16583baea33ee8d057e">ASSERT_THAT</a></div><div class="ttdeci">#define ASSERT_THAT(value, matcher)</div></div>
+<div class="ttc" id="aa00281_html_ac31e206123aa702e1152bb2735b31409"><div class="ttname"><a href="a00281.html#ac31e206123aa702e1152bb2735b31409">EXPECT_THAT</a></div><div class="ttdeci">#define EXPECT_THAT(value, matcher)</div></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">gmock.h</a></div></div>
+<div class="ttc" id="aa00322_html_ae0522f740806da841ae21bc71804e038"><div class="ttname"><a href="a00322.html#ae0522f740806da841ae21bc71804e038">testing::internal::StartsWith</a></div><div class="ttdeci">constexpr bool StartsWith(const char(&amp;prefix)[N], const char(&amp;str)[M])</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00070">gmock-function-mocker.h:70</a></div></div>
 </div><!-- fragment --><p >Matchers enable assertions of this form to read like English and generate informative failure messages. For example, if the above assertion on <code>value1</code> fails, the resulting message will be similar to the following:</p>
 <div class="fragment"><div class="line">Value of: value1</div>
 <div class="line">  Actual: &quot;Hi, world!&quot;</div>
@@ -197,11 +197,11 @@ EXPECT_NEAR</h2>
 Exception Assertions</h1>
 <p >The following assertions verify that a piece of code throws, or does not throw, an exception. Usage requires exceptions to be enabled in the build environment.</p>
 <p >Note that the piece of code under test can be a compound statement, for example:</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="a00260.html#a2743a1438137ad857aa3f9fec3ff67ec">EXPECT_NO_THROW</a>({</div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="a00191.html#a2743a1438137ad857aa3f9fec3ff67ec">EXPECT_NO_THROW</a>({</div>
 <div class="line">  <span class="keywordtype">int</span> n = 5;</div>
 <div class="line">  DoSomething(&amp;n);</div>
 <div class="line">});</div>
-<div class="ttc" id="aa00260_html_a2743a1438137ad857aa3f9fec3ff67ec"><div class="ttname"><a href="a00260.html#a2743a1438137ad857aa3f9fec3ff67ec">EXPECT_NO_THROW</a></div><div class="ttdeci">#define EXPECT_NO_THROW(statement)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l01958">gtest.h:1958</a></div></div>
+<div class="ttc" id="aa00191_html_a2743a1438137ad857aa3f9fec3ff67ec"><div class="ttname"><a href="a00191.html#a2743a1438137ad857aa3f9fec3ff67ec">EXPECT_NO_THROW</a></div><div class="ttdeci">#define EXPECT_NO_THROW(statement)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l01958">gtest.h:1958</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="EXPECT_THROW"></a>
 EXPECT_THROW</h2>
 <p ><code>EXPECT_THROW(</code>*<code>statement</code>*<code>,</code>*<code>exception_type</code>*<code>)</code> \ <code>ASSERT_THROW(</code>*<code>statement</code>*<code>,</code>*<code>exception_type</code>*<code>)</code></p>
@@ -233,17 +233,17 @@ EXPECT_PRED*</h2>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> c = 10;</div>
 <div class="line">...</div>
 <div class="line">EXPECT_PRED2(MutuallyPrime, a, b);  <span class="comment">// Succeeds</span></div>
-<div class="line"><a class="code hl_define" href="a00269.html#a14e74e655e502914d3d07e083145ac91">EXPECT_PRED2</a>(MutuallyPrime, b, c);  <span class="comment">// Fails</span></div>
-<div class="ttc" id="aa00269_html_a14e74e655e502914d3d07e083145ac91"><div class="ttname"><a href="a00269.html#a14e74e655e502914d3d07e083145ac91">EXPECT_PRED2</a></div><div class="ttdeci">#define EXPECT_PRED2(pred, v1, v2)</div><div class="ttdef"><b>Definition:</b> <a href="a00269_source.html#l00164">gtest_pred_impl.h:164</a></div></div>
+<div class="line"><a class="code hl_define" href="a00230.html#a14e74e655e502914d3d07e083145ac91">EXPECT_PRED2</a>(MutuallyPrime, b, c);  <span class="comment">// Fails</span></div>
+<div class="ttc" id="aa00230_html_a14e74e655e502914d3d07e083145ac91"><div class="ttname"><a href="a00230.html#a14e74e655e502914d3d07e083145ac91">EXPECT_PRED2</a></div><div class="ttdeci">#define EXPECT_PRED2(pred, v1, v2)</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00164">gtest_pred_impl.h:164</a></div></div>
 </div><!-- fragment --><p >In the above example, the first assertion succeeds, and the second fails with the following message:</p>
 <div class="fragment"><div class="line">MutuallyPrime(b, c) is false, where</div>
 <div class="line">b is 4</div>
 <div class="line">c is 10</div>
 </div><!-- fragment --><p >Note that if the given predicate is an overloaded function or a function template, the assertion macro might not be able to determine which version to use, and it might be necessary to explicitly specify the type of the function. For example, for a Boolean function <code>IsPositive()</code> overloaded to take either a single <code>int</code> or <code>double</code> argument, it would be necessary to write one of the following:</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="a00269.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span> (*)(<span class="keywordtype">int</span>)<span class="keyword">&gt;</span>(IsPositive), 5);</div>
-<div class="line"><a class="code hl_define" href="a00269.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span> (*)(<span class="keywordtype">double</span>)<span class="keyword">&gt;</span>(IsPositive), 3.14);</div>
-<div class="ttc" id="aa00269_html_a6d09aa83f8d297481380c7c073c9f070"><div class="ttname"><a href="a00269.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1</a></div><div class="ttdeci">#define EXPECT_PRED1(pred, v1)</div><div class="ttdef"><b>Definition:</b> <a href="a00269_source.html#l00115">gtest_pred_impl.h:115</a></div></div>
-</div><!-- fragment --><p >Writing simply <code><a class="el" href="a00269.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1(IsPositive, 5)</a>;</code> would result in a compiler error. Similarly, to use a template function, specify the template arguments:</p>
+<div class="fragment"><div class="line"><a class="code hl_define" href="a00230.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span> (*)(<span class="keywordtype">int</span>)<span class="keyword">&gt;</span>(IsPositive), 5);</div>
+<div class="line"><a class="code hl_define" href="a00230.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span> (*)(<span class="keywordtype">double</span>)<span class="keyword">&gt;</span>(IsPositive), 3.14);</div>
+<div class="ttc" id="aa00230_html_a6d09aa83f8d297481380c7c073c9f070"><div class="ttname"><a href="a00230.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1</a></div><div class="ttdeci">#define EXPECT_PRED1(pred, v1)</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00115">gtest_pred_impl.h:115</a></div></div>
+</div><!-- fragment --><p >Writing simply <code><a class="el" href="a00230.html#a6d09aa83f8d297481380c7c073c9f070">EXPECT_PRED1(IsPositive, 5)</a>;</code> would result in a compiler error. Similarly, to use a template function, specify the template arguments:</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keywordtype">bool</span> IsNegative(T x) {</div>
 <div class="line">  <span class="keywordflow">return</span> x &lt; 0;</div>
@@ -251,8 +251,8 @@ EXPECT_PRED*</h2>
 <div class="line">...</div>
 <div class="line">EXPECT_PRED1(IsNegative&lt;int&gt;, -5);  <span class="comment">// Must specify type for IsNegative</span></div>
 </div><!-- fragment --><p >If a template has multiple parameters, wrap the predicate in parentheses so the macro arguments are parsed correctly:</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="a00269.html#a4e9b777cce4e5423f4c2e491be7aa818">ASSERT_PRED2</a>((MyPredicate&lt;int, int&gt;), 5, 0);</div>
-<div class="ttc" id="aa00269_html_a4e9b777cce4e5423f4c2e491be7aa818"><div class="ttname"><a href="a00269.html#a4e9b777cce4e5423f4c2e491be7aa818">ASSERT_PRED2</a></div><div class="ttdeci">#define ASSERT_PRED2(pred, v1, v2)</div><div class="ttdef"><b>Definition:</b> <a href="a00269_source.html#l00168">gtest_pred_impl.h:168</a></div></div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="a00230.html#a4e9b777cce4e5423f4c2e491be7aa818">ASSERT_PRED2</a>((MyPredicate&lt;int, int&gt;), 5, 0);</div>
+<div class="ttc" id="aa00230_html_a4e9b777cce4e5423f4c2e491be7aa818"><div class="ttname"><a href="a00230.html#a4e9b777cce4e5423f4c2e491be7aa818">ASSERT_PRED2</a></div><div class="ttdeci">#define ASSERT_PRED2(pred, v1, v2)</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00168">gtest_pred_impl.h:168</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="EXPECT_PRED_FORMAT"></a>
 EXPECT_PRED_FORMAT*</h2>
 <p ><code>EXPECT_PRED_FORMAT1(</code>*<code>pred_formatter</code>*<code>,</code>*<code>val1</code>*<code>)</code> \ <code>EXPECT_PRED_FORMAT2(</code>*<code>pred_formatter</code>*<code>,</code>*<code>val1</code>*<code>,</code>*<code>val2</code>*<code>)</code> \ <code>EXPECT_PRED_FORMAT3(</code>*<code>pred_formatter</code>*<code>,</code>*<code>val1</code>*<code>,</code>*<code>val2</code>*<code>,</code>*<code>val3</code>*<code>)</code> \ <code>EXPECT_PRED_FORMAT4(</code>*<code>pred_formatter</code>*<code>,</code>*<code>val1</code>*<code>,</code>*<code>val2</code>*<code>,</code>*<code>val3</code>*<code>,</code>*<code>val4</code>*<code>)</code> \ <code>EXPECT_PRED_FORMAT5(</code>*<code>pred_formatter</code>*<code>,</code>*<code>val1</code>*<code>,</code>*<code>val2</code>*<code>,</code>*<code>val3</code>*<code>,</code>*<code>val4</code>*<code>,</code>*<code>val5</code>*<code>)</code></p>
@@ -267,7 +267,7 @@ EXPECT_PRED_FORMAT*</h2>
 <div class="line">                                            T2 val2,</div>
 <div class="line">                                            ...</div>
 <div class="line">                                            Tn valn);</div>
-<div class="ttc" id="aa00816_html"><div class="ttname"><a href="a00816.html">testing::AssertionResult</a></div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l00286">gtest.h:286</a></div></div>
+<div class="ttc" id="aa00816_html"><div class="ttname"><a href="a00816.html">testing::AssertionResult</a></div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00286">gtest.h:286</a></div></div>
 </div><!-- fragment --><p >where *<code>val1</code>*, *<code>val2</code>*, ..., *<code>valn</code>* are the values of the predicate arguments, and *<code>expr1</code>*, *<code>expr2</code>*, ..., *<code>exprn</code>* are the corresponding expressions as they appear in the source code. The types <code>T1</code>, <code>T2</code>, ..., <code>Tn</code> can be either value types or reference types; if an argument has type <code>T</code>, it can be declared as either <code>T</code> or <code>const T&amp;</code>, whichever is appropriate. For more about the return type <code><a class="el" href="a00816.html">testing::AssertionResult</a></code>, see <a href="../advanced.md#using-a-function-that-returns-an-assertionresult">Using a Function That Returns an AssertionResult</a>.</p>
 <p >As an example, see the following code:</p>
 <div class="fragment"><div class="line"><span class="comment">// Returns the smallest prime common divisor of m and n,</span></div>
@@ -295,8 +295,8 @@ EXPECT_PRED_FORMAT*</h2>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> c = 10;</div>
 <div class="line">...</div>
 <div class="line">EXPECT_PRED_FORMAT2(AssertMutuallyPrime, a, b);  <span class="comment">// Succeeds</span></div>
-<div class="line"><a class="code hl_define" href="a00269.html#af0141918615a5e2d5247e9cda8324dae">EXPECT_PRED_FORMAT2</a>(AssertMutuallyPrime, b, c);  <span class="comment">// Fails</span></div>
-<div class="ttc" id="aa00269_html_af0141918615a5e2d5247e9cda8324dae"><div class="ttname"><a href="a00269.html#af0141918615a5e2d5247e9cda8324dae">EXPECT_PRED_FORMAT2</a></div><div class="ttdeci">#define EXPECT_PRED_FORMAT2(pred_format, v1, v2)</div><div class="ttdef"><b>Definition:</b> <a href="a00269_source.html#l00162">gtest_pred_impl.h:162</a></div></div>
+<div class="line"><a class="code hl_define" href="a00230.html#af0141918615a5e2d5247e9cda8324dae">EXPECT_PRED_FORMAT2</a>(AssertMutuallyPrime, b, c);  <span class="comment">// Fails</span></div>
+<div class="ttc" id="aa00230_html_af0141918615a5e2d5247e9cda8324dae"><div class="ttname"><a href="a00230.html#af0141918615a5e2d5247e9cda8324dae">EXPECT_PRED_FORMAT2</a></div><div class="ttdeci">#define EXPECT_PRED_FORMAT2(pred_format, v1, v2)</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00162">gtest_pred_impl.h:162</a></div></div>
 <div class="ttc" id="aa00321_html_a74a3d26c1286bd4d7c189c5dff2483ab"><div class="ttname"><a href="a00321.html#a74a3d26c1286bd4d7c189c5dff2483ab">testing::AssertionSuccess</a></div><div class="ttdeci">GTEST_API_ AssertionResult AssertionSuccess()</div></div>
 <div class="ttc" id="aa00321_html_a8d91083190a5914bfe8c5666e2dbca9b"><div class="ttname"><a href="a00321.html#a8d91083190a5914bfe8c5666e2dbca9b">testing::AssertionFailure</a></div><div class="ttdeci">GTEST_API_ AssertionResult AssertionFailure()</div></div>
 </div><!-- fragment --><p >In the above example, the final assertion fails and the predicate-formatter produces the following failure message:</p>
@@ -369,7 +369,7 @@ EXPECT_EXIT</h2>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

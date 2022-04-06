@@ -53,7 +53,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00218_source.html">gmock-actions.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00311_source.html">gmock-actions.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for testing::internal::ReturnRefOfCopyAction&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -86,7 +86,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class testing::internal::ReturnRefOfCopyAction&lt; T &gt;</div>
-<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00788">788</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00311_source.html#l00788">788</a> of file <a class="el" href="a00311_source.html">gmock-actions.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a073c18a8b50423b08f6603e860622839" name="a073c18a8b50423b08f6603e860622839"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a073c18a8b50423b08f6603e860622839">&#9670;&nbsp;</a></span>ReturnRefOfCopyAction()</h2>
@@ -114,9 +114,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00792">792</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00311_source.html#l00792">792</a> of file <a class="el" href="a00311_source.html">gmock-actions.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  792</span>: <a class="code hl_variable" href="a00496.html#a41fdd44b2021e01db916c6d5afcbf73f">value_</a>(value) {}  <span class="comment">// NOLINT</span></div>
-<div class="ttc" id="aa00496_html_a41fdd44b2021e01db916c6d5afcbf73f"><div class="ttname"><a href="a00496.html#a41fdd44b2021e01db916c6d5afcbf73f">testing::internal::ReturnRefOfCopyAction::value_</a></div><div class="ttdeci">const T value_</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00824">gmock-actions.h:824</a></div></div>
+<div class="ttc" id="aa00496_html_a41fdd44b2021e01db916c6d5afcbf73f"><div class="ttname"><a href="a00496.html#a41fdd44b2021e01db916c6d5afcbf73f">testing::internal::ReturnRefOfCopyAction::value_</a></div><div class="ttdeci">const T value_</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l00824">gmock-actions.h:824</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -148,20 +148,20 @@ template&lt;typename F &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00797">797</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00311_source.html#l00797">797</a> of file <a class="el" href="a00311_source.html">gmock-actions.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  797</span>                             {</div>
 <div class="line"><span class="lineno">  798</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> Function&lt;F&gt;::Result Result;</div>
 <div class="line"><span class="lineno">  799</span>    <span class="comment">// Asserts that the function return type is a reference.  This</span></div>
 <div class="line"><span class="lineno">  800</span>    <span class="comment">// catches the user error of using ReturnRefOfCopy(x) when Return(x)</span></div>
 <div class="line"><span class="lineno">  801</span>    <span class="comment">// should be used, and generates some helpful error message.</span></div>
-<div class="line"><span class="lineno">  802</span>    <a class="code hl_define" href="a00293.html#ae1f37dc71d5daa6fb49ca1b6047d4a8c">GTEST_COMPILE_ASSERT_</a>(</div>
+<div class="line"><span class="lineno">  802</span>    <a class="code hl_define" href="a00197.html#ae1f37dc71d5daa6fb49ca1b6047d4a8c">GTEST_COMPILE_ASSERT_</a>(</div>
 <div class="line"><span class="lineno">  803</span>        std::is_reference&lt;Result&gt;::value,</div>
 <div class="line"><span class="lineno">  804</span>        use_Return_instead_of_ReturnRefOfCopy_to_return_a_value);</div>
 <div class="line"><span class="lineno">  805</span>    <span class="keywordflow">return</span> Action&lt;F&gt;(<span class="keyword">new</span> Impl&lt;F&gt;(<a class="code hl_variable" href="a00496.html#a41fdd44b2021e01db916c6d5afcbf73f">value_</a>));</div>
 <div class="line"><span class="lineno">  806</span>  }</div>
-<div class="ttc" id="aa00293_html_ae1f37dc71d5daa6fb49ca1b6047d4a8c"><div class="ttname"><a href="a00293.html#ae1f37dc71d5daa6fb49ca1b6047d4a8c">GTEST_COMPILE_ASSERT_</a></div><div class="ttdeci">#define GTEST_COMPILE_ASSERT_(expr, msg)</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l00889">gtest-port.h:889</a></div></div>
+<div class="ttc" id="aa00197_html_ae1f37dc71d5daa6fb49ca1b6047d4a8c"><div class="ttname"><a href="a00197.html#ae1f37dc71d5daa6fb49ca1b6047d4a8c">GTEST_COMPILE_ASSERT_</a></div><div class="ttdeci">#define GTEST_COMPILE_ASSERT_(expr, msg)</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00889">gtest-port.h:889</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00293_source.html#l00889">GTEST_COMPILE_ASSERT_</a>, and <a class="el" href="a00218_source.html#l00824">testing::internal::ReturnRefOfCopyAction&lt; T &gt;::value_</a>.</p>
+<p class="reference">References <a class="el" href="a00197_source.html#l00889">GTEST_COMPILE_ASSERT_</a>, and <a class="el" href="a00311_source.html#l00824">testing::internal::ReturnRefOfCopyAction&lt; T &gt;::value_</a>.</p>
 
 </div>
 </div>
@@ -188,19 +188,19 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00218_source.html#l00824">824</a> of file <a class="el" href="a00218_source.html">gmock-actions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00311_source.html#l00824">824</a> of file <a class="el" href="a00311_source.html">gmock-actions.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00218_source.html#l00797">testing::internal::ReturnRefOfCopyAction&lt; T &gt;::operator Action&lt; F &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00311_source.html#l00797">testing::internal::ReturnRefOfCopyAction&lt; T &gt;::operator Action&lt; F &gt;()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00218_source.html">gmock-actions.h</a></li>
+<li><a class="el" href="a00311_source.html">gmock-actions.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:18 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

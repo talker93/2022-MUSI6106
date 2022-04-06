@@ -52,7 +52,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00284_source.html">gtest-internal.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00212_source.html">gtest-internal.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for testing::internal::SuiteApiResolver&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -91,7 +91,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 struct testing::internal::SuiteApiResolver&lt; T &gt;</div>
-<p class="definition">Definition at line <a class="el" href="a00284_source.html#l00513">513</a> of file <a class="el" href="a00284_source.html">gtest-internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00212_source.html#l00513">513</a> of file <a class="el" href="a00212_source.html">gtest-internal.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a343c36f492a946d302b1cfc930266768" name="a343c36f492a946d302b1cfc930266768"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a343c36f492a946d302b1cfc930266768">&#9670;&nbsp;</a></span>Test</h2>
@@ -107,7 +107,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00284_source.html#l00516">516</a> of file <a class="el" href="a00284_source.html">gtest-internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00212_source.html#l00516">516</a> of file <a class="el" href="a00212_source.html">gtest-internal.h</a>.</p>
 
 </div>
 </div>
@@ -148,7 +148,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00284_source.html#l00519">519</a> of file <a class="el" href="a00284_source.html">gtest-internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00212_source.html#l00519">519</a> of file <a class="el" href="a00212_source.html">gtest-internal.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  520</span>                                                                      {</div>
 <div class="line"><span class="lineno">  521</span><span class="preprocessor">#ifndef GTEST_REMOVE_LEGACY_TEST_CASEAPI_</span></div>
 <div class="line"><span class="lineno">  522</span>    <a class="code hl_typedef" href="a00322.html#a04786aa10f8b0bf38a5ead94d00475f4">SetUpTearDownSuiteFuncType</a> test_case_fp =</div>
@@ -156,7 +156,7 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">  524</span>    <a class="code hl_typedef" href="a00322.html#a04786aa10f8b0bf38a5ead94d00475f4">SetUpTearDownSuiteFuncType</a> test_suite_fp =</div>
 <div class="line"><span class="lineno">  525</span>        <a class="code hl_function" href="a00322.html#a9579a78c229ea302caded45d65f77336">GetNotDefaultOrNull</a>(&amp;T::SetUpTestSuite, &amp;<a class="code hl_function" href="a00820.html#ae173b07a0fdd09fc1d417a2bb6cbdd76">Test::SetUpTestSuite</a>);</div>
 <div class="line"><span class="lineno">  526</span> </div>
-<div class="line"><span class="lineno">  527</span>    <a class="code hl_define" href="a00293.html#ab54343f0a36dc4cb0ce8a478dd7847b8">GTEST_CHECK_</a>(!test_case_fp || !test_suite_fp)</div>
+<div class="line"><span class="lineno">  527</span>    <a class="code hl_define" href="a00197.html#ab54343f0a36dc4cb0ce8a478dd7847b8">GTEST_CHECK_</a>(!test_case_fp || !test_suite_fp)</div>
 <div class="line"><span class="lineno">  528</span>        &lt;&lt; <span class="stringliteral">&quot;Test can not provide both SetUpTestSuite and SetUpTestCase, please &quot;</span></div>
 <div class="line"><span class="lineno">  529</span>           <span class="stringliteral">&quot;make sure there is only one present at &quot;</span></div>
 <div class="line"><span class="lineno">  530</span>        &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; line_num;</div>
@@ -168,13 +168,13 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">  536</span>    <span class="keywordflow">return</span> &amp;T::SetUpTestSuite;</div>
 <div class="line"><span class="lineno">  537</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">  538</span>  }</div>
-<div class="ttc" id="aa00293_html_ab54343f0a36dc4cb0ce8a478dd7847b8"><div class="ttname"><a href="a00293.html#ab54343f0a36dc4cb0ce8a478dd7847b8">GTEST_CHECK_</a></div><div class="ttdeci">#define GTEST_CHECK_(condition)</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l01018">gtest-port.h:1018</a></div></div>
-<div class="ttc" id="aa00322_html_a04786aa10f8b0bf38a5ead94d00475f4"><div class="ttname"><a href="a00322.html#a04786aa10f8b0bf38a5ead94d00475f4">testing::internal::SetUpTearDownSuiteFuncType</a></div><div class="ttdeci">void(*)() SetUpTearDownSuiteFuncType</div><div class="ttdef"><b>Definition:</b> <a href="a00284_source.html#l00502">gtest-internal.h:502</a></div></div>
-<div class="ttc" id="aa00322_html_a9579a78c229ea302caded45d65f77336"><div class="ttname"><a href="a00322.html#a9579a78c229ea302caded45d65f77336">testing::internal::GetNotDefaultOrNull</a></div><div class="ttdeci">SetUpTearDownSuiteFuncType GetNotDefaultOrNull(SetUpTearDownSuiteFuncType a, SetUpTearDownSuiteFuncType def)</div><div class="ttdef"><b>Definition:</b> <a href="a00284_source.html#l00504">gtest-internal.h:504</a></div></div>
-<div class="ttc" id="aa00820_html_a5ccbac42fee8c5b00b0bfe89b6c49d79"><div class="ttname"><a href="a00820.html#a5ccbac42fee8c5b00b0bfe89b6c49d79">testing::Test::SetUpTestCase</a></div><div class="ttdeci">static void SetUpTestCase()</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l00444">gtest.h:444</a></div></div>
-<div class="ttc" id="aa00820_html_ae173b07a0fdd09fc1d417a2bb6cbdd76"><div class="ttname"><a href="a00820.html#ae173b07a0fdd09fc1d417a2bb6cbdd76">testing::Test::SetUpTestSuite</a></div><div class="ttdeci">static void SetUpTestSuite()</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l00430">gtest.h:430</a></div></div>
+<div class="ttc" id="aa00197_html_ab54343f0a36dc4cb0ce8a478dd7847b8"><div class="ttname"><a href="a00197.html#ab54343f0a36dc4cb0ce8a478dd7847b8">GTEST_CHECK_</a></div><div class="ttdeci">#define GTEST_CHECK_(condition)</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l01018">gtest-port.h:1018</a></div></div>
+<div class="ttc" id="aa00322_html_a04786aa10f8b0bf38a5ead94d00475f4"><div class="ttname"><a href="a00322.html#a04786aa10f8b0bf38a5ead94d00475f4">testing::internal::SetUpTearDownSuiteFuncType</a></div><div class="ttdeci">void(*)() SetUpTearDownSuiteFuncType</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00502">gtest-internal.h:502</a></div></div>
+<div class="ttc" id="aa00322_html_a9579a78c229ea302caded45d65f77336"><div class="ttname"><a href="a00322.html#a9579a78c229ea302caded45d65f77336">testing::internal::GetNotDefaultOrNull</a></div><div class="ttdeci">SetUpTearDownSuiteFuncType GetNotDefaultOrNull(SetUpTearDownSuiteFuncType a, SetUpTearDownSuiteFuncType def)</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00504">gtest-internal.h:504</a></div></div>
+<div class="ttc" id="aa00820_html_a5ccbac42fee8c5b00b0bfe89b6c49d79"><div class="ttname"><a href="a00820.html#a5ccbac42fee8c5b00b0bfe89b6c49d79">testing::Test::SetUpTestCase</a></div><div class="ttdeci">static void SetUpTestCase()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00444">gtest.h:444</a></div></div>
+<div class="ttc" id="aa00820_html_ae173b07a0fdd09fc1d417a2bb6cbdd76"><div class="ttname"><a href="a00820.html#ae173b07a0fdd09fc1d417a2bb6cbdd76">testing::Test::SetUpTestSuite</a></div><div class="ttdeci">static void SetUpTestSuite()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00430">gtest.h:430</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00284_source.html#l00504">testing::internal::GetNotDefaultOrNull()</a>, <a class="el" href="a00293_source.html#l01018">GTEST_CHECK_</a>, <a class="el" href="a00260_source.html#l00444">testing::Test::SetUpTestCase()</a>, and <a class="el" href="a00260_source.html#l00430">testing::Test::SetUpTestSuite()</a>.</p>
+<p class="reference">References <a class="el" href="a00212_source.html#l00504">testing::internal::GetNotDefaultOrNull()</a>, <a class="el" href="a00197_source.html#l01018">GTEST_CHECK_</a>, <a class="el" href="a00191_source.html#l00444">testing::Test::SetUpTestCase()</a>, and <a class="el" href="a00191_source.html#l00430">testing::Test::SetUpTestSuite()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -227,7 +227,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00284_source.html#l00540">540</a> of file <a class="el" href="a00284_source.html">gtest-internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00212_source.html#l00540">540</a> of file <a class="el" href="a00212_source.html">gtest-internal.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  541</span>                                                                         {</div>
 <div class="line"><span class="lineno">  542</span><span class="preprocessor">#ifndef GTEST_REMOVE_LEGACY_TEST_CASEAPI_</span></div>
 <div class="line"><span class="lineno">  543</span>    <a class="code hl_typedef" href="a00322.html#a04786aa10f8b0bf38a5ead94d00475f4">SetUpTearDownSuiteFuncType</a> test_case_fp =</div>
@@ -235,7 +235,7 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">  545</span>    <a class="code hl_typedef" href="a00322.html#a04786aa10f8b0bf38a5ead94d00475f4">SetUpTearDownSuiteFuncType</a> test_suite_fp =</div>
 <div class="line"><span class="lineno">  546</span>        <a class="code hl_function" href="a00322.html#a9579a78c229ea302caded45d65f77336">GetNotDefaultOrNull</a>(&amp;T::TearDownTestSuite, &amp;<a class="code hl_function" href="a00820.html#a7704c8223ba28338a66ca2eaeba66383">Test::TearDownTestSuite</a>);</div>
 <div class="line"><span class="lineno">  547</span> </div>
-<div class="line"><span class="lineno">  548</span>    <a class="code hl_define" href="a00293.html#ab54343f0a36dc4cb0ce8a478dd7847b8">GTEST_CHECK_</a>(!test_case_fp || !test_suite_fp)</div>
+<div class="line"><span class="lineno">  548</span>    <a class="code hl_define" href="a00197.html#ab54343f0a36dc4cb0ce8a478dd7847b8">GTEST_CHECK_</a>(!test_case_fp || !test_suite_fp)</div>
 <div class="line"><span class="lineno">  549</span>        &lt;&lt; <span class="stringliteral">&quot;Test can not provide both TearDownTestSuite and TearDownTestCase,&quot;</span></div>
 <div class="line"><span class="lineno">  550</span>           <span class="stringliteral">&quot; please make sure there is only one present at&quot;</span></div>
 <div class="line"><span class="lineno">  551</span>        &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; line_num;</div>
@@ -247,10 +247,10 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">  557</span>    <span class="keywordflow">return</span> &amp;T::TearDownTestSuite;</div>
 <div class="line"><span class="lineno">  558</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">  559</span>  }</div>
-<div class="ttc" id="aa00820_html_a7704c8223ba28338a66ca2eaeba66383"><div class="ttname"><a href="a00820.html#a7704c8223ba28338a66ca2eaeba66383">testing::Test::TearDownTestSuite</a></div><div class="ttdeci">static void TearDownTestSuite()</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l00438">gtest.h:438</a></div></div>
-<div class="ttc" id="aa00820_html_af374706cbaf0ffc460f4fd04e7c150f1"><div class="ttname"><a href="a00820.html#af374706cbaf0ffc460f4fd04e7c150f1">testing::Test::TearDownTestCase</a></div><div class="ttdeci">static void TearDownTestCase()</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l00443">gtest.h:443</a></div></div>
+<div class="ttc" id="aa00820_html_a7704c8223ba28338a66ca2eaeba66383"><div class="ttname"><a href="a00820.html#a7704c8223ba28338a66ca2eaeba66383">testing::Test::TearDownTestSuite</a></div><div class="ttdeci">static void TearDownTestSuite()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00438">gtest.h:438</a></div></div>
+<div class="ttc" id="aa00820_html_af374706cbaf0ffc460f4fd04e7c150f1"><div class="ttname"><a href="a00820.html#af374706cbaf0ffc460f4fd04e7c150f1">testing::Test::TearDownTestCase</a></div><div class="ttdeci">static void TearDownTestCase()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00443">gtest.h:443</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00284_source.html#l00504">testing::internal::GetNotDefaultOrNull()</a>, <a class="el" href="a00293_source.html#l01018">GTEST_CHECK_</a>, <a class="el" href="a00260_source.html#l00443">testing::Test::TearDownTestCase()</a>, and <a class="el" href="a00260_source.html#l00438">testing::Test::TearDownTestSuite()</a>.</p>
+<p class="reference">References <a class="el" href="a00212_source.html#l00504">testing::internal::GetNotDefaultOrNull()</a>, <a class="el" href="a00197_source.html#l01018">GTEST_CHECK_</a>, <a class="el" href="a00191_source.html#l00443">testing::Test::TearDownTestCase()</a>, and <a class="el" href="a00191_source.html#l00438">testing::Test::TearDownTestSuite()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -268,12 +268,12 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00284_source.html">gtest-internal.h</a></li>
+<li><a class="el" href="a00212_source.html">gtest-internal.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:31 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:18 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

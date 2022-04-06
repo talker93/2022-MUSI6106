@@ -57,7 +57,7 @@ Exception Assertions</h2>
 <p >See <a href="reference/assertions.md#exceptions">Exception Assertions</a> in the Assertions Reference.</p>
 <h2><a class="anchor" id="autotoc_md15"></a>
 Predicate Assertions for Better Error Messages</h2>
-<p >Even though googletest has a rich set of assertions, they can never be complete, as it's impossible (nor a good idea) to anticipate all scenarios a user might run into. Therefore, sometimes a user has to use <code><a class="el" href="a00260.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE()</a></code> to check a complex expression, for lack of a better macro. This has the problem of not showing you the values of the parts of the expression, making it hard to understand what went wrong. As a workaround, some users choose to construct the failure message by themselves, streaming it into <code><a class="el" href="a00260.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE()</a></code>. However, this is awkward especially when the expression has side-effects or is expensive to evaluate.</p>
+<p >Even though googletest has a rich set of assertions, they can never be complete, as it's impossible (nor a good idea) to anticipate all scenarios a user might run into. Therefore, sometimes a user has to use <code><a class="el" href="a00191.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE()</a></code> to check a complex expression, for lack of a better macro. This has the problem of not showing you the values of the parts of the expression, making it hard to understand what went wrong. As a workaround, some users choose to construct the failure message by themselves, streaming it into <code><a class="el" href="a00191.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE()</a></code>. However, this is awkward especially when the expression has side-effects or is expensive to evaluate.</p>
 <p >googletest gives you three different options to solve this problem:</p>
 <h3><a class="anchor" id="autotoc_md16"></a>
 Using an Existing Boolean Function</h3>
@@ -79,7 +79,7 @@ Using a Function That Returns an AssertionResult</h3>
 <div class="line"> </div>
 <div class="line">}</div>
 </div><!-- fragment --><p >You can then use the <code>&lt;&lt;</code> operator to stream messages to the <code>AssertionResult</code> object.</p>
-<p >To provide more readable messages in Boolean assertions (e.g. <code><a class="el" href="a00260.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE()</a></code>), write a predicate function that returns <code>AssertionResult</code> instead of <code>bool</code>. For example, if you define <code>IsEven()</code> as:</p>
+<p >To provide more readable messages in Boolean assertions (e.g. <code><a class="el" href="a00191.html#ac33e7cdfb5d44a7a0f0ab552eb5c3c6a">EXPECT_TRUE()</a></code>), write a predicate function that returns <code>AssertionResult</code> instead of <code>bool</code>. For example, if you define <code>IsEven()</code> as:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">testing::AssertionResult IsEven(int n) {</div>
 <div class="line">  if ((n % 2) == 0)</div>
@@ -173,8 +173,8 @@ initialize return object of type 'bool&amp;rsquo; with an rvalue of type 'void'"
 <p >{: .callout .warning} WARNING: A fatal assertion in a helper function (private void-returning method) called from a constructor or destructor does not terminate the current test, as your intuition might suggest: it merely returns from the constructor or destructor early, possibly leaving your object in a partially-constructed or partially-destructed state! You almost certainly want to <code>abort</code> or use <code>SetUp</code>/<code>TearDown</code> instead.</p>
 <h1><a class="anchor" id="autotoc_md26"></a>
 Skipping test execution</h1>
-<p >Related to the assertions <code><a class="el" href="a00260.html#a75adcdf89f69b0b615e395daafc315af">SUCCEED()</a></code> and <code><a class="el" href="a00260.html#a3e26a8d27caa386ed0ea7ce9d5b7c4ed">FAIL()</a></code>, you can prevent further test execution at runtime with the <code><a class="el" href="a00260.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code> macro. This is useful when you need to check for preconditions of the system under test during runtime and skip tests in a meaningful way.</p>
-<p ><code><a class="el" href="a00260.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code> can be used in individual test cases or in the <code>SetUp()</code> methods of classes derived from either <code><a class="el" href="a00844.html">testing::Environment</a></code> or <code><a class="el" href="a00820.html">testing::Test</a></code>. For example:</p>
+<p >Related to the assertions <code><a class="el" href="a00191.html#a75adcdf89f69b0b615e395daafc315af">SUCCEED()</a></code> and <code><a class="el" href="a00191.html#a3e26a8d27caa386ed0ea7ce9d5b7c4ed">FAIL()</a></code>, you can prevent further test execution at runtime with the <code><a class="el" href="a00191.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code> macro. This is useful when you need to check for preconditions of the system under test during runtime and skip tests in a meaningful way.</p>
+<p ><code><a class="el" href="a00191.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code> can be used in individual test cases or in the <code>SetUp()</code> methods of classes derived from either <code><a class="el" href="a00844.html">testing::Environment</a></code> or <code><a class="el" href="a00820.html">testing::Test</a></code>. For example:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">TEST(SkipTest, DoesSkip) {</div>
 <div class="line">  GTEST_SKIP() &lt;&lt; &quot;Skipping single test&quot;;</div>
@@ -192,7 +192,7 @@ Skipping test execution</h1>
 <div class="line">TEST_F(SkipFixture, SkipsOneTest) {</div>
 <div class="line">  EXPECT_EQ(5, 7);  // Won&#39;t fail</div>
 <div class="line">}</div>
-</div><!-- fragment --><p >As with assertion macros, you can stream a custom message into <code><a class="el" href="a00260.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code>.</p>
+</div><!-- fragment --><p >As with assertion macros, you can stream a custom message into <code><a class="el" href="a00191.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code>.</p>
 <h1><a class="anchor" id="autotoc_md27"></a>
 Teaching googletest How to Print Your Values</h1>
 <p >When a test assertion such as <code>EXPECT_EQ</code> fails, googletest prints the argument values to help you debug. It does this using a user-extensible value printer.</p>
@@ -392,7 +392,7 @@ Death Test Styles</h2>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
 Caveats</h2>
-<p >The <code>statement</code> argument of <code>ASSERT_EXIT()</code> can be any valid C++ statement. If it leaves the current function via a <code>return</code> statement or by throwing an exception, the death test is considered to have failed. Some googletest macros may return from the current function (e.g. <code><a class="el" href="a00260.html#ae9244bfbda562e8b798789b001993fa5">ASSERT_TRUE()</a></code>), so be sure to avoid them in <code>statement</code>.</p>
+<p >The <code>statement</code> argument of <code>ASSERT_EXIT()</code> can be any valid C++ statement. If it leaves the current function via a <code>return</code> statement or by throwing an exception, the death test is considered to have failed. Some googletest macros may return from the current function (e.g. <code><a class="el" href="a00191.html#ae9244bfbda562e8b798789b001993fa5">ASSERT_TRUE()</a></code>), so be sure to avoid them in <code>statement</code>.</p>
 <p >Since <code>statement</code> runs in the child process, any in-memory side effect (e.g. modifying a variable, releasing memory, etc) it causes will <em>not</em> be observable in the parent process. In particular, if you release memory in a death test, your program will fail the heap check as the parent process will never see the memory reclaimed. To solve this problem, you can</p>
 <ol type="1">
 <li>try not to free memory in a death test;</li>
@@ -495,7 +495,7 @@ Asserting on Subroutines</h3>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Fatal assertion   </th><th class="markdownTableHeadNone">Nonfatal assertion   </th><th class="markdownTableHeadNone">Verifies    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code><a class="el" href="a00260.html#a5034fda3490aad5a93942ac83f4cea49">ASSERT_NO_FATAL_FAILURE(statement)</a>;</code>   </td><td class="markdownTableBodyNone"><code><a class="el" href="a00260.html#a067c02ccaf3171d6e1781cd0f8cdcf74">EXPECT_NO_FATAL_FAILURE(statement)</a>;</code>   </td><td class="markdownTableBodyNone"><code>statement</code> doesn't generate any new fatal failures in the current thread.   </td></tr>
+<td class="markdownTableBodyNone"><code><a class="el" href="a00191.html#a5034fda3490aad5a93942ac83f4cea49">ASSERT_NO_FATAL_FAILURE(statement)</a>;</code>   </td><td class="markdownTableBodyNone"><code><a class="el" href="a00191.html#a067c02ccaf3171d6e1781cd0f8cdcf74">EXPECT_NO_FATAL_FAILURE(statement)</a>;</code>   </td><td class="markdownTableBodyNone"><code>statement</code> doesn't generate any new fatal failures in the current thread.   </td></tr>
 </table>
 <p >Only failures in the thread that executes the assertion are checked to determine the result of this type of assertions. If <code>statement</code> creates new threads, failures in these threads are ignored.</p>
 <p >Examples:</p>
@@ -526,7 +526,7 @@ Checking for Failures in the Current Test</h3>
 <div class="line">  // The following won&#39;t be executed.</div>
 <div class="line">  ...</div>
 <div class="line">}</div>
-</div><!-- fragment --><p >If <code>HasFatalFailure()</code> is used outside of <code><a class="el" href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST()</a></code> , <code><a class="el" href="a00260.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F()</a></code> , or a test fixture, you must add the <code><a class="el" href="a00820.html">testing::Test</a>::</code> prefix, as in:</p>
+</div><!-- fragment --><p >If <code>HasFatalFailure()</code> is used outside of <code><a class="el" href="a00191.html#ab5540a6d621853916be8240ff51819cf">TEST()</a></code> , <code><a class="el" href="a00191.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F()</a></code> , or a test fixture, you must add the <code><a class="el" href="a00820.html">testing::Test</a>::</code> prefix, as in:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">if (testing::Test::HasFatalFailure()) return;</div>
 </div><!-- fragment --><p >Similarly, <code>HasNonfatalFailure()</code> returns <code>true</code> if the current test has at least one non-fatal failure, and <code>HasFailure()</code> returns <code>true</code> if the current test has at least one failure of either kind.</p>
@@ -622,10 +622,10 @@ Global Set-Up and Tear-Down</h1>
 </div><!-- fragment --><p >Then, you register an instance of your environment class with googletest by calling the <code><a class="el" href="a00321.html#a224caeebdb6586b728d204367fea1087">testing::AddGlobalTestEnvironment()</a></code> function:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">Environment* AddGlobalTestEnvironment(Environment* env);</div>
-</div><!-- fragment --><p >Now, when <code><a class="el" href="a00260.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> is called, it first calls the <code>SetUp()</code> method of each environment object, then runs the tests if none of the environments reported fatal failures and <code><a class="el" href="a00260.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code> was not called. <code><a class="el" href="a00260.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> always calls <code>TearDown()</code> with each environment object, regardless of whether or not the tests were run.</p>
+</div><!-- fragment --><p >Now, when <code><a class="el" href="a00191.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> is called, it first calls the <code>SetUp()</code> method of each environment object, then runs the tests if none of the environments reported fatal failures and <code><a class="el" href="a00191.html#a3c0bbb980d533108ecc23c3534527d3c">GTEST_SKIP()</a></code> was not called. <code><a class="el" href="a00191.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> always calls <code>TearDown()</code> with each environment object, regardless of whether or not the tests were run.</p>
 <p >It's OK to register multiple environment objects. In this suite, their <code>SetUp()</code> will be called in the order they are registered, and their <code>TearDown()</code> will be called in the reverse order.</p>
 <p >Note that googletest takes ownership of the registered environment objects. Therefore <b>do not delete them</b> by yourself.</p>
-<p >You should call <code><a class="el" href="a00321.html#a224caeebdb6586b728d204367fea1087">AddGlobalTestEnvironment()</a></code> before <code><a class="el" href="a00260.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> is called, probably in <code><a class="el" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></code>. If you use <code>gtest_main</code>, you need to call this before <code><a class="el" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></code> starts for it to take effect. One way to do this is to define a global variable like this:</p>
+<p >You should call <code><a class="el" href="a00321.html#a224caeebdb6586b728d204367fea1087">AddGlobalTestEnvironment()</a></code> before <code><a class="el" href="a00191.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> is called, probably in <code><a class="el" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></code>. If you use <code>gtest_main</code>, you need to call this before <code><a class="el" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></code> starts for it to take effect. One way to do this is to define a global variable like this:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">testing::Environment* const foo_env =</div>
 <div class="line">    testing::AddGlobalTestEnvironment(new FooEnvironment);</div>
@@ -712,10 +712,10 @@ Creating Value-Parameterized Abstract Tests</h2>
 <li>Put the definition of the parameterized test fixture class (e.g. <code>FooTest</code>) in a header file, say <code>foo_param_test.h</code>. Think of this as <em>declaring</em> your abstract tests.</li>
 <li>Put the <code>TEST_P</code> definitions in <code>foo_param_test.cc</code>, which includes <code>foo_param_test.h</code>. Think of this as <em>implementing</em> your abstract tests.</li>
 </ol>
-<p >Once they are defined, you can instantiate them by including <code>foo_param_test.h</code>, invoking <code><a class="el" href="a00272.html#a6a5cb3ce0a0fe17f84f357a6f39a4ba5">INSTANTIATE_TEST_SUITE_P()</a></code>, and depending on the library target that contains <code>foo_param_test.cc</code>. You can instantiate the same abstract test suite multiple times, possibly in different source files.</p>
+<p >Once they are defined, you can instantiate them by including <code>foo_param_test.h</code>, invoking <code><a class="el" href="a00242.html#a6a5cb3ce0a0fe17f84f357a6f39a4ba5">INSTANTIATE_TEST_SUITE_P()</a></code>, and depending on the library target that contains <code>foo_param_test.cc</code>. You can instantiate the same abstract test suite multiple times, possibly in different source files.</p>
 <h2><a class="anchor" id="autotoc_md48"></a>
 Specifying Names for Value-Parameterized Test Parameters</h2>
-<p >The optional last argument to <code><a class="el" href="a00272.html#a6a5cb3ce0a0fe17f84f357a6f39a4ba5">INSTANTIATE_TEST_SUITE_P()</a></code> allows the user to specify a function or functor that generates custom test name suffixes based on the test parameters. The function should accept one argument of type <code><a class="el" href="a01072.html">testing::TestParamInfo</a>&lt;class ParamType&gt;</code>, and return <code>std::string</code>.</p>
+<p >The optional last argument to <code><a class="el" href="a00242.html#a6a5cb3ce0a0fe17f84f357a6f39a4ba5">INSTANTIATE_TEST_SUITE_P()</a></code> allows the user to specify a function or functor that generates custom test name suffixes based on the test parameters. The function should accept one argument of type <code><a class="el" href="a01072.html">testing::TestParamInfo</a>&lt;class ParamType&gt;</code>, and return <code>std::string</code>.</p>
 <p ><code><a class="el" href="a01076.html">testing::PrintToStringParamName</a></code> is a builtin test suffix generator that returns the value of <code>testing::PrintToString(GetParam())</code>. It does not work for <code>std::string</code> or C strings.</p>
 <p >{: .callout .note} NOTE: test names must be non-empty, unique, and may only contain ASCII alphanumeric characters. In particular, they <a href="faq.md#why-should-test-suite-names-and-test-names-not-contain-underscore">should not contain underscores</a></p>
 <div class="fragment"><div class="line"> {c++}</div>
@@ -767,7 +767,7 @@ Typed Tests</h1>
 <div class="line">using MyTypes = ::testing::Types&lt;char, int, unsigned int&gt;;</div>
 <div class="line">TYPED_TEST_SUITE(FooTest, MyTypes);</div>
 </div><!-- fragment --><p >The type alias (<code>using</code> or <code>typedef</code>) is necessary for the <code>TYPED_TEST_SUITE</code> macro to parse correctly. Otherwise the compiler will think that each comma in the type list introduces a new macro argument.</p>
-<p >Then, use <code><a class="el" href="a00275.html#ae6f575265873190de41b1329d16df0f0">TYPED_TEST()</a></code> instead of <code><a class="el" href="a00260.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F()</a></code> to define a typed test for this test suite. You can repeat this as many times as you want:</p>
+<p >Then, use <code><a class="el" href="a00227.html#ae6f575265873190de41b1329d16df0f0">TYPED_TEST()</a></code> instead of <code><a class="el" href="a00191.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F()</a></code> to define a typed test for this test suite. You can repeat this as many times as you want:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">TYPED_TEST(FooTest, DoesBlah) {</div>
 <div class="line">  // Inside a test, refer to the special name TypeParam to get the type</div>
@@ -802,7 +802,7 @@ Type-Parameterized Tests</h1>
 </div><!-- fragment --><p >Next, declare that you will define a type-parameterized test suite:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">TYPED_TEST_SUITE_P(FooTest);</div>
-</div><!-- fragment --><p >Then, use <code><a class="el" href="a00275.html#a6e9d1cd9b97da0076ae699775d3222d0">TYPED_TEST_P()</a></code> to define a type-parameterized test. You can repeat this as many times as you want:</p>
+</div><!-- fragment --><p >Then, use <code><a class="el" href="a00227.html#a6e9d1cd9b97da0076ae699775d3222d0">TYPED_TEST_P()</a></code> to define a type-parameterized test. You can repeat this as many times as you want:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">TYPED_TEST_P(FooTest, DoesBlah) {</div>
 <div class="line">  // Inside a test, refer to TypeParam to get the type parameter.</div>
@@ -841,20 +841,20 @@ Testing Private Code</h1>
 <li><p class="startli">Private class members are only accessible from within the class or by friends. To access a class' private members, you can declare your test fixture as a friend to the class and define accessors in your fixture. Tests using the fixture can then access the private members of your production class via the accessors in the fixture. Note that even though your fixture is a friend to your production class, your tests are not automatically friends to it, as they are technically defined in sub-classes of the fixture.</p>
 <p class="startli">Another way to test private members is to refactor them into an implementation class, which is then declared in a <code>*-internal.h</code> file. Your clients aren't allowed to include this header but your tests can. Such is called the <a href="https://www.gamedev.net/articles/programming/general-and-gameplay-programming/the-c-pimpl-r1794/">Pimpl</a> (Private Implementation) idiom.</p>
 <p class="startli">Or, you can declare an individual test as a friend of your class by adding this line in the class body:</p>
-<p class="startli">```c++ <a class="el" href="a00311.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(TestSuiteName, TestName)</a>; ```</p>
+<p class="startli">```c++ <a class="el" href="a00224.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(TestSuiteName, TestName)</a>; ```</p>
 <p class="startli">For example,</p>
-<p class="startli">```c++ // foo.h class Foo { ... private: <a class="el" href="a00311.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(FooTest, BarReturnsZeroOnNull)</a>;</p>
+<p class="startli">```c++ // foo.h class Foo { ... private: <a class="el" href="a00224.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(FooTest, BarReturnsZeroOnNull)</a>;</p>
 <p class="startli">int Bar(void* x); };</p>
-<p class="startli">// foo_test.cc ... <a class="el" href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST(FooTest, BarReturnsZeroOnNull)</a> { Foo foo; EXPECT_EQ(foo.Bar(NULL), 0); // Uses Foo's private member Bar(). } ```</p>
+<p class="startli">// foo_test.cc ... <a class="el" href="a00191.html#ab5540a6d621853916be8240ff51819cf">TEST(FooTest, BarReturnsZeroOnNull)</a> { Foo foo; EXPECT_EQ(foo.Bar(NULL), 0); // Uses Foo's private member Bar(). } ```</p>
 <p class="startli">Pay special attention when your class is defined in a namespace. If you want your test fixtures and tests to be friends of your class, then they must be defined in the exact same namespace (no anonymous or inline namespaces).</p>
 <p class="startli">For example, if the code to be tested looks like:</p>
 <p class="startli">```c++ namespace my_namespace {</p>
-<p class="startli">class Foo { friend class FooTest; <a class="el" href="a00311.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(FooTest, Bar)</a>; <a class="el" href="a00311.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(FooTest, Baz)</a>; ... definition of the class Foo ... };</p>
+<p class="startli">class Foo { friend class FooTest; <a class="el" href="a00224.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(FooTest, Bar)</a>; <a class="el" href="a00224.html#a8d443b4cc1d87a7a17943b8fbdbf3910">FRIEND_TEST(FooTest, Baz)</a>; ... definition of the class Foo ... };</p>
 <p class="startli">} // namespace my_namespace ```</p>
 <p class="startli">Your test code should be something like:</p>
 <p class="startli">```c++ namespace my_namespace {</p>
 <p class="startli">class FooTest : public <a class="el" href="a00820.html">testing::Test</a> { protected: ... };</p>
-<p class="startli"><a class="el" href="a00260.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F(FooTest, Bar)</a> { ... } <a class="el" href="a00260.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F(FooTest, Baz)</a> { ... }</p>
+<p class="startli"><a class="el" href="a00191.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F(FooTest, Bar)</a> { ... } <a class="el" href="a00191.html#a0ee66d464d1a06c20c1929cae09d8758">TEST_F(FooTest, Baz)</a> { ... }</p>
 <p class="startli">} // namespace my_namespace ```</p>
 </li>
 </ul>
@@ -892,7 +892,7 @@ Registering tests programmatically</h1>
 <div class="line">                       const char* file, int line, Factory factory);</div>
 </div><!-- fragment --><p >The <code>factory</code> argument is a factory callable (move-constructible) object or function pointer that creates a new instance of the Test object. It handles ownership to the caller. The signature of the callable is <code>Fixture*()</code>, where <code>Fixture</code> is the test fixture class for the test. All tests registered with the same <code>test_suite_name</code> must return the same fixture type. This is checked at runtime.</p>
 <p >The framework will infer the fixture class from the factory and will call the <code>SetUpTestSuite</code> and <code>TearDownTestSuite</code> for it.</p>
-<p >Must be called before <code><a class="el" href="a00260.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> is invoked, otherwise behavior is undefined.</p>
+<p >Must be called before <code><a class="el" href="a00191.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code> is invoked, otherwise behavior is undefined.</p>
 <p >Use case example:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">class MyFixture : public testing::Test {</div>
@@ -985,7 +985,7 @@ Defining Event Listeners</h2>
 <div class="line"> };</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md57"></a>
 Using Event Listeners</h2>
-<p >To use the event listener you have defined, add an instance of it to the googletest event listener list (represented by class <a href="reference/testing.md#TestEventListeners"><code>TestEventListeners</code></a> - note the "s" at the end of the name) in your <code><a class="el" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></code> function, before calling <code><a class="el" href="a00260.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code>:</p>
+<p >To use the event listener you have defined, add an instance of it to the googletest event listener list (represented by class <a href="reference/testing.md#TestEventListeners"><code>TestEventListeners</code></a> - note the "s" at the end of the name) in your <code><a class="el" href="a00002.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a></code> function, before calling <code><a class="el" href="a00191.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code>:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">int main(int argc, char** argv) {</div>
 <div class="line">  testing::InitGoogleTest(&amp;argc, argv);</div>
@@ -1006,7 +1006,7 @@ Using Event Listeners</h2>
 <p >You may append more than one listener to the list. When an <code>On*Start()</code> or <code>OnTestPartResult()</code> event is fired, the listeners will receive it in the order they appear in the list (since new listeners are added to the end of the list, the default text printer and the default XML generator will receive the event first). An <code>On*End()</code> event will be received by the listeners in the <em>reverse</em> order. This allows output by listeners added later to be framed by output from listeners added earlier.</p>
 <h2><a class="anchor" id="autotoc_md58"></a>
 Generating Failures in Listeners</h2>
-<p >You may use failure-raising macros (<code>EXPECT_*()</code>, <code>ASSERT_*()</code>, <code><a class="el" href="a00260.html#a3e26a8d27caa386ed0ea7ce9d5b7c4ed">FAIL()</a></code>, etc) when processing an event. There are some restrictions:</p>
+<p >You may use failure-raising macros (<code>EXPECT_*()</code>, <code>ASSERT_*()</code>, <code><a class="el" href="a00191.html#a3e26a8d27caa386ed0ea7ce9d5b7c4ed">FAIL()</a></code>, etc) when processing an event. There are some restrictions:</p>
 <ol type="1">
 <li>You cannot generate any failure in <code>OnTestPartResult()</code> (otherwise it will cause <code>OnTestPartResult()</code> to be called recursively).</li>
 <li>A listener that handles <code>OnTestPartResult()</code> is not allowed to generate any failure.</li>
@@ -1015,7 +1015,7 @@ Generating Failures in Listeners</h2>
 <p >See <a href="https://github.com/google/googletest/blob/master/googletest/samples/sample10_unittest.cc" title="Failure-raising listener example">sample10_unittest.cc</a> for an example of a failure-raising listener.</p>
 <h1><a class="anchor" id="autotoc_md59"></a>
 Running Test Programs: Advanced Options</h1>
-<p >googletest test programs are ordinary executables. Once built, you can run them directly and affect their behavior via the following environment variables and/or command line flags. For the flags to work, your programs must call <code><a class="el" href="a00321.html#aee3f6f99df893f576f705f66c0559482">testing::InitGoogleTest()</a></code> before calling <code><a class="el" href="a00260.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code>.</p>
+<p >googletest test programs are ordinary executables. Once built, you can run them directly and affect their behavior via the following environment variables and/or command line flags. For the flags to work, your programs must call <code><a class="el" href="a00321.html#aee3f6f99df893f576f705f66c0559482">testing::InitGoogleTest()</a></code> before calling <code><a class="el" href="a00191.html#a853a3792807489591d3d4a2f2ff9359f">RUN_ALL_TESTS()</a></code>.</p>
 <p >To see a list of supported flags and their usage, please run your test program with the <code>--help</code> flag. You can also use <code>-h</code>, <code>-?</code>, or <code>/?</code> for short.</p>
 <p >If an option is specified both by an environment variable and by a flag, the latter takes precedence.</p>
 <h2><a class="anchor" id="autotoc_md60"></a>
@@ -1511,7 +1511,7 @@ void __tsan_on_report() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

@@ -119,8 +119,8 @@ Using a Function, Functor, or Lambda as an Action</h1>
 <div class="line"><span class="keywordtype">double</span> Distance(<a class="code hl_typedef" href="a00321.html#a603e329ec0263ebfcf16f712810bd511">Unused</a>, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y) { <span class="keywordflow">return</span> sqrt(x*x + y*y); }</div>
 <div class="line">...</div>
 <div class="line">EXPECT_CALL(mock, Foo(<span class="stringliteral">&quot;Hi&quot;</span>, _, _)).WillOnce(<a class="code hl_function" href="a00321.html#af5cacf4475557b5a3e37af3836564235">Invoke</a>(Distance));</div>
-<div class="ttc" id="aa00321_html_a603e329ec0263ebfcf16f712810bd511"><div class="ttname"><a href="a00321.html#a603e329ec0263ebfcf16f712810bd511">testing::Unused</a></div><div class="ttdeci">internal::IgnoredValue Unused</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01196">gmock-actions.h:1196</a></div></div>
-<div class="ttc" id="aa00321_html_af5cacf4475557b5a3e37af3836564235"><div class="ttname"><a href="a00321.html#af5cacf4475557b5a3e37af3836564235">testing::Invoke</a></div><div class="ttdeci">std::decay&lt; FunctionImpl &gt;::type Invoke(FunctionImpl &amp;&amp;function_impl)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01343">gmock-actions.h:1343</a></div></div>
+<div class="ttc" id="aa00321_html_a603e329ec0263ebfcf16f712810bd511"><div class="ttname"><a href="a00321.html#a603e329ec0263ebfcf16f712810bd511">testing::Unused</a></div><div class="ttdeci">internal::IgnoredValue Unused</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l01196">gmock-actions.h:1196</a></div></div>
+<div class="ttc" id="aa00321_html_af5cacf4475557b5a3e37af3836564235"><div class="ttname"><a href="a00321.html#af5cacf4475557b5a3e37af3836564235">testing::Invoke</a></div><div class="ttdeci">std::decay&lt; FunctionImpl &gt;::type Invoke(FunctionImpl &amp;&amp;function_impl)</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l01343">gmock-actions.h:1343</a></div></div>
 </div><!-- fragment --><p ><code>Invoke(callback)</code> and <code>InvokeWithoutArgs(callback)</code> take ownership of <code>callback</code>, which must be permanent. The type of <code>callback</code> must be a base callback type instead of a derived one, e.g.</p>
 <div class="fragment"><div class="line">BlockingClosure* done = <span class="keyword">new</span> BlockingClosure;</div>
 <div class="line">... <a class="code hl_function" href="a00321.html#af5cacf4475557b5a3e37af3836564235">Invoke</a>(done) ...;  <span class="comment">// This won&#39;t compile!</span></div>
@@ -131,7 +131,7 @@ Using a Function, Functor, or Lambda as an Action</h1>
 <div class="fragment"><div class="line"><a class="code hl_function" href="a00322.html#a4c6f0469015303fe29a4f08ba036e6d6">using ::testing::InvokeArgument</a>;</div>
 <div class="line">...</div>
 <div class="line">InvokeArgument&lt;2&gt;(5, string(<span class="stringliteral">&quot;Hi&quot;</span>), std::ref(foo))</div>
-<div class="ttc" id="aa00322_html_a4c6f0469015303fe29a4f08ba036e6d6"><div class="ttname"><a href="a00322.html#a4c6f0469015303fe29a4f08ba036e6d6">testing::internal::InvokeArgument</a></div><div class="ttdeci">auto InvokeArgument(F f, Args... args) -&gt; decltype(f(args...))</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00507">gmock-more-actions.h:507</a></div></div>
+<div class="ttc" id="aa00322_html_a4c6f0469015303fe29a4f08ba036e6d6"><div class="ttname"><a href="a00322.html#a4c6f0469015303fe29a4f08ba036e6d6">testing::internal::InvokeArgument</a></div><div class="ttdeci">auto InvokeArgument(F f, Args... args) -&gt; decltype(f(args...))</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l00507">gmock-more-actions.h:507</a></div></div>
 </div><!-- fragment --><p >calls the mock function's #2 argument, passing to it <code>5</code> and <code>string("Hi")</code> by value, and <code>foo</code> by reference.</p>
 <h1><a class="anchor" id="autotoc_md248"></a>
 Default Action</h1>
@@ -139,7 +139,7 @@ Default Action</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Action   </th><th class="markdownTableHeadLeft">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code><a class="el" href="a00321.html#ae041df61ff61ccb9753ba15b4309e1a6">DoDefault()</a></code>   </td><td class="markdownTableBodyLeft">Do the default action (specified by <code><a class="el" href="a00203.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL()</a></code> or the built-in one).   </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="a00321.html#ae041df61ff61ccb9753ba15b4309e1a6">DoDefault()</a></code>   </td><td class="markdownTableBodyLeft">Do the default action (specified by <code><a class="el" href="a00302.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL()</a></code> or the built-in one).   </td></tr>
 </table>
 <p >{: .callout .note} <b>Note:</b> due to technical reasons, <code><a class="el" href="a00321.html#ae041df61ff61ccb9753ba15b4309e1a6">DoDefault()</a></code> cannot be used inside a composite action - trying to do so will result in a run-time error.</p>
 <h1><a class="anchor" id="autotoc_md249"></a>
@@ -164,9 +164,9 @@ Defining Actions</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Macro   </th><th class="markdownTableHeadLeft">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"><code><a class="el" href="a00218.html#a7af7137aa4871df4235881af377205fe">ACTION(Sum)</a> { return arg0 + arg1; }</code>   </td><td class="markdownTableBodyLeft">Defines an action <code>Sum()</code> to return the sum of the mock function's argument #0 and #1.    </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="a00311.html#a7af7137aa4871df4235881af377205fe">ACTION(Sum)</a> { return arg0 + arg1; }</code>   </td><td class="markdownTableBodyLeft">Defines an action <code>Sum()</code> to return the sum of the mock function's argument #0 and #1.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft"><code><a class="el" href="a00218.html#af5f47e069acb517db9f743f029471aa7">ACTION_P(Plus, n)</a> { return arg0 + n; }</code>   </td><td class="markdownTableBodyLeft">Defines an action <code>Plus(n)</code> to return the sum of the mock function's argument #0 and <code>n</code>.    </td></tr>
+<td class="markdownTableBodyLeft"><code><a class="el" href="a00311.html#af5f47e069acb517db9f743f029471aa7">ACTION_P(Plus, n)</a> { return arg0 + n; }</code>   </td><td class="markdownTableBodyLeft">Defines an action <code>Plus(n)</code> to return the sum of the mock function's argument #0 and <code>n</code>.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft"><code>ACTION_Pk(Foo, p1, ..., pk) { statements; }</code>   </td><td class="markdownTableBodyLeft">Defines a parameterized action <code>Foo(p1, ..., pk)</code> to execute the given <code>statements</code>.   </td></tr>
 </table>
@@ -175,7 +175,7 @@ Defining Actions</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

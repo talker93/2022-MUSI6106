@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: AudioFileIf.h File Reference</title>
+<title>MUSI6106: CombFilter.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,25 +46,19 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">AudioFileIf.h File Reference</div></div>
+  <div class="headertitle"><div class="title">CombFilter.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00077_source.html">ErrorDef.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00077_source.html">ErrorDef.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for AudioFileIf.h:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for CombFilter.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00057.png" border="0" usemap="#aAudioFileIf_8h" alt=""/></div>
-<map name="aAudioFileIf_8h" id="aAudioFileIf_8h">
-<area shape="rect" title=" " alt="" coords="117,5,212,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,60,107"/>
-<area shape="rect" title=" " alt="" coords="85,80,151,107"/>
-<area shape="rect" title=" " alt="" coords="175,80,250,107"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="275,80,353,107"/>
+<div class="center"><img src="a00057.png" border="0" usemap="#aCombFilter_8h" alt=""/></div>
+<map name="aCombFilter_8h" id="aCombFilter_8h">
+<area shape="rect" title=" " alt="" coords="5,5,100,32"/>
+<area shape="rect" href="a00077.html" title=" " alt="" coords="13,80,92,107"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -72,13 +66,11 @@ $(function() {
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00058.png" border="0" usemap="#aAudioFileIf_8hdep" alt=""/></div>
-<map name="aAudioFileIf_8hdep" id="aAudioFileIf_8hdep">
-<area shape="rect" title=" " alt="" coords="136,5,231,32"/>
-<area shape="rect" href="a00068.html" title=" " alt="" coords="59,80,145,107"/>
-<area shape="rect" href="a00074.html" title=" " alt="" coords="129,155,237,181"/>
-<area shape="rect" href="a00002.html" title=" " alt="" coords="221,80,357,107"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="5,155,105,181"/>
+<div class="center"><img src="a00058.png" border="0" usemap="#aCombFilter_8hdep" alt=""/></div>
+<map name="aCombFilter_8hdep" id="aCombFilter_8hdep">
+<area shape="rect" title=" " alt="" coords="81,5,175,32"/>
+<area shape="rect" href="a00014.html" title=" " alt="" coords="5,80,115,107"/>
+<area shape="rect" href="a00011.html" title=" " alt="" coords="139,80,256,107"/>
 </map>
 </div>
 </div>
@@ -86,16 +78,20 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html">CAudioFileIf</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">open, read, and write audio files  <a href="a00340.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html">CCombFilterBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">base class for the comb filter (FIR &amp; IIR)  <a href="a00348.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00344.html">CAudioFileIf::FileSpec_t</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html">CCombFilterFir</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIR comb filter implementation.  <a href="a00352.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00356.html">CCombFilterIir</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IIR comb filter implementation.  <a href="a00356.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

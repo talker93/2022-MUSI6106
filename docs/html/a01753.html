@@ -43,7 +43,7 @@ $(function() {
   <div class="headertitle"><div class="title">Mocking Reference </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >This page lists the facilities provided by GoogleTest for creating and working with mock objects. To use them, include the header <code><a class="el" href="a00188.html">gmock/gmock.h</a></code>.</p>
+<div class="textblock"><p >This page lists the facilities provided by GoogleTest for creating and working with mock objects. To use them, include the header <code><a class="el" href="a00305.html">gmock/gmock.h</a></code>.</p>
 <h1><a class="anchor" id="macros"></a>
 Macros</h1>
 <p >GoogleTest defines the following macros for working with mocks.</p>
@@ -70,20 +70,20 @@ MOCK_METHOD</h2>
 <div class="fragment"><div class="line"><span class="keyword">class </span>MyMock {</div>
 <div class="line"> <span class="keyword">public</span>:</div>
 <div class="line">  <span class="comment">// The following 2 lines will not compile due to commas in the arguments:</span></div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(std::pair&lt;bool, int&gt;, GetPair, ());              <span class="comment">// Error!</span></div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, CheckMap, (std::map&lt;int, double&gt;, <span class="keywordtype">bool</span>));  <span class="comment">// Error!</span></div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(std::pair&lt;bool, int&gt;, GetPair, ());              <span class="comment">// Error!</span></div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, CheckMap, (std::map&lt;int, double&gt;, <span class="keywordtype">bool</span>));  <span class="comment">// Error!</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// One solution - wrap arguments that contain commas in parentheses:</span></div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>((std::pair&lt;bool, int&gt;), GetPair, ());</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, CheckMap, ((std::map&lt;int, double&gt;), <span class="keywordtype">bool</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>((std::pair&lt;bool, int&gt;), GetPair, ());</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, CheckMap, ((std::map&lt;int, double&gt;), <span class="keywordtype">bool</span>));</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Another solution - use type aliases:</span></div>
 <div class="line">  <span class="keyword">using</span> BoolAndInt = std::pair&lt;bool, int&gt;;</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(BoolAndInt, GetPair, ());</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(BoolAndInt, GetPair, ());</div>
 <div class="line">  <span class="keyword">using</span> MapIntDouble = std::map&lt;int, double&gt;;</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, CheckMap, (MapIntDouble, <span class="keywordtype">bool</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, CheckMap, (MapIntDouble, <span class="keywordtype">bool</span>));</div>
 <div class="line">};</div>
-<div class="ttc" id="aa00200_html_a05ffc29d0784b131ee178da190d31397"><div class="ttname"><a href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a></div><div class="ttdeci">#define MOCK_METHOD(...)</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00108">gmock-function-mocker.h:108</a></div></div>
+<div class="ttc" id="aa00308_html_a05ffc29d0784b131ee178da190d31397"><div class="ttname"><a href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a></div><div class="ttdeci">#define MOCK_METHOD(...)</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00108">gmock-function-mocker.h:108</a></div></div>
 </div><!-- fragment --><p ><code>MOCK_METHOD</code> must be used in the <code>public:</code> section of a mock class definition, regardless of whether the method being mocked is <code>public</code>, <code>protected</code>, or <code>private</code> in the base class.</p>
 <h2><a class="anchor" id="EXPECT_CALL"></a>
 EXPECT_CALL</h2>
@@ -91,7 +91,7 @@ EXPECT_CALL</h2>
 <p >Creates an <a href="../gmock_for_dummies.md#setting-expectations">expectation</a> that the method *<code>method_name</code>* of the object *<code>mock_object</code>* is called with arguments that match the given matchers *<code>matchers...</code>*. <code>EXPECT_CALL</code> must precede any code that exercises the mock object.</p>
 <p >The parameter *<code>matchers...</code>* is a comma-separated list of <a href="../gmock_for_dummies.md#matchers-what-arguments-do-we-expect">matchers</a> that correspond to each argument of the method *<code>method_name</code>*. The expectation will apply only to calls of *<code>method_name</code>* whose arguments match all of the matchers. If <code>(</code>*<code>matchers...</code>*<code>)</code> is omitted, the expectation behaves as if each argument's matcher were a <a href="matchers.md#wildcard">wildcard matcher (<code>_</code>)</a>. See the <a class="el" href="a01752.html">Matchers Reference</a> for a list of all built-in matchers.</p>
 <p >The following chainable clauses can be used to modify the expectation, and they must be used in the following order:</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_object, method_name(matchers...))</div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_object, method_name(matchers...))</div>
 <div class="line">    .With(multi_argument_matcher)  <span class="comment">// Can be used at most once</span></div>
 <div class="line">    .Times(cardinality)            <span class="comment">// Can be used at most once</span></div>
 <div class="line">    .InSequence(sequences...)      <span class="comment">// Can be used any number of times</span></div>
@@ -99,7 +99,7 @@ EXPECT_CALL</h2>
 <div class="line">    .WillOnce(action)              <span class="comment">// Can be used any number of times</span></div>
 <div class="line">    .WillRepeatedly(action)        <span class="comment">// Can be used at most once</span></div>
 <div class="line">    .RetiresOnSaturation();        <span class="comment">// Can be used at most once</span></div>
-<div class="ttc" id="aa00203_html_a535a6156de72c1a2e25a127e38ee5232"><div class="ttname"><a href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a></div><div class="ttdeci">#define EXPECT_CALL(obj, call)</div></div>
+<div class="ttc" id="aa00302_html_a535a6156de72c1a2e25a127e38ee5232"><div class="ttname"><a href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a></div><div class="ttdeci">#define EXPECT_CALL(obj, call)</div></div>
 </div><!-- fragment --><p >See details for each modifier clause below.</p>
 <h3><a class="anchor" id="autotoc_md264"></a>
 With {#EXPECT_CALL.With}</h3>
@@ -151,9 +151,9 @@ InSequence {#EXPECT_CALL.InSequence}</h3>
 <div class="line">...</div>
 <div class="line">EXPECT_CALL(my_mock, Reset())</div>
 <div class="line">    .InSequence(s1, s2);</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, GetSize())</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, GetSize())</div>
 <div class="line">    .InSequence(s1);</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, Describe())</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, Describe())</div>
 <div class="line">    .InSequence(s2);</div>
 </div><!-- fragment --><p >The <code>InSequence</code> clause can be used any number of times on an expectation.</p>
 <p >See also the <a class="el" href="a01753.html#InSequence">`InSequence` class</a>.</p>
@@ -165,9 +165,9 @@ After {#EXPECT_CALL.After}</h3>
 <p >For example, the following code sets the expectation that the <code>Describe()</code> method of <code>my_mock</code> is called only after both <code>InitX()</code> and <code>InitY()</code> have been called.</p>
 <div class="fragment"><div class="line">using ::testing::Expectation;</div>
 <div class="line">...</div>
-<div class="line">Expectation init_x = <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, InitX());</div>
-<div class="line">Expectation init_y = <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, InitY());</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, Describe())</div>
+<div class="line">Expectation init_x = <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, InitX());</div>
+<div class="line">Expectation init_y = <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, InitY());</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, Describe())</div>
 <div class="line">    .After(init_x, init_y);</div>
 </div><!-- fragment --><p >The <code>ExpectationSet</code> object is helpful when the number of prerequisites for an expectation is large or variable, for example:</p>
 <div class="fragment"><div class="line">using ::testing::ExpectationSet;</div>
@@ -175,9 +175,9 @@ After {#EXPECT_CALL.After}</h3>
 <div class="line">ExpectationSet all_inits;</div>
 <div class="line"><span class="comment">// Collect all expectations of InitElement() calls</span></div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; element_count; i++) {</div>
-<div class="line">  all_inits += <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, InitElement(i));</div>
+<div class="line">  all_inits += <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, InitElement(i));</div>
 <div class="line">}</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, Describe())</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, Describe())</div>
 <div class="line">    .After(all_inits);  <span class="comment">// Expect Describe() call after all InitElement() calls</span></div>
 </div><!-- fragment --><p >The <code>After</code> clause can be used any number of times on an expectation.</p>
 <h3><a class="anchor" id="autotoc_md268"></a>
@@ -193,7 +193,7 @@ WillOnce {#EXPECT_CALL.WillOnce}</h3>
 <div class="line">    .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(1))</div>
 <div class="line">    .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(2))</div>
 <div class="line">    .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(3));</div>
-<div class="ttc" id="aa00321_html_adae3994eb444d1ad2dd602454b854663"><div class="ttname"><a href="a00321.html#adae3994eb444d1ad2dd602454b854663">testing::Return</a></div><div class="ttdeci">internal::ReturnAction&lt; R &gt; Return(R value)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01242">gmock-actions.h:1242</a></div></div>
+<div class="ttc" id="aa00321_html_adae3994eb444d1ad2dd602454b854663"><div class="ttname"><a href="a00321.html#adae3994eb444d1ad2dd602454b854663">testing::Return</a></div><div class="ttdeci">internal::ReturnAction&lt; R &gt; Return(R value)</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l01242">gmock-actions.h:1242</a></div></div>
 </div><!-- fragment --><p >The <code>WillOnce</code> clause can be used any number of times on an expectation.</p>
 <h3><a class="anchor" id="autotoc_md269"></a>
 WillRepeatedly {#EXPECT_CALL.WillRepeatedly}</h3>
@@ -207,7 +207,7 @@ WillRepeatedly {#EXPECT_CALL.WillRepeatedly}</h3>
 <div class="line">EXPECT_CALL(my_mock, GetName())</div>
 <div class="line">    .WillRepeatedly(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(<span class="stringliteral">&quot;John Doe&quot;</span>));  <span class="comment">// Return &quot;John Doe&quot; on all calls</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, GetNumber())</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, GetNumber())</div>
 <div class="line">    .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(42))        <span class="comment">// Return 42 on the first call</span></div>
 <div class="line">    .WillRepeatedly(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(7));  <span class="comment">// Return 7 on all subsequent calls</span></div>
 </div><!-- fragment --><p >The <code>WillRepeatedly</code> clause can be used at most once on an expectation.</p>
@@ -221,7 +221,7 @@ RetiresOnSaturation {#EXPECT_CALL.RetiresOnSaturation}</h3>
 <div class="line">...</div>
 <div class="line">EXPECT_CALL(my_mock, SetNumber(_))  <span class="comment">// Expectation 1</span></div>
 <div class="line">    .Times(AnyNumber());</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, SetNumber(7))  <span class="comment">// Expectation 2</span></div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, SetNumber(7))  <span class="comment">// Expectation 2</span></div>
 <div class="line">    .Times(2)</div>
 <div class="line">    .RetiresOnSaturation();</div>
 </div><!-- fragment --><p >In the above example, the first two calls to <code>my_mock.SetNumber(7)</code> match expectation 2, which then becomes inactive and no longer matches any calls. A third call to <code>my_mock.SetNumber(7)</code> would then match expectation 1. Without <code>RetiresOnSaturation()</code> on expectation 2, a third call to <code>my_mock.SetNumber(7)</code> would match expectation 2 again, producing a failure since the limit of 2 calls was exceeded.</p>
@@ -232,10 +232,10 @@ ON_CALL</h2>
 <p >Defines what happens when the method *<code>method_name</code>* of the object *<code>mock_object</code>* is called with arguments that match the given matchers *<code>matchers...</code>*. Requires a modifier clause to specify the method's behavior. <em>Does not</em> set any expectations that the method will be called.</p>
 <p >The parameter *<code>matchers...</code>* is a comma-separated list of <a href="../gmock_for_dummies.md#matchers-what-arguments-do-we-expect">matchers</a> that correspond to each argument of the method *<code>method_name</code>*. The <code>ON_CALL</code> specification will apply only to calls of *<code>method_name</code>* whose arguments match all of the matchers. If <code>(</code>*<code>matchers...</code>*<code>)</code> is omitted, the behavior is as if each argument's matcher were a <a href="matchers.md#wildcard">wildcard matcher (<code>_</code>)</a>. See the <a class="el" href="a01752.html">Matchers Reference</a> for a list of all built-in matchers.</p>
 <p >The following chainable clauses can be used to set the method's behavior, and they must be used in the following order:</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="a00203.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a>(mock_object, method_name(matchers...))</div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="a00302.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a>(mock_object, method_name(matchers...))</div>
 <div class="line">    .With(multi_argument_matcher)  <span class="comment">// Can be used at most once</span></div>
 <div class="line">    .WillByDefault(action);        <span class="comment">// Required</span></div>
-<div class="ttc" id="aa00203_html_a5b12ae6cf84f0a544ca811b380c37334"><div class="ttname"><a href="a00203.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a></div><div class="ttdeci">#define ON_CALL(obj, call)</div></div>
+<div class="ttc" id="aa00302_html_a5b12ae6cf84f0a544ca811b380c37334"><div class="ttname"><a href="a00302.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a></div><div class="ttdeci">#define ON_CALL(obj, call)</div></div>
 </div><!-- fragment --><p >See details for each modifier clause below.</p>
 <h3><a class="anchor" id="autotoc_md271"></a>
 With {#ON_CALL.With}</h3>
@@ -290,7 +290,7 @@ NiceMock</h2>
 <div class="fragment"><div class="line">using ::testing::NiceMock;</div>
 <div class="line">...</div>
 <div class="line">NiceMock&lt;MockClass&gt; my_mock(<span class="stringliteral">&quot;some&quot;</span>, <span class="stringliteral">&quot;args&quot;</span>);</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, DoSomething());</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, DoSomething());</div>
 <div class="line">... code that uses my_mock ...</div>
 </div><!-- fragment --><p ><code>NiceMock&lt;T&gt;</code> only works for mock methods defined using the <code>MOCK_METHOD</code> macro directly in the definition of class <code>T</code>. If a mock method is defined in a base class of <code>T</code>, a warning might still be generated.</p>
 <p ><code>NiceMock&lt;T&gt;</code> might not work correctly if the destructor of <code>T</code> is not virtual.</p>
@@ -303,7 +303,7 @@ NaggyMock</h2>
 <div class="fragment"><div class="line">using ::testing::NaggyMock;</div>
 <div class="line">...</div>
 <div class="line">NaggyMock&lt;MockClass&gt; my_mock(<span class="stringliteral">&quot;some&quot;</span>, <span class="stringliteral">&quot;args&quot;</span>);</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, DoSomething());</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, DoSomething());</div>
 <div class="line">... code that uses my_mock ...</div>
 </div><!-- fragment --><p ><a class="el" href="a00688.html">Mock</a> objects of type <code>T</code> by default behave the same way as <code>NaggyMock&lt;T&gt;</code>.</p>
 <h2><a class="anchor" id="StrictMock"></a>
@@ -315,7 +315,7 @@ StrictMock</h2>
 <div class="fragment"><div class="line">using ::testing::StrictMock;</div>
 <div class="line">...</div>
 <div class="line">StrictMock&lt;MockClass&gt; my_mock(<span class="stringliteral">&quot;some&quot;</span>, <span class="stringliteral">&quot;args&quot;</span>);</div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, DoSomething());</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(my_mock, DoSomething());</div>
 <div class="line">... code that uses my_mock ...</div>
 </div><!-- fragment --><p ><code>StrictMock&lt;T&gt;</code> only works for mock methods defined using the <code>MOCK_METHOD</code> macro directly in the definition of class <code>T</code>. If a mock method is defined in a base class of <code>T</code>, a failure might not be generated.</p>
 <p ><code>StrictMock&lt;T&gt;</code> might not work correctly if the destructor of <code>T</code> is not virtual.</p>
@@ -333,10 +333,10 @@ InSequence</h2>
 <div class="line">  InSequence seq;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// The following are expected to occur in the order declared.</span></div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p >The name of the <code>InSequence</code> object does not matter.</p>
 <h2><a class="anchor" id="Expectation"></a>
@@ -344,7 +344,7 @@ Expectation</h2>
 <p ><code>::testing::Expectation</code></p>
 <p >Represents a mock function call expectation as created by <a class="el" href="a01753.html#EXPECT_CALL">`EXPECT_CALL`</a>:</p>
 <div class="fragment"><div class="line">using ::testing::Expectation;</div>
-<div class="line">Expectation my_expectation = <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
+<div class="line">Expectation my_expectation = <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
 </div><!-- fragment --><p >Useful for specifying sequences of expectations; see the `After` clause of <code>EXPECT_CALL</code>.</p>
 <h2><a class="anchor" id="ExpectationSet"></a>
 ExpectationSet</h2>
@@ -353,13 +353,13 @@ ExpectationSet</h2>
 <p >Use the <code>+=</code> operator to add <a class="el" href="a01753.html#Expectation">`Expectation`</a> objects to the set:</p>
 <div class="fragment"><div class="line">using ::testing::ExpectationSet;</div>
 <div class="line">ExpectationSet my_expectations;</div>
-<div class="line">my_expectations += <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
+<div class="line">my_expectations += <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(...);</div>
 </div><!-- fragment --><p >Useful for specifying sequences of expectations; see the `After` clause of <code>EXPECT_CALL</code>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

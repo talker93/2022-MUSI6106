@@ -1,13 +1,11 @@
 <map id="CRingBuffer::put" name="CRingBuffer::put">
-<area shape="rect" id="node1" title=" " alt="" coords="671,81,785,108"/>
-<area shape="rect" id="node2" href="$a00368.html#a5a7d25e5bee8e5e6648f4bbe9317367e" title=" " alt="" coords="452,31,623,57"/>
-<area shape="rect" id="node5" href="$a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="457,107,617,133"/>
-<area shape="rect" id="node3" href="$a00368.html#a33d44ada59f89aed15f510d7c5fe019a" title=" " alt="" coords="250,5,371,32"/>
-<area shape="rect" id="node4" href="$a00368.html#a12fc205ad6f6daeb3abd78e108cd6790" title=" " alt="" coords="45,5,129,32"/>
-<area shape="rect" id="node6" href="$a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="249,56,373,83"/>
-<area shape="rect" id="node8" href="$a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="230,107,391,133"/>
-<area shape="rect" id="node9" href="$a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="232,157,389,184"/>
-<area shape="rect" id="node10" href="$a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,208,404,235"/>
-<area shape="rect" id="node7" href="$a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="62,56,113,83"/>
-<area shape="rect" id="node11" href="$a00360.html#a47e0979e162e23e217829fee0140a3de" title=" " alt="" coords="5,208,169,235"/>
+<area shape="rect" id="node1" title=" " alt="" coords="565,56,680,83"/>
+<area shape="rect" id="node2" href="$a00368.html#a5a7d25e5bee8e5e6648f4bbe9317367e" title=" " alt="" coords="347,19,517,45"/>
+<area shape="rect" id="node5" href="$a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="352,81,512,108"/>
+<area shape="rect" id="node3" href="$a00368.html#a33d44ada59f89aed15f510d7c5fe019a" title=" " alt="" coords="157,5,279,32"/>
+<area shape="rect" id="node4" href="$a00368.html#a12fc205ad6f6daeb3abd78e108cd6790" title=" " alt="" coords="5,5,89,32"/>
+<area shape="rect" id="node6" href="$a00392.html#a7a0b8a83679dd3ee9eed05d50bf14fd1" title=" " alt="" coords="156,56,280,83"/>
+<area shape="rect" id="node8" href="$a00352.html#ae189e7502fcc8d0556ffb6a171d03e37" title=" " alt="" coords="137,107,299,133"/>
+<area shape="rect" id="node9" href="$a00356.html#a739cd38e607477ff2aa1267c8e14f32a" title=" " alt="" coords="139,157,297,184"/>
+<area shape="rect" id="node7" href="$a00002.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="22,56,73,83"/>
 </map>

@@ -62,9 +62,9 @@ MSVC gives me warning C4301 or C4373 when I define a mock method with a const pa
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MockFoo : <span class="keyword">public</span> Foo {</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Bar, (<span class="keyword">const</span> <span class="keywordtype">int</span> i), (<span class="keyword">override</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Bar, (<span class="keyword">const</span> <span class="keywordtype">int</span> i), (<span class="keyword">override</span>));</div>
 <div class="line">};</div>
-<div class="ttc" id="aa00200_html_a05ffc29d0784b131ee178da190d31397"><div class="ttname"><a href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a></div><div class="ttdeci">#define MOCK_METHOD(...)</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00108">gmock-function-mocker.h:108</a></div></div>
+<div class="ttc" id="aa00308_html_a05ffc29d0784b131ee178da190d31397"><div class="ttname"><a href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a></div><div class="ttdeci">#define MOCK_METHOD(...)</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00108">gmock-function-mocker.h:108</a></div></div>
 </div><!-- fragment --><p >You may get the following warning:</p>
 <div class="fragment"><div class="line">warning C4301: &#39;MockFoo::Bar&#39;: overriding virtual function only differs from &#39;Foo::Bar&#39; by const/volatile qualifier</div>
 </div><!-- fragment --><p >This is a MSVC bug. The same code compiles fine with gcc, for example. If you use Visual C++ 2008 SP1, you would get the warning:</p>
@@ -93,16 +93,16 @@ My program crashed and &lt;tt&gt;ScopedMockLog&lt;/tt&gt; spit out tons of messa
 <div class="line">using ::testing::Not;</div>
 <div class="line">...</div>
 <div class="line">  <span class="comment">// Ignores any log not done by us.</span></div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(log, <a class="code hl_function" href="a00322.html#a8a57ce0412334a3f487bbaa8321febbe">Log</a>(_, Not(<a class="code hl_function" href="a00322.html#a4fe0a2f1ea296e6d92e6dcf8942818d6">EndsWith</a>(<span class="stringliteral">&quot;/my_file.cc&quot;</span>)), _))</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(log, <a class="code hl_function" href="a00322.html#a8a57ce0412334a3f487bbaa8321febbe">Log</a>(_, Not(<a class="code hl_function" href="a00322.html#a4fe0a2f1ea296e6d92e6dcf8942818d6">EndsWith</a>(<span class="stringliteral">&quot;/my_file.cc&quot;</span>)), _))</div>
 <div class="line">      .Times(AnyNumber());</div>
-<div class="ttc" id="aa00203_html_a535a6156de72c1a2e25a127e38ee5232"><div class="ttname"><a href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a></div><div class="ttdeci">#define EXPECT_CALL(obj, call)</div></div>
-<div class="ttc" id="aa00322_html_a4fe0a2f1ea296e6d92e6dcf8942818d6"><div class="ttname"><a href="a00322.html#a4fe0a2f1ea296e6d92e6dcf8942818d6">testing::internal::EndsWith</a></div><div class="ttdeci">constexpr bool EndsWith(const char(&amp;suffix)[N], const char(&amp;str)[M])</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00075">gmock-function-mocker.h:75</a></div></div>
+<div class="ttc" id="aa00302_html_a535a6156de72c1a2e25a127e38ee5232"><div class="ttname"><a href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a></div><div class="ttdeci">#define EXPECT_CALL(obj, call)</div></div>
+<div class="ttc" id="aa00322_html_a4fe0a2f1ea296e6d92e6dcf8942818d6"><div class="ttname"><a href="a00322.html#a4fe0a2f1ea296e6d92e6dcf8942818d6">testing::internal::EndsWith</a></div><div class="ttdeci">constexpr bool EndsWith(const char(&amp;suffix)[N], const char(&amp;str)[M])</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00075">gmock-function-mocker.h:75</a></div></div>
 <div class="ttc" id="aa00322_html_a8a57ce0412334a3f487bbaa8321febbe"><div class="ttname"><a href="a00322.html#a8a57ce0412334a3f487bbaa8321febbe">testing::internal::Log</a></div><div class="ttdeci">GTEST_API_ void Log(LogSeverity severity, const std::string &amp;message, int stack_frames_to_skip)</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md187"></a>
 How can I assert that a function is NEVER called?</h2>
 <div class="fragment"><div class="line">using ::testing::_;</div>
 <div class="line">...</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar(_))</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar(_))</div>
 <div class="line">      .Times(0);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md188"></a>
 I have a failed test where gMock tells me TWICE that a particular expectation is not satisfied. Isn't this redundant?</h2>
@@ -140,13 +140,13 @@ The "newer expectations override older ones" rule makes writing expectations awk
 <div class="line">  <span class="comment">// foo.Bar() should be called twice, return 1 the first time, and return</span></div>
 <div class="line">  <span class="comment">// 2 the second time.  However, I have to write the expectations in the</span></div>
 <div class="line">  <span class="comment">// reverse order.  This sucks big time!!!</span></div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
 <div class="line">      .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(2))</div>
 <div class="line">      .RetiresOnSaturation();</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
 <div class="line">      .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(1))</div>
 <div class="line">      .RetiresOnSaturation();</div>
-<div class="ttc" id="aa00321_html_adae3994eb444d1ad2dd602454b854663"><div class="ttname"><a href="a00321.html#adae3994eb444d1ad2dd602454b854663">testing::Return</a></div><div class="ttdeci">internal::ReturnAction&lt; R &gt; Return(R value)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01242">gmock-actions.h:1242</a></div></div>
+<div class="ttc" id="aa00321_html_adae3994eb444d1ad2dd602454b854663"><div class="ttname"><a href="a00321.html#adae3994eb444d1ad2dd602454b854663">testing::Return</a></div><div class="ttdeci">internal::ReturnAction&lt; R &gt; Return(R value)</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l01242">gmock-actions.h:1242</a></div></div>
 </div><!-- fragment --><p >The problem, is that they didn't pick the <b>best</b> way to express the test's intent.</p>
 <p >By default, expectations don't have to be matched in <em>any</em> particular order. If you want them to match in a certain order, you need to be explicit. This is gMock's (and jMock's) fundamental philosophy: it's easy to accidentally over-specify your tests, and we want to make it harder to do so.</p>
 <p >There are two better ways to write the test spec. You could either put the expectations in sequence:</p>
@@ -157,10 +157,10 @@ The "newer expectations override older ones" rule makes writing expectations awk
 <div class="line">  <span class="comment">// in their natural order.</span></div>
 <div class="line">  {</div>
 <div class="line">    InSequence s;</div>
-<div class="line">    <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
+<div class="line">    <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
 <div class="line">        .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(1))</div>
 <div class="line">        .RetiresOnSaturation();</div>
-<div class="line">    <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
+<div class="line">    <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
 <div class="line">        .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(2))</div>
 <div class="line">        .RetiresOnSaturation();</div>
 <div class="line">  }</div>
@@ -169,7 +169,7 @@ The "newer expectations override older ones" rule makes writing expectations awk
 <div class="line">...</div>
 <div class="line">  <span class="comment">// foo.Bar() should be called twice, return 1 the first time, and return</span></div>
 <div class="line">  <span class="comment">// 2 the second time.</span></div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar())</div>
 <div class="line">      .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(1))</div>
 <div class="line">      .WillOnce(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(2))</div>
 <div class="line">      .RetiresOnSaturation();</div>
@@ -181,14 +181,14 @@ gMock prints a warning when a function without EXPECT_CALL is called, even if I 
 <p >If, however, you are sure that the calls are OK, you can write</p>
 <div class="fragment"><div class="line">using ::testing::_;</div>
 <div class="line">...</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar(_))</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Bar(_))</div>
 <div class="line">      .WillRepeatedly(...);</div>
 </div><!-- fragment --><p >instead of</p>
 <div class="fragment"><div class="line">using ::testing::_;</div>
 <div class="line">...</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a>(foo, Bar(_))</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a>(foo, Bar(_))</div>
 <div class="line">      .WillByDefault(...);</div>
-<div class="ttc" id="aa00203_html_a5b12ae6cf84f0a544ca811b380c37334"><div class="ttname"><a href="a00203.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a></div><div class="ttdeci">#define ON_CALL(obj, call)</div></div>
+<div class="ttc" id="aa00302_html_a5b12ae6cf84f0a544ca811b380c37334"><div class="ttname"><a href="a00302.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a></div><div class="ttdeci">#define ON_CALL(obj, call)</div></div>
 </div><!-- fragment --><p >This tells gMock that you do expect the calls and no warning should be printed.</p>
 <p >Also, you can control the verbosity by specifying <code>--gmock_verbose=error</code>. Other values are <code>info</code> and <code>warning</code>. If you find the output too noisy when debugging, just choose a less verbose level.</p>
 <h2><a class="anchor" id="autotoc_md192"></a>
@@ -196,9 +196,9 @@ How can I delete the mock function's argument in an action?</h2>
 <p >If your mock function takes a pointer argument and you want to delete that argument, you can use <a class="el" href="a00321.html#a07fc507392118e742af3b0463709c943">testing::DeleteArg&lt;N&gt;()</a> to delete the N'th (zero-indexed) argument:</p>
 <div class="fragment"><div class="line">using ::testing::_;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Bar, (X* x, <span class="keyword">const</span> Y&amp; y));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Bar, (X* x, <span class="keyword">const</span> Y&amp; y));</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_foo_, Bar(_, _))</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_foo_, Bar(_, _))</div>
 <div class="line">      .WillOnce(testing::DeleteArg&lt;0&gt;()));</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md193"></a>
 How can I perform an arbitrary action on a mock function's argument?</h2>
@@ -206,11 +206,11 @@ How can I perform an arbitrary action on a mock function's argument?</h2>
 <div class="fragment"><div class="line">using ::testing::_;</div>
 <div class="line"><a class="code hl_function" href="a00321.html#af5cacf4475557b5a3e37af3836564235">using ::testing::Invoke</a>;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Bar, (X* p));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Bar, (X* p));</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_foo_, Bar(_))</div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_foo_, Bar(_))</div>
 <div class="line">      .WillOnce(<a class="code hl_function" href="a00321.html#af5cacf4475557b5a3e37af3836564235">Invoke</a>(MyAction(...)));</div>
-<div class="ttc" id="aa00321_html_af5cacf4475557b5a3e37af3836564235"><div class="ttname"><a href="a00321.html#af5cacf4475557b5a3e37af3836564235">testing::Invoke</a></div><div class="ttdeci">std::decay&lt; FunctionImpl &gt;::type Invoke(FunctionImpl &amp;&amp;function_impl)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01343">gmock-actions.h:1343</a></div></div>
+<div class="ttc" id="aa00321_html_af5cacf4475557b5a3e37af3836564235"><div class="ttname"><a href="a00321.html#af5cacf4475557b5a3e37af3836564235">testing::Invoke</a></div><div class="ttdeci">std::decay&lt; FunctionImpl &gt;::type Invoke(FunctionImpl &amp;&amp;function_impl)</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l01343">gmock-actions.h:1343</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md194"></a>
 My code calls a static/global function. Can I mock it?</h2>
 <p >You can, but you need to make some changes.</p>
@@ -227,7 +227,7 @@ My mock object needs to do complex stuff. It's a lot of pain to specify the acti
 I got a warning "Uninteresting function call encountered - default action taken.." Should I panic?</h2>
 <p >By all means, NO! It's just an FYI. :-)</p>
 <p >What it means is that you have a mock function, you haven't set any expectations on it (by gMock's rule this means that you are not interested in calls to this function and therefore it can be called any number of times), and it is called. That's OK - you didn't say it's not OK to call the function!</p>
-<p >What if you actually meant to disallow this function to be called, but forgot to write <code><a class="el" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL(foo, Bar())</a>.Times(0)</code>? While one can argue that it's the user's fault, gMock tries to be nice and prints you a note.</p>
+<p >What if you actually meant to disallow this function to be called, but forgot to write <code><a class="el" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL(foo, Bar())</a>.Times(0)</code>? While one can argue that it's the user's fault, gMock tries to be nice and prints you a note.</p>
 <p >So, when you see the message and believe that there shouldn't be any uninteresting calls, you should investigate what's going on. To make your life easier, gMock dumps the stack trace when an uninteresting call is encountered. From that you can figure out which mock function it is, and how it is called.</p>
 <h2><a class="anchor" id="autotoc_md197"></a>
 I want to define a custom action. Should I use Invoke() or implement the ActionInterface interface?</h2>
@@ -244,7 +244,7 @@ I have a huge mock class, and Microsoft Visual C++ runs out of memory when compi
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

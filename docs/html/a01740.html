@@ -57,17 +57,17 @@ Mocking a Normal Class</h2>
 <div class="line">  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Process(Bar elem, <span class="keywordtype">int</span> count) = 0;</div>
 <div class="line">};</div>
 </div><!-- fragment --><p >(note that <code>~Foo()</code> <b>must</b> be virtual) we can define its mock as</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00188.html">gmock/gmock.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00305.html">gmock/gmock.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MockFoo : <span class="keyword">public</span> Foo {</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">int</span>, GetSize, (), (<span class="keyword">const</span>, <span class="keyword">override</span>));</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">string</span>, Describe, (<span class="keyword">const</span> <span class="keywordtype">char</span>* name), (<span class="keyword">override</span>));</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">string</span>, Describe, (<span class="keywordtype">int</span> type), (<span class="keyword">override</span>));</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, Process, (Bar elem, <span class="keywordtype">int</span> count), (<span class="keyword">override</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">int</span>, GetSize, (), (<span class="keyword">const</span>, <span class="keyword">override</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">string</span>, Describe, (<span class="keyword">const</span> <span class="keywordtype">char</span>* name), (<span class="keyword">override</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">string</span>, Describe, (<span class="keywordtype">int</span> type), (<span class="keyword">override</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, Process, (Bar elem, <span class="keywordtype">int</span> count), (<span class="keyword">override</span>));</div>
 <div class="line">};</div>
-<div class="ttc" id="aa00188_html"><div class="ttname"><a href="a00188.html">gmock.h</a></div></div>
-<div class="ttc" id="aa00200_html_a05ffc29d0784b131ee178da190d31397"><div class="ttname"><a href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a></div><div class="ttdeci">#define MOCK_METHOD(...)</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00108">gmock-function-mocker.h:108</a></div></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">gmock.h</a></div></div>
+<div class="ttc" id="aa00308_html_a05ffc29d0784b131ee178da190d31397"><div class="ttname"><a href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a></div><div class="ttdeci">#define MOCK_METHOD(...)</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00108">gmock-function-mocker.h:108</a></div></div>
 </div><!-- fragment --><p >To create a "nice" mock, which ignores all uninteresting calls, a "naggy" mock, which warns on all uninteresting calls, or a "strict" mock, which treats them as failures:</p>
 <div class="fragment"><div class="line">using ::testing::NiceMock;</div>
 <div class="line">using ::testing::NaggyMock;</div>
@@ -92,14 +92,14 @@ Mocking a Class Template</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Elem&gt;</div>
 <div class="line"><span class="keyword">class </span>MockStack : <span class="keyword">public</span> StackInterface&lt;Elem&gt; {</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">int</span>, GetSize, (), (<span class="keyword">const</span>, <span class="keyword">override</span>));</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Push, (<span class="keyword">const</span> Elem&amp; x), (<span class="keyword">override</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">int</span>, GetSize, (), (<span class="keyword">const</span>, <span class="keyword">override</span>));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">void</span>, Push, (<span class="keyword">const</span> Elem&amp; x), (<span class="keyword">override</span>));</div>
 <div class="line">};</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md113"></a>
 Specifying Calling Conventions for Mock Functions</h2>
 <p >If your mock function doesn't use the default calling convention, you can specify it by adding <code>Calltype(convention)</code> to <code>MOCK_METHOD</code>'s 4th parameter. For example,</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, Foo, (<span class="keywordtype">int</span> n), (Calltype(STDMETHODCALLTYPE)));</div>
-<div class="line"><a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">int</span>, Bar, (<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y),</div>
+<div class="fragment"><div class="line"><a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">bool</span>, Foo, (<span class="keywordtype">int</span> n), (Calltype(STDMETHODCALLTYPE)));</div>
+<div class="line"><a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(<span class="keywordtype">int</span>, Bar, (<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y),</div>
 <div class="line">            (<span class="keyword">const</span>, Calltype(STDMETHODCALLTYPE)));</div>
 </div><!-- fragment --><p >where <code>STDMETHODCALLTYPE</code> is defined by <code>&lt;objbase.h&gt;</code> on Windows.</p>
 <h1><a class="anchor" id="UsingMocks"></a>
@@ -116,25 +116,25 @@ Using Mocks in Tests</h1>
 <p >Here's an example:</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">using ::testing::Return</a>;                          <span class="comment">// #1</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_define" href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST</a>(BarTest, DoesThis) {</div>
+<div class="line"><a class="code hl_define" href="a00191.html#ab5540a6d621853916be8240ff51819cf">TEST</a>(BarTest, DoesThis) {</div>
 <div class="line">  MockFoo foo;                                    <span class="comment">// #2</span></div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a>(foo, GetSize())                         <span class="comment">// #3</span></div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a>(foo, GetSize())                         <span class="comment">// #3</span></div>
 <div class="line">      .WillByDefault(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(1));</div>
 <div class="line">  <span class="comment">// ... other default actions ...</span></div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Describe(5))                   <span class="comment">// #4</span></div>
+<div class="line">  <a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(foo, Describe(5))                   <span class="comment">// #4</span></div>
 <div class="line">      .Times(3)</div>
 <div class="line">      .WillRepeatedly(<a class="code hl_function" href="a00321.html#adae3994eb444d1ad2dd602454b854663">Return</a>(<span class="stringliteral">&quot;Category 5&quot;</span>));</div>
 <div class="line">  <span class="comment">// ... other expectations ...</span></div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="a00260.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(MyProductionFunction(&amp;foo), <span class="stringliteral">&quot;good&quot;</span>);  <span class="comment">// #5</span></div>
+<div class="line">  <a class="code hl_define" href="a00191.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(MyProductionFunction(&amp;foo), <span class="stringliteral">&quot;good&quot;</span>);  <span class="comment">// #5</span></div>
 <div class="line">}                                                 <span class="comment">// #6</span></div>
-<div class="ttc" id="aa00203_html_a535a6156de72c1a2e25a127e38ee5232"><div class="ttname"><a href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a></div><div class="ttdeci">#define EXPECT_CALL(obj, call)</div></div>
-<div class="ttc" id="aa00203_html_a5b12ae6cf84f0a544ca811b380c37334"><div class="ttname"><a href="a00203.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a></div><div class="ttdeci">#define ON_CALL(obj, call)</div></div>
-<div class="ttc" id="aa00260_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="a00260.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02050">gtest.h:2050</a></div></div>
-<div class="ttc" id="aa00260_html_ab5540a6d621853916be8240ff51819cf"><div class="ttname"><a href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST</a></div><div class="ttdeci">#define TEST(test_suite_name, test_name)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02360">gtest.h:2360</a></div></div>
-<div class="ttc" id="aa00321_html_adae3994eb444d1ad2dd602454b854663"><div class="ttname"><a href="a00321.html#adae3994eb444d1ad2dd602454b854663">testing::Return</a></div><div class="ttdeci">internal::ReturnAction&lt; R &gt; Return(R value)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l01242">gmock-actions.h:1242</a></div></div>
+<div class="ttc" id="aa00191_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="a00191.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l02050">gtest.h:2050</a></div></div>
+<div class="ttc" id="aa00191_html_ab5540a6d621853916be8240ff51819cf"><div class="ttname"><a href="a00191.html#ab5540a6d621853916be8240ff51819cf">TEST</a></div><div class="ttdeci">#define TEST(test_suite_name, test_name)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l02360">gtest.h:2360</a></div></div>
+<div class="ttc" id="aa00302_html_a535a6156de72c1a2e25a127e38ee5232"><div class="ttname"><a href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a></div><div class="ttdeci">#define EXPECT_CALL(obj, call)</div></div>
+<div class="ttc" id="aa00302_html_a5b12ae6cf84f0a544ca811b380c37334"><div class="ttname"><a href="a00302.html#a5b12ae6cf84f0a544ca811b380c37334">ON_CALL</a></div><div class="ttdeci">#define ON_CALL(obj, call)</div></div>
+<div class="ttc" id="aa00321_html_adae3994eb444d1ad2dd602454b854663"><div class="ttname"><a href="a00321.html#adae3994eb444d1ad2dd602454b854663">testing::Return</a></div><div class="ttdeci">internal::ReturnAction&lt; R &gt; Return(R value)</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l01242">gmock-actions.h:1242</a></div></div>
 </div><!-- fragment --><h1><a class="anchor" id="OnCall"></a>
 Setting Default Actions</h1>
 <p >gMock has a <b>built-in default action</b> for any function that returns <code>void</code>, <code>bool</code>, a numeric value, or a pointer. In C++11, it will additionally returns the default-constructed value, if one exists for the given type.</p>
@@ -146,18 +146,18 @@ Setting Default Actions</h1>
 <div class="line"> </div>
 <div class="line"><span class="comment">// When this fires, the default action of MakeBuzz() will run, which</span></div>
 <div class="line"><span class="comment">// will return a new Buzz object.</span></div>
-<div class="line"><a class="code hl_define" href="a00203.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_buzzer_, MakeBuzz(<span class="stringliteral">&quot;hello&quot;</span>)).Times(AnyNumber());</div>
+<div class="line"><a class="code hl_define" href="a00302.html#a535a6156de72c1a2e25a127e38ee5232">EXPECT_CALL</a>(mock_buzzer_, MakeBuzz(<span class="stringliteral">&quot;hello&quot;</span>)).Times(AnyNumber());</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> buzz1 = mock_buzzer_.MakeBuzz(<span class="stringliteral">&quot;hello&quot;</span>);</div>
 <div class="line"><span class="keyword">auto</span> buzz2 = mock_buzzer_.MakeBuzz(<span class="stringliteral">&quot;hello&quot;</span>);</div>
-<div class="line"><a class="code hl_define" href="a00260.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a>(buzz1, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a class="code hl_define" href="a00260.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a>(buzz2, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a class="code hl_define" href="a00260.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a>(buzz1, buzz2);</div>
+<div class="line"><a class="code hl_define" href="a00191.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a>(buzz1, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a class="code hl_define" href="a00191.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a>(buzz2, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a class="code hl_define" href="a00191.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a>(buzz1, buzz2);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Resets the default action for return type std::unique_ptr&lt;Buzz&gt;,</span></div>
 <div class="line"><span class="comment">// to avoid interfere with other tests.</span></div>
 <div class="line">DefaultValue&lt;std::unique_ptr&lt;Buzz&gt;&gt;::Clear();</div>
-<div class="ttc" id="aa00260_html_a6ae7443947f25abc58bfcfcfc56b0d75"><div class="ttname"><a href="a00260.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a></div><div class="ttdeci">#define EXPECT_NE(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02052">gtest.h:2052</a></div></div>
+<div class="ttc" id="aa00191_html_a6ae7443947f25abc58bfcfcfc56b0d75"><div class="ttname"><a href="a00191.html#a6ae7443947f25abc58bfcfcfc56b0d75">EXPECT_NE</a></div><div class="ttdeci">#define EXPECT_NE(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l02052">gtest.h:2052</a></div></div>
 </div><!-- fragment --><p >To customize the default action for a particular method of a specific mock object, use <a href="reference/mocking.md#ON_CALL"><code>ON_CALL</code></a>. <code>ON_CALL</code> has a similar syntax to <code>EXPECT_CALL</code>, but it is used for setting default behaviors when you do not require that the mock method is called. See <a href="gmock_cook_book.md#UseOnCall">Knowing When to Expect</a> for a more detailed discussion.</p>
 <h1><a class="anchor" id="ExpectCall"></a>
 Setting Expectations</h1>
@@ -195,7 +195,7 @@ Mock Classes</h1>
 <p >gMock defines a convenient mock class template</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>MockFunction&lt;R(A1, ..., An)&gt; {</div>
 <div class="line"> <span class="keyword">public</span>:</div>
-<div class="line">  <a class="code hl_define" href="a00200.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(R, Call, (A1, ..., An));</div>
+<div class="line">  <a class="code hl_define" href="a00308.html#a05ffc29d0784b131ee178da190d31397">MOCK_METHOD</a>(R, Call, (A1, ..., An));</div>
 <div class="line">};</div>
 </div><!-- fragment --><p >See this <a href="gmock_cook_book.md#UsingCheckPoints">recipe</a> for one application of it.</p>
 <h1><a class="anchor" id="autotoc_md117"></a>
@@ -212,7 +212,7 @@ Flags</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

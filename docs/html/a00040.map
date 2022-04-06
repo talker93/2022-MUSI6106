@@ -1,5 +1,4 @@
-<map id="Synthesis.h" name="Synthesis.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,95,32"/>
-<area shape="rect" id="node2" href="$a00044.html" title=" " alt="" coords="25,80,75,107"/>
-<area shape="rect" id="node3" href="$a00026.html" title=" " alt="" coords="7,155,93,181"/>
+<map id="Fft.h" name="Fft.h">
+<area shape="rect" id="node1" title=" " alt="" coords="13,5,61,32"/>
+<area shape="rect" id="node2" href="$a00026.html" title=" " alt="" coords="5,80,68,107"/>
 </map>

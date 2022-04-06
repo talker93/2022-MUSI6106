@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MUSI6106: CombFilterIf.cpp File Reference</title>
+<title>MUSI6106: RingBuffer.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,81 +40,60 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd4489a5e8a0b10919d42ac6008fb276.html">CombFilter</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">CombFilterIf.cpp File Reference</div></div>
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle"><div class="title">RingBuffer.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00317_source.html">MUSI6106Config.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00077_source.html">ErrorDef.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00041_source.html">Util.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00047_source.html">RingBuffer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00062_source.html">CombFilterIf.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00050_source.html">CombFilter.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for CombFilterIf.cpp:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for RingBuffer.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00036.png" border="0" usemap="#aCombFilterIf_8cpp" alt=""/></div>
-<map name="aCombFilterIf_8cpp" id="aCombFilterIf_8cpp">
-<area shape="rect" title=" " alt="" coords="265,5,383,32"/>
-<area shape="rect" href="a00317.html" title=" " alt="" coords="5,80,136,107"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="223,155,302,181"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="457,80,509,107"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="533,80,625,107"/>
-<area shape="rect" href="a00062.html" title=" " alt="" coords="211,80,314,107"/>
-<area shape="rect" href="a00050.html" title=" " alt="" coords="338,80,433,107"/>
-<area shape="rect" title=" " alt="" coords="450,155,515,181"/>
-<area shape="rect" title=" " alt="" coords="540,155,601,181"/>
-<area shape="rect" title=" " alt="" coords="372,155,425,181"/>
-<area shape="rect" title=" " alt="" coords="625,155,700,181"/>
-<area shape="rect" title=" " alt="" coords="724,155,783,181"/>
+<div class="center"><img src="a00036.png" border="0" usemap="#aRingBuffer_8h" alt=""/></div>
+<map name="aRingBuffer_8h" id="aRingBuffer_8h">
+<area shape="rect" title=" " alt="" coords="132,5,224,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,71,107"/>
+<area shape="rect" title=" " alt="" coords="95,80,170,107"/>
+<area shape="rect" title=" " alt="" coords="194,80,253,107"/>
+<area shape="rect" title=" " alt="" coords="277,80,338,107"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00037.png" border="0" usemap="#aRingBuffer_8hdep" alt=""/></div>
+<map name="aRingBuffer_8hdep" id="aRingBuffer_8hdep">
+<area shape="rect" title=" " alt="" coords="205,5,297,32"/>
+<area shape="rect" href="a00014.html" title=" " alt="" coords="5,80,115,107"/>
+<area shape="rect" href="a00011.html" title=" " alt="" coords="139,80,256,107"/>
+<area shape="rect" href="a00044.html" title=" " alt="" coords="280,80,331,107"/>
+<area shape="rect" href="a00059.html" title=" " alt="" coords="293,155,379,181"/>
 </map>
 </div>
 </div>
 <p><a href="a00035_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ae3df409f71a622d577411ff3c724c07c"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a> = __DATE__</td></tr>
-<tr class="separator:ae3df409f71a622d577411ff3c724c07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html">CRingBuffer&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">implement a circular buffer of type T  <a href="a00372.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ae3df409f71a622d577411ff3c724c07c" name="ae3df409f71a622d577411ff3c724c07c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3df409f71a622d577411ff3c724c07c">&#9670;&nbsp;</a></span>kCMyProjectBuildDate</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* kCMyProjectBuildDate = __DATE__</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00014">14</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00054">CCombFilterIf::getBuildDate()</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

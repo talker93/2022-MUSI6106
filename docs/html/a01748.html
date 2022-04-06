@@ -74,19 +74,19 @@ Set up a Bazel workspace</h1>
 Create and run a binary</h1>
 <p >With your Bazel workspace set up, you can now use GoogleTest code within your own project.</p>
 <p >As an example, create a file named <code>hello_test.cc</code> in your <code>my_workspace</code> directory with the following contents:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00260.html">gtest/gtest.h</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00191.html">gtest/gtest.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Demonstrate some basic assertions.</span></div>
-<div class="line"><a class="code hl_define" href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST</a>(HelloTest, BasicAssertions) {</div>
+<div class="line"><a class="code hl_define" href="a00191.html#ab5540a6d621853916be8240ff51819cf">TEST</a>(HelloTest, BasicAssertions) {</div>
 <div class="line">  <span class="comment">// Expect two strings not to be equal.</span></div>
-<div class="line">  <a class="code hl_define" href="a00260.html#aee7e9c42f55549dbc0dfc42391eb9775">EXPECT_STRNE</a>(<span class="stringliteral">&quot;hello&quot;</span>, <span class="stringliteral">&quot;world&quot;</span>);</div>
+<div class="line">  <a class="code hl_define" href="a00191.html#aee7e9c42f55549dbc0dfc42391eb9775">EXPECT_STRNE</a>(<span class="stringliteral">&quot;hello&quot;</span>, <span class="stringliteral">&quot;world&quot;</span>);</div>
 <div class="line">  <span class="comment">// Expect equality.</span></div>
-<div class="line">  <a class="code hl_define" href="a00260.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(7 * 6, 42);</div>
+<div class="line">  <a class="code hl_define" href="a00191.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(7 * 6, 42);</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00260_html"><div class="ttname"><a href="a00260.html">gtest.h</a></div></div>
-<div class="ttc" id="aa00260_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="a00260.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02050">gtest.h:2050</a></div></div>
-<div class="ttc" id="aa00260_html_ab5540a6d621853916be8240ff51819cf"><div class="ttname"><a href="a00260.html#ab5540a6d621853916be8240ff51819cf">TEST</a></div><div class="ttdeci">#define TEST(test_suite_name, test_name)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02360">gtest.h:2360</a></div></div>
-<div class="ttc" id="aa00260_html_aee7e9c42f55549dbc0dfc42391eb9775"><div class="ttname"><a href="a00260.html#aee7e9c42f55549dbc0dfc42391eb9775">EXPECT_STRNE</a></div><div class="ttdeci">#define EXPECT_STRNE(s1, s2)</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l02121">gtest.h:2121</a></div></div>
+<div class="ttc" id="aa00191_html"><div class="ttname"><a href="a00191.html">gtest.h</a></div></div>
+<div class="ttc" id="aa00191_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="a00191.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l02050">gtest.h:2050</a></div></div>
+<div class="ttc" id="aa00191_html_ab5540a6d621853916be8240ff51819cf"><div class="ttname"><a href="a00191.html#ab5540a6d621853916be8240ff51819cf">TEST</a></div><div class="ttdeci">#define TEST(test_suite_name, test_name)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l02360">gtest.h:2360</a></div></div>
+<div class="ttc" id="aa00191_html_aee7e9c42f55549dbc0dfc42391eb9775"><div class="ttname"><a href="a00191.html#aee7e9c42f55549dbc0dfc42391eb9775">EXPECT_STRNE</a></div><div class="ttdeci">#define EXPECT_STRNE(s1, s2)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l02121">gtest.h:2121</a></div></div>
 </div><!-- fragment --><p >GoogleTest provides <a href="primer.md#assertions">assertions</a> that you use to test the behavior of your code. The above sample includes the main GoogleTest header file and demonstrates some basic assertions.</p>
 <p >To build the code, create a file named <code>BUILD</code> in the same directory with the following contents:</p>
 <div class="fragment"><div class="line">cc_test(</div>
@@ -134,7 +134,7 @@ Next steps</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:29 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

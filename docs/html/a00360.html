@@ -54,7 +54,7 @@ $(function() {
 <p>interface class for the comb filter (FIR &amp; IIR)  
  <a href="a00360.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00062_source.html">CombFilterIf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00053_source.html">CombFilterIf.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for CCombFilterIf:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -121,7 +121,7 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a3dca2624e47fa1b574ae01fac9d6d707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a></td></tr>
+<tr class="memitem:a3dca2624e47fa1b574ae01fac9d6d707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00092.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a></td></tr>
 <tr class="memdesc:a3dca2624e47fa1b574ae01fac9d6d707"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal bool to check whether the init function has been called  <a href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">More...</a><br /></td></tr>
 <tr class="separator:a3dca2624e47fa1b574ae01fac9d6d707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a8973e3297f5643aac503427ba57cf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00348.html">CCombFilterBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a></td></tr>
@@ -134,7 +134,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >interface class for the comb filter (FIR &amp; IIR) </p>
 
-<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00010">10</a> of file <a class="el" href="a00062_source.html">CombFilterIf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00010">10</a> of file <a class="el" href="a00053_source.html">CombFilterIf.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a105e8c0ea41b5375a85fcf08248c3a6c" name="a105e8c0ea41b5375a85fcf08248c3a6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a105e8c0ea41b5375a85fcf08248c3a6c">&#9670;&nbsp;</a></span>CombFilterType_t</h2>
@@ -156,16 +156,16 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a105e8c0ea41b5375a85fcf08248c3a6cae57580d738e8b6e6e52e07e6a82d270b" name="a105e8c0ea41b5375a85fcf08248c3a6cae57580d738e8b6e6e52e07e6a82d270b"></a>kNumFilterTypes&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00024">24</a> of file <a class="el" href="a00062_source.html">CombFilterIf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00024">24</a> of file <a class="el" href="a00053_source.html">CombFilterIf.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
 <div class="line"><span class="lineno">   26</span>        <a class="code hl_enumvalue" href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b">kCombFIR</a>,           <span class="comment">//!&lt; finite impulse response filter</span></div>
 <div class="line"><span class="lineno">   27</span>        <a class="code hl_enumvalue" href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9">kCombIIR</a>,           <span class="comment">//!&lt; infinite impulse response filter</span></div>
 <div class="line"><span class="lineno">   28</span> </div>
 <div class="line"><span class="lineno">   29</span>        <a class="code hl_enumvalue" href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6cae57580d738e8b6e6e52e07e6a82d270b">kNumFilterTypes</a></div>
 <div class="line"><span class="lineno">   30</span>    };</div>
-<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b">CCombFilterIf::kCombFIR</a></div><div class="ttdeci">@ kCombFIR</div><div class="ttdoc">finite impulse response filter</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00026">CombFilterIf.h:26</a></div></div>
-<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9">CCombFilterIf::kCombIIR</a></div><div class="ttdeci">@ kCombIIR</div><div class="ttdoc">infinite impulse response filter</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00027">CombFilterIf.h:27</a></div></div>
-<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6cae57580d738e8b6e6e52e07e6a82d270b"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6cae57580d738e8b6e6e52e07e6a82d270b">CCombFilterIf::kNumFilterTypes</a></div><div class="ttdeci">@ kNumFilterTypes</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00030">CombFilterIf.h:29</a></div></div>
+<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca3bfcbae9621c4bd1e989327b4714266b">CCombFilterIf::kCombFIR</a></div><div class="ttdeci">@ kCombFIR</div><div class="ttdoc">finite impulse response filter</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00026">CombFilterIf.h:26</a></div></div>
+<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6ca4cb5fe8a76410e264fea69f1880584a9">CCombFilterIf::kCombIIR</a></div><div class="ttdeci">@ kCombIIR</div><div class="ttdoc">infinite impulse response filter</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00027">CombFilterIf.h:27</a></div></div>
+<div class="ttc" id="aa00360_html_a105e8c0ea41b5375a85fcf08248c3a6cae57580d738e8b6e6e52e07e6a82d270b"><div class="ttname"><a href="a00360.html#a105e8c0ea41b5375a85fcf08248c3a6cae57580d738e8b6e6e52e07e6a82d270b">CCombFilterIf::kNumFilterTypes</a></div><div class="ttdeci">@ kNumFilterTypes</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00030">CombFilterIf.h:29</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -189,16 +189,16 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc" name="a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc"></a>kNumFilterParams&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00033">33</a> of file <a class="el" href="a00062_source.html">CombFilterIf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00033">33</a> of file <a class="el" href="a00053_source.html">CombFilterIf.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
 <div class="line"><span class="lineno">   35</span>        <a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">kParamGain</a>,         <span class="comment">//!&lt; gain as factor (usually -1...1)</span></div>
 <div class="line"><span class="lineno">   36</span>        <a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251">kParamDelay</a>,        <span class="comment">//!&lt; delay in seconds for specification of comb width</span></div>
 <div class="line"><span class="lineno">   37</span> </div>
 <div class="line"><span class="lineno">   38</span>        <a class="code hl_enumvalue" href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc">kNumFilterParams</a></div>
 <div class="line"><span class="lineno">   39</span>    };</div>
-<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc">CCombFilterIf::kNumFilterParams</a></div><div class="ttdeci">@ kNumFilterParams</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00039">CombFilterIf.h:38</a></div></div>
-<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a></div><div class="ttdeci">@ kParamGain</div><div class="ttdoc">gain as factor (usually -1...1)</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00035">CombFilterIf.h:35</a></div></div>
-<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251">CCombFilterIf::kParamDelay</a></div><div class="ttdeci">@ kParamDelay</div><div class="ttdoc">delay in seconds for specification of comb width</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00036">CombFilterIf.h:36</a></div></div>
+<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a2f7dc4e482690155bbfdc075fe903edc">CCombFilterIf::kNumFilterParams</a></div><div class="ttdeci">@ kNumFilterParams</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00039">CombFilterIf.h:38</a></div></div>
+<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a3f484f79e52bf95f97a5f2869b8fc83d">CCombFilterIf::kParamGain</a></div><div class="ttdeci">@ kParamGain</div><div class="ttdoc">gain as factor (usually -1...1)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00035">CombFilterIf.h:35</a></div></div>
+<div class="ttc" id="aa00360_html_a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251"><div class="ttname"><a href="a00360.html#a538d460bd9eed45d364d22ade0d8c2a1a6ecf8374957d8d4f2f69272e58513251">CCombFilterIf::kParamDelay</a></div><div class="ttdeci">@ kParamDelay</div><div class="ttdoc">delay in seconds for specification of comb width</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00036">CombFilterIf.h:36</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -224,7 +224,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b" name="ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b"></a>kNumVersionInts&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00014">14</a> of file <a class="el" href="a00062_source.html">CombFilterIf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00014">14</a> of file <a class="el" href="a00053_source.html">CombFilterIf.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
 <div class="line"><span class="lineno">   16</span>        <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566">kMajor</a>,             <span class="comment">//!&lt; major version number</span></div>
 <div class="line"><span class="lineno">   17</span>        <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b">kMinor</a>,             <span class="comment">//!&lt; minor version number</span></div>
@@ -232,10 +232,10 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   19</span> </div>
 <div class="line"><span class="lineno">   20</span>        <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b">kNumVersionInts</a></div>
 <div class="line"><span class="lineno">   21</span>    };</div>
-<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b">CCombFilterIf::kNumVersionInts</a></div><div class="ttdeci">@ kNumVersionInts</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00021">CombFilterIf.h:20</a></div></div>
-<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2">CCombFilterIf::kPatch</a></div><div class="ttdeci">@ kPatch</div><div class="ttdoc">patch version number</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00018">CombFilterIf.h:18</a></div></div>
-<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b">CCombFilterIf::kMinor</a></div><div class="ttdeci">@ kMinor</div><div class="ttdoc">minor version number</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00017">CombFilterIf.h:17</a></div></div>
-<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566">CCombFilterIf::kMajor</a></div><div class="ttdeci">@ kMajor</div><div class="ttdoc">major version number</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00016">CombFilterIf.h:16</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b">CCombFilterIf::kNumVersionInts</a></div><div class="ttdeci">@ kNumVersionInts</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00021">CombFilterIf.h:20</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2">CCombFilterIf::kPatch</a></div><div class="ttdeci">@ kPatch</div><div class="ttdoc">patch version number</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00018">CombFilterIf.h:18</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b">CCombFilterIf::kMinor</a></div><div class="ttdeci">@ kMinor</div><div class="ttdoc">minor version number</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00017">CombFilterIf.h:17</a></div></div>
+<div class="ttc" id="aa00360_html_ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566"><div class="ttname"><a href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566">CCombFilterIf::kMajor</a></div><div class="ttdeci">@ kMajor</div><div class="ttdoc">major version number</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00016">CombFilterIf.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -263,7 +263,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00017">17</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00017">17</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>                              :</div>
 <div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>(<span class="keyword">false</span>),</div>
 <div class="line"><span class="lineno">   19</span>    <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>(0),</div>
@@ -272,14 +272,14 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   22</span>    <span class="comment">// this never hurts</span></div>
 <div class="line"><span class="lineno">   23</span>    this-&gt;<a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">reset</a> ();</div>
 <div class="line"><span class="lineno">   24</span>}</div>
-<div class="ttc" id="aa00360_html_a3dca2624e47fa1b574ae01fac9d6d707"><div class="ttname"><a href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">CCombFilterIf::m_bIsInitialized</a></div><div class="ttdeci">bool m_bIsInitialized</div><div class="ttdoc">internal bool to check whether the init function has been called</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00104">CombFilterIf.h:104</a></div></div>
-<div class="ttc" id="aa00360_html_a5a8973e3297f5643aac503427ba57cf0"><div class="ttname"><a href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">CCombFilterIf::m_pCCombFilter</a></div><div class="ttdeci">CCombFilterBase * m_pCCombFilter</div><div class="ttdoc">handle of the comb filter</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00105">CombFilterIf.h:105</a></div></div>
-<div class="ttc" id="aa00360_html_a999417616935767c84647148264a33c0"><div class="ttname"><a href="a00360.html#a999417616935767c84647148264a33c0">CCombFilterIf::m_fSampleRate</a></div><div class="ttdeci">float m_fSampleRate</div><div class="ttdoc">audio sample rate in Hz</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00107">CombFilterIf.h:107</a></div></div>
-<div class="ttc" id="aa00360_html_addb1b5c6cb81115d10e100171153860e"><div class="ttname"><a href="a00360.html#addb1b5c6cb81115d10e100171153860e">CCombFilterIf::reset</a></div><div class="ttdeci">Error_t reset()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00109">CombFilterIf.cpp:109</a></div></div>
+<div class="ttc" id="aa00360_html_a3dca2624e47fa1b574ae01fac9d6d707"><div class="ttname"><a href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">CCombFilterIf::m_bIsInitialized</a></div><div class="ttdeci">bool m_bIsInitialized</div><div class="ttdoc">internal bool to check whether the init function has been called</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00104">CombFilterIf.h:104</a></div></div>
+<div class="ttc" id="aa00360_html_a5a8973e3297f5643aac503427ba57cf0"><div class="ttname"><a href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">CCombFilterIf::m_pCCombFilter</a></div><div class="ttdeci">CCombFilterBase * m_pCCombFilter</div><div class="ttdoc">handle of the comb filter</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00105">CombFilterIf.h:105</a></div></div>
+<div class="ttc" id="aa00360_html_a999417616935767c84647148264a33c0"><div class="ttname"><a href="a00360.html#a999417616935767c84647148264a33c0">CCombFilterIf::m_fSampleRate</a></div><div class="ttdeci">float m_fSampleRate</div><div class="ttdoc">audio sample rate in Hz</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00107">CombFilterIf.h:107</a></div></div>
+<div class="ttc" id="aa00360_html_addb1b5c6cb81115d10e100171153860e"><div class="ttname"><a href="a00360.html#addb1b5c6cb81115d10e100171153860e">CCombFilterIf::reset</a></div><div class="ttdeci">Error_t reset()</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00109">CombFilterIf.cpp:109</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00035_source.html#l00109">reset()</a>.</p>
+<p class="reference">References <a class="el" href="a00011_source.html#l00109">reset()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00059">create()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00011_source.html#l00059">create()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -328,12 +328,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00027">27</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00027">27</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
 <div class="line"><span class="lineno">   29</span>    this-&gt;<a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">reset</a> ();</div>
 <div class="line"><span class="lineno">   30</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00035_source.html#l00109">reset()</a>.</p>
+<p class="reference">References <a class="el" href="a00011_source.html#l00109">reset()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -380,7 +380,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00059">59</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00059">59</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
 <div class="line"><span class="lineno">   61</span>    pCCombFilterIf = <span class="keyword">new</span> <a class="code hl_function" href="a00360.html#adee1df157f2c971ce3fcf7746dcc7bc4">CCombFilterIf</a> ();</div>
 <div class="line"><span class="lineno">   62</span> </div>
@@ -392,9 +392,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   68</span>}</div>
 <div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a></div><div class="ttdeci">@ kUnknownError</div></div>
 <div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a></div><div class="ttdeci">@ kNoError</div></div>
-<div class="ttc" id="aa00360_html_adee1df157f2c971ce3fcf7746dcc7bc4"><div class="ttname"><a href="a00360.html#adee1df157f2c971ce3fcf7746dcc7bc4">CCombFilterIf::CCombFilterIf</a></div><div class="ttdeci">CCombFilterIf()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00017">CombFilterIf.cpp:17</a></div></div>
+<div class="ttc" id="aa00360_html_adee1df157f2c971ce3fcf7746dcc7bc4"><div class="ttname"><a href="a00360.html#adee1df157f2c971ce3fcf7746dcc7bc4">CCombFilterIf::CCombFilterIf</a></div><div class="ttdeci">CCombFilterIf()</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00017">CombFilterIf.cpp:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00035_source.html#l00017">CCombFilterIf()</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, and <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">kUnknownError</a>.</p>
+<p class="reference">References <a class="el" href="a00011_source.html#l00017">CCombFilterIf()</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, and <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">kUnknownError</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -441,7 +441,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00070">70</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00070">70</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
 <div class="line"><span class="lineno">   72</span>    <span class="keywordflow">if</span> (!pCCombFilterIf)</div>
 <div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">Error_t::kUnknownError</a>;</div>
@@ -455,7 +455,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   81</span> </div>
 <div class="line"><span class="lineno">   82</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">kUnknownError</a>, and <a class="el" href="a00035_source.html#l00109">reset()</a>.</p>
+<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa4366541ea8a34268abc8b24f19fcefdd">kUnknownError</a>, and <a class="el" href="a00011_source.html#l00109">reset()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -494,13 +494,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >returns the date of the build </p><dl class="section return"><dt>Returns</dt><dd>const char* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00054">54</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00054">54</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   55</span>{</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00035.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a>;</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00011.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a>;</div>
 <div class="line"><span class="lineno">   57</span>}</div>
-<div class="ttc" id="aa00035_html_ae3df409f71a622d577411ff3c724c07c"><div class="ttname"><a href="a00035.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a></div><div class="ttdeci">static const char * kCMyProjectBuildDate</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00014">CombFilterIf.cpp:14</a></div></div>
+<div class="ttc" id="aa00011_html_ae3df409f71a622d577411ff3c724c07c"><div class="ttname"><a href="a00011.html#ae3df409f71a622d577411ff3c724c07c">kCMyProjectBuildDate</a></div><div class="ttdeci">static const char * kCMyProjectBuildDate</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00014">CombFilterIf.cpp:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00035_source.html#l00014">kCMyProjectBuildDate</a>.</p>
+<p class="reference">References <a class="el" href="a00011_source.html#l00014">kCMyProjectBuildDate</a>.</p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00143">143</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00143">143</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  144</span>{</div>
 <div class="line"><span class="lineno">  145</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>)</div>
 <div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> -1;</div>
@@ -541,9 +541,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>-&gt;<a class="code hl_function" href="a00348.html#a494d31970d8e8e52058cfa34393b0662">getParam</a> (eParam);</div>
 <div class="line"><span class="lineno">  155</span>    }</div>
 <div class="line"><span class="lineno">  156</span>}</div>
-<div class="ttc" id="aa00348_html_a494d31970d8e8e52058cfa34393b0662"><div class="ttname"><a href="a00348.html#a494d31970d8e8e52058cfa34393b0662">CCombFilterBase::getParam</a></div><div class="ttdeci">float getParam(CCombFilterIf::FilterParam_t eParam) const</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00093">CombFilter.cpp:93</a></div></div>
+<div class="ttc" id="aa00348_html_a494d31970d8e8e52058cfa34393b0662"><div class="ttname"><a href="a00348.html#a494d31970d8e8e52058cfa34393b0662">CCombFilterBase::getParam</a></div><div class="ttdeci">float getParam(CCombFilterIf::FilterParam_t eParam) const</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00098">CombFilter.cpp:98</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00032_source.html#l00093">CCombFilterBase::getParam()</a>, <a class="el" href="a00062_source.html#l00036">kParamDelay</a>, <a class="el" href="a00062_source.html#l00035">kParamGain</a>, <a class="el" href="a00062_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00062_source.html#l00107">m_fSampleRate</a>, and <a class="el" href="a00062_source.html#l00105">m_pCCombFilter</a>.</p>
+<p class="reference">References <a class="el" href="a00014_source.html#l00098">CCombFilterBase::getParam()</a>, <a class="el" href="a00053_source.html#l00036">kParamDelay</a>, <a class="el" href="a00053_source.html#l00035">kParamGain</a>, <a class="el" href="a00053_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00107">m_fSampleRate</a>, and <a class="el" href="a00053_source.html#l00105">m_pCCombFilter</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -589,20 +589,20 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00032">32</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00032">32</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   33</span>{</div>
 <div class="line"><span class="lineno">   34</span>    <span class="keywordtype">int</span> iVersion = 0;</div>
 <div class="line"><span class="lineno">   35</span> </div>
 <div class="line"><span class="lineno">   36</span>    <span class="keywordflow">switch</span> (eVersionIdx)</div>
 <div class="line"><span class="lineno">   37</span>    {</div>
 <div class="line"><span class="lineno">   38</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a4fed6a68f2cb90344924ac5568d97566">kMajor</a>:</div>
-<div class="line"><span class="lineno">   39</span>        iVersion    = <a class="code hl_define" href="a00317.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a>; </div>
+<div class="line"><span class="lineno">   39</span>        iVersion    = <a class="code hl_define" href="a00083.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a>; </div>
 <div class="line"><span class="lineno">   40</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   41</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a46eea0e7cc86a0395d6e791d4bb8bf7b">kMinor</a>:</div>
-<div class="line"><span class="lineno">   42</span>        iVersion    = <a class="code hl_define" href="a00317.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a>;</div>
+<div class="line"><span class="lineno">   42</span>        iVersion    = <a class="code hl_define" href="a00083.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a>;</div>
 <div class="line"><span class="lineno">   43</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   44</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a334cf08ae8811d3a01d4169254b730e2">kPatch</a>:</div>
-<div class="line"><span class="lineno">   45</span>        iVersion    = <a class="code hl_define" href="a00317.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a>;</div>
+<div class="line"><span class="lineno">   45</span>        iVersion    = <a class="code hl_define" href="a00083.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a>;</div>
 <div class="line"><span class="lineno">   46</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   47</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00360.html#ac0a4e468bfe193e17c4b3f2c4ff05d23a0126bfa2f2b7ea58b55895706e57cf5b">kNumVersionInts</a>:</div>
 <div class="line"><span class="lineno">   48</span>        iVersion    = -1;</div>
@@ -611,11 +611,11 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   51</span> </div>
 <div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span> iVersion;</div>
 <div class="line"><span class="lineno">   53</span>}</div>
-<div class="ttc" id="aa00317_html_a1de30c60ae3b063ebab4d30e7ccbb9c7"><div class="ttname"><a href="a00317.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00028">MUSI6106Config.h:28</a></div></div>
-<div class="ttc" id="aa00317_html_a36f0698e09f5575ef7e2d132c1625476"><div class="ttname"><a href="a00317.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00029">MUSI6106Config.h:29</a></div></div>
-<div class="ttc" id="aa00317_html_ac5bc7ad1f89346fef556af1ee27930dd"><div class="ttname"><a href="a00317.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a></div><div class="ttdeci">#define MUSI6106_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="a00317_source.html#l00030">MUSI6106Config.h:30</a></div></div>
+<div class="ttc" id="aa00083_html_a1de30c60ae3b063ebab4d30e7ccbb9c7"><div class="ttname"><a href="a00083.html#a1de30c60ae3b063ebab4d30e7ccbb9c7">MUSI6106_VERSION_MAJOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00028">MUSI6106Config.h:28</a></div></div>
+<div class="ttc" id="aa00083_html_a36f0698e09f5575ef7e2d132c1625476"><div class="ttname"><a href="a00083.html#a36f0698e09f5575ef7e2d132c1625476">MUSI6106_VERSION_MINOR</a></div><div class="ttdeci">#define MUSI6106_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00029">MUSI6106Config.h:29</a></div></div>
+<div class="ttc" id="aa00083_html_ac5bc7ad1f89346fef556af1ee27930dd"><div class="ttname"><a href="a00083.html#ac5bc7ad1f89346fef556af1ee27930dd">MUSI6106_VERSION_PATCH</a></div><div class="ttdeci">#define MUSI6106_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00030">MUSI6106Config.h:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00062_source.html#l00016">kMajor</a>, <a class="el" href="a00062_source.html#l00017">kMinor</a>, <a class="el" href="a00062_source.html#l00020">kNumVersionInts</a>, <a class="el" href="a00062_source.html#l00018">kPatch</a>, <a class="el" href="a00317_source.html#l00028">MUSI6106_VERSION_MAJOR</a>, <a class="el" href="a00317_source.html#l00029">MUSI6106_VERSION_MINOR</a>, and <a class="el" href="a00317_source.html#l00030">MUSI6106_VERSION_PATCH</a>.</p>
+<p class="reference">References <a class="el" href="a00053_source.html#l00016">kMajor</a>, <a class="el" href="a00053_source.html#l00017">kMinor</a>, <a class="el" href="a00053_source.html#l00020">kNumVersionInts</a>, <a class="el" href="a00053_source.html#l00018">kPatch</a>, <a class="el" href="a00083_source.html#l00028">MUSI6106_VERSION_MAJOR</a>, <a class="el" href="a00083_source.html#l00029">MUSI6106_VERSION_MINOR</a>, and <a class="el" href="a00083_source.html#l00030">MUSI6106_VERSION_PATCH</a>.</p>
 
 </div>
 </div>
@@ -667,7 +667,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00084">84</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00084">84</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   85</span>{</div>
 <div class="line"><span class="lineno">   86</span>    <a class="code hl_function" href="a00360.html#addb1b5c6cb81115d10e100171153860e">reset</a>();</div>
 <div class="line"><span class="lineno">   87</span> </div>
@@ -692,11 +692,11 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
 <div class="line"><span class="lineno">  107</span>}</div>
 <div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">Error_t::kFunctionInvalidArgsError</a></div><div class="ttdeci">@ kFunctionInvalidArgsError</div></div>
-<div class="ttc" id="aa00348_html"><div class="ttname"><a href="a00348.html">CCombFilterBase</a></div><div class="ttdoc">base class for the comb filter (FIR &amp; IIR)</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00008">CombFilter.h:9</a></div></div>
-<div class="ttc" id="aa00352_html"><div class="ttname"><a href="a00352.html">CCombFilterFir</a></div><div class="ttdoc">FIR comb filter implementation.</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00038">CombFilter.h:39</a></div></div>
-<div class="ttc" id="aa00356_html"><div class="ttname"><a href="a00356.html">CCombFilterIir</a></div><div class="ttdoc">IIR comb filter implementation.</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00049">CombFilter.h:50</a></div></div>
+<div class="ttc" id="aa00348_html"><div class="ttname"><a href="a00348.html">CCombFilterBase</a></div><div class="ttdoc">base class for the comb filter (FIR &amp; IIR)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00008">CombFilter.h:9</a></div></div>
+<div class="ttc" id="aa00352_html"><div class="ttname"><a href="a00352.html">CCombFilterFir</a></div><div class="ttdoc">FIR comb filter implementation.</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00038">CombFilter.h:39</a></div></div>
+<div class="ttc" id="aa00356_html"><div class="ttname"><a href="a00356.html">CCombFilterIir</a></div><div class="ttdoc">IIR comb filter implementation.</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00049">CombFilter.h:50</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00062_source.html#l00026">kCombFIR</a>, <a class="el" href="a00062_source.html#l00027">kCombIIR</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">kFunctionInvalidArgsError</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00062_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00062_source.html#l00107">m_fSampleRate</a>, <a class="el" href="a00062_source.html#l00105">m_pCCombFilter</a>, and <a class="el" href="a00035_source.html#l00109">reset()</a>.</p>
+<p class="reference">References <a class="el" href="a00053_source.html#l00026">kCombFIR</a>, <a class="el" href="a00053_source.html#l00027">kCombIIR</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fa819a1ca163e9ca86f941b0b072a9a248">kFunctionInvalidArgsError</a>, <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00053_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00107">m_fSampleRate</a>, <a class="el" href="a00053_source.html#l00105">m_pCCombFilter</a>, and <a class="el" href="a00011_source.html#l00109">reset()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -752,7 +752,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00120">120</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00120">120</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  121</span>{</div>
 <div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>)</div>
 <div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a>;</div>
@@ -762,7 +762,7 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aa00077_html_a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb"><div class="ttname"><a href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a></div><div class="ttdeci">@ kNotInitializedError</div></div>
 <div class="ttc" id="aa00348_html_a1678f8ddaa2f34e15b36367b9f2b3be0"><div class="ttname"><a href="a00348.html#a1678f8ddaa2f34e15b36367b9f2b3be0">CCombFilterBase::process</a></div><div class="ttdeci">virtual Error_t process(float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames)=0</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">kNotInitializedError</a>, <a class="el" href="a00062_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00062_source.html#l00105">m_pCCombFilter</a>, and <a class="el" href="a00348.html#a1678f8ddaa2f34e15b36367b9f2b3be0">CCombFilterBase::process()</a>.</p>
+<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">kNotInitializedError</a>, <a class="el" href="a00053_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00105">m_pCCombFilter</a>, and <a class="el" href="a00348.html#a1678f8ddaa2f34e15b36367b9f2b3be0">CCombFilterBase::process()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -793,7 +793,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >resets the internal variables (requires new call of init) </p><dl class="section return"><dt>Returns</dt><dd>Error_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00109">109</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00109">109</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  110</span>{</div>
 <div class="line"><span class="lineno">  111</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>;</div>
 <div class="line"><span class="lineno">  112</span>    <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>      = 0;</div>
@@ -804,9 +804,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">Error_t::kNoError</a>;</div>
 <div class="line"><span class="lineno">  118</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00062_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00062_source.html#l00107">m_fSampleRate</a>, and <a class="el" href="a00062_source.html#l00105">m_pCCombFilter</a>.</p>
+<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fafcd1af9ec66cb99f2d106d7fdc865c8b">kNoError</a>, <a class="el" href="a00053_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00107">m_fSampleRate</a>, and <a class="el" href="a00053_source.html#l00105">m_pCCombFilter</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00017">CCombFilterIf()</a>, <a class="el" href="a00035_source.html#l00070">destroy()</a>, <a class="el" href="a00035_source.html#l00084">init()</a>, and <a class="el" href="a00035_source.html#l00027">~CCombFilterIf()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00011_source.html#l00017">CCombFilterIf()</a>, <a class="el" href="a00011_source.html#l00070">destroy()</a>, <a class="el" href="a00011_source.html#l00084">init()</a>, and <a class="el" href="a00011_source.html#l00027">~CCombFilterIf()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -859,7 +859,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error_t </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00035_source.html#l00128">128</a> of file <a class="el" href="a00035_source.html">CombFilterIf.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00011_source.html#l00128">128</a> of file <a class="el" href="a00011_source.html">CombFilterIf.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
 <div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00360.html#a3dca2624e47fa1b574ae01fac9d6d707">m_bIsInitialized</a>)</div>
 <div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">Error_t::kNotInitializedError</a>;</div>
@@ -873,9 +873,9 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00360.html#a5a8973e3297f5643aac503427ba57cf0">m_pCCombFilter</a>-&gt;<a class="code hl_function" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec">setParam</a>(eParam, fParamValue);</div>
 <div class="line"><span class="lineno">  140</span>    }</div>
 <div class="line"><span class="lineno">  141</span>}</div>
-<div class="ttc" id="aa00348_html_acde2c44a0c01416cd700c646f1c21cec"><div class="ttname"><a href="a00348.html#acde2c44a0c01416cd700c646f1c21cec">CCombFilterBase::setParam</a></div><div class="ttdeci">Error_t setParam(CCombFilterIf::FilterParam_t eParam, float fParamValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00059">CombFilter.cpp:59</a></div></div>
+<div class="ttc" id="aa00348_html_acde2c44a0c01416cd700c646f1c21cec"><div class="ttname"><a href="a00348.html#acde2c44a0c01416cd700c646f1c21cec">CCombFilterBase::setParam</a></div><div class="ttdeci">Error_t setParam(CCombFilterIf::FilterParam_t eParam, float fParamValue)</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00059">CombFilter.cpp:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">kNotInitializedError</a>, <a class="el" href="a00062_source.html#l00036">kParamDelay</a>, <a class="el" href="a00062_source.html#l00035">kParamGain</a>, <a class="el" href="a00062_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00062_source.html#l00107">m_fSampleRate</a>, <a class="el" href="a00062_source.html#l00105">m_pCCombFilter</a>, and <a class="el" href="a00032_source.html#l00059">CCombFilterBase::setParam()</a>.</p>
+<p class="reference">References <a class="el" href="a00077.html#a4e8c0d09726859e3d3369c0da5a1aa7fad0b37fe7dcc839e4cda4d7f5553d52cb">kNotInitializedError</a>, <a class="el" href="a00053_source.html#l00036">kParamDelay</a>, <a class="el" href="a00053_source.html#l00035">kParamGain</a>, <a class="el" href="a00053_source.html#l00104">m_bIsInitialized</a>, <a class="el" href="a00053_source.html#l00107">m_fSampleRate</a>, <a class="el" href="a00053_source.html#l00105">m_pCCombFilter</a>, and <a class="el" href="a00014_source.html#l00059">CCombFilterBase::setParam()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -883,13 +883,11 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00360_a47e0979e162e23e217829fee0140a3de_cgraph.png" border="0" usemap="#aa00360_a47e0979e162e23e217829fee0140a3de_cgraph" alt=""/></div>
 <map name="aa00360_a47e0979e162e23e217829fee0140a3de_cgraph" id="aa00360_a47e0979e162e23e217829fee0140a3de_cgraph">
-<area shape="rect" title=" " alt="" coords="5,71,169,98"/>
-<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,71,404,98"/>
+<area shape="rect" title=" " alt="" coords="5,42,169,69"/>
+<area shape="rect" href="a00348.html#acde2c44a0c01416cd700c646f1c21cec" title=" " alt="" coords="217,42,404,69"/>
 <area shape="rect" href="a00348.html#aca98f57b3895a3aa20a961ce788f155e" title=" " alt="" coords="452,5,641,47"/>
-<area shape="rect" href="a00372.html#a2bd848181a662312600bc590b9040d2a" title=" " alt="" coords="467,122,627,149"/>
-<area shape="rect" href="a00372.html#a408e0ec5855fca27bd2dc5862fa913ab" title=" " alt="" coords="465,71,628,98"/>
+<area shape="rect" href="a00372.html#af265a6322c4b1584c880def00d31e663" title=" " alt="" coords="465,71,628,98"/>
 <area shape="rect" href="a00372.html#a67eddecd2a880c52c80093774bc37c24" title=" " alt="" coords="689,71,820,98"/>
-<area shape="rect" href="a00372.html#a702eb6314380082795f735df74a816c9" title=" " alt="" coords="697,122,812,149"/>
 </map>
 </div>
 
@@ -906,7 +904,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00083.html#abb452686968e48b67397da5f97445f5b">bool</a> CCombFilterIf::m_bIsInitialized</td>
+          <td class="memname"><a class="el" href="a00092.html#abb452686968e48b67397da5f97445f5b">bool</a> CCombFilterIf::m_bIsInitialized</td>
         </tr>
       </table>
   </td>
@@ -918,9 +916,9 @@ Private Attributes</h2></td></tr>
 
 <p>internal bool to check whether the init function has been called </p>
 
-<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00104">104</a> of file <a class="el" href="a00062_source.html">CombFilterIf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00104">104</a> of file <a class="el" href="a00053_source.html">CombFilterIf.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00143">getParam()</a>, <a class="el" href="a00035_source.html#l00084">init()</a>, <a class="el" href="a00035_source.html#l00120">process()</a>, <a class="el" href="a00035_source.html#l00109">reset()</a>, and <a class="el" href="a00035_source.html#l00128">setParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00011_source.html#l00143">getParam()</a>, <a class="el" href="a00011_source.html#l00084">init()</a>, <a class="el" href="a00011_source.html#l00120">process()</a>, <a class="el" href="a00011_source.html#l00109">reset()</a>, and <a class="el" href="a00011_source.html#l00128">setParam()</a>.</p>
 
 </div>
 </div>
@@ -946,9 +944,9 @@ Private Attributes</h2></td></tr>
 
 <p>audio sample rate in Hz </p>
 
-<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00107">107</a> of file <a class="el" href="a00062_source.html">CombFilterIf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00107">107</a> of file <a class="el" href="a00053_source.html">CombFilterIf.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00143">getParam()</a>, <a class="el" href="a00035_source.html#l00084">init()</a>, <a class="el" href="a00035_source.html#l00109">reset()</a>, and <a class="el" href="a00035_source.html#l00128">setParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00011_source.html#l00143">getParam()</a>, <a class="el" href="a00011_source.html#l00084">init()</a>, <a class="el" href="a00011_source.html#l00109">reset()</a>, and <a class="el" href="a00011_source.html#l00128">setParam()</a>.</p>
 
 </div>
 </div>
@@ -974,20 +972,20 @@ Private Attributes</h2></td></tr>
 
 <p>handle of the comb filter </p>
 
-<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00105">105</a> of file <a class="el" href="a00062_source.html">CombFilterIf.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00053_source.html#l00105">105</a> of file <a class="el" href="a00053_source.html">CombFilterIf.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a00035_source.html#l00143">getParam()</a>, <a class="el" href="a00035_source.html#l00084">init()</a>, <a class="el" href="a00035_source.html#l00120">process()</a>, <a class="el" href="a00035_source.html#l00109">reset()</a>, and <a class="el" href="a00035_source.html#l00128">setParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a00011_source.html#l00143">getParam()</a>, <a class="el" href="a00011_source.html#l00084">init()</a>, <a class="el" href="a00011_source.html#l00120">process()</a>, <a class="el" href="a00011_source.html#l00109">reset()</a>, and <a class="el" href="a00011_source.html#l00128">setParam()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00062_source.html">CombFilterIf.h</a></li>
-<li><a class="el" href="a00035_source.html">CombFilterIf.cpp</a></li>
+<li><a class="el" href="a00053_source.html">CombFilterIf.h</a></li>
+<li><a class="el" href="a00011_source.html">CombFilterIf.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 3 2022 20:31:30 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Apr 6 2022 12:24:16 for MUSI6106 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>
