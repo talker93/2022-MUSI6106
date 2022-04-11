@@ -57,9 +57,20 @@ public:
     \return Error_t
     */
     Error_t getPath (int **ppiPathResult) const;
+    
+    float argmin(float a, float b, float c);
 
 private:
     bool m_bIsInitialized;
+    //bool isInParamRange(float fValue);
+    CDtw* m_pCDtw;
+    int m_iNumRows;
+    int m_iNumCols;
+    float** m_ppfCostMatrix;
+    float** m_ppfDistanceMatrix;
+    float** m_ppfDeltaMatrix;
+    int** m_ppiPathResult;
+    int** m_iDec;
 };
 
 
