@@ -5,6 +5,7 @@
 #pragma once
 
 #include "ErrorDef.h"
+#include "RingBuffer.h"
 
 /*! \brief interface for fast convolution
 */
@@ -28,6 +29,8 @@ public:
     \param iBlockLength processing block size
     \return Error_t
     */
+    static Error_t create(CFastConv*& CFastConv);
+    
     Error_t init(float* pfImpulseResponse, int iLengthOfIr, int iBlockLength = 8192, ConvCompMode_t eCompMode = kFreqDomain);
 
     /*! resets all internal class members
@@ -50,7 +53,13 @@ public:
     Error_t flushBuffer(float* pfOutputBuffer);
 
 private:
-
+    int m_iBlockLength;
+    int m_iOverlapLength;
+    int m_iDataLength;
+    int m_iIRLength;
+    CRingBuffer<float>* m_pCRingBuff = 0;
+    float* m_pfIR;
+    
 };
 
 
