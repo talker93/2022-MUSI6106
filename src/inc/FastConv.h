@@ -29,7 +29,9 @@ public:
     \param iBlockLength processing block size
     \return Error_t
     */
-    static Error_t create(CFastConv*& CFastConv);
+    static Error_t create(CFastConv*& pCFastConv);
+    
+    static Error_t destroy(CFastConv*& pCFastConv);
     
     Error_t init(float* pfImpulseResponse, int iLengthOfIr, int iBlockLength = 8192, ConvCompMode_t eCompMode = kFreqDomain);
 
@@ -59,7 +61,9 @@ private:
     int m_iIRLength;
     CRingBuffer<float>* m_pCRingBuff = 0;
     float* m_pfIR;
-    
+    bool m_bIsInitialized;
+    /* 0-> timeDomain, 1-> freqDomain*/
+    int m_iCompType;
 };
 
 

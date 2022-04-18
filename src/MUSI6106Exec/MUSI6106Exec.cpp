@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 
     //float                       fModFrequencyInHz;
     //float                       fModWidthInSec;
-    int iIRLength = 1;
+    int iIRLength = 10;
 
     clock_t                     time = 0;
 
@@ -57,8 +57,8 @@ int main(int argc, char* argv[])
     sInputFilePath = argv[1];
     sOutputFilePath = argv[2];
     pfImpulseResponse = new float[iIRLength];
-    *pfImpulseResponse = 1.0;
-    //*(pfImpulseResponse+1) = 1.0;
+    for(int i = 0; i < 10; i++)
+        pfImpulseResponse[i] = 1;
         
     //fModFrequencyInHz = atof(argv[3]);
     //fModWidthInSec = atof(argv[4]);
@@ -89,17 +89,16 @@ int main(int argc, char* argv[])
     ppfInputAudio = new float*[stFileSpec.iNumChannels];
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
         ppfInputAudio[i] = new float[kBlockSize];
-    
+
     ppfOutputAudio = new float*[stFileSpec.iNumChannels];
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
         ppfOutputAudio[i] = new float[kBlockSize];
-    
     
     ////////////////////////////////////////////////////////////////////////////
     //CVibrato::create(pCVibrato);
     //pCVibrato->init(fModWidthInSec, stFileSpec.fSampleRateInHz, iNumChannels);
     CFastConv::create(pCFastConv);
-    pCFastConv->init(pfImpulseResponse, 1, iNumFrames, CFastConv::kTimeDomain);
+    pCFastConv->init(pfImpulseResponse, iIRLength, iNumFrames, CFastConv::kFreqDomain);
     
     
     // Set parameters of vibrato
