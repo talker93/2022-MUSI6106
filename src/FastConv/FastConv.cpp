@@ -58,21 +58,33 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
                 pfOutputBuffer[n] += m_pCRingBuff->get(k) * m_pfIR[n - k];
             }
         }
+        m_pCRingBuff->getPostInc();
     }
+    
     /*
-    for (int i = 0; i < bufferLength; ++i) {
-            m_buffer->putPostInc(input[i]);
-            for (int j = 0; j < m_IRLength; ++j) {
-                output[i] += m_buffer->get(m_IRLength-j) * (m_IR[j] * m_wetGain);
-            }
-            m_buffer->getPostInc();
+    for (int i = 0; i < iLengthOfBuffers; ++i) {
+        m_pCRingBuff->putPostInc(pfInputBuffer[i]);
+        for (int j = 0; j < m_iIRLength; ++j) {
+            pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
         }
-        return Error_t::kNoError;
-    */
+        m_pCRingBuff->getPostInc();
+    }
+     */
+    
     return Error_t::kNoError;
 }
 
 Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
 {
+    for (int i = 0; i < m_iIRLength; ++i) {
+        m_pCRingBuff->putPostInc(0.F);
+        for (int j = 0; j < m_iIRLength; ++j) {
+            pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
+        }
+        m_pCRingBuff->getPostInc();
+    }
+    
+    
+    
     return Error_t::kNoError;
 }
