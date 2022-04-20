@@ -94,7 +94,18 @@ int main(int argc, char* argv[])
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
         ppfOutputAudio[i] = new float[kBlockSize];
     
-    
+    if (ppfInputAudio == 0)
+    {
+        CAudioFileIf::destroy(phAudioFile);
+        //hTestOutputFile.close();
+        return -1;
+    }
+    if (ppfOutputAudio[0] == 0)
+    {
+        CAudioFileIf::destroy(phAudioFileOut);
+        //hTestOutputFile.close();
+        return -1;
+    }
     ////////////////////////////////////////////////////////////////////////////
     //CVibrato::create(pCVibrato);
     //pCVibrato->init(fModWidthInSec, stFileSpec.fSampleRateInHz, iNumChannels);
@@ -102,7 +113,6 @@ int main(int argc, char* argv[])
     pCFastConv->init(pfImpulseResponse, 1, iNumFrames, CFastConv::kTimeDomain);
     
     
-    // Set parameters of vibrato
     
 
     // processing
@@ -114,7 +124,16 @@ int main(int argc, char* argv[])
     }
     phAudioFile->getFileSpec(stFileSpec);
 
+    
+    //flushbuffer
+    float** flush = 0;
+    flush = new float*[1];
+    flush[0] = new float[iIRLength];
+    memset(flush, 0, sizeof(float) * (iIRLength - 1));
+    pCFastConv->flushBuffer(flush[0]);
+    phAudioFileOut->writeData(flush, iIRLength - 1);
 
+    
     cout << "\nreading/writing done in: \t" << (clock() - time) * 1.F / CLOCKS_PER_SEC << " seconds." << endl;
 
     //////////////////////////////////////////////////////////////////////////////
