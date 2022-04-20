@@ -26,7 +26,7 @@ namespace fastconv_test {
         {
             
             m_pCFastConv = new CFastConv();
-            int IRLength = 51;
+            IRLength = 51;
             IR = new float[IRLength];
             std::default_random_engine generator(0);
             std::uniform_real_distribution<float> uniformRealDistribution(-1.0,1.0);
@@ -54,8 +54,9 @@ namespace fastconv_test {
         //input
         int InputLength = 10;
         float* input = new float[InputLength];
-        for(int i = 0; i < InputLength; i++)
-            input[i] = 0.0;
+        //for(int i = 0; i < InputLength; i++)
+        //    input[i] = 0.0;
+        memset(input, 0, sizeof(float) * InputLength);
         input[3] = 1.0;
         //output
         float* output = new float[InputLength];
@@ -68,6 +69,10 @@ namespace fastconv_test {
             EXPECT_NEAR(IR[i], output[i + 3], 1e-8);
         }
         
+        for (int i = 0; i < 3; i++) {
+                EXPECT_EQ(output[i], 0);
+        }
+        
         delete[] input;
         delete[] output;
         
@@ -78,8 +83,9 @@ namespace fastconv_test {
         //input
         int InputLength = 10;
         float* input = new float[InputLength];
-        for(int i = 0; i < InputLength; i++)
-            input[i] = 0.0;
+        //for(int i = 0; i < InputLength; i++)
+        //    input[i] = 0.0;
+        memset(input, 0, sizeof(float) * InputLength);
         input[3] = 1.0;
         //output
         float* output = new float[IRLength];
@@ -121,9 +127,14 @@ namespace fastconv_test {
         for(int i = 0, start = 0; i < 8; start += blockLengths[i++])
             m_pCFastConv->process(output + start, input + start, blockLengths[i]);
         
-        //check
+        //check output shiif IR
         for (int i = 0; i < IRLength && i + 3 < InputLength; i++) {
             EXPECT_NEAR(IR[i], output[i + 3], 1e-8);
+        }
+        //check tail
+        for (int i = IRLength + 3; i < InputLength; i++) {
+            //EXPECT_NEAR(output[i], 0, 1e-8);
+            EXPECT_EQ(output[i], 0);
         }
     
     }
