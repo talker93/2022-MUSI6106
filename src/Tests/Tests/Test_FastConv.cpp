@@ -26,7 +26,7 @@ namespace fastconv_test {
         {
             
             m_pCFastConv = new CFastConv();
-            IRLength = 51;
+            int IRLength = 51;
             IR = new float[IRLength];
             std::default_random_engine generator(0);
             std::uniform_real_distribution<float> uniformRealDistribution(-1.0,1.0);
@@ -44,27 +44,27 @@ namespace fastconv_test {
             delete[] IR;
         }
         
-        
+        int IRLength = 0;
         float* IR = nullptr;
         CFastConv *m_pCFastConv = 0;
     };
 
-    TEST_F(TimeConv, identity){
+    TEST_F(FastConv, identity){
         
         //input
-        InLength = 10;
-        float* input = new float[InLength];
-        for(int i = 0; i < InLength; i++)
+        int InputLength = 10;
+        float* input = new float[InputLength];
+        for(int i = 0; i < InputLength; i++)
             input[i] = 0.0;
         input[3] = 1.0;
         //output
-        float* output = new float[signalLength];
-        memset(output, 0, sizeof(float) * InLength);
+        float* output = new float[InputLength];
+        memset(output, 0, sizeof(float) * InputLength);
         
-        m_pCFastConv->process(output, input, InLength);
+        m_pCFastConv->process(output, input, InputLength);
         
         //check
-        for(int i = 0; i + 3 < InLength; i++){
+        for(int i = 0; i + 3 < InputLength; i++){
             EXPECT_NEAR(IR[i], output[i + 3], 1e-8);
         }
         
@@ -73,26 +73,27 @@ namespace fastconv_test {
         
     }
 
-    TEST_F(TimeConv, flushbuffer){
+    TEST_F(FastConv, flushbuffer){
         
         //input
-        InLength = 10;
-        float* input = new float[InLength];
-        for(int i = 0; i < InLength; i++)
+        int InputLength = 10;
+        float* input = new float[InputLength];
+        for(int i = 0; i < InputLength; i++)
             input[i] = 0.0;
         input[3] = 1.0;
         //output
-        float* output = new float[signalLength];
-        memset(output, 0, sizeof(float) * InLength);
+        float* output = new float[IRLength];
+        memset(output, 0, sizeof(float) * IRLength);
         
-        m_pCFastConv->process(output, input, InLength);
+        m_pCFastConv->process(output, input, InputLength);
+        memset(output, 0, sizeof(float) * IRLength);
         
         //flush
-        m_pCFastConv->flushbuffer(output);
+        m_pCFastConv->flushBuffer(output);
         
         //check
-        for(int i = 0; i + InLength - 3 < InLength; i++){
-            EXPECT_NEAR(IR[i+InLength-3], output[i], 1e-8);
+        for(int i = 0; i + InputLength - 3 < IRLength; i++){
+            EXPECT_NEAR(IR[i + InputLength - 3], output[i], 1e-8);
         }
         
         delete[] input;
@@ -101,18 +102,18 @@ namespace fastconv_test {
     }
 
     //identity with a succession of different input/output block sizes
-    TEST_F(TimeConv, varyingBlockSize){
+    TEST_F(FastConv, varyingBlockSize){
         
         //input
-        InLength = 10000;
-        float* input = new float[InLength];
+        int InputLength = 10000;
+        float* input = new float[InputLength];
         //for(int i = 0; i < InLength; i++)
         //    input[i] = 0.0;
-        memset(input, 0, sizeof(float) * InLength);
+        memset(input, 0, sizeof(float) * InputLength);
         input[3] = 1.0;
         //output
-        float* output = new float[signalLength];
-        memset(output, 0, sizeof(float) * InLength);
+        float* output = new float[InputLength];
+        memset(output, 0, sizeof(float) * InputLength);
         
         int blockLengths[] = {1, 13, 1023, 2048, 1, 17, 5000, 1897};
         
@@ -121,7 +122,7 @@ namespace fastconv_test {
             m_pCFastConv->process(output + start, input + start, blockLengths[i]);
         
         //check
-        for (int i = 0; i < IRLength && i + 3 < InLength; i++) {
+        for (int i = 0; i < IRLength && i + 3 < InputLength; i++) {
             EXPECT_NEAR(IR[i], output[i + 3], 1e-8);
         }
     
