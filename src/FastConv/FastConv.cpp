@@ -51,8 +51,10 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             m_iBlockLength = iBlockLength;
             m_iIRLength = iLengthOfIr;
             m_iOverlapLength = iLengthOfIr - 1;
-            m_iDataLength = iBlockLength + iLengthOfIr - 1;
-            m_pCRingBuff = new CRingBuffer<float>(m_iDataLength);
+            m_iDataLength = iBlockLength + 1 - iLengthOfIr;
+            m_pCRingBuff = new CRingBuffer<float>(iBlockLength);
+            m_pCRingBuff->setReadIdx(0);
+            m_pCRingBuff->setWriteIdx(0);
             m_pfIR = pfImpulseResponse;
             break;
             
@@ -247,7 +249,7 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
         m_iCurDivNum++;
 
     }
-    else if(m_iCompType == 0)
+    else if(m_iCompType == kTimeDomain)
     {
     // reset outputbuffer
         for (int i = 0; i < iLengthOfBuffers; i++)
