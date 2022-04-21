@@ -8,6 +8,9 @@
 
 #include "rvfft.h"
 
+#include <iostream>
+using namespace std;
+
 const float CFft::m_Pi  = static_cast<float>(M_PI);
 const float CFft::m_Pi2 = static_cast<float>(M_PI_2);
 

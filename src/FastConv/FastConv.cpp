@@ -1,6 +1,8 @@
 
 #include "FastConv.h"
 #include <iostream>
+#include <cmath>
+using namespace std;
 
 CFastConv::CFastConv( void ) :
     m_bIsInitialized(false),
@@ -49,10 +51,8 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             m_iBlockLength = iBlockLength;
             m_iIRLength = iLengthOfIr;
             m_iOverlapLength = iLengthOfIr - 1;
-            m_iDataLength = iBlockLength + 1 - iLengthOfIr;
-            m_pCRingBuff = new CRingBuffer<float>(iBlockLength*2);
-            m_pCRingBuff->setReadIdx(0);
-            m_pCRingBuff->setWriteIdx(0);
+            m_iDataLength = iBlockLength + iLengthOfIr - 1;
+            m_pCRingBuff = new CRingBuffer<float>(m_iDataLength);
             m_pfIR = pfImpulseResponse;
             break;
             
@@ -62,10 +62,19 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             m_iOverlapLength = iLengthOfIr - 1;
             m_iDataLength = iBlockLength + iLengthOfIr - 1;
             m_pCRingBuff = new CRingBuffer<float>(m_iDataLength);
-            m_pCRingBuff->setReadIdx(0);
-            m_pCRingBuff->setWriteIdx(0);
             m_pfIR = pfImpulseResponse;
             m_iCompType = 1;
+            m_ppfImpulseBlock = new float*[m_iDivDimes];
+            for (int i = 0; i < m_iDivDimes; i++)
+            {
+                m_ppfImpulseBlock[i] = new float[m_iBlockLength];
+                for (int j = 0; j < m_iBlockLength; j++)
+                {
+                    m_ppfImpulseBlock[i][j] = m_pfIR[i+j];
+                }
+            }
+            
+            
             break;
 
         case kNumConvCompModes:
@@ -94,76 +103,173 @@ Error_t CFastConv::reset()
     return Error_t::kNoError;
 }
 
-Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, int iLengthOfBuffers )
+Error_t CFastConv::getRealAndImag (float* pfOutReal, float* pfOutImag, float* pfInput)
+{
+    float* pfSpec = new float [static_cast<int>(m_iFftLength)]();
+    
+    CFft* pCFft;
+    CFft::createInstance(pCFft);
+    // why am I getting wrong data here, if init(m_iDataLength) ?
+    pCFft->initInstance(static_cast<int>(m_iFftLength));
+    pCFft->doFft(pfSpec, pfInput);
+    pCFft->splitRealImag(pfOutReal, pfOutImag, pfSpec);
+    pCFft->resetInstance();
+    CFft::destroyInstance(pCFft);
+    
+    return Error_t::kNoError;
+}
+
+Error_t CFastConv::fftMul(float *pfMulOut, float *pfMul_1, float* pfMul_2)
 {
     
-    // here is the input check
-    std::cout << "--------input" << std::endl;
-    for (int i = 0; i < iLengthOfBuffers; i++)
-        std::cout << pfInputBuffer[i] << ", ";
-    std::cout << std::endl;
-    // impulse response
-    std::cout << "---------impulse response" << std::endl;
-    for (int i = 0; i < m_iIRLength; i++)
-        std::cout << m_pfIR[i] << std::endl;
+    float* pfMul_1_Real = new float [static_cast<int>(m_iFftLength/2+1)]();
+    float* pfMul_1_Imag = new float [static_cast<int>(m_iFftLength/2+1)]();
+    float* pfMul_2_Real = new float [static_cast<int>(m_iFftLength/2+1)]();
+    float* pfMul_2_Imag = new float [static_cast<int>(m_iFftLength/2+1)]();
+    float* pfOut_Real = new float [static_cast<int>(m_iFftLength/2+1)]();
+    float* pfOut_Imag = new float [static_cast<int>(m_iFftLength/2+1)]();
+    float* pfOut = new float [static_cast<int>(m_iFftLength)]();
+
+    getRealAndImag(pfMul_1_Real, pfMul_1_Imag, pfMul_1);
+    getRealAndImag(pfMul_2_Real, pfMul_2_Imag, pfMul_2);
     
-    
-    if(m_iCompType == 0)
+    for(int i = 0; i < static_cast<int>(m_iFftLength); i++)
     {
-        for (int n = 0; n < iLengthOfBuffers; n++) {
-            //y[n] = 0;
-            m_pCRingBuff->putPostInc(pfInputBuffer[n]);
-            for (int k = 0; k < m_iDataLength; k++) {
-                // To right shift the impulse
-                if ((n - k) >= 0 && (n - k) < m_iIRLength) {
-                    // Main calculation
-                    pfOutputBuffer[n] += m_pCRingBuff->get(k) * m_pfIR[n - k];
-                }
+        pfOut_Real[i] = pfMul_1_Real[i] * pfMul_2_Real[i] - pfMul_1_Imag[i] * pfMul_2_Imag[i];
+        pfOut_Imag[i] = pfMul_1_Real[i] * pfMul_2_Imag[i] + pfMul_2_Real[i] * pfMul_1_Imag[i];
+    }
+    
+    CFft* pCFft_Mul;
+    CFft::createInstance(pCFft_Mul);
+    pCFft_Mul->initInstance(static_cast<int>(m_iFftLength));
+    pCFft_Mul->mergeRealImag(pfOut, pfOut_Real, pfOut_Imag);
+    pCFft_Mul->doInvFft(pfMulOut, pfOut);
+    pCFft_Mul->resetInstance();
+    CFft::destroyInstance(pCFft_Mul);
+    
+    return Error_t::kNoError;
+    
+}
+
+Error_t CFastConv::checkData(const float *pfData, int dataLength)
+{
+    cout << "-----------------data inspector-----------" << endl;
+    cout << "Data until " << dataLength << " : "<< endl;
+    for(int i = 0; i < dataLength; i++)
+        cout << pfData[i] << ", ";
+    cout << "-----------------inspector ends------------" << endl;
+}
+
+Error_t CFastConv::checkData(float*& pfData, int dataLength, bool init /*= false*/)
+{
+    cout << "-----------------data inspector-----------" << endl;
+    cout << "Data until " << dataLength << " : "<< endl;
+    for(int i = 0; i < dataLength; i++)
+        cout << pfData[i] << ", ";
+    cout << "-----------------inspector ends------------" << endl;
+    if(init == true)
+    {
+        delete [] pfData;
+        pfData = 0;
+    }
+}
+
+Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, int iLengthOfBuffers )
+{
+    if(m_iCompType == 1)
+    {
+
+        
+        // -------------------------------------
+
+
+//        if(m_iCurDivNum % m_iDivDimes == 0) {
+//
+//        };
+//
+        float conv = 0;
+        memset(pfOutputBuffer, 0, iLengthOfBuffers*sizeof(float));
+
+        // tail adding
+        for (int n = 0; n < m_iIRLength-1; n++)
+            pfOutputBuffer[n] = m_pCRingBuff->get(n+iLengthOfBuffers);
+
+        // buffer reset
+        m_pCRingBuff->reset();
+
+        // direct conv
+//        for ( int n = 0; n < iLengthOfBuffers + m_iIRLength - 1; n++)
+//        {
+//            for ( int k = 0; k < iLengthOfBuffers; k++)
+//            {
+//                if((n-k) >= 0 && (n-k) < m_iIRLength)
+//                {
+//                    conv += pfInputBuffer[k] * m_pfIR[n-k];
+//                }
+//            }
+//            m_pCRingBuff->putPostInc(conv);
+//            conv = 0;
+//        }
+        
+        // get the minimum FFT number
+        for( int i = 0; i < 100; i++)
+        {
+            if (m_iDataLength < pow(2, i+1) && m_iDataLength > pow(2, i))
+            {
+                m_iFftLength = pow(2, i+1);
+                break;
             }
         }
+
+        float* pfIirBuffer = new float [static_cast<int>(m_iFftLength)]();
+        memcpy(pfIirBuffer, m_pfIR, m_iIRLength*sizeof(float));
+
+        float* pfInput = new float [static_cast<int>(m_iFftLength)]();
+        memcpy(pfInput, pfInputBuffer, iLengthOfBuffers*sizeof(float));
+
+        float* pfMulResult = new float [static_cast<int>(m_iFftLength)]();
+
+        fftMul(pfMulResult, pfInput, pfIirBuffer);
+
+        m_pCRingBuff->putPostInc(pfMulResult, m_iDataLength);
+        
+        // output
+        for (int n = 0; n < iLengthOfBuffers; n++)
+            pfOutputBuffer[n] += m_pCRingBuff->get(n);
+
     }
-    else if(m_iCompType == 1)
+    else if(m_iCompType == 0)
     {
         // reset outputbuffer
-        for (int i = 0; i < iLengthOfBuffers; i++)
-            pfOutputBuffer[i] = 0;
+        memset(pfOutputBuffer, 0, iLengthOfBuffers*sizeof(pfOutputBuffer[0]));
+        
+        float tail;
         
         m_pCRingBuff -> putPostInc(pfInputBuffer, iLengthOfBuffers);
-        
-        std::cout << "-------------bufer" << std::endl;
-        for (int i = 0; i < m_pCRingBuff->getLength(); i++)
-        {
-            std::cout << m_pCRingBuff->get(i) << ", ";
-        }
-        std::cout << std::endl;
         
         for (int n = 0; n < iLengthOfBuffers + m_iIRLength - 1; n++)
         {
             for (int k = 0; k < iLengthOfBuffers; k++)
             {
                 if((n-k) >= 0 && (n-k) < m_iIRLength && n < iLengthOfBuffers)
-                {
                     pfOutputBuffer[n] += m_pCRingBuff->get(k) * m_pfIR[n - k];
-                    if(n < m_iOverlapLength)
-                        pfOutputBuffer[n] += m_pCRingBuff->get(k+iLengthOfBuffers);
-                }
                 else if((n-k) >= 0 && (n-k) < m_iIRLength && n >= iLengthOfBuffers)
-                {
-                    m_pCRingBuff->putPostInc(m_pCRingBuff->get(k)*m_pfIR[n-k]);
-                }
+                    tail = (m_pCRingBuff->get(k) * m_pfIR[n-k] + tail);
             }
+            // put buffer in the tail
+            if(n >= iLengthOfBuffers)
+            {
+                m_pCRingBuff->putPostInc(tail);
+                tail = 0;
+            }
+            // add buffer in begin
+            if(n < m_iOverlapLength)
+                pfOutputBuffer[n] += m_pCRingBuff->get(n+iLengthOfBuffers);
         }
         
-        std::cout << m_pCRingBuff->getLength() << std::endl;
         m_pCRingBuff->setWriteIdx(0);
     }
     
-    // here is the output check
-    std::cout << "---------------------output" << std::endl;
-    for (int i = 0; i < iLengthOfBuffers; i++)
-        std::cout << pfOutputBuffer[i] << ", ";
-    std::cout << std::endl;
-    std::cout << std::endl;
 
     return Error_t::kNoError;
 }

@@ -25,11 +25,8 @@ int main(int argc, char* argv[])
 
     static const int            kBlockSize = 1024;
     long long                   iNumFrames = kBlockSize;
-    //int                         iNumChannels;
 
-    //float                       fModFrequencyInHz;
-    //float                       fModWidthInSec;
-    int iIRLength = 10;
+    int iIRLength = 2;
 
     clock_t                     time = 0;
 
@@ -56,8 +53,9 @@ int main(int argc, char* argv[])
     }
     sInputFilePath = argv[1];
     sOutputFilePath = argv[2];
+    
     pfImpulseResponse = new float[iIRLength];
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < iIRLength; i++)
         pfImpulseResponse[i] = 1;
         
     //fModFrequencyInHz = atof(argv[3]);

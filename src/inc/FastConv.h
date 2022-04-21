@@ -6,6 +6,7 @@
 
 #include "ErrorDef.h"
 #include "RingBuffer.h"
+#include "Fft.h"
 
 /*! \brief interface for fast convolution
 */
@@ -53,17 +54,37 @@ public:
     \return Error_t
     */
     Error_t flushBuffer(float* pfOutputBuffer);
+    
+    /*! return the FFT results with length: m_iBlockLength
+     \param pfInput (mono)
+     \return Error_t
+    */
+    Error_t getRealAndImag(float* pfOutReal, float* pfOutImag, float* pfInput);
+    
+    /*! return the FFT multiplication results with length: m_iBlockLength
+     \param pfOut (mono), pfMul_1 (mono), pfMul_2 (mono)
+     \return Error_t
+    */
+    Error_t fftMul(float* pfOut, float* pfMul_1, float* pfMul_2);
 
 private:
     int m_iBlockLength;
     int m_iOverlapLength;
     int m_iDataLength;
     int m_iIRLength;
+    int m_iFftLength;
+    float** m_ppfImpulseBlock;
+    float** m_ppfInputBlock;
     CRingBuffer<float>* m_pCRingBuff = 0;
     float* m_pfIR;
     bool m_bIsInitialized;
     /* 0-> timeDomain, 1-> freqDomain*/
     int m_iCompType;
+    int m_iDivDimes;
+    int m_iCurDivNum;
+    CFastConv* m_pCFastConv = 0;
+    Error_t checkData(const float* pfData, int dataLength);
+    Error_t checkData(float*& pfData, int dataLength, bool init = false);
 };
 
 
