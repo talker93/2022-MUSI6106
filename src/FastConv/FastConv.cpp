@@ -64,8 +64,11 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             m_pCRingBuff = new CRingBuffer<float>(m_iDataLength);
             m_pfIR = pfImpulseResponse;
             m_iCompType = 1;
-            m_ppfImpulseBlock = new float*[m_iDivDimes];
-            for (int i = 0; i < m_iDivDimes; i++)
+            m_ppfInputBlock = new float*[m_iDivNums+1];
+            for(int i = 0; i < m_iDivNums+1; i++)
+                m_ppfInputBlock[i] = new float [m_iBlockLength]();
+            m_ppfImpulseBlock = new float*[m_iDivNums];
+            for (int i = 0; i < m_iDivNums; i++)
             {
                 m_ppfImpulseBlock[i] = new float[m_iBlockLength];
                 for (int j = 0; j < m_iBlockLength; j++)
@@ -73,8 +76,6 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
                     m_ppfImpulseBlock[i][j] = m_pfIR[i+j];
                 }
             }
-            
-            
             break;
 
         case kNumConvCompModes:
@@ -174,68 +175,76 @@ Error_t CFastConv::checkData(float*& pfData, int dataLength, bool init /*= false
     }
 }
 
+Error_t CFastConv::fftBlock(float *buffer, float *block1, float *block2, int blockLen_1, int blockLen_2)
+{
+    if(blockLen_1 > m_iBlockLength || blockLen_2 > m_iBlockLength)
+        assert("something wrong with your input block number");
+    
+    memset(buffer, 0, m_iDataLength*sizeof(float));
+    
+    // get the minimum FFT number
+    for( int i = 0; i < 100; i++)
+    {
+        if (m_iDataLength < pow(2, i+1) && m_iDataLength > pow(2, i))
+        {
+            m_iFftLength = pow(2, i+1);
+            break;
+        }
+    }
+
+    float* blockBuffer1 = new float [static_cast<int>(m_iFftLength)]();
+    memcpy(blockBuffer1, block1, blockLen_1*sizeof(float));
+
+    float* blockBuffer2 = new float [static_cast<int>(m_iFftLength)]();
+    memcpy(blockBuffer2, block2, blockLen_2*sizeof(float));
+
+    fftMul(buffer, blockBuffer1, blockBuffer2);
+}
+
 Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, int iLengthOfBuffers )
 {
     if(m_iCompType == 1)
     {
-
+        m_iCurDivNum = m_iCurDivNum % (m_iDivNums+1);
+        memset(pfOutputBuffer, 0, iLengthOfBuffers);
         
-        // -------------------------------------
-
-
-//        if(m_iCurDivNum % m_iDivDimes == 0) {
-//
-//        };
-//
-        float conv = 0;
-        memset(pfOutputBuffer, 0, iLengthOfBuffers*sizeof(float));
-
-        // tail adding
-        for (int n = 0; n < m_iIRLength-1; n++)
-            pfOutputBuffer[n] = m_pCRingBuff->get(n+iLengthOfBuffers);
-
-        // buffer reset
-        m_pCRingBuff->reset();
-
-        // direct conv
-//        for ( int n = 0; n < iLengthOfBuffers + m_iIRLength - 1; n++)
-//        {
-//            for ( int k = 0; k < iLengthOfBuffers; k++)
-//            {
-//                if((n-k) >= 0 && (n-k) < m_iIRLength)
-//                {
-//                    conv += pfInputBuffer[k] * m_pfIR[n-k];
-//                }
-//            }
-//            m_pCRingBuff->putPostInc(conv);
-//            conv = 0;
-//        }
+        // get new input block
+        memcpy(m_ppfInputBlock[m_iCurDivNum], pfInputBuffer, iLengthOfBuffers*sizeof(float));
         
-        // get the minimum FFT number
-        for( int i = 0; i < 100; i++)
+        int num = 0;
+        int k = m_iDivNums-1;
+        for ( int n = 0; n < m_iDivNums; n++)
         {
-            if (m_iDataLength < pow(2, i+1) && m_iDataLength > pow(2, i))
+            fftBlock(m_ppfBuffer[num], m_ppfInputBlock[n], m_ppfImpulseBlock[k], m_iBlockLength, m_iBlockLength);
+            k--;
+            num++;
+        }
+        k = m_iDivNums-1;
+        for ( int n = 1; n < m_iDivNums; n++)
+        {
+            fftBlock(m_ppfBuffer[num], m_ppfInputBlock[n], m_ppfImpulseBlock[k], m_iBlockLength, m_iBlockLength);
+            k--;
+            num++;
+        }
+        
+        // get tail
+        for (int i = 0; i < num/2; i++)
+        {
+            for (int j = m_iBlockLength; j < m_iDataLength; j++)
             {
-                m_iFftLength = pow(2, i+1);
-                break;
+                pfOutputBuffer[j-m_iBlockLength] += m_ppfBuffer[i][j];
             }
         }
-
-        float* pfIirBuffer = new float [static_cast<int>(m_iFftLength)]();
-        memcpy(pfIirBuffer, m_pfIR, m_iIRLength*sizeof(float));
-
-        float* pfInput = new float [static_cast<int>(m_iFftLength)]();
-        memcpy(pfInput, pfInputBuffer, iLengthOfBuffers*sizeof(float));
-
-        float* pfMulResult = new float [static_cast<int>(m_iFftLength)]();
-
-        fftMul(pfMulResult, pfInput, pfIirBuffer);
-
-        m_pCRingBuff->putPostInc(pfMulResult, m_iDataLength);
+        // get head
+        for (int i = 0; (i >= num/2)&&(i<num); i++)
+        {
+            for (int j = 0; j < m_iBlockLength; j++)
+            {
+                pfOutputBuffer[j] += m_ppfBuffer[i][j];
+            }
+        }
         
-        // output
-        for (int n = 0; n < iLengthOfBuffers; n++)
-            pfOutputBuffer[n] += m_pCRingBuff->get(n);
+        m_iCurDivNum++;
 
     }
     else if(m_iCompType == 0)
