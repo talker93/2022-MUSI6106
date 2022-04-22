@@ -23,13 +23,13 @@ int main(int argc, char* argv[])
     std::string             sInputFilePath,                 //!< file paths
         sOutputFilePath;
 
-    static const int            kBlockSize = 8;
+    static const int            kBlockSize = 32;
     long long                   iNumFrames = kBlockSize;
     //int                         iNumChannels;
 
     //float                       fModFrequencyInHz;
     //float                       fModWidthInSec;
-    int iIRLength = 16;
+    int iIRLength = 1;
 
     clock_t                     time = 0;
 
@@ -57,9 +57,11 @@ int main(int argc, char* argv[])
     sInputFilePath = argv[1];
     sOutputFilePath = argv[2];
     pfImpulseResponse = new float[iIRLength];
-    *pfImpulseResponse = 1.0;
-    //*(pfImpulseResponse+1) = 1.0;
-        
+//    for(int i = 0; i < iIRLength; i++)
+//    {
+//        pfImpulseResponse[i] = 1;
+//    }
+    pfImpulseResponse[0] = 1;
     //fModFrequencyInHz = atof(argv[3]);
     //fModWidthInSec = atof(argv[4]);
 
@@ -110,7 +112,7 @@ int main(int argc, char* argv[])
     //CVibrato::create(pCVibrato);
     //pCVibrato->init(fModWidthInSec, stFileSpec.fSampleRateInHz, iNumChannels);
     CFastConv::create(pCFastConv);
-    pCFastConv->init(pfImpulseResponse, 1, iNumFrames, CFastConv::kTimeDomain);
+    pCFastConv->init(pfImpulseResponse, iIRLength, iNumFrames, CFastConv::kFreqDomain);
     
     
     

@@ -58,6 +58,7 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
     {
         case(kTimeDomain):
             m_iBlockLength = iBlockLength;
+            m_iCompType = 0;
             m_iIRLength = iLengthOfIr;
             m_iOverlapLength = iLengthOfIr - 1;
             m_iDataLength = iBlockLength + 1 - iLengthOfIr;
@@ -82,13 +83,22 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
                     break;
                 }
             }
+//            m_iFftLength = 1024;
             
             // blocking impluse response
             m_ppfIRFft = new float * [m_iDivNums];
             for(int i = 0; i < m_iDivNums; i++)
             {
-                m_ppfIRFft[i] = new float [m_iBlockLength]();
-                copy(pfImpulseResponse+i*m_iBlockLength, pfImpulseResponse+(i+1)*m_iBlockLength, m_ppfIRFft[i]);
+                if(i < m_iDivNums - 1)
+                {
+                    m_ppfIRFft[i] = new float [m_iBlockLength]();
+                    copy(pfImpulseResponse+i*m_iBlockLength, pfImpulseResponse+(i+1)*m_iBlockLength, m_ppfIRFft[i]);
+                }
+                else if(i == m_iDivNums -1)
+                {
+                    m_ppfIRFft[i] = new float [m_iBlockLength]();
+                    copy(pfImpulseResponse+i*m_iBlockLength, pfImpulseResponse+i*m_iBlockLength+iLengthOfIr%m_iBlockLength, m_ppfIRFft[i]);
+                }
             }
             
             // create buffer
@@ -98,8 +108,8 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             
             m_pfOutputBufer = new float [m_iFftLength]();
             
-            m_ppfMulBuffer = new float* [4];
-            for(int i = 0; i < 4; i++)
+            m_ppfMulBuffer = new float* [5];
+            for(int i = 0; i < 5; i++)
                 m_ppfMulBuffer[i] = new float [m_iFftLength]();
             
             m_ppfMulSplitBuffer = new float* [6];
@@ -162,25 +172,58 @@ Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul1, const float *pfM
 {
     copy(pfMul1, pfMul1+pfMulLength1, m_ppfMulBuffer[0]);
     copy(pfMul2, pfMul2+pfMulLength2, m_ppfMulBuffer[1]);
+//    checkData(pfMul2, m_iBlockLength);
     
     // m_ppfMulBuffer: 2, 3 -> output; 0, 1 -> input
     m_pCFft->doFft(m_ppfMulBuffer[2], m_ppfMulBuffer[0]);
     m_pCFft->doFft(m_ppfMulBuffer[3], m_ppfMulBuffer[1]);
+    for (int i = 0; i < m_iFftLength; i++)
+    {
+        m_ppfMulBuffer[2][i] = m_ppfMulBuffer[2][i] * m_iFftLength;
+        m_ppfMulBuffer[3][i] = m_ppfMulBuffer[3][i] * m_iFftLength;
+    }
+    checkData(m_ppfMulBuffer[2], m_iFftLength);
+    checkData(m_ppfMulBuffer[3], m_iFftLength);
     
     // m_ppfMulSplitBuffer: 0, 2 -> Real; 1, 3 -> Imag
     m_pCFft->splitRealImag(m_ppfMulSplitBuffer[0], m_ppfMulSplitBuffer[1], m_ppfMulBuffer[2]);
     m_pCFft->splitRealImag(m_ppfMulSplitBuffer[2], m_ppfMulSplitBuffer[3], m_ppfMulBuffer[3]);
+//    checkData(m_ppfMulBuffer[3], m_iFftLength);
 
     // m_ppfMulSplitBuffer: 4 -> OutputReal; 5 -> OutputImag
-    for(int i = 0; i < m_iBlockLength+1; i++)
+    for(int i = 0; i < m_iFftLength/2+1; i++)
     {
         m_ppfMulSplitBuffer[4][i] = m_ppfMulSplitBuffer[0][i] * m_ppfMulSplitBuffer[2][i]
-                                    + m_ppfMulSplitBuffer[1][i] * m_ppfMulSplitBuffer[3][i];
+                                    - m_ppfMulSplitBuffer[1][i] * m_ppfMulSplitBuffer[3][i];
         m_ppfMulSplitBuffer[5][i] = m_ppfMulSplitBuffer[0][i] * m_ppfMulSplitBuffer[3][i]
                                     + m_ppfMulSplitBuffer[1][i] * m_ppfMulSplitBuffer[2][i];
+//        cout << "[0]" << endl;
+//        checkData(m_ppfMulSplitBuffer[0], m_iFftLength/2+1);
+//        cout << "[1]" << endl;
+//        checkData(m_ppfMulSplitBuffer[1], m_iFftLength/2+1);
+//        cout << "[2]" << endl;
+//        checkData(m_ppfMulSplitBuffer[2], m_iFftLength/2+1);
+//        cout << "[3]" << endl;
+//        checkData(m_ppfMulSplitBuffer[3], m_iFftLength/2+1);
+//        cout << "[4]" << endl;
+//        checkData(m_ppfMulSplitBuffer[4], m_iFftLength/2+1);
+//        cout << "block end" << endl;
     }
     
-    m_pCFft->mergeRealImag(pfMulOut, m_ppfMulSplitBuffer[4], m_ppfMulSplitBuffer[5]);
+    m_pCFft->mergeRealImag(m_ppfMulBuffer[4], m_ppfMulSplitBuffer[4], m_ppfMulSplitBuffer[5]);
+    
+    m_pCFft->doInvFft(pfMulOut, m_ppfMulBuffer[4]);
+    
+    for (int i = 0; i < m_iFftLength; i++)
+        pfMulOut[i] = pfMulOut[i] * m_iFftLength;
+    
+//    checkData(pfMul1, m_iBlockLength);
+//
+//    checkData(m_ppfMulSplitBuffer[0], m_iFftLength/2+1);
+//
+//    checkData(m_ppfMulSplitBuffer[4], m_iFftLength/2+1);
+//
+//    checkData(pfMulOut, m_iFftLength);
     
     return Error_t::kNoError;
 }
@@ -228,6 +271,10 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
                 pfOutputBuffer[j] += m_ppCRingBuffFft[headerBufferIdx] -> getPostInc();
             headerBufferIdx = (headerBufferIdx+1) % m_iDivNums;
         }
+        cout << "intput" << endl;
+        checkData(pfInputBuffer, m_iBlockLength);
+        cout << "output" << endl;
+        checkData(pfOutputBuffer, m_iBlockLength);
         m_iCurBlockIdx = (m_iCurBlockIdx+1) % m_iDivNums;
     }
      else if(m_iCompType == 0)
@@ -257,7 +304,6 @@ Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
             for (int i = 0; i < m_iIRLength; ++i) {
                 m_pCRingBuff->putPostInc(0.F);
                 for (int j = 0; j < m_iIRLength; ++j) {
-                    // sorry for comment this block, we will discuss about it.
 //                    pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
                 }
                 m_pCRingBuff->getPostInc();
