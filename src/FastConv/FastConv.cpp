@@ -182,8 +182,8 @@ Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul1, const float *pfM
         m_ppfMulBuffer[2][i] = m_ppfMulBuffer[2][i] * m_iFftLength;
         m_ppfMulBuffer[3][i] = m_ppfMulBuffer[3][i] * m_iFftLength;
     }
-    checkData(m_ppfMulBuffer[2], m_iFftLength);
-    checkData(m_ppfMulBuffer[3], m_iFftLength);
+//    checkData(m_ppfMulBuffer[2], m_iFftLength);
+//    checkData(m_ppfMulBuffer[3], m_iFftLength);
     
     // m_ppfMulSplitBuffer: 0, 2 -> Real; 1, 3 -> Imag
     m_pCFft->splitRealImag(m_ppfMulSplitBuffer[0], m_ppfMulSplitBuffer[1], m_ppfMulBuffer[2]);
@@ -271,10 +271,10 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
                 pfOutputBuffer[j] += m_ppCRingBuffFft[headerBufferIdx] -> getPostInc();
             headerBufferIdx = (headerBufferIdx+1) % m_iDivNums;
         }
-        cout << "intput" << endl;
-        checkData(pfInputBuffer, m_iBlockLength);
-        cout << "output" << endl;
-        checkData(pfOutputBuffer, m_iBlockLength);
+//        cout << "intput" << endl;
+//        checkData(pfInputBuffer, m_iBlockLength);
+//        cout << "output" << endl;
+//        checkData(pfOutputBuffer, m_iBlockLength);
         m_iCurBlockIdx = (m_iCurBlockIdx+1) % m_iDivNums;
     }
      else if(m_iCompType == 0)
