@@ -296,7 +296,7 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
     
     return Error_t::kNoError;
 }
-
+/*
 Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
 {
     switch (m_iCompType) {
@@ -314,6 +314,22 @@ Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
         default:
             break;
     }
+}
+*/
+ 
+Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
+{
+    for (int i = 0; i < m_iIRLength; ++i) {
+        m_pCRingBuff->putPostInc(0.F);
+        for (int j = 0; j < m_iIRLength; ++j) {
+            pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
+        }
+        m_pCRingBuff->getPostInc();
+    }
+    
+    
+    
+    return Error_t::kNoError;
 }
 
 Error_t CFastConv::checkData(const float *pfData, int dataLength)
