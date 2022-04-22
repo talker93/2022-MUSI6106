@@ -23,13 +23,13 @@ int main(int argc, char* argv[])
     std::string             sInputFilePath,                 //!< file paths
         sOutputFilePath;
 
-    static const int            kBlockSize = 1024;
+    static const int            kBlockSize = 8;
     long long                   iNumFrames = kBlockSize;
     //int                         iNumChannels;
 
     //float                       fModFrequencyInHz;
     //float                       fModWidthInSec;
-    int iIRLength = 1;
+    int iIRLength = 16;
 
     clock_t                     time = 0;
 

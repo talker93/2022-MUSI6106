@@ -7,6 +7,9 @@
 #include "ErrorDef.h"
 #include "RingBuffer.h"
 #include "Fft.h"
+#include <math.h>
+#include <iostream>
+using namespace std;
 
 /*! \brief interface for fast convolution
 */
@@ -41,6 +44,12 @@ public:
     */
     Error_t reset ();
 
+    /*! return the 'tail' after processing has finished (identical to feeding in zeros
+    \param pfOutputBuffer (mono)
+    \return Error_t
+    */
+    Error_t flushBuffer(float* pfOutputBuffer);
+    
     /*! computes the output with reverb
     \param pfOutputBuffer (mono)
     \param pfInputBuffer (mono)
@@ -48,29 +57,13 @@ public:
     \return Error_t
     */
     Error_t process(float* pfOutputBuffer, const float* pfInputBuffer, int iLengthOfBuffers);
-
-    /*! return the 'tail' after processing has finished (identical to feeding in zeros
-    \param pfOutputBuffer (mono)
-    \return Error_t
-    */
-    Error_t flushBuffer(float* pfOutputBuffer);
     
-    /*! return the FFT results with length: m_iDataLength
-     \param pfInput (mono)
-     \return Error_t
-    */
-    Error_t getRealAndImag(float* pfOutReal, float* pfOutImag, float* pfInput);
-    
-    /*! return the FFT multiplication results with length: m_iDataLength
-     \param pfOut (mono), pfMul_1 (mono), pfMul_2 (mono)
-     \return Error_t
-    */
-    Error_t fftMul(float* pfOut, float* pfMul_1, float* pfMul_2);
-    
-    /*! return the FFT multiplication results and store in buffer
-     \param buffer: iDataLength
+    /*!
+     \param pfMulOut: iFftLength
+     \param pfMul1: m_iBlockLength
+     \param pfMul2: m_iBlockLength
      */
-    Error_t fftBlock(float* buffer, float* block1, float* block2, int blockLen_1, int blockLen_2);
+    Error_t fftMul(float* pfMulOut, const float* pfMul1, const float* pfMul2, int pfMulLength1, int pfMulLength2);
 
 private:
     int m_iBlockLength;
@@ -78,19 +71,22 @@ private:
     int m_iDataLength;
     int m_iIRLength;
     int m_iFftLength;
-    float** m_ppfImpulseBlock;
-    float** m_ppfInputBlock;
-    float** m_ppfBuffer;
     CRingBuffer<float>* m_pCRingBuff = 0;
+    CRingBuffer<float>** m_ppCRingBuffFft = 0;
     float* m_pfIR;
+    float** m_ppfIRFft;
     bool m_bIsInitialized;
-    /* 0-> timeDomain, 1-> freqDomain*/
+    /* 0-> time domain, 1-> freq domain*/
     int m_iCompType;
     int m_iDivNums;
-    int m_iCurDivNum = 0;
-    CFastConv* m_pCFastConv = 0;
+    int m_iCurBlockIdx;
+    float** m_ppfMulBuffer;
+    float** m_ppfMulSplitBuffer;
+    float* m_pfOutputBufer;
+    CFft* m_pCFft = 0;
     Error_t checkData(const float* pfData, int dataLength);
     Error_t checkData(float*& pfData, int dataLength, bool init = false);
+    Error_t checkRingBuffer();
     
 };
 
