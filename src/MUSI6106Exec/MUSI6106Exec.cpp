@@ -20,28 +20,29 @@ void    showClInfo();
 int main(int argc, char* argv[])
 {
 
-    std::string             sInputFilePath,                 //!< file paths
-        sOutputFilePath;
+    std::string sInputFilePath, sOutputFilePath;
+    
+    std::string sInputIrPath;
 
-    static const int            kBlockSize = 32;
+    static const int            kBlockSize = 2048;
     long long                   iNumFrames = kBlockSize;
+    long long                   iIrLength = 0;
     //int                         iNumChannels;
 
-    //float                       fModFrequencyInHz;
-    //float                       fModWidthInSec;
-    int iIRLength = 1;
 
     clock_t                     time = 0;
 
     float** ppfInputAudio = 0;
     float** ppfOutputAudio = 0;
-    
+    float** ppfIrAudio = 0;
     float* pfImpulseResponse=0;
 
     CAudioFileIf* phAudioFile = 0;
     CAudioFileIf* phAudioFileOut = 0;
+    CAudioFileIf* phAudioIr = 0;
 
     CAudioFileIf::FileSpec_t    stFileSpec;
+    CAudioFileIf::FileSpec_t    stIrSpec;
 
     CFastConv* pCFastConv = 0;
 
@@ -49,21 +50,14 @@ int main(int argc, char* argv[])
 
 
     // command line args
-    if (argc < 2)
+    if (argc < 4)
     {
         cout << "Incorrect number of arguments!" << endl;
         return -1;
     }
     sInputFilePath = argv[1];
     sOutputFilePath = argv[2];
-    pfImpulseResponse = new float[iIRLength];
-//    for(int i = 0; i < iIRLength; i++)
-//    {
-//        pfImpulseResponse[i] = 1;
-//    }
-    pfImpulseResponse[0] = 1;
-    //fModFrequencyInHz = atof(argv[3]);
-    //fModWidthInSec = atof(argv[4]);
+    sInputIrPath = argv[3];
 
     ///////////////////////////////////////////////////////////////////////////
     // open the input wave file
@@ -76,6 +70,17 @@ int main(int argc, char* argv[])
         return -1;
     }
     phAudioFile->getFileSpec(stFileSpec);
+    
+    // open the impulse response file
+    CAudioFileIf::create(phAudioIr);
+    phAudioIr->openFile(sInputIrPath, CAudioFileIf::kFileRead);
+    if (!phAudioIr->isOpen())
+    {
+        cout << "Impulse response open error!";
+        CAudioFileIf::destroy(phAudioIr);
+        return -1;
+    }
+    phAudioIr->getFileSpec(stIrSpec);
     
     //create output file
     CAudioFileIf::create(phAudioFileOut);
@@ -96,6 +101,11 @@ int main(int argc, char* argv[])
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
         ppfOutputAudio[i] = new float[kBlockSize];
     
+    phAudioIr->getLength(iIrLength);
+    ppfIrAudio = new float*[stIrSpec.iNumChannels];
+    for (int i = 0; i < stIrSpec.iNumChannels; i++)
+        ppfIrAudio[i] = new float[iIrLength];
+    cout << iIrLength << endl;
     if (ppfInputAudio == 0)
     {
         CAudioFileIf::destroy(phAudioFile);
@@ -108,15 +118,20 @@ int main(int argc, char* argv[])
         //hTestOutputFile.close();
         return -1;
     }
+    
+    if (ppfIrAudio[0] == 0)
+    {
+        CAudioFileIf::destroy(phAudioIr);
+        return -1;
+    }
+    
+    // Load impluse response from file
+    phAudioIr->readData(ppfIrAudio, iIrLength);
+    
     ////////////////////////////////////////////////////////////////////////////
-    //CVibrato::create(pCVibrato);
-    //pCVibrato->init(fModWidthInSec, stFileSpec.fSampleRateInHz, iNumChannels);
     CFastConv::create(pCFastConv);
-    pCFastConv->init(pfImpulseResponse, iIRLength, iNumFrames, CFastConv::kFreqDomain);
+    pCFastConv->init(ppfIrAudio[0], iIrLength, iNumFrames, CFastConv::kFreqDomain);
     
-    
-    
-
     // processing
     while (!phAudioFile->isEof())
     {
@@ -128,12 +143,12 @@ int main(int argc, char* argv[])
 
     
     //flushbuffer
-    float** flush = 0;
-    flush = new float*[1];
-    flush[0] = new float[iIRLength];
-    memset(flush, 0, sizeof(float) * (iIRLength - 1));
-    pCFastConv->flushBuffer(flush[0]);
-    phAudioFileOut->writeData(flush, iIRLength - 1);
+//    float** flush = 0;
+//    flush = new float*[1];
+//    flush[0] = new float[iIrLength];
+//    memset(flush, 0, sizeof(float) * (iIrLength - 1));
+//    pCFastConv->flushBuffer(flush[0]);
+//    phAudioFileOut->writeData(flush, iIrLength - 1);
 
     
     cout << "\nreading/writing done in: \t" << (clock() - time) * 1.F / CLOCKS_PER_SEC << " seconds." << endl;
@@ -142,12 +157,15 @@ int main(int argc, char* argv[])
     // clean-up
     CAudioFileIf::destroy(phAudioFile);
     CAudioFileIf::destroy(phAudioFileOut);
-    //CFastConv::reset(pCFastConv);
+    CAudioFileIf::destroy(phAudioIr);
+    pCFastConv->reset();
+    CFastConv::destroy(pCFastConv);
 
     
-    
+    delete [] ppfIrAudio;
     delete[] ppfInputAudio;
     delete[] ppfOutputAudio;
+    ppfIrAudio = 0;
     ppfInputAudio = 0;
     ppfOutputAudio = 0;
 

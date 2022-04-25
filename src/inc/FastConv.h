@@ -7,6 +7,8 @@
 #include "ErrorDef.h"
 #include "RingBuffer.h"
 #include "Fft.h"
+#include "Vector.h"
+#include "Util.h"
 #include <math.h>
 #include <iostream>
 using namespace std;
@@ -76,11 +78,11 @@ private:
     float* m_pfIR;
     float** m_ppfIRFft;
     bool m_bIsInitialized;
-    /* 0-> time domain, 1-> freq domain*/
-    int m_iCompType;
+    CFastConv::ConvCompMode_t m_eCompType;
     int m_iDivNums;
     int m_iCurBlockIdx;
     float** m_ppfMulBuffer;
+    CFft::complex_t** m_ppfMulFftBuffer;
     float** m_ppfMulSplitBuffer;
     float* m_pfOutputBufer;
     CFft* m_pCFft = 0;
