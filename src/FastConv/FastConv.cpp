@@ -290,6 +290,9 @@ Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
  
 Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
 {
+    float* pfFlushInputBuffer = new float[m_iBlockLength + m_iIRLength - 1];
+    memset(pfFlushInputBuffer, 0, sizeof(float) * (m_iBlockLength + m_iIRLength - 1));
+    
     switch (m_eCompType) {
         case 0:
             for (int i = 0; i < m_iIRLength; ++i) {
@@ -302,10 +305,12 @@ Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
             break;
             
         case 1:
+            
+            process(pfOutputBuffer, pfFlushInputBuffer, m_iBlockLength + m_iIRLength - 1);
 //            for (int i = 0; i < m_iIRLength; ++i) {
-//                m_pCRingBuff->putPostInc(0.F);
+//                //m_pCRingBuff->putPostInc(0.F);
 //                for (int j = 0; j < m_iIRLength; ++j) {
-//                    pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
+//                    pfOutputBuffer[i] += pfFlushInputBuffer[m_iIRLength-j] * m_pfIR[j];
 //                }
 //                m_pCRingBuff->getPostInc();
 //            }
