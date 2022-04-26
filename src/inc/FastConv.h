@@ -65,7 +65,7 @@ public:
      \param pfMul1: m_iBlockLength
      \param pfMul2: m_iBlockLength
      */
-    Error_t fftMul(float* pfMulOut, const float* pfMul, int H_index);
+    Error_t fftMul(float* pfMulOut, const float* pfMul, int H_index, int iLenOfBuffer);
 
 private:
     int m_iBlockLength;

@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
     std::string sInputIrPath;
 
     static const int            kBlockSize = 512;
+    static const int            kConvBlockSize = 2048;
     long long                   iNumFrames = kBlockSize;
     long long                   iIrLength = 0;
     //int                         iNumChannels;
@@ -44,7 +45,7 @@ int main(int argc, char* argv[])
 
     CAudioFileIf::FileSpec_t    stFileSpec;
     CAudioFileIf::FileSpec_t    stIrSpec;
-    CFastConv::ConvCompMode_t eCompMode;
+    CFastConv::ConvCompMode_t   eCompMode;
 
     CFastConv* pCFastConv = 0;
     int mode = 0;
@@ -143,7 +144,7 @@ int main(int argc, char* argv[])
     
     ////////////////////////////////////////////////////////////////////////////
     CFastConv::create(pCFastConv);
-    pCFastConv->init(ppfIrAudio[0], iIrLength, iNumFrames, eCompMode);
+    pCFastConv->init(ppfIrAudio[0], iIrLength, kConvBlockSize, eCompMode);
     
     // processing
     time_begin = clock();
@@ -153,20 +154,23 @@ int main(int argc, char* argv[])
         pCFastConv->process(ppfOutputAudio[0], ppfInputAudio[0], iNumFrames);
         phAudioFileOut->writeData(ppfOutputAudio, iNumFrames);
     }
-    time_end = clock();
-    cout << "\nConvolution fininshed by " << (time_end - time_begin) * 1.F / CLOCKS_PER_SEC << "seconds." << endl;
     
     
     phAudioFile->getFileSpec(stFileSpec);
 
-    
     //flushbuffer
-//    float** flush = 0;
-//    flush = new float*[1];
-//    flush[0] = new float[iIrLength];
-//    memset(flush, 0, sizeof(float) * (iIrLength - 1));
-//    pCFastConv->flushBuffer(flush[0]);
-//    phAudioFileOut->writeData(flush, iIrLength - 1);
+    if(eCompMode==CFastConv::kTimeDomain)
+    {
+        float** flush = 0;
+        flush = new float*[1];
+        flush[0] = new float[iIrLength];
+        memset(flush, 0, sizeof(float) * (iIrLength - 1));
+        pCFastConv->flushBuffer(flush[0]);
+        phAudioFileOut->writeData(flush, iIrLength - 1);
+    }
+    
+    time_end = clock();
+    cout << "\nConvolution fininshed by " << (time_end - time_begin) * 1.F / CLOCKS_PER_SEC << "seconds." << endl;
 
     
     cout << "\nreading/writing done in: \t" << (clock() - time) * 1.F / CLOCKS_PER_SEC << " seconds." << endl;

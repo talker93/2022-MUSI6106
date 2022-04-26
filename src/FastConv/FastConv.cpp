@@ -185,12 +185,12 @@ Error_t CFastConv::reset()
     return Error_t::kNoError;
 }
 
-Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul, int H_index)
+Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul, int H_index, int iLenOfBuffer)
 {
-    copy(pfMul, pfMul+m_iBlockLength, m_ppfMulBuffer[0]);
+    copy(pfMul, pfMul+iLenOfBuffer, m_ppfMulBuffer[0]);
     
     //pre scaling
-    CVectorFloat::mulC_I(m_ppfMulBuffer[0], m_iFftLength, m_iBlockLength);
+    CVectorFloat::mulC_I(m_ppfMulBuffer[0], m_iFftLength, iLenOfBuffer);
     
     // m_ppfMulBuffer: 2, 3 -> output; 0, 1 -> input
     m_pCFft->doFft(m_ppfMulFftBuffer[0], m_ppfMulBuffer[0]);
@@ -230,7 +230,7 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
         {
             if(i < m_iDivNums)
             {
-                fftMul(m_pfFftOutBuffer, pfInputBuffer, i);
+                fftMul(m_pfFftOutBuffer, pfInputBuffer, i, iLengthOfBuffers);
                 CVectorFloat::add_I(m_pfFftOutBuffer, remaining_block, m_iBlockLength);
                 copy(m_pfFftOutBuffer, m_pfFftOutBuffer+m_iBlockLength, m_pfOutputBuffer+i*m_iBlockLength);
                 copy(m_pfFftOutBuffer+m_iBlockLength, m_pfFftOutBuffer+2*m_iBlockLength, remaining_block);
@@ -246,7 +246,7 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
         CVectorFloat::add_I(m_pfOutputBuffer, remaining_buffer, m_iDivNums*m_iBlockLength);
         m_pCRingBuff->putPostInc(m_pfOutputBuffer, (m_iDivNums+1)*m_iBlockLength);
         
-        copy(m_pfOutputBuffer, m_pfOutputBuffer+m_iBlockLength, pfOutputBuffer);
+        copy(m_pfOutputBuffer, m_pfOutputBuffer+iLengthOfBuffers, pfOutputBuffer);
     }
      else if(m_eCompType == kTimeDomain)
     {
@@ -292,13 +292,13 @@ Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
 {
     switch (m_eCompType) {
         case 0:
-//            for (int i = 0; i < m_iIRLength; ++i) {
-//                m_pCRingBuff->putPostInc(0.F);
-//                for (int j = 0; j < m_iIRLength; ++j) {
-//                    pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
-//                }
-//                m_pCRingBuff->getPostInc();
-//            }
+            for (int i = 0; i < m_iIRLength; ++i) {
+                m_pCRingBuff->putPostInc(0.F);
+                for (int j = 0; j < m_iIRLength; ++j) {
+                    pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
+                }
+                m_pCRingBuff->getPostInc();
+            }
             break;
             
         case 1:
