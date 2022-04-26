@@ -192,10 +192,10 @@ Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul, int H_index, int 
     //pre scaling
     CVectorFloat::mulC_I(m_ppfMulBuffer[0], m_iFftLength, iLenOfBuffer);
     
-    // m_ppfMulBuffer: 2, 3 -> output; 0, 1 -> input
+    // m_ppfMulBuffer: 0 -> output; 0 -> input
     m_pCFft->doFft(m_ppfMulFftBuffer[0], m_ppfMulBuffer[0]);
     
-    // m_ppfMulSplitBuffer: 0, 2 -> Real; 1, 3 -> Imag
+    // m_ppfMulSplitBuffer: 0 -> Real; 1 -> Imag
     m_pCFft->splitRealImag(m_ppfMulSplitBuffer[0], m_ppfMulSplitBuffer[1], m_ppfMulFftBuffer[0]);
 
     // m_ppfMulSplitBuffer: 4 -> OutputReal; 5 -> OutputImag
