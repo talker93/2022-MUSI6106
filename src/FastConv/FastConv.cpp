@@ -110,7 +110,7 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
                 m_ppfMulSplitBuffer[i] = new float [(m_iFftLength/2)+1]();
             
             m_pCFft->createInstance(m_pCFft);
-            m_pCFft->initInstance(m_iFftLength);
+            m_pCFft->initInstance(m_iFftLength, 1, CFft::kWindowHann, CFft::kNoWindow);
             break;
 
         case kNumConvCompModes:
@@ -167,24 +167,18 @@ Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul1, const float *pfM
 {
     copy(pfMul1, pfMul1+pfMulLength1, m_ppfMulBuffer[0]);
     copy(pfMul2, pfMul2+pfMulLength2, m_ppfMulBuffer[1]);
-//    checkData(pfMul1, m_iBlockLength);
-//    checkData(pfMul2, m_iBlockLength);
     
     //pre scaling
     CVectorFloat::mulC_I(m_ppfMulBuffer[0], m_iFftLength, m_iBlockLength);
     CVectorFloat::mulC_I(m_ppfMulBuffer[1], m_iFftLength, m_iBlockLength);
-//    checkData(m_ppfMulBuffer[1], m_iFftLength);
     
     // m_ppfMulBuffer: 2, 3 -> output; 0, 1 -> input
     m_pCFft->doFft(m_ppfMulFftBuffer[0], m_ppfMulBuffer[0]);
     m_pCFft->doFft(m_ppfMulFftBuffer[1], m_ppfMulBuffer[1]);
-//    checkData(m_ppfMulFftBuffer[0], m_iFftLength);
-//    checkData(m_ppfMulFftBuffer[1], m_iFftLength);
     
     // m_ppfMulSplitBuffer: 0, 2 -> Real; 1, 3 -> Imag
     m_pCFft->splitRealImag(m_ppfMulSplitBuffer[0], m_ppfMulSplitBuffer[1], m_ppfMulFftBuffer[0]);
     m_pCFft->splitRealImag(m_ppfMulSplitBuffer[2], m_ppfMulSplitBuffer[3], m_ppfMulFftBuffer[1]);
-//    checkData(m_ppfMulBuffer[3], m_iFftLength);
 
     // m_ppfMulSplitBuffer: 4 -> OutputReal; 5 -> OutputImag
     for(int i = 0; i < m_iFftLength/2+1; i++)
@@ -201,11 +195,6 @@ Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul1, const float *pfM
     
     //post scaling
     CVectorFloat::mulC_I(pfMulOut, 1/static_cast<float>(m_iFftLength), m_iFftLength);
-    
-//    checkData(pfMul1, m_iBlockLength);
-//    checkData(m_ppfMulSplitBuffer[0], m_iFftLength/2+1);
-//    checkData(m_ppfMulSplitBuffer[4], m_iFftLength/2+1);
-//    checkData(pfMulOut, m_iFftLength);
     
     return Error_t::kNoError;
 }
