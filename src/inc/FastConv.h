@@ -65,7 +65,7 @@ public:
      \param pfMul1: m_iBlockLength
      \param pfMul2: m_iBlockLength
      */
-    Error_t fftMul(float* pfMulOut, const float* pfMul1, const float* pfMul2, int pfMulLength1, int pfMulLength2);
+    Error_t fftMul(float* pfMulOut, const float* pfMul, int H_index);
 
 private:
     int m_iBlockLength;
@@ -80,7 +80,6 @@ private:
     bool m_bIsInitialized;
     CFastConv::ConvCompMode_t m_eCompType;
     int m_iDivNums;
-    int m_iCurBlockIdx;
     float** m_ppfMulBuffer;
     CFft::complex_t** m_ppfMulFftBuffer;
     float** m_ppfMulSplitBuffer;
@@ -88,8 +87,12 @@ private:
     float* m_pfFftOutBuffer;
     CFft* m_pCFft = 0;
     Error_t checkData(const float* pfData, int dataLength);
-    Error_t checkData(float*& pfData, int dataLength, bool init = false);
-    Error_t checkRingBuffer();
+    Error_t checkData(float*& pfData, int dataLength, bool reset = false);
+    CFft::complex_t** m_ppf_H;
+    float** m_ppf_H_Real;
+    float** m_ppf_H_Imag;
+    float* remaining_buffer;
+    float* remaining_block;
     
 };
 

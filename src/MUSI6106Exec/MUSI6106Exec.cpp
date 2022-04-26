@@ -30,6 +30,8 @@ int main(int argc, char* argv[])
 
 
     clock_t                     time = 0;
+    clock_t time_begin = 0;
+    clock_t time_end = 0;
 
     float** ppfInputAudio = 0;
     float** ppfOutputAudio = 0;
@@ -42,14 +44,16 @@ int main(int argc, char* argv[])
 
     CAudioFileIf::FileSpec_t    stFileSpec;
     CAudioFileIf::FileSpec_t    stIrSpec;
+    CFastConv::ConvCompMode_t eCompMode;
 
     CFastConv* pCFastConv = 0;
+    int mode = 0;
 
     showClInfo();
 
 
     // command line args
-    if (argc < 4)
+    if (argc < 5)
     {
         cout << "Incorrect number of arguments!" << endl;
         return -1;
@@ -57,6 +61,16 @@ int main(int argc, char* argv[])
     sInputFilePath = argv[1];
     sOutputFilePath = argv[2];
     sInputIrPath = argv[3];
+    mode = atoi(argv[4]);
+    switch (mode) {
+        case 0:
+            eCompMode = CFastConv::kTimeDomain;
+            break;
+        case 1:
+            eCompMode = CFastConv::kFreqDomain;
+        default:
+            break;
+    }
 
     ///////////////////////////////////////////////////////////////////////////
     // open the input wave file
@@ -129,15 +143,20 @@ int main(int argc, char* argv[])
     
     ////////////////////////////////////////////////////////////////////////////
     CFastConv::create(pCFastConv);
-    pCFastConv->init(ppfIrAudio[0], iIrLength, iNumFrames, CFastConv::kFreqDomain);
+    pCFastConv->init(ppfIrAudio[0], iIrLength, iNumFrames, eCompMode);
     
     // processing
+    time_begin = clock();
     while (!phAudioFile->isEof())
     {
         phAudioFile->readData(ppfInputAudio, iNumFrames);
         pCFastConv->process(ppfOutputAudio[0], ppfInputAudio[0], iNumFrames);
         phAudioFileOut->writeData(ppfOutputAudio, iNumFrames);
     }
+    time_end = clock();
+    cout << "\nConvolution fininshed by " << (time_end - time_begin) * 1.F / CLOCKS_PER_SEC << "seconds." << endl;
+    
+    
     phAudioFile->getFileSpec(stFileSpec);
 
     

@@ -13,7 +13,6 @@ CFastConv::CFastConv( void ) :
     m_bIsInitialized(false),
     m_eCompType(kNumConvCompModes),
     m_iDivNums(0),
-    m_iCurBlockIdx(0),
     m_ppfMulBuffer(0),
     m_ppfMulSplitBuffer(0),
     m_ppfMulFftBuffer(0),
@@ -74,22 +73,6 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
 
             m_iFftLength = 2 * m_iBlockLength;
             
-            // blocking impluse response
-            m_ppfIRFft = new float * [m_iDivNums];
-            for(int i = 0; i < m_iDivNums; i++)
-            {
-                if(i < m_iDivNums - 1)
-                {
-                    m_ppfIRFft[i] = new float [m_iBlockLength]();
-                    copy(pfImpulseResponse+i*m_iBlockLength, pfImpulseResponse+(i+1)*m_iBlockLength, m_ppfIRFft[i]);
-                }
-                else if(i == m_iDivNums -1)
-                {
-                    m_ppfIRFft[i] = new float [m_iBlockLength]();
-                    copy(pfImpulseResponse+i*m_iBlockLength, pfImpulseResponse+i*m_iBlockLength+iLengthOfIr%m_iBlockLength, m_ppfIRFft[i]);
-                }
-            }
-            
             // create buffer
             m_pCRingBuff = new CRingBuffer<float> ((m_iDivNums+1)*m_iBlockLength);
             
@@ -111,6 +94,46 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             
             m_pCFft->createInstance(m_pCFft);
             m_pCFft->initInstance(m_iFftLength, 1, CFft::kWindowHann, CFft::kNoWindow);
+            
+            // blocking impluse response
+            m_ppfIRFft = new float * [m_iDivNums];
+            for(int i = 0; i < m_iDivNums; i++)
+            {
+                if(i < m_iDivNums - 1)
+                {
+                    m_ppfIRFft[i] = new float [m_iBlockLength]();
+                    copy(pfImpulseResponse+i*m_iBlockLength, pfImpulseResponse+(i+1)*m_iBlockLength, m_ppfIRFft[i]);
+                }
+                else if(i == m_iDivNums -1)
+                {
+                    m_ppfIRFft[i] = new float [m_iBlockLength]();
+                    copy(pfImpulseResponse+i*m_iBlockLength, pfImpulseResponse+i*m_iBlockLength+iLengthOfIr%m_iBlockLength, m_ppfIRFft[i]);
+                }
+            }
+            
+            // caculating FFT results of impulse response
+            m_ppf_H = new CFft::complex_t* [m_iDivNums];
+            for(int i = 0; i < m_iDivNums; i++)
+                m_ppf_H[i] = new CFft::complex_t [m_iFftLength]();
+            
+            m_ppf_H_Real = new float* [m_iDivNums];
+            for(int i = 0; i < m_iDivNums; i++)
+                m_ppf_H_Real[i] = new float [m_iFftLength/2 + 1]();
+            
+            m_ppf_H_Imag = new float* [m_iDivNums];
+            for(int i = 0; i < m_iDivNums; i++)
+                m_ppf_H_Imag[i] = new float [m_iFftLength/2 + 1]();
+            
+            for(int i = 0; i < m_iDivNums; i++)
+            {
+                CVectorFloat::mulC_I(m_ppfIRFft[i], m_iFftLength, m_iBlockLength);
+                m_pCFft->doFft(m_ppf_H[i], m_ppfIRFft[i]);
+                m_pCFft->splitRealImag(m_ppf_H_Real[i], m_ppf_H_Imag[i], m_ppf_H[i]);
+            }
+            
+            remaining_buffer = new float [m_iDivNums*m_iBlockLength]();
+            remaining_block = new float [m_iBlockLength]();
+            
             break;
 
         case kNumConvCompModes:
@@ -152,7 +175,6 @@ Error_t CFastConv::reset()
     m_ppfIRFft = 0;
     m_eCompType = kNumConvCompModes;
     m_iDivNums = 0;
-    m_iCurBlockIdx = 0;
     m_ppfMulBuffer = 0;
     m_ppfMulSplitBuffer = 0;
     m_pfOutputBuffer = 0;
@@ -163,30 +185,26 @@ Error_t CFastConv::reset()
     return Error_t::kNoError;
 }
 
-Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul1, const float *pfMul2, int pfMulLength1, int pfMulLength2)
+Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul, int H_index)
 {
-    copy(pfMul1, pfMul1+pfMulLength1, m_ppfMulBuffer[0]);
-    copy(pfMul2, pfMul2+pfMulLength2, m_ppfMulBuffer[1]);
+    copy(pfMul, pfMul+m_iBlockLength, m_ppfMulBuffer[0]);
     
     //pre scaling
     CVectorFloat::mulC_I(m_ppfMulBuffer[0], m_iFftLength, m_iBlockLength);
-    CVectorFloat::mulC_I(m_ppfMulBuffer[1], m_iFftLength, m_iBlockLength);
     
     // m_ppfMulBuffer: 2, 3 -> output; 0, 1 -> input
     m_pCFft->doFft(m_ppfMulFftBuffer[0], m_ppfMulBuffer[0]);
-    m_pCFft->doFft(m_ppfMulFftBuffer[1], m_ppfMulBuffer[1]);
     
     // m_ppfMulSplitBuffer: 0, 2 -> Real; 1, 3 -> Imag
     m_pCFft->splitRealImag(m_ppfMulSplitBuffer[0], m_ppfMulSplitBuffer[1], m_ppfMulFftBuffer[0]);
-    m_pCFft->splitRealImag(m_ppfMulSplitBuffer[2], m_ppfMulSplitBuffer[3], m_ppfMulFftBuffer[1]);
 
     // m_ppfMulSplitBuffer: 4 -> OutputReal; 5 -> OutputImag
     for(int i = 0; i < m_iFftLength/2+1; i++)
     {
-        m_ppfMulSplitBuffer[4][i] = m_ppfMulSplitBuffer[0][i] * m_ppfMulSplitBuffer[2][i]
-                                    - m_ppfMulSplitBuffer[1][i] * m_ppfMulSplitBuffer[3][i];
-        m_ppfMulSplitBuffer[5][i] = m_ppfMulSplitBuffer[0][i] * m_ppfMulSplitBuffer[3][i]
-                                    + m_ppfMulSplitBuffer[1][i] * m_ppfMulSplitBuffer[2][i];
+        m_ppfMulSplitBuffer[4][i] = m_ppfMulSplitBuffer[0][i] * m_ppf_H_Real[H_index][i]
+                                    - m_ppfMulSplitBuffer[1][i] * m_ppf_H_Imag[H_index][i];
+        m_ppfMulSplitBuffer[5][i] = m_ppfMulSplitBuffer[0][i] * m_ppf_H_Imag[H_index][i]
+                                    + m_ppfMulSplitBuffer[1][i] * m_ppf_H_Real[H_index][i];
     }
     
     m_pCFft->mergeRealImag(m_ppfMulFftBuffer[2], m_ppfMulSplitBuffer[4], m_ppfMulSplitBuffer[5]);
@@ -204,8 +222,6 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
     
     if(m_eCompType == kFreqDomain)
     {
-        CVectorFloat::setZero(m_pfOutputBuffer, m_iBlockLength*(m_iDivNums+1));
-        CVectorFloat::setZero(m_pfFftOutBuffer, m_iFftLength);
         float* remaining_buffer = new float [m_iDivNums*m_iBlockLength]();
         
         // caculate for x[n], n is a specific number
@@ -214,7 +230,7 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
         {
             if(i < m_iDivNums)
             {
-                fftMul(m_pfFftOutBuffer, pfInputBuffer, m_ppfIRFft[i], m_iBlockLength, m_iBlockLength);
+                fftMul(m_pfFftOutBuffer, pfInputBuffer, i);
                 CVectorFloat::add_I(m_pfFftOutBuffer, remaining_block, m_iBlockLength);
                 copy(m_pfFftOutBuffer, m_pfFftOutBuffer+m_iBlockLength, m_pfOutputBuffer+i*m_iBlockLength);
                 copy(m_pfFftOutBuffer+m_iBlockLength, m_pfFftOutBuffer+2*m_iBlockLength, remaining_block);
@@ -313,14 +329,14 @@ Error_t CFastConv::checkData(const float *pfData, int dataLength)
     cout << "-----------------inspector ends------------" << endl;
 }
 
-Error_t CFastConv::checkData(float*& pfData, int dataLength, bool init /*= false*/)
+Error_t CFastConv::checkData(float*& pfData, int dataLength, bool reset /*= false*/)
 {
     cout << "-----------------data inspector-----------" << endl;
     cout << "Data until " << dataLength << " : "<< endl;
     for(int i = 0; i < dataLength; i++)
         cout << pfData[i] << ", ";
     cout << "-----------------inspector ends------------" << endl;
-    if(init == true)
+    if(reset == true)
     {
         delete [] pfData;
         pfData = 0;
