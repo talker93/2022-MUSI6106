@@ -8,7 +8,6 @@ CFastConv::CFastConv( void ) :
     m_iIRLength(0),
     m_iFftLength(0),
     m_pCRingBuff(0),
-    m_ppCRingBuffFft(0),
     m_pfIR(0),
     m_ppfIRFft(0),
     m_bIsInitialized(false),
@@ -18,7 +17,8 @@ CFastConv::CFastConv( void ) :
     m_ppfMulBuffer(0),
     m_ppfMulSplitBuffer(0),
     m_ppfMulFftBuffer(0),
-    m_pfOutputBufer(0),
+    m_pfOutputBuffer(0),
+    m_pfFftOutBuffer(0),
     m_pCFft(0)
 {
     this -> reset();
@@ -72,7 +72,7 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             m_iIRLength = iLengthOfIr;
             m_iDivNums = ceil(static_cast<float>(iLengthOfIr)/static_cast<float>(iBlockLength));
 
-            m_iFftLength = 2*m_iBlockLength;
+            m_iFftLength = 2 * m_iBlockLength;
             
             // blocking impluse response
             m_ppfIRFft = new float * [m_iDivNums];
@@ -91,11 +91,11 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             }
             
             // create buffer
-            m_ppCRingBuffFft = new CRingBuffer<float>* [m_iDivNums];
-            for(int i = 0; i < m_iDivNums; i++)
-                m_ppCRingBuffFft[i] = new CRingBuffer<float> (m_iBlockLength*2*m_iDivNums);
+            m_pCRingBuff = new CRingBuffer<float> ((m_iDivNums+1)*m_iBlockLength);
             
-            m_pfOutputBufer = new float [m_iFftLength]();
+            m_pfOutputBuffer = new float [m_iBlockLength*(m_iDivNums+1)]();
+            
+            m_pfFftOutBuffer = new float [m_iFftLength]();
             
             m_ppfMulBuffer = new float* [2];
             for(int i = 0; i < 2; i++)
@@ -125,8 +125,6 @@ Error_t CFastConv::reset()
     {
         delete m_pCRingBuff;
         m_pCRingBuff = 0;
-        delete [] m_ppCRingBuffFft;
-        m_ppCRingBuffFft = 0;
         delete m_pfIR;
         m_pfIR = 0;
         delete [] m_ppfIRFft;
@@ -137,8 +135,10 @@ Error_t CFastConv::reset()
         m_ppfMulFftBuffer = 0;
         delete[] m_ppfMulSplitBuffer;
         m_ppfMulSplitBuffer = 0;
-        delete m_pfOutputBufer;
-        m_pfOutputBufer = 0;
+        delete m_pfOutputBuffer;
+        m_pfOutputBuffer = 0;
+        delete m_pfFftOutBuffer;
+        m_pfFftOutBuffer =0;
         m_pCFft->resetInstance();
         m_pCFft = 0;
     }
@@ -148,7 +148,6 @@ Error_t CFastConv::reset()
     m_iIRLength = 0;
     m_iFftLength = 0;
     m_pCRingBuff = 0;
-    m_ppCRingBuffFft = 0;
     m_pfIR = 0;
     m_ppfIRFft = 0;
     m_eCompType = kNumConvCompModes;
@@ -156,7 +155,8 @@ Error_t CFastConv::reset()
     m_iCurBlockIdx = 0;
     m_ppfMulBuffer = 0;
     m_ppfMulSplitBuffer = 0;
-    m_pfOutputBufer = 0;
+    m_pfOutputBuffer = 0;
+    m_pfFftOutBuffer = 0;
     m_pCFft = 0;
     m_bIsInitialized = false;
     
@@ -202,13 +202,10 @@ Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul1, const float *pfM
     //post scaling
     CVectorFloat::mulC_I(pfMulOut, 1/static_cast<float>(m_iFftLength), m_iFftLength);
     
-    checkData(pfMul1, m_iBlockLength);
-
-    checkData(m_ppfMulSplitBuffer[0], m_iFftLength/2+1);
-
-    checkData(m_ppfMulSplitBuffer[4], m_iFftLength/2+1);
-
-    checkData(pfMulOut, m_iFftLength);
+//    checkData(pfMul1, m_iBlockLength);
+//    checkData(m_ppfMulSplitBuffer[0], m_iFftLength/2+1);
+//    checkData(m_ppfMulSplitBuffer[4], m_iFftLength/2+1);
+//    checkData(pfMulOut, m_iFftLength);
     
     return Error_t::kNoError;
 }
@@ -218,51 +215,33 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
     
     if(m_eCompType == kFreqDomain)
     {
-        int tailBufferIdx;
-        int tailPosition;
-        int headerBufferIdx;
-        int headerPosition;
+        CVectorFloat::setZero(m_pfOutputBuffer, m_iBlockLength*(m_iDivNums+1));
+        CVectorFloat::setZero(m_pfFftOutBuffer, m_iFftLength);
+        float* remaining_buffer = new float [m_iDivNums*m_iBlockLength]();
         
-        // tail addition
-        // there are m_iDivNums ring buffer in total
-        // each ring buffer has length of 2 * m_iBlockLength * m_iDivNums
-        // the tail stores in the 2nd half of a correspondant part in the ring buffer
-        tailBufferIdx = m_iCurBlockIdx;
-        for ( int i = 0; i < m_iDivNums; i++)
+        // caculate for x[n], n is a specific number
+        float* remaining_block = new float [m_iBlockLength]();
+        for(int i = 0; i < m_iDivNums+1; i++)
         {
-            tailPosition = m_iDivNums - 1 - i;
-            m_ppCRingBuffFft[tailBufferIdx] -> setReadIdx((tailPosition*2+1)*m_iBlockLength);
-            for (int j = 0; j < m_iBlockLength; j++)
-                pfOutputBuffer[j] += m_ppCRingBuffFft[tailBufferIdx] -> getPostInc();
-            tailBufferIdx = (tailBufferIdx+1) % m_iDivNums;
+            if(i < m_iDivNums)
+            {
+                fftMul(m_pfFftOutBuffer, pfInputBuffer, m_ppfIRFft[i], m_iBlockLength, m_iBlockLength);
+                CVectorFloat::add_I(m_pfFftOutBuffer, remaining_block, m_iBlockLength);
+                copy(m_pfFftOutBuffer, m_pfFftOutBuffer+m_iBlockLength, m_pfOutputBuffer+i*m_iBlockLength);
+                copy(m_pfFftOutBuffer+m_iBlockLength, m_pfFftOutBuffer+2*m_iBlockLength, remaining_block);
+            }
+            else if(i == m_iDivNums)
+            {
+                copy(remaining_block, remaining_block+m_iBlockLength, m_pfOutputBuffer+i*m_iBlockLength);
+            }
         }
         
-        // calculate and store in ringBuffer
-        // data length is m_iFftLength
-        for(int i = 0; i < m_iDivNums; i++)
-        {
-            fftMul(m_pfOutputBufer, pfInputBuffer, m_ppfIRFft[i], m_iBlockLength, m_iBlockLength);
-            checkData(m_pfOutputBufer, m_iBlockLength);
-            m_ppCRingBuffFft[m_iCurBlockIdx] -> put(m_pfOutputBufer, m_iFftLength);
-            m_ppCRingBuffFft[m_iCurBlockIdx] -> setWriteIdx(2*m_iBlockLength*(i+1));
-        }
+        m_pCRingBuff->setReadIdx(m_pCRingBuff->getReadIdx()+m_iBlockLength);
+        m_pCRingBuff->getPostInc(remaining_buffer, m_iDivNums*m_iBlockLength);
+        CVectorFloat::add_I(m_pfOutputBuffer, remaining_buffer, m_iDivNums*m_iBlockLength);
+        m_pCRingBuff->putPostInc(m_pfOutputBuffer, (m_iDivNums+1)*m_iBlockLength);
         
-        // header addition
-        // the header stores in the 1st half of a correspondant part in the ring buffer
-        headerBufferIdx = (m_iCurBlockIdx + 1) % m_iDivNums;
-        for ( int i = 0; i < m_iDivNums; i++)
-        {
-            headerPosition = m_iDivNums - 1 - i;
-            m_ppCRingBuffFft[headerBufferIdx] -> setReadIdx(headerPosition*2*m_iBlockLength);
-            for (int j = 0; j < m_iBlockLength; j++)
-                pfOutputBuffer[j] += m_ppCRingBuffFft[headerBufferIdx] -> getPostInc();
-            headerBufferIdx = (headerBufferIdx+1) % m_iDivNums;
-        }
-//        cout << "intput" << endl;
-//        checkData(pfInputBuffer, m_iBlockLength);
-//        cout << "output" << endl;
-        checkData(pfOutputBuffer, m_iBlockLength);
-        m_iCurBlockIdx = (m_iCurBlockIdx+1) % m_iDivNums;
+        copy(m_pfOutputBuffer, m_pfOutputBuffer+m_iBlockLength, pfOutputBuffer);
     }
      else if(m_eCompType == kTimeDomain)
     {
@@ -319,11 +298,11 @@ Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
             
         case 1:
 //            for (int i = 0; i < m_iIRLength; ++i) {
-//                m_ppCRingBuffFft[0]->putPostInc(0.F);
+//                m_pCRingBuff->putPostInc(0.F);
 //                for (int j = 0; j < m_iIRLength; ++j) {
-//                    pfOutputBuffer[i] += m_ppCRingBuffFft[0]->get(m_iIRLength-j) * m_ppfIRFft[0][j];
+//                    pfOutputBuffer[i] += m_pCRingBuff->get(m_iIRLength-j) * m_pfIR[j];
 //                }
-//                m_ppCRingBuffFft[0]->getPostInc();
+//                m_pCRingBuff->getPostInc();
 //            }
             break;
             

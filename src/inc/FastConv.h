@@ -84,7 +84,8 @@ private:
     float** m_ppfMulBuffer;
     CFft::complex_t** m_ppfMulFftBuffer;
     float** m_ppfMulSplitBuffer;
-    float* m_pfOutputBufer;
+    float* m_pfOutputBuffer;
+    float* m_pfFftOutBuffer;
     CFft* m_pCFft = 0;
     Error_t checkData(const float* pfData, int dataLength);
     Error_t checkData(float*& pfData, int dataLength, bool init = false);

@@ -5,7 +5,6 @@
 #include "MUSI6106Config.h"
 
 #include "AudioFileIf.h"
-//#include "Vibrato.h"
 #include "FastConv.h"
 
 
@@ -24,7 +23,7 @@ int main(int argc, char* argv[])
     
     std::string sInputIrPath;
 
-    static const int            kBlockSize = 2048;
+    static const int            kBlockSize = 512;
     long long                   iNumFrames = kBlockSize;
     long long                   iIrLength = 0;
     //int                         iNumChannels;
