@@ -23,8 +23,8 @@ int main(int argc, char* argv[])
     
     std::string sInputIrPath;
 
-    static const int            kBlockSize = 512;
-    static const int            kConvBlockSize = 2048;
+    static const int            kBlockSize = 1023;
+    static const int            kConvBlockSize = 8192;
     long long                   iNumFrames = kBlockSize;
     long long                   iIrLength = 0;
     //int                         iNumChannels;

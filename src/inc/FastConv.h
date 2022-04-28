@@ -74,7 +74,8 @@ private:
     int m_iIRLength;
     int m_iFftLength;
     CRingBuffer<float>* m_pCRingBuff = 0;
-    CRingBuffer<float>** m_ppCRingBuffFft = 0;
+    CRingBuffer<float>* m_pCRingBuffIn = 0;
+    CRingBuffer<float>* m_pCRingBuffOut = 0;
     float* m_pfIR;
     float** m_ppfIRFft;
     bool m_bIsInitialized;
@@ -83,7 +84,10 @@ private:
     float** m_ppfMulBuffer;
     CFft::complex_t** m_ppfMulFftBuffer;
     float** m_ppfMulSplitBuffer;
+    float* m_pfBlockBuffer;
+    float* m_pfInputBuffer;
     float* m_pfOutputBuffer;
+    float* m_pfLayerBuffer;
     float* m_pfFftOutBuffer;
     CFft* m_pCFft = 0;
     Error_t checkData(const float* pfData, int dataLength);
@@ -91,9 +95,10 @@ private:
     CFft::complex_t** m_ppf_H;
     float** m_ppf_H_Real;
     float** m_ppf_H_Imag;
-    float* remaining_buffer;
-    float* remaining_block;
-    
+    int m_iCurBlock;
+    int m_iLatency;
+    bool m_bRingBufferInAdded;
+    bool m_bNeedAddLatency;
 };
 
 

@@ -251,7 +251,9 @@ namespace fastconv_test {
         
         
         for(int i = 0, start = 0; i < 8; start += blockLengths[i++])
+        {
             m_pCFastConv->process(output + start, input + start, blockLengths[i]);
+        }
         
         //check output shiif IR
         for (int i = 0; i < IRLength && i + 3 < InputLength; i++) {
@@ -272,4 +274,3 @@ namespace fastconv_test {
 }
 
 #endif //WITH_TESTS
-
