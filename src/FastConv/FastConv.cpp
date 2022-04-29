@@ -25,8 +25,7 @@ CFastConv::CFastConv( void ) :
     m_pfOutputBuffer(0),
     m_pfInputBuffer(0),
     m_pfBlockBuffer(0),
-    m_bRingBufferInAdded(false),
-    m_bNeedAddLatency(false)
+    m_bBoundryIsMet(false)
 {
     this -> reset();
 }
@@ -84,8 +83,8 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             m_iFftLength = 2 * m_iBlockLength;
             
             // create buffer
-            m_pCRingBuffIn = new CRingBuffer<float> (m_iBlockLength*2);
-            m_pCRingBuffOut = new CRingBuffer<float> (m_iBlockLength*2);
+            m_pCRingBuffIn = new CRingBuffer<float> (m_iBlockLength);
+            m_pCRingBuffOut = new CRingBuffer<float> (m_iBlockLength);
             
             m_pfLayerBuffer = new float [m_iBlockLength*(m_iDivNums+1)]();
             m_pfOutputBuffer = new float [m_iBlockLength*(m_iDivNums+1)]();
@@ -198,8 +197,7 @@ Error_t CFastConv::reset()
     m_pfOutputBuffer = 0;
     m_pfInputBuffer = 0;
     m_pfBlockBuffer = 0;
-    m_bRingBufferInAdded = false;
-    m_bNeedAddLatency = false;
+    m_bBoundryIsMet = false;
     m_bIsInitialized = false;
     
     return Error_t::kNoError;
@@ -245,20 +243,17 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
         // when the boundry met
         if(iLengthOfBuffers+m_pCRingBuffIn -> getNumValuesInBuffer() >= m_iBlockLength)
         {
-            // fill out the block in the ring buffer
+            m_bBoundryIsMet = true;
+            
+            // 1.before calculation
+            // 1.1. split current frame and fill up the input ring buffer
             int value2fill = m_iBlockLength - m_pCRingBuffIn -> getNumValuesInBuffer();
             m_pCRingBuffIn->putPostInc(pfInputBuffer, value2fill);
-            m_bRingBufferInAdded = true;
+            // 1.2. write out the rest output ring buffer
+            m_pCRingBuffOut->getPostInc(pfOutputBuffer, value2fill);
             
-            // store the latency
-            m_iLatency = value2fill;
-            m_bNeedAddLatency = true;
-            
-            // output the rest in the ring buffer out
-            m_pCRingBuffOut->getPostInc(pfOutputBuffer, m_iLatency);
-            
-            // FFT and multiplication
-            // overlap blocks for one layer
+            // 2. FFT and multiplication
+            // 2.1 overlap blocks for one layer
             m_pCRingBuffIn -> getPostInc(m_pfInputBuffer, m_iBlockLength);
             float* remaining = new float [m_iBlockLength]();
             CVectorFloat::setZero(m_pfLayerBuffer, (m_iDivNums+1)*m_iBlockLength);
@@ -270,45 +265,38 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
                 CVectorFloat::copy(remaining, &m_pfBlockBuffer[m_iBlockLength], m_iBlockLength);
             }
             
-            // overlap layers
+            // 2.2 overlap layers
             CVectorFloat::add_I(m_pfLayerBuffer, &m_pfOutputBuffer[m_iBlockLength], m_iDivNums*m_iBlockLength);
             
-            // send to buffer
+            // 2.3 send to buffer
             CVectorFloat::copy(m_pfOutputBuffer, m_pfLayerBuffer, m_iBlockLength*(m_iDivNums+1));
             
-            // send to ring buffer
+            // 2.4 send to ring buffer
             m_pCRingBuffOut -> putPostInc(m_pfOutputBuffer, m_iBlockLength);
             
-            // copy the 2nd part of input into ring buffer
+            // 3. after calculation
+            // 3.1 copy the 2nd part of input into ring buffer
             m_pCRingBuffIn->putPostInc(&pfInputBuffer[value2fill], iLengthOfBuffers-value2fill);
+            
+            // 3.2 write out the initial values from each FFT results
+            m_pCRingBuffOut -> getPostInc(&pfOutputBuffer[value2fill], iLengthOfBuffers-value2fill);
         }
         
         // copy value from input into ring buffer
         // bypass this function when boundries have been met
-        if(iLengthOfBuffers+m_pCRingBuffIn -> getNumValuesInBuffer() <= m_pCRingBuffIn->getLength())
+        if(!m_bBoundryIsMet)
         {
-            if(!m_bRingBufferInAdded)
-            {
-                m_pCRingBuffIn->putPostInc(pfInputBuffer, iLengthOfBuffers);
-                m_bRingBufferInAdded = false;
-            }
-            else
-                m_bRingBufferInAdded = false;
+            m_pCRingBuffIn->putPostInc(pfInputBuffer, iLengthOfBuffers);
         }
         
         // copy value from ring buffer into output
         // add latency when boundries have been met
-        if(m_pCRingBuffOut -> getNumValuesInBuffer() >= iLengthOfBuffers)
+        if(!m_bBoundryIsMet)
         {
-            if(m_bNeedAddLatency)
-            {
-                m_pCRingBuffOut -> getPostInc(&pfOutputBuffer[m_iLatency], iLengthOfBuffers-m_iLatency);
-                m_bNeedAddLatency = false;
-            }
-            else
-                m_pCRingBuffOut -> getPostInc(pfOutputBuffer, iLengthOfBuffers);
+            m_pCRingBuffOut -> getPostInc(pfOutputBuffer, iLengthOfBuffers);
         }
-        cout << m_iCurBlock << endl;
+        
+        m_bBoundryIsMet = false;
     }
      else if(m_eCompType == kTimeDomain)
     {

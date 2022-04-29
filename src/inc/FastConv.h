@@ -99,6 +99,7 @@ private:
     int m_iLatency;
     bool m_bRingBufferInAdded;
     bool m_bNeedAddLatency;
+    bool m_bBoundryIsMet;
 };
 
 
