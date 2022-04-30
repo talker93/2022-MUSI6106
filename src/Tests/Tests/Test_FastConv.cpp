@@ -19,6 +19,106 @@ namespace fastconv_test {
         }
     }
 
+class FastConv: public testing::Test
+    {
+    protected:
+        void SetUp() override
+        {
+            m_pfInput = new float[m_iInputLength];
+            m_pfIr = new float[m_iIRLength];
+            m_pfOutput = new float[m_iInputLength + m_iIRLength];
+
+            CVectorFloat::setZero(m_pfInput, m_iInputLength);
+            m_pfInput[0] = 1;
+
+            CSynthesis::generateNoise(m_pfIr, m_iIRLength);
+            m_pfIr[0] = 1;
+
+            CVectorFloat::setZero(m_pfOutput, m_iInputLength + m_iIRLength);
+
+            m_pCFastConv = new CFastConv();
+        }
+
+        virtual void TearDown()
+        {
+            m_pCFastConv->reset();
+            delete m_pCFastConv;
+
+            delete[] m_pfIr;
+            delete[] m_pfOutput;
+            delete[] m_pfInput;
+        }
+
+        float *m_pfInput = 0;
+        float *m_pfIr = 0;
+        float *m_pfOutput = 0;
+
+        int m_iInputLength = 83099;
+        int m_iIRLength = 60001;
+
+        CFastConv *m_pCFastConv = 0;
+    };
+
+    TEST_F(FastConv, Params)
+    {
+        EXPECT_EQ(false, Error_t::kNoError == m_pCFastConv->init(0, 1));
+        EXPECT_EQ(false, Error_t::kNoError == m_pCFastConv->init(m_pfIr, 0));
+        EXPECT_EQ(false, Error_t::kNoError == m_pCFastConv->init(m_pfIr, 10, -1));
+        EXPECT_EQ(false, Error_t::kNoError == m_pCFastConv->init(m_pfIr, 10, 7));
+        EXPECT_EQ(true, Error_t::kNoError == m_pCFastConv->init(m_pfIr, 10, 4));
+        EXPECT_EQ(true, Error_t::kNoError == m_pCFastConv->reset());
+    }
+
+    TEST_F(FastConv, Impulse)
+    {
+        // impulse with impulse
+        int iBlockLength = 4;
+        m_pCFastConv->init(m_pfIr, 1, iBlockLength);
+
+        for (auto i = 0; i < 500; i++)
+            m_pCFastConv->process(&m_pfOutput[i], &m_pfInput[i], 1);
+
+        EXPECT_NEAR(1.F, m_pfOutput[iBlockLength], 1e-6F);
+        EXPECT_NEAR(0.F, m_pfOutput[iBlockLength+1], 1e-6F);
+        EXPECT_NEAR(0.F, m_pfOutput[iBlockLength+2], 1e-6F);
+        EXPECT_NEAR(0.F, m_pfOutput[iBlockLength+3], 1e-6F);
+        EXPECT_NEAR(0.F, CVectorFloat::getMin(m_pfOutput, m_iInputLength), 1e-6F);
+        EXPECT_NEAR(1.F, CVectorFloat::getMax(m_pfOutput, m_iInputLength), 1e-6F);
+
+        // impulse with dc
+        for (auto i = 0; i < 4; i++)
+            m_pfOutput[i] = 1;
+        iBlockLength = 8;
+        m_pCFastConv->init(m_pfOutput, 4, iBlockLength);
+
+        for (auto i = 0; i < 500; i++)
+            m_pCFastConv->process(&m_pfOutput[i], &m_pfInput[i], 1);
+
+        EXPECT_NEAR(0.F, CVectorFloat::getMean(m_pfOutput, 8), 1e-6F);
+        EXPECT_NEAR(1.F, CVectorFloat::getMean(&m_pfOutput[8], 4), 1e-6F);
+        EXPECT_NEAR(0.F, CVectorFloat::getMean(&m_pfOutput[12], 400), 1e-6F);
+
+        // impulse with noise
+        iBlockLength = 8;
+        m_pCFastConv->init(m_pfIr, 27, iBlockLength);
+
+        for (auto i = 0; i < m_iInputLength; i++)
+            m_pCFastConv->process(&m_pfOutput[i], &m_pfInput[i], 1);
+
+        CHECK_ARRAY_CLOSE(m_pfIr, &m_pfOutput[iBlockLength], 27, 1e-6F);
+        CHECK_ARRAY_CLOSE(&m_pfInput[1], &m_pfOutput[iBlockLength + 27], 10, 1e-6F);
+
+        // noise with impulse
+        iBlockLength = 8;
+        m_pCFastConv->init(m_pfInput, 27, iBlockLength);
+
+        for (auto i = 0; i < m_iIRLength; i++)
+            m_pCFastConv->process(&m_pfOutput[i], &m_pfIr[i], 1);
+
+        CHECK_ARRAY_CLOSE(m_pfIr, &m_pfOutput[iBlockLength], m_iIRLength - iBlockLength, 1e-6F);
+    }
+
+
     class FastConvTime: public testing::Test
     {
     protected:
@@ -27,6 +127,7 @@ namespace fastconv_test {
             
             m_pCFastConv = new CFastConv();
             IRLength = 51;
+            //BlockLength = 64;
             IR = new float[IRLength];
             std::default_random_engine generator(0);
             std::uniform_real_distribution<float> uniformRealDistribution(-1.0,1.0);
@@ -46,6 +147,7 @@ namespace fastconv_test {
         
         int IRLength = 0;
         float* IR = nullptr;
+        //int BlockLength = 0;
         CFastConv *m_pCFastConv = 0;
     };
 
