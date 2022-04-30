@@ -58,8 +58,15 @@ Error_t CFastConv::destroy(CFastConv *&pCFastConv)
 
 Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLength /*= 8192*/, ConvCompMode_t eCompMode /*= kFreqDomain*/)
 {
+    if(iLengthOfIr == 0)
+        return Error_t::kFunctionInvalidArgsError;
 
-    
+    if(pfImpulseResponse == NULL)
+        return Error_t::kFunctionInvalidArgsError;
+
+    if(iBlockLength < 1)
+        return Error_t::kFunctionInvalidArgsError;
+
     switch(eCompMode)
     {
         case(kTimeDomain):
@@ -75,6 +82,8 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             break;
             
         case(kFreqDomain):
+            if (!CUtil::isPowOf2(iBlockLength))
+                return Error_t::kFunctionInvalidArgsError;
             m_iBlockLength = iBlockLength;
             m_eCompType = CFastConv::kFreqDomain;
             m_iIRLength = iLengthOfIr;
@@ -261,8 +270,6 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
             {
                 fftMul(m_pfBlockBuffer, m_pfInputBuffer, i, m_iBlockLength);
                 CVectorFloat::add_I(&m_pfLayerBuffer[i*m_iBlockLength], m_pfBlockBuffer, m_iFftLength);
-                CVectorFloat::add_I(&m_pfLayerBuffer[i*m_iBlockLength], remaining, m_iBlockLength);
-                CVectorFloat::copy(remaining, &m_pfBlockBuffer[m_iBlockLength], m_iBlockLength);
             }
             
             // 2.2 overlap layers
@@ -273,6 +280,7 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
             
             // 2.4 send to ring buffer
             m_pCRingBuffOut -> putPostInc(m_pfOutputBuffer, m_iBlockLength);
+//            checkData(m_pfOutputBuffer, (m_iDivNums+1)*m_iBlockLength);
             
             // 3. after calculation
             // 3.1 copy the 2nd part of input into ring buffer
@@ -285,17 +293,16 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
         // copy value from input into ring buffer
         // bypass this function when boundries have been met
         if(!m_bBoundryIsMet)
-        {
             m_pCRingBuffIn->putPostInc(pfInputBuffer, iLengthOfBuffers);
-        }
         
         // copy value from ring buffer into output
         // add latency when boundries have been met
         if(!m_bBoundryIsMet)
-        {
             m_pCRingBuffOut -> getPostInc(pfOutputBuffer, iLengthOfBuffers);
-        }
         
+        checkData(pfOutputBuffer, iLengthOfBuffers);
+//        m_iCurBlock++;
+//        cout << m_iCurBlock << endl;
         m_bBoundryIsMet = false;
     }
      else if(m_eCompType == kTimeDomain)
