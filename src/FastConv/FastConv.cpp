@@ -249,60 +249,55 @@ Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, i
     
     if(m_eCompType == kFreqDomain)
     {
+        int iUsed = 0;
         // when the boundry met
-        if(iLengthOfBuffers+m_pCRingBuffIn -> getNumValuesInBuffer() >= m_iBlockLength)
+        while(iLengthOfBuffers+m_pCRingBuffIn -> getNumValuesInBuffer() - iUsed >= m_iBlockLength)
         {
             m_bBoundryIsMet = true;
             
-            // 1.before calculation
+            // 1.Before calculation
             // 1.1. split current frame and fill up the input ring buffer
             int value2fill = m_iBlockLength - m_pCRingBuffIn -> getNumValuesInBuffer();
-            m_pCRingBuffIn->putPostInc(pfInputBuffer, value2fill);
+            m_pCRingBuffIn->putPostInc(&pfInputBuffer[iUsed], value2fill);
             // 1.2. write out the rest output ring buffer
-            m_pCRingBuffOut->getPostInc(pfOutputBuffer, value2fill);
+            m_pCRingBuffOut->getPostInc(&pfOutputBuffer[iUsed], value2fill);
+            // 1.3 add the index for audio IO
+            iUsed += value2fill;
             
             // 2. FFT and multiplication
             // 2.1 overlap blocks for one layer
             m_pCRingBuffIn -> getPostInc(m_pfInputBuffer, m_iBlockLength);
-            float* remaining = new float [m_iBlockLength]();
             CVectorFloat::setZero(m_pfLayerBuffer, (m_iDivNums+1)*m_iBlockLength);
             for(int i = 0; i < m_iDivNums; i++)
             {
                 fftMul(m_pfBlockBuffer, m_pfInputBuffer, i, m_iBlockLength);
                 CVectorFloat::add_I(&m_pfLayerBuffer[i*m_iBlockLength], m_pfBlockBuffer, m_iFftLength);
             }
-            
             // 2.2 overlap layers
             CVectorFloat::add_I(m_pfLayerBuffer, &m_pfOutputBuffer[m_iBlockLength], m_iDivNums*m_iBlockLength);
-            
             // 2.3 send to buffer
             CVectorFloat::copy(m_pfOutputBuffer, m_pfLayerBuffer, m_iBlockLength*(m_iDivNums+1));
-            
             // 2.4 send to ring buffer
             m_pCRingBuffOut -> putPostInc(m_pfOutputBuffer, m_iBlockLength);
-//            checkData(m_pfOutputBuffer, (m_iDivNums+1)*m_iBlockLength);
             
-            // 3. after calculation
-            // 3.1 copy the 2nd part of input into ring buffer
-            m_pCRingBuffIn->putPostInc(&pfInputBuffer[value2fill], iLengthOfBuffers-value2fill);
-            
+            // 3. After calculation
+            // 3.1 copy the rest part of input into ring buffer
+            m_pCRingBuffIn->putPostInc(&pfInputBuffer[iUsed], (iLengthOfBuffers-value2fill)%m_iBlockLength);
             // 3.2 write out the initial values from each FFT results
-            m_pCRingBuffOut -> getPostInc(&pfOutputBuffer[value2fill], iLengthOfBuffers-value2fill);
+            m_pCRingBuffOut -> getPostInc(&pfOutputBuffer[iUsed], (iLengthOfBuffers-value2fill)%m_iBlockLength);
+            // 3.3 add the index for audio IO
+            iUsed += (iLengthOfBuffers-value2fill)%m_iBlockLength;
         }
         
-        // copy value from input into ring buffer
-        // bypass this function when boundries have been met
+        // bypass these function when boundries have been met
         if(!m_bBoundryIsMet)
+        {
+            // copy value from input into ring buffer
             m_pCRingBuffIn->putPostInc(pfInputBuffer, iLengthOfBuffers);
-        
-        // copy value from ring buffer into output
-        // add latency when boundries have been met
-        if(!m_bBoundryIsMet)
+            // copy value from ring buffer into output
             m_pCRingBuffOut -> getPostInc(pfOutputBuffer, iLengthOfBuffers);
+        }
         
-        checkData(pfOutputBuffer, iLengthOfBuffers);
-//        m_iCurBlock++;
-//        cout << m_iCurBlock << endl;
         m_bBoundryIsMet = false;
     }
      else if(m_eCompType == kTimeDomain)

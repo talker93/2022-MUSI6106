@@ -22,11 +22,11 @@ int main(int argc, char* argv[])
     std::string sInputFilePath, sOutputFilePath;
     
     std::string sInputIrPath;
-
-    static const int            kBlockSize = 1024;
+ 
+    static const int            kBlockSize = 1023;
     static const int            kConvBlockSize = 8192;
     long long                   iNumFrames = kBlockSize;
-    long long                   iIrLength = 0;
+    long long                   iIrLength;
     //int                         iNumChannels;
 
 
@@ -109,17 +109,17 @@ int main(int argc, char* argv[])
     // allocate memory
     ppfInputAudio = new float*[stFileSpec.iNumChannels];
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
-        ppfInputAudio[i] = new float[kBlockSize];
+        ppfInputAudio[i] = new float[kBlockSize]();
     
     ppfOutputAudio = new float*[stFileSpec.iNumChannels];
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
-        ppfOutputAudio[i] = new float[kBlockSize];
+        ppfOutputAudio[i] = new float[kBlockSize]();
     
     phAudioIr->getLength(iIrLength);
     ppfIrAudio = new float*[stIrSpec.iNumChannels];
     for (int i = 0; i < stIrSpec.iNumChannels; i++)
-        ppfIrAudio[i] = new float[iIrLength];
-    cout << iIrLength << endl;
+        ppfIrAudio[i] = new float[iIrLength]();
+    
     if (ppfInputAudio == 0)
     {
         CAudioFileIf::destroy(phAudioFile);
