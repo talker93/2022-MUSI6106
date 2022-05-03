@@ -34,10 +34,9 @@ int main(int argc, char* argv[])
     clock_t time_begin = 0;
     clock_t time_end = 0;
 
-    float** ppfInputAudio = 0;
-    float** ppfOutputAudio = 0;
-    float** ppfIrAudio = 0;
-    float* pfImpulseResponse=0;
+    float* pfInputAudio = 0;
+    float* pfOutputAudio = 0;
+    float* pfIrAudio = 0;
 
     CAudioFileIf* phAudioFile = 0;
     CAudioFileIf* phAudioFileOut = 0;
@@ -107,52 +106,47 @@ int main(int argc, char* argv[])
     }
     
     // allocate memory
-    ppfInputAudio = new float*[stFileSpec.iNumChannels];
-    for (int i = 0; i < stFileSpec.iNumChannels; i++)
-        ppfInputAudio[i] = new float[kBlockSize]();
+    pfInputAudio = new float[kBlockSize]();
     
-    ppfOutputAudio = new float*[stFileSpec.iNumChannels];
-    for (int i = 0; i < stFileSpec.iNumChannels; i++)
-        ppfOutputAudio[i] = new float[kBlockSize]();
+    pfOutputAudio = new float[kBlockSize]();
     
     phAudioIr->getLength(iIrLength);
-    ppfIrAudio = new float*[stIrSpec.iNumChannels];
-    for (int i = 0; i < stIrSpec.iNumChannels; i++)
-        ppfIrAudio[i] = new float[iIrLength]();
+    pfIrAudio = new float[iIrLength]();
     
-    if (ppfInputAudio == 0)
+    if (pfInputAudio == 0)
     {
         CAudioFileIf::destroy(phAudioFile);
         //hTestOutputFile.close();
         return -1;
     }
-    if (ppfOutputAudio[0] == 0)
+    if (pfOutputAudio == 0)
     {
         CAudioFileIf::destroy(phAudioFileOut);
         //hTestOutputFile.close();
         return -1;
     }
     
-    if (ppfIrAudio[0] == 0)
+    if (pfIrAudio == 0)
     {
         CAudioFileIf::destroy(phAudioIr);
         return -1;
     }
     
     // Load impluse response from file
-    phAudioIr->readData(ppfIrAudio, iIrLength);
+    phAudioIr->readData(&pfIrAudio, iIrLength);
     
     ////////////////////////////////////////////////////////////////////////////
     CFastConv::create(pCFastConv);
-    pCFastConv->init(ppfIrAudio[0], iIrLength, kConvBlockSize, eCompMode);
+    pCFastConv->init(pfIrAudio, iIrLength, kConvBlockSize, eCompMode);
     
     // processing
+    int block_idx = 0;
     time_begin = clock();
     while (!phAudioFile->isEof())
     {
-        phAudioFile->readData(ppfInputAudio, iNumFrames);
-        pCFastConv->process(ppfOutputAudio[0], ppfInputAudio[0], iNumFrames);
-        phAudioFileOut->writeData(ppfOutputAudio, iNumFrames);
+        phAudioFile->readData(&pfInputAudio, iNumFrames);
+        pCFastConv->process(pfOutputAudio, pfInputAudio, iNumFrames);
+        phAudioFileOut->writeData(&pfOutputAudio, iNumFrames);
     }
     
     
@@ -184,12 +178,12 @@ int main(int argc, char* argv[])
     CFastConv::destroy(pCFastConv);
 
     
-    delete [] ppfIrAudio;
-    delete[] ppfInputAudio;
-    delete[] ppfOutputAudio;
-    ppfIrAudio = 0;
-    ppfInputAudio = 0;
-    ppfOutputAudio = 0;
+    delete [] pfIrAudio;
+    delete[] pfInputAudio;
+    delete[] pfOutputAudio;
+    pfIrAudio = 0;
+    pfInputAudio = 0;
+    pfOutputAudio = 0;
 
     // all done
     return 0;
