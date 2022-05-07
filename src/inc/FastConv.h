@@ -62,8 +62,9 @@ public:
     
     /*!
      \param pfMulOut: iFftLength
-     \param pfMul1: m_iBlockLength
-     \param pfMul2: m_iBlockLength
+     \param pfMul: iLenOfBuffer
+     \param H_index: the number of your blocked impulse response
+     \param iLenOfBuffer: the length of your input buffer, should less than 2*m_iBlockLength
      */
     Error_t fftMul(float* pfMulOut, const float* pfMul, int H_index, int iLenOfBuffer);
 

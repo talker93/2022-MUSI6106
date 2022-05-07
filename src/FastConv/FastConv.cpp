@@ -66,6 +66,8 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
 
     if(iBlockLength < 1)
         return Error_t::kFunctionInvalidArgsError;
+    
+    this->reset();
 
     switch(eCompMode)
     {
@@ -102,8 +104,8 @@ Error_t CFastConv::init(float *pfImpulseResponse, int iLengthOfIr, int iBlockLen
             
             m_pfFftOutBuffer = new float [m_iFftLength]();
             
-            m_ppfMulBuffer = new float* [2];
-            for(int i = 0; i < 2; i++)
+            m_ppfMulBuffer = new float* [1];
+            for(int i = 0; i < 1; i++)
                 m_ppfMulBuffer[i] = new float [m_iFftLength]();
             
             m_ppfMulFftBuffer = new CFft::complex_t* [3];
@@ -246,6 +248,8 @@ Error_t CFastConv::fftMul(float *pfMulOut, const float *pfMul, int H_index, int 
 
 Error_t CFastConv::process (float* pfOutputBuffer, const float *pfInputBuffer, int iLengthOfBuffers)
 {
+    if(iLengthOfBuffers<=0)
+        return Error_t::kFunctionInvalidArgsError;
     
     if(m_eCompType == kFreqDomain)
     {
@@ -372,8 +376,6 @@ Error_t CFastConv::flushBuffer(float* pfOutputBuffer)
             break;
     }
     
-    
-    
     return Error_t::kNoError;
 }
 
@@ -384,6 +386,8 @@ Error_t CFastConv::checkData(const float *pfData, int dataLength)
     for(int i = 0; i < dataLength; i++)
         cout << pfData[i] << ", ";
     cout << "-----------------inspector ends------------" << endl;
+    
+    return Error_t::kNoError;
 }
 
 Error_t CFastConv::checkData(float*& pfData, int dataLength, bool reset /*= false*/)
@@ -398,4 +402,6 @@ Error_t CFastConv::checkData(float*& pfData, int dataLength, bool reset /*= fals
         delete [] pfData;
         pfData = 0;
     }
+    
+    return Error_t::kNoError;
 }
